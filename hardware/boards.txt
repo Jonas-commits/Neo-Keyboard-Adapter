@@ -1,0 +1,31 @@
+micro3.name=Arduino Micro 3.3V
+
+micro3.vid.0=0x1B4F
+micro3.pid.0=0x9203
+
+micro3.upload.tool=avrdude
+micro3.upload.protocol=avr109
+micro3.upload.maximum_size=28672
+micro3.upload.maximum_data_size=2560
+micro3.upload.speed=57600
+micro3.upload.disable_flushing=true
+micro3.upload.use_1200bps_touch=true
+micro3.upload.wait_for_upload_port=true
+
+micro3.bootloader.tool=avrdude
+micro3.bootloader.low_fuses=0xff
+micro3.bootloader.high_fuses=0xd8
+micro3.bootloader.extended_fuses=0xcb
+micro3.bootloader.file=caterina/Caterina-promicro8.hex
+micro3.bootloader.unlock_bits=0x3F
+micro3.bootloader.lock_bits=0x2F
+
+micro3.build.mcu=atmega32u4
+micro3.build.f_cpu=8000000L
+micro3.build.vid=0x1B4F
+micro3.build.pid=0x9203
+micro3.build.usb_product="Arduino Micro"
+micro3.build.board=AVR_MICRO
+micro3.build.core=arduino
+micro3.build.variant=micro
+micro3.build.extra_flags={build.usb_flags}
