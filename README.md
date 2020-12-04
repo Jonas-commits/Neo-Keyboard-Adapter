@@ -10,7 +10,7 @@
 * Download Arduino IDE https://www.arduino.cc/en/software
 * **Do not** attempt to flash a sketch by selecting the "Arduino Pro Micro" in the List. It will work, but soft-brick the device for further programming.
 * Download Additional Bootloader for 3.3V/8Mhz Variant at Sparkfun https://codeload.github.com/sparkfun/SF32u4_boards/zip/master
-* Copy Bootloader SF32u4_boards-master.zipiSF32u4_boards-master/sparkfun/avr/bootloaders/caterina/Caterina-promicro8.hex to *Arduino-Install-dir*/hardware/arduino/avr/bootloaders/caterina
+* Copy Bootloader SF32u4_boards-master.zip/SF32u4_boards-master/sparkfun/avr/bootloaders/caterina/Caterina-promicro8.hex to *Arduino-Install-dir*/hardware/arduino/avr/bootloaders/caterina
 * Edit *Arduino-Install-dir*/hardware/arduino/avr/boards.txt by adding the contents from [hardware/boards.txt](hardware/boards.txt)
 * Sketches can now be uploaded by selecting the respective COM-Port and selecting the device "Arduino Pro Mirco 3.3V"
 	
