@@ -16,7 +16,7 @@
 	
 ### Mirco Usb Host Shield:
 * USB runs with 5V, but the board is 3.3V only and therefore has a design flaw and has to be fixed
-* Furthermore the reset pin of the shield (**Not** the reset pin of the Arduino) has to be connected to 3.3V (Don't know if you can just set the port to HIGH in Software?) but i went straight after following setup: https://geekhack.org/index.php?topic=80421.0
+* Furthermore the reset pin of the shield (**Not** the reset pin of the Arduino) has to be connected to 3.3V. Unfortunately this pin is GND in Arduino, so we cannot just set the Pin to HIGH. I went straight after following setup: https://geekhack.org/index.php?topic=80421.0
 	
 ### Software 
 * The USB Host Shield Library has to be installed in the Arduino Library Manager
