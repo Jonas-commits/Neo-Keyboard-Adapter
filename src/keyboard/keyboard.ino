@@ -1,21 +1,24 @@
 #include <hidboot.h>
 #include <usbhub.h>
 #include <SPI.h>
-#include <Keyboard.h>
-
-#include "usb_hid_keys.h"
+#include <HID-Project.h>
 
 class KbdRptParser : public KeyboardReportParser
 {
-    void PrintKey(uint8_t mod, uint8_t key);
+	private:
+		void PrintKey(uint8_t m, uint8_t key);
+		
+	protected:
+		void OnControlKeysChanged(uint8_t before, uint8_t after);
 
-  protected:
-    void OnControlKeysChanged(uint8_t before, uint8_t after);
-
-    void OnKeyDown  (uint8_t mod, uint8_t key);
-    void OnKeyUp  (uint8_t mod, uint8_t key);
-    void OnKeyPressed(uint8_t key);
+		void OnKeyDown  (uint8_t mod, uint8_t key);
+		void OnKeyUp  (uint8_t mod, uint8_t key);
+		void OnKeyPressed(uint8_t key);
+	
+	public:
 };
+
+
 
 void KbdRptParser::PrintKey(uint8_t m, uint8_t key)
 {
@@ -39,6 +42,7 @@ void KbdRptParser::PrintKey(uint8_t m, uint8_t key)
 
 void KbdRptParser::OnKeyDown(uint8_t mod, uint8_t key)
 {
+  Keyboard.press(KeyboardKeycode(key));
   Serial.print("DN ");
   PrintKey(mod, key);
 }
@@ -81,6 +85,7 @@ void KbdRptParser::OnControlKeysChanged(uint8_t before, uint8_t after) {
 
 void KbdRptParser::OnKeyUp(uint8_t mod, uint8_t key)
 {
+  Keyboard.release(KeyboardKeycode(key));
   Serial.print("UP ");
   PrintKey(mod, key);
 }
