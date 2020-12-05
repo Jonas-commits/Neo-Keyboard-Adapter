@@ -11,7 +11,6 @@ void NeoReportParser::PrintKey(uint8_t m, uint8_t key)
 	Serial.print((mod.bmLeftGUI    == 1) ? "G" : " ");
 
 	Serial.print(" >");
-	//PrintHex<uint8_t>(key, 0x80);
 	Serial.print(key, HEX);
 	Serial.print("< ");
 

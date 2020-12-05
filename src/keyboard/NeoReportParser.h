@@ -8,8 +8,10 @@
 class NeoReportParser : public KeyboardReportParser
 {
 	private:
+#ifdef NEO_DEBUG
 	void PrintKey(uint8_t m, uint8_t key);
-	
+#endif
+
 	protected:
 	void OnControlKeysChanged(uint8_t before, uint8_t after);
 
