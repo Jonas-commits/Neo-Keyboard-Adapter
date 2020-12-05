@@ -6,17 +6,17 @@
 #include <HID-Project.h>
 
 struct NeoModifiers {
-	boolean bmLeftCtrl : 1;
-	boolean bmLeftShift : 1;
-	boolean bmLeftAlt : 1;
-	boolean bmLeftGUI : 1;
-	boolean bmRightCtrl : 1;
-	boolean bmRightShift : 1;
-	boolean bmRightAlt : 1;
-	boolean bmRightGUI : 1;
-	boolean bmLeft3 : 1;
-	boolean bmRight3 : 1;
-	boolean bmLeft4 : 1;
+	boolean bmLeftCtrl;
+	boolean bmLeftShift;
+	boolean bmLeftAlt;
+	boolean bmLeftGUI;
+	boolean bmRightCtrl;
+	boolean bmRightShift;
+	boolean bmRightAlt;
+	boolean bmRightGUI;
+	boolean bmLeft3;
+	boolean bmRight3;
+	boolean bmLeft4;
 };
 
 class NeoReportParser : public KeyboardReportParser

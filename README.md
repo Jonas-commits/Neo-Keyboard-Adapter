@@ -20,6 +20,7 @@
 	
 ### Software 
 * The USB Host Shield Library has to be installed in the Arduino Library Manager
+* The HID-Project Library has to be installed in the Arduino Library Manager, standard Keyboard Library is insufficient.
 * After uploading the [example](https://github.com/felis/USB_Host_Shield_2.0/blob/master/examples/HID/USBHIDBootKbd/USBHIDBootKbd.ino) to the board I can see the board working in the serial port monitor. 
 * I did not fully understand how you need to plug it in to make it work, my guess is, first arduino to PC, then open port monitor, then plug in keyboard. Have to be worked out in more detail. 
 	
