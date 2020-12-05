@@ -1,38 +1,32 @@
 #include "NeoReportParser.h"
 
-#ifdef NEO_DEBUG
-void NeoReportParser::PrintKey(uint8_t m, uint8_t key)
-{
-	MODIFIERKEYS mod;
-	*((uint8_t*)&mod) = m;
-	Serial.print((mod.bmLeftCtrl   == 1) ? "C" : " ");
-	Serial.print((mod.bmLeftShift  == 1) ? "S" : " ");
-	Serial.print((mod.bmLeftAlt    == 1) ? "A" : " ");
-	Serial.print((mod.bmLeftGUI    == 1) ? "G" : " ");
-
-	Serial.print(" >");
-	Serial.print(key, HEX);
-	Serial.print("< ");
-
-	Serial.print((mod.bmRightCtrl   == 1) ? "C" : " ");
-	Serial.print((mod.bmRightShift  == 1) ? "S" : " ");
-	Serial.print((mod.bmRightAlt    == 1) ? "A" : " ");
-	Serial.println((mod.bmRightGUI    == 1) ? "G" : " ");
-};
-#endif
+NeoReportParser::NeoReportParser(){
+	KeyboardReportParser();
+	neoModifiers.bmLeftCtrl = false;
+	neoModifiers.bmLeftShift = false;
+	neoModifiers.bmLeftAlt = false;
+	neoModifiers.bmLeftGUI = false;
+	neoModifiers.bmRightCtrl = false;
+	neoModifiers.bmRightShift = false;
+	neoModifiers.bmRightAlt = false;
+	neoModifiers.bmRightGUI = false;
+	neoModifiers.bmLeft3 = false;
+	neoModifiers.bmRight3 = false;
+	neoModifiers.bmLeft4 = false;
+}
 
 void NeoReportParser::OnKeyDown(uint8_t mod, uint8_t key)
-{
+{	
 	Keyboard.press(KeyboardKeycode(key));
-	
-#ifdef NEO_DEBUG
-	Serial.print("DN ");
-	PrintKey(mod, key);
-#endif
+}
+
+void NeoReportParser::OnKeyUp(uint8_t mod, uint8_t key)
+{
+	Keyboard.release(KeyboardKeycode(key));
 }
 
 void NeoReportParser::OnControlKeysChanged(uint8_t before, uint8_t after) {
-#ifdef NEO_DEBUG
+
 
 	MODIFIERKEYS beforeMod;
 	*((uint8_t*)&beforeMod) = before;
@@ -41,38 +35,29 @@ void NeoReportParser::OnControlKeysChanged(uint8_t before, uint8_t after) {
 	*((uint8_t*)&afterMod) = after;
 
 	if (beforeMod.bmLeftCtrl != afterMod.bmLeftCtrl) {
-		Serial.println("LeftCtrl changed");
+		neoModifiers.bmLeftCtrl = !neoModifiers.bmLeftCtrl;
 	}
 	if (beforeMod.bmLeftShift != afterMod.bmLeftShift) {
-		Serial.println("LeftShift changed");
+		neoModifiers.bmLeftCtrl = !neoModifiers.bmLeftShift;
 	}
 	if (beforeMod.bmLeftAlt != afterMod.bmLeftAlt) {
-		Serial.println("LeftAlt changed");
+		neoModifiers.bmLeftCtrl = !neoModifiers.bmLeftAlt;
 	}
 	if (beforeMod.bmLeftGUI != afterMod.bmLeftGUI) {
-		Serial.println("LeftGUI changed");
+		neoModifiers.bmLeftCtrl = !neoModifiers.bmLeftGUI;
 	}
 
 	if (beforeMod.bmRightCtrl != afterMod.bmRightCtrl) {
-		Serial.println("RightCtrl changed");
+		neoModifiers.bmLeftCtrl = !neoModifiers.bmRightCtrl;
 	}
 	if (beforeMod.bmRightShift != afterMod.bmRightShift) {
-		Serial.println("RightShift changed");
+		neoModifiers.bmLeftCtrl = !neoModifiers.bmRightShift;
 	}
 	if (beforeMod.bmRightAlt != afterMod.bmRightAlt) {
-		Serial.println("RightAlt changed");
+		neoModifiers.bmLeftCtrl = !neoModifiers.bmRightAlt;
 	}
 	if (beforeMod.bmRightGUI != afterMod.bmRightGUI) {
-		Serial.println("RightGUI changed");
+		neoModifiers.bmLeftCtrl = !neoModifiers.bmRightGUI;
 	}
-#endif
 }
 
-void NeoReportParser::OnKeyUp(uint8_t mod, uint8_t key)
-{
-	Keyboard.release(KeyboardKeycode(key));
-#ifdef NEO_DEBUG
-	Serial.print("UP ");
-	PrintKey(mod, key);
-#endif
-}

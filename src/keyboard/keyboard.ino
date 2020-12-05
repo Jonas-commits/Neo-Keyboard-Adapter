@@ -1,5 +1,5 @@
 // #include <usbhub.h>
-// #define DEBUG_NEO 1
+#define NEO_DEBUG
 
 #include "NeoReportParser.h"
 
@@ -11,15 +11,15 @@ NeoReportParser Prs;
 
 void setup()
 {
-#ifdef DEBUG_NEO
+#ifdef NEO_DEBUG
 	Serial.begin(115200);
-	Serial.println("Start");
+	Serial.println("Started Keyboard");
 #endif
 	Keyboard.begin();
 
 
 	if (Usb.Init() == -1){
-#ifdef DEBUG_NEO
+#ifdef NEO_DEBUG
 		Serial.println("OSC did not start.");
 #endif
 	}
