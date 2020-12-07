@@ -1,5 +1,4 @@
 // #include <usbhub.h>
-#define NEO_DEBUG
 
 #include "NeoReportParser.h"
 
@@ -11,19 +10,19 @@ NeoReportParser Prs;
 
 void setup()
 {
-#ifdef NEO_DEBUG
-	Serial.begin(115200);
-	Serial.println("Started Keyboard");
-#endif
 	Keyboard.begin();
 
-
-	if (Usb.Init() == -1){
-#ifdef NEO_DEBUG
-		Serial.println("OSC did not start.");
-#endif
+	// Flash LED rapidly in case USB Shield could not be initialized
+	if (Usb.Init() == -1) {
+		while (true) {
+			RXLED0;
+			delay(100);
+			RXLED1;
+			delay(100);
+		}
 	}
-
+	
+	//The USB needs some time
 	delay(200);
 
 	HidKeyboard.SetReportParser(0, &Prs);
