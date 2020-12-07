@@ -1,22 +1,7 @@
 #include "NeoReportParser.h"
 
-NeoReportParser::NeoReportParser(){
-	KeyboardReportParser();
-	neoModifiers.bmLeftCtrl = false;
-	neoModifiers.bmLeftShift = false;
-	neoModifiers.bmLeftAlt = false;
-	neoModifiers.bmLeftGUI = false;
-	neoModifiers.bmRightCtrl = false;
-	neoModifiers.bmRightShift = false;
-	neoModifiers.bmRightAlt = false;
-	neoModifiers.bmRightGUI = false;
-	neoModifiers.bmLeft3 = false;
-	neoModifiers.bmRight3 = false;
-	neoModifiers.bmLeft4 = false;
-}
-
 void NeoReportParser::OnKeyDown(uint8_t mod, uint8_t key)
-{	
+{
 	Keyboard.press(KeyboardKeycode(key));
 }
 
@@ -71,7 +56,7 @@ void NeoReportParser::OnControlKeysChanged(uint8_t before, uint8_t after) {
 			neoModifiers.bmLeftGUI = false;
 		} else {
 			OnKeyDown(after, KEY_LEFT_GUI);
-			neoModifiers.bmLeftGUI = true;			
+			neoModifiers.bmLeftGUI = true;
 		}
 	}
 
