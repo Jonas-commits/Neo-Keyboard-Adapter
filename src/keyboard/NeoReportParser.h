@@ -22,18 +22,19 @@ struct NeoModifiers {
 class NeoReportParser : public KeyboardReportParser
 {
 	private:
+
+	const static uint8_t NEO_MAP_SIZE = 100;
+	const static uint8_t neoMap[NEO_MAP_SIZE];
+	
 	NeoModifiers neoModifiers;
 	boolean applyMap;
 	
-	const static uint8_t NEO_MAP_SIZE = 100;
-	const static uint8_t neoMap[NEO_MAP_SIZE];
-
-	protected:
-	void OnControlKeysChanged(uint8_t before, uint8_t after);
-
-	void OnKeyDown  (uint8_t mod, uint8_t key);
-	void OnKeyUp  (uint8_t mod, uint8_t key);
-	void OnKeyPressed(uint8_t key);
+	void OnKeyDown  (uint8_t mod, uint8_t key) override;
+	void OnKeyUp  (uint8_t mod, uint8_t key) override;
+	void OnControlKeysChanged(uint8_t before, uint8_t after) override;
+	//void OnKeyPressed(uint8_t key) override; // not used here
+	
+	
 	
 	public:
 	NeoReportParser() : KeyboardReportParser(), neoModifiers(), applyMap(true) { }

@@ -16,21 +16,83 @@
 	 KEYPAD_8, KEYPAD_9, KEYPAD_0, KEYPAD_DOT
  };
 
-void NeoReportParser::OnKeyDown(uint8_t mod, uint8_t key)
-{
-	if (applyMap && key < NEO_MAP_SIZE){ //act like neo keyboard
-		Keyboard.press(KeyboardKeycode(neoMap[key]));
+void NeoReportParser::OnKeyDown(uint8_t mod, uint8_t key) {
+	if (applyMap && key < NEO_MAP_SIZE + 1){ //act like neo keyboard
+		
+		switch (key){ //handle neo-only-modifiers, others are handled in OnControlKeysChanged already
+			case KEY_CAPS_LOCK:
+				neoModifiers.bmLeft3 = true;
+				break;
+			
+			case KEY_BACKSLASH:
+			case KEY_NON_US_NUM:
+				neoModifiers.bmRight3 = true;
+				break;
+				
+			case KEY_NON_US:
+				neoModifiers.bmLeft4 = true;
+				break;
+			
+			default:
+				if (neoModifiers.bmLeftShift || neoModifiers.bmRightShift) {
+					if (neoModifiers.bmLeft3 || neoModifiers.bmRight3) { //layer 5
+						
+					} else { // layer 2
+						if ( 
+							key <= KEY_Z || KEY_ENTER <= key <= KEY_SPACE || key == KEY_SEMICOLON || key == KEY_QUOTE
+							|| neoModifiers.bmLeftCtrl || neoModifiers.bmRightCtrl
+							|| neoModifiers.bmLeftGUI || neoModifiers.bmRightGUI || neoModifiers.bmLeftAlt
+						) {
+							Keyboard.press(KeyboardKeycode(neoMap[key]));
+							
+						} else {
+							
+						}
+					}
+				
+				} else if (neoModifiers.bmLeft3 || neoModifiers.bmRight3) {
+					if (neoModifiers.bmLeft4 || neoModifiers.bmRightAlt) { // layer 6
+						
+					} else { // layer 3
+						
+					}
+					
+				} else if (neoModifiers.bmLeft4 || neoModifiers.bmRightAlt) { // layer 4
+				
+				} else { // layer 1
+					if (key != KEY_RIGHT_BRACE) { //only key not fitting in layer1
+						Keyboard.press(KeyboardKeycode(neoMap[key]));
+					} else {
+						
+					}
+				}
+		}
 		
 	} else { //act like a normal keyboard
 		Keyboard.press(KeyboardKeycode(key));
 	}
 }
 
-void NeoReportParser::OnKeyUp(uint8_t mod, uint8_t key)
-{
-	if (applyMap && key < NEO_MAP_SIZE) { //act like neo keyboard
-		Keyboard.release(KeyboardKeycode(neoMap[key]));
+void NeoReportParser::OnKeyUp(uint8_t mod, uint8_t key) {
+	if (applyMap && key < NEO_MAP_SIZE + 1) { //act like neo keyboard
 		
+		switch (key){ //handle neo-only-modifiers, others are handled in OnControlKeysChanged already
+			case KEY_CAPS_LOCK:
+				neoModifiers.bmLeft3 = false;
+				break;
+			
+			case KEY_BACKSLASH:
+			case KEY_NON_US_NUM:
+				neoModifiers.bmRight3 = false;
+				break;
+			
+			case KEY_NON_US:
+				neoModifiers.bmLeft4 = false;
+				break;
+			
+			default:
+				Keyboard.release(KeyboardKeycode(neoMap[key]));
+		}
 	} else { //act like a normal keyboard
 		Keyboard.release(KeyboardKeycode(key));
 	}
@@ -47,7 +109,7 @@ void NeoReportParser::OnControlKeysChanged(uint8_t before, uint8_t after) {
 
 	if (beforeMod.bmLeftCtrl != afterMod.bmLeftCtrl) {
 		if (neoModifiers.bmLeftCtrl) {
-			OnKeyUp(after, KEY_LEFT_CTRL);
+			OnKeyUp(before, KEY_LEFT_CTRL);
 			neoModifiers.bmLeftCtrl = false;
 		} else {
 			OnKeyDown(after, KEY_LEFT_CTRL);
@@ -57,7 +119,7 @@ void NeoReportParser::OnControlKeysChanged(uint8_t before, uint8_t after) {
 	
 	if (beforeMod.bmLeftShift != afterMod.bmLeftShift) {
 		if (neoModifiers.bmLeftShift) {
-			OnKeyUp(after, KEY_LEFT_SHIFT);
+			OnKeyUp(before, KEY_LEFT_SHIFT);
 			neoModifiers.bmLeftShift = false;
 		} else {
 			OnKeyDown(after, KEY_LEFT_SHIFT);
@@ -67,7 +129,7 @@ void NeoReportParser::OnControlKeysChanged(uint8_t before, uint8_t after) {
 	
 	if (beforeMod.bmLeftAlt != afterMod.bmLeftAlt) {
 		if (neoModifiers.bmLeftAlt) {
-			OnKeyUp(after, KEY_LEFT_ALT);
+			OnKeyUp(before, KEY_LEFT_ALT);
 			neoModifiers.bmLeftAlt = false;
 		} else {
 			OnKeyDown(after, KEY_LEFT_ALT);
@@ -78,7 +140,7 @@ void NeoReportParser::OnControlKeysChanged(uint8_t before, uint8_t after) {
 	
 	if (beforeMod.bmLeftGUI != afterMod.bmLeftGUI) {
 		if (neoModifiers.bmLeftGUI) {
-			OnKeyUp(after, KEY_LEFT_GUI);
+			OnKeyUp(before, KEY_LEFT_GUI);
 			neoModifiers.bmLeftGUI = false;
 		} else {
 			OnKeyDown(after, KEY_LEFT_GUI);
@@ -88,7 +150,7 @@ void NeoReportParser::OnControlKeysChanged(uint8_t before, uint8_t after) {
 
 	if (beforeMod.bmRightCtrl != afterMod.bmRightCtrl) {
 		if (neoModifiers.bmRightCtrl) {
-			OnKeyUp(after, KEY_RIGHT_CTRL);
+			OnKeyUp(before, KEY_RIGHT_CTRL);
 			neoModifiers.bmRightCtrl = false;
 		} else {
 			OnKeyDown(after, KEY_RIGHT_CTRL);
@@ -98,7 +160,7 @@ void NeoReportParser::OnControlKeysChanged(uint8_t before, uint8_t after) {
 	
 	if (beforeMod.bmRightShift != afterMod.bmRightShift) {
 		if (neoModifiers.bmRightShift) {
-			OnKeyUp(after, KEY_RIGHT_SHIFT);
+			OnKeyUp(before, KEY_RIGHT_SHIFT);
 			neoModifiers.bmRightShift = false;
 		} else {
 			OnKeyDown(after, KEY_RIGHT_SHIFT);
@@ -108,7 +170,7 @@ void NeoReportParser::OnControlKeysChanged(uint8_t before, uint8_t after) {
 	
 	if (beforeMod.bmRightAlt != afterMod.bmRightAlt) {
 		if (neoModifiers.bmRightAlt) {
-			OnKeyUp(after, KEY_RIGHT_ALT);
+			OnKeyUp(before, KEY_RIGHT_ALT);
 			neoModifiers.bmRightAlt = false;
 		} else {
 			OnKeyDown(after, KEY_RIGHT_ALT);
@@ -118,7 +180,7 @@ void NeoReportParser::OnControlKeysChanged(uint8_t before, uint8_t after) {
 	
 	if (beforeMod.bmRightGUI != afterMod.bmRightGUI) {
 		if (neoModifiers.bmRightGUI) {
-			OnKeyUp(after, KEY_RIGHT_GUI);
+			OnKeyUp(before, KEY_RIGHT_GUI);
 			neoModifiers.bmRightGUI = false;
 		} else {
 			OnKeyDown(after, KEY_RIGHT_GUI);
