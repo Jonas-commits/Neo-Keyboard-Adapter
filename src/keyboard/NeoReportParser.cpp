@@ -16,9 +16,15 @@
 	 KEYPAD_8, KEYPAD_9, KEYPAD_0, KEYPAD_DOT
  };
 
+const InputSequence NeoReportParser::neoMapL2[] PROGMEM = {0}; //TODO
+const InputSequence NeoReportParser::neoMapL3[] PROGMEM = {0}; //TODO
+const InputSequence NeoReportParser::neoMapL4[] PROGMEM = {0}; //TODO
+const InputSequence NeoReportParser::neoMapL5[] PROGMEM = {0}; //TODO
+const InputSequence NeoReportParser::neoMapL6[] PROGMEM = {0}; //TODO
+
 void NeoReportParser::OnKeyDown(uint8_t mod, uint8_t key) {
 	if (applyMap && key < NEO_MAP_SIZE + 1){ //act like neo keyboard
-		
+
 		switch (key){ //handle neo-only-modifiers, others are handled in OnControlKeysChanged already
 			case KEY_CAPS_LOCK:
 				neoModifiers.bmLeft3 = true;
@@ -46,24 +52,25 @@ void NeoReportParser::OnKeyDown(uint8_t mod, uint8_t key) {
 							Keyboard.press(KeyboardKeycode(neoMap[key]));
 							
 						} else {
-							
+							substitutePress(neoMapL2, key);
 						}
 					}
 				
 				} else if (neoModifiers.bmLeft3 || neoModifiers.bmRight3) {
 					if (neoModifiers.bmLeft4 || neoModifiers.bmRightAlt) { // layer 6
-						
+						substitutePress(neoMapL6, key);
 					} else { // layer 3
-						
+						substitutePress(neoMapL3, key);
 					}
 					
 				} else if (neoModifiers.bmLeft4 || neoModifiers.bmRightAlt) { // layer 4
-				
+					substitutePress(neoMapL4, key);
 				} else { // layer 1
-					if (key != KEY_RIGHT_BRACE) { //only key not fitting in layer1
+					if (key != KEY_EQUAL) { //only key not fitting in layer1
 						Keyboard.press(KeyboardKeycode(neoMap[key]));
 					} else {
-						
+						InputSequence sq = {KEY_LEFT_SHIFT, KEY_EQUAL};
+						substitutePress(&sq, 0);
 					}
 				}
 		}
@@ -187,6 +194,18 @@ void NeoReportParser::OnControlKeysChanged(uint8_t before, uint8_t after) {
 			neoModifiers.bmRightGUI = true;
 		}
 		
+	}
+}
+
+void NeoReportParser::substitutePress(InputSequence *sq, uint8_t offset){
+	InputSequence ModKey = sq[offset];
+	if(ModKey.modifiers == KEY_UNICODE){
+		//TODO
+	} else{
+		Keyboard.releaseAll();
+		Keyboard.press(KeyboardKeycode(ModKey.modifiers));
+		Keyboard.press(KeyboardKeycode(ModKey.key));
+		Keyboard.releaseAll(); //TODO: refine in release function
 	}
 }
 
