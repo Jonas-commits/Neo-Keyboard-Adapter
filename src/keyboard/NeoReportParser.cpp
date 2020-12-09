@@ -42,6 +42,7 @@ void NeoReportParser::OnKeyDown(uint8_t mod, uint8_t key) {
 			default:
 				if (neoModifiers.bmLeftShift || neoModifiers.bmRightShift) {
 					if (neoModifiers.bmLeft3 || neoModifiers.bmRight3) { //layer 5
+						substitutePress(neoMapL5, key);
 						
 					} else { // layer 2
 						if ( 
@@ -57,14 +58,17 @@ void NeoReportParser::OnKeyDown(uint8_t mod, uint8_t key) {
 					}
 				
 				} else if (neoModifiers.bmLeft3 || neoModifiers.bmRight3) {
+					
 					if (neoModifiers.bmLeft4 || neoModifiers.bmRightAlt) { // layer 6
 						substitutePress(neoMapL6, key);
+						
 					} else { // layer 3
 						substitutePress(neoMapL3, key);
 					}
 					
 				} else if (neoModifiers.bmLeft4 || neoModifiers.bmRightAlt) { // layer 4
 					substitutePress(neoMapL4, key);
+				
 				} else { // layer 1
 					if (key != KEY_EQUAL) { //only key not fitting in layer1
 						Keyboard.press(KeyboardKeycode(neoMap[key]));
