@@ -16,7 +16,27 @@
 	 KEYPAD_8, KEYPAD_9, KEYPAD_0, KEYPAD_DOT
  };
 
-const InputSequence NeoReportParser::neoMapL2[] PROGMEM = {0}; //TODO
+const InputSequence NeoReportParser::neoMapL2[] = {
+	{KEY_LEFT_SHIFT, KEY_TILDE}, {KEY_LEFT_SHIFT, KEY_3}, {KEY_UNICODE, 0x2113}, {KEY_UNICODE, 0xBB},
+	{KEY_UNICODE, 0xAB}, {KEY_LEFT_SHIFT, KEY_4}, {KEY_RIGHT_ALT, KEY_E}, {KEY_UNICODE, 0x201E},
+	{KEY_UNICODE, 0x201C}, {KEY_UNICODE, 0x201D}, {0, 0}, {0, 0}, 
+	{0, 0}, {0, 0}, {0, 0}, {0, 0},
+	{KEY_UNICODE, 0x2014}, {KEY_UNICODE, 0xB8}, {KEY_UNICODE, 0x1E9E}, {KEY_UNICODE, 0x2DC},
+	{0, 0}, {0, 0}, {0, 0}, {0, 0},
+	{KEY_UNICODE, 0x2C7}, {KEY_UNICODE, 0x2013}, {KEY_UNICODE, 0x2022}, {0, 0}, 
+	{0, 0}, {0, 0}, {0, 0}, {0, 0}, 
+	{0, 0}, {0, 0}, {0, 0}, {0, 0},
+	{0, 0}, {0, 0}, {0, 0}, {0, 0},
+	{0, 0}, {0, 0}, {0, 0}, {0, 0},
+	{0, 0}, {0, 0}, {0, 0}, {0, 0},
+	{0, 0}, {0, 0}, {0, 0}, {0, 0},
+	{0, 0}, {0, 0}, {0, 0}, {0, 0},
+	{0, 0}, {0, 0}, {0, 0}, {KEY_UNICODE, 0x2666},
+	{KEY_UNICODE, 0x2665}, {KEY_UNICODE, 0x2660}, {KEY_UNICODE, 0x2663}, {KEY_RIGHT_ALT, KEY_E},
+	{KEY_UNICODE, 0x2023}, {KEY_UNICODE, 0x2714}, {KEY_UNICODE, 0x2718}, {KEY_RIGHT_ALT, 0x2020},
+	{KEY_UNICODE, 0x2423}, {KEY_RESERVED, KEY_PERIOD} 
+}; 
+	
 const InputSequence NeoReportParser::neoMapL3[] PROGMEM = {0}; //TODO
 const InputSequence NeoReportParser::neoMapL4[] PROGMEM = {0}; //TODO
 const InputSequence NeoReportParser::neoMapL5[] PROGMEM = {0}; //TODO
@@ -46,14 +66,15 @@ void NeoReportParser::OnKeyDown(uint8_t mod, uint8_t key) {
 						
 					} else { // layer 2
 						if ( 
-							key <= KEY_Z || KEY_ENTER <= key <= KEY_SPACE || key == KEY_SEMICOLON || key == KEY_QUOTE
+							key <= KEY_Z || (KEY_ENTER <= key && key <= KEY_SPACE) || 
+							(KEY_BACKSLASH <= key && key <= KEY_QUOTE) || (KEY_SLASH <= key && key <= KEYPAD_ENTER)
 							|| neoModifiers.bmLeftCtrl || neoModifiers.bmRightCtrl
 							|| neoModifiers.bmLeftGUI || neoModifiers.bmRightGUI || neoModifiers.bmLeftAlt
 						) {
 							Keyboard.press(KeyboardKeycode(neoMap[key]));
 							
 						} else {
-							substitutePress(neoMapL2, key);
+							substitutePress(neoMapL2, key - KEY_Z - 1);
 						}
 					}
 				
@@ -203,13 +224,33 @@ void NeoReportParser::OnControlKeysChanged(uint8_t before, uint8_t after) {
 
 void NeoReportParser::substitutePress(InputSequence *sq, uint8_t offset){
 	InputSequence ModKey = sq[offset];
+	
+	Keyboard.releaseAll();
 	if(ModKey.modifiers == KEY_UNICODE){
-		//TODO
+		uint16_t uni = ModKey.key;
+		uint8_t digits[5];
+		//load digits into array to send them in reverse order
+		for(int8_t i = 0; i < 5; i++){
+			digits[i] =  uni % 10;
+			uni /= 10;
+		}
+		
+		Keyboard.press(KeyboardKeycode(KEY_LEFT_ALT));
+		for(int8_t i = 4; i >= 0; i--){
+			uint8_t digit = digits[i];
+			if(digit == 0){ //0 is after 9 in keypad key order
+				digit = 10;
+			}
+			Keyboard.write(KeyboardKeycode(digit + KEYPAD_1 - 1));
+		}
+		//release in the end of function
+		
+		
 	} else{
-		Keyboard.releaseAll();
 		Keyboard.press(KeyboardKeycode(ModKey.modifiers));
 		Keyboard.press(KeyboardKeycode(ModKey.key));
-		Keyboard.releaseAll(); //TODO: refine in release function
+		//release in the end of function
 	}
+	Keyboard.releaseAll(); //TODO: refine in release function
 }
 

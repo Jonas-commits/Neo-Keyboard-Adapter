@@ -19,20 +19,24 @@ struct NeoModifiers {
 	boolean bmLeft4;
 };
 
+//todo: get rid of this struture, by separating into 2 arrays, progmem does not like structures
 struct InputSequence {
 	uint8_t modifiers;
 	uint16_t key;
 };
 
+enum C : uint8_t {
+	KEY_UNICODE = 0xFF
+};
+
 class NeoReportParser : public KeyboardReportParser
 {
 	private:
-	const static uint8_t KEY_UNICODE = 0xFF;
 	
 	const static uint8_t NEO_MAP_SIZE = 100;
 	const static uint8_t neoMap[NEO_MAP_SIZE];
 	
-	const static InputSequence neoMapL2[NEO_MAP_SIZE] PROGMEM; 
+	const static InputSequence neoMapL2[NEO_MAP_SIZE - KEY_Z - 1];
 	const static InputSequence neoMapL3[NEO_MAP_SIZE] PROGMEM;
 	const static InputSequence neoMapL4[NEO_MAP_SIZE] PROGMEM;
 	const static InputSequence neoMapL5[NEO_MAP_SIZE] PROGMEM;
