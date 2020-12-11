@@ -51,7 +51,7 @@ class NeoReportParser : public KeyboardReportParser
 	
 	void substitutePress(InputSequence *sq, uint8_t offset);
 	int8_t getActiveLayer();
-	
+	boolean neoModifierChange(uint8_t key, boolean isKeyDownEvent);
 	
 	
 	public:

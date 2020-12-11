@@ -70,25 +70,9 @@ const InputSequence NeoReportParser::neoMapL6[] PROGMEM = {0}; //TODO
 void NeoReportParser::OnKeyDown(uint8_t mod, uint8_t key) {
 	if (applyMap && key < NEO_MAP_SIZE + 1){ //act like neo keyboard
 
-		/*
-		 * handle neo modifiers and quit after determination, as we want to suppress the key press
-		 * other modifiers do not need to be considered here, as they are handled in the OnControlKeysChanged function
-		 */
-		switch (key){ 
-			case KEY_CAPS_LOCK:
-				neoModifiers.bmLeft3 = true;
-				return;
-			
-			case KEY_BACKSLASH:
-			case KEY_NON_US_NUM:
-				neoModifiers.bmRight3 = true;
-				return;
-				
-			case KEY_NON_US:
-				neoModifiers.bmLeft4 = true;
-				return;
+		if(neoModifierChange(key, true)){
+			return;
 		}
-			
 		
 		// map action according the current layer active, indicated by modifier states
 		switch (getActiveLayer()) {
@@ -139,23 +123,12 @@ void NeoReportParser::OnKeyDown(uint8_t mod, uint8_t key) {
 void NeoReportParser::OnKeyUp(uint8_t mod, uint8_t key) {
 	if (applyMap && key < NEO_MAP_SIZE + 1) { //act like neo keyboard
 		
-		switch (key){ //handle neo-only-modifiers, others are handled in OnControlKeysChanged already
-			case KEY_CAPS_LOCK:
-				neoModifiers.bmLeft3 = false;
-				break;
-			
-			case KEY_BACKSLASH:
-			case KEY_NON_US_NUM:
-				neoModifiers.bmRight3 = false;
-				break;
-			
-			case KEY_NON_US:
-				neoModifiers.bmLeft4 = false;
-				break;
-			
-			default:
-				Keyboard.release(KeyboardKeycode(neoMap[key]));
+		if(neoModifierChange(key, false)){
+			return;
 		}
+		
+		Keyboard.release(KeyboardKeycode(neoMap[key]));
+	
 	} else { //act like a normal keyboard
 		Keyboard.release(KeyboardKeycode(key));
 	}
@@ -289,14 +262,15 @@ int8_t NeoReportParser::getActiveLayer() {
 	if (neoModifiers.bmLeftShift || neoModifiers.bmRightShift) {
 		if (neoModifiers.bmLeft3 || neoModifiers.bmRight3) {
 			return 5;
-					
+		
 		} else {
 			return 2;
 		}
-				
+		
 	} else if (neoModifiers.bmLeft3 || neoModifiers.bmRight3) {
 		if (neoModifiers.bmLeft4 || neoModifiers.bmRightAlt) {
 			return 6;
+		
 		} else {
 			return 3;
 		}
@@ -306,5 +280,25 @@ int8_t NeoReportParser::getActiveLayer() {
 		
 	} else {
 		return 1;
+	}
+}
+
+boolean NeoReportParser::neoModifierChange(uint8_t key, boolean isKeyDownEvent){
+	switch (key){ 
+		case KEY_CAPS_LOCK:
+			neoModifiers.bmLeft3 = isKeyDownEvent;
+			return true;
+			
+		case KEY_BACKSLASH:
+		case KEY_NON_US_NUM:
+			neoModifiers.bmRight3 = isKeyDownEvent;
+			return true;
+				
+		case KEY_NON_US:
+			neoModifiers.bmLeft4 = isKeyDownEvent;
+			return true;
+			
+		default:
+			return false;
 	}
 }
