@@ -42,24 +42,59 @@ const uint8_t NeoReportParser::neoMap[] = {
 };
 
 const InputSequence NeoReportParser::neoMapL2[] PROGMEM = {
-	{KEY_LEFT_SHIFT, KEY_TILDE}, {KEY_LEFT_SHIFT, KEY_3}, {KEY_UNICODE, 0x2113}, {KEY_UNICODE, 0xBB},
-	{KEY_UNICODE, 0xAB}, {KEY_LEFT_SHIFT, KEY_4}, {KEY_RIGHT_ALT, KEY_E}, {KEY_UNICODE, 0x201E},
-	{KEY_UNICODE, 0x201C}, {KEY_UNICODE, 0x201D}, {0, 0}, {0, 0}, 
-	{0, 0}, {0, 0}, {0, 0}, {0, 0},
-	{KEY_UNICODE, 0x2014}, {KEY_UNICODE, 0xB8}, {KEY_UNICODE, 0x1E9E}, {KEY_UNICODE, 0x2DC},
-	{0, 0}, {0, 0}, {0, 0}, {0, 0},
-	{KEY_UNICODE, 0x2C7}, {KEY_UNICODE, 0x2013}, {KEY_UNICODE, 0x2022}, {0, 0}, 
-	{0, 0}, {0, 0}, {0, 0}, {0, 0}, 
-	{0, 0}, {0, 0}, {0, 0}, {0, 0},
-	{0, 0}, {0, 0}, {0, 0}, {0, 0},
-	{0, 0}, {0, 0}, {0, 0}, {0, 0},
-	{0, 0}, {0, 0}, {0, 0}, {0, 0},
-	{0, 0}, {0, 0}, {0, 0}, {0, 0},
-	{0, 0}, {0, 0}, {0, 0}, {0, 0},
-	{0, 0}, {0, 0}, {0, 0}, {KEY_UNICODE, 0x2666},
-	{KEY_UNICODE, 0x2665}, {KEY_UNICODE, 0x2660}, {KEY_UNICODE, 0x2663}, {KEY_RIGHT_ALT, KEY_E},
-	{KEY_UNICODE, 0x2023}, {KEY_UNICODE, 0x2714}, {KEY_UNICODE, 0x2718}, {KEY_RIGHT_ALT, 0x2020},
-	{KEY_UNICODE, 0x2423}, {KEY_RESERVED, KEY_PERIOD} 
+  //KEY_1							KEY_2							KEY_3							KEY_4
+	{KEY_LEFT_SHIFT, KEY_TILDE},	{KEY_LEFT_SHIFT, KEY_3},		{KEY_UNICODE, 0x2113},			{KEY_UNICODE, 0xBB},
+	
+  //KEY_5							KEY_6							KEY_7							KEY_8
+	{KEY_UNICODE, 0xAB},			{KEY_LEFT_SHIFT, KEY_4},		{KEY_RIGHT_ALT, KEY_E},			{KEY_UNICODE, 0x201E},
+	
+  //KEY_9							KEY_0							KEY_ENTER						KEY_ESC
+	{KEY_UNICODE, 0x201C},			{KEY_UNICODE, 0x201D},			{0, 0},							{0, 0},
+	
+  //KEY_BACKSPACE					KEY_TAB							KEY_SPACE						KEY_MINUS
+	{0, 0},							{0, 0},							{0, 0},							{KEY_UNICODE, 0x2014},
+
+  //KEY_EQUAL						KEY_LEFT_BRACE					KEY_RIGHT_BRACE					KEY_BACKSLASH
+	{KEY_UNICODE, 0xB8},			{KEY_UNICODE, 0x1E9E},			{KEY_UNICODE, 0x2DC},			{0, 0},
+	
+  //KEY_NON_US_NUM					KEY_SEMICOLON					KEY_QUOTE						KEY_TILDE
+	{0, 0},							{0, 0},							{0, 0},							{KEY_UNICODE, 0x2C7},
+	
+  //KEY_COMMA						KEY_PERIOD						KEY_SLASH						KEY_CAPS_LOCK
+	{KEY_UNICODE, 0x2013},			{KEY_UNICODE, 0x2022},			{0, 0},			{0, 0}, 
+	
+  //KEY_F1							KEY_F2							KEY_F3							KEY_F4
+	{0, 0},							{0, 0},							{0, 0},							{0, 0},
+	
+  //KEY_F5							KEY_F6							KEY_F7							KEY_F8
+	{0, 0},							{0, 0},							{0, 0},							{0, 0},
+	
+  //KEY_F9							KEY_F10							KEY_F11							KEY_F12
+	{0, 0},							{0, 0},							{0, 0},							{0, 0},
+		
+  //KEY_PRINT						KEY_SCROLL_LOCK					KEY_PAUSE						KEY_INSERT
+	{0, 0},							{0, 0},							{0, 0},							{0, 0},
+		
+  //KEY_HOME						KEY_PAGE_UP						KEY_DELETE						KEY_END
+	{0, 0},							{0, 0},							{0, 0},							{0, 0},
+		
+  //KEY_PAGE_DOWN					KEY_RIGHT_ARROW					KEY_LEFT_ARROW					KEY_DOWN_ARROW
+	{0, 0},							{0, 0},							{0, 0},							{0, 0},
+	
+  //KEY_UP_ARROW					KEY_NUM_LOCK					KEYPAD_DIVIDE					KEYPAD_MULTIPLY
+	{0, 0},							{0, 0},							{0, 0},							{0, 0},
+
+  //KEYPAD_SUBTRACT					KEYPAD_ADD						KEYPAD_ENTER					KEYPAD_1
+	{0, 0},							{0, 0},							{0, 0},							{KEY_UNICODE, 0x2666},
+	
+  //KEYPAD_2						KEYPAD_3						KEYPAD_4						KEYPAD_5
+	{KEY_UNICODE, 0x2665},			{KEY_UNICODE, 0x2660},			{KEY_UNICODE, 0x2663},			{KEY_RIGHT_ALT, KEY_E},
+	
+  //KEYPAD_6						KEYPAD_7						KEYPAD_8						KEYPAD_9
+	{KEY_UNICODE, 0x2023},			{KEY_UNICODE, 0x2714},			{KEY_UNICODE, 0x2718},			{KEY_RIGHT_ALT, 0x2020},
+  
+  //KEYPAD_0						KEYPAD_DOT
+	{KEY_UNICODE, 0x2423},			{KEY_RESERVED, KEY_PERIOD} 
 }; 
 	
 const InputSequence NeoReportParser::neoMapL3[] PROGMEM = {0}; //TODO
