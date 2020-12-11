@@ -20,7 +20,7 @@ struct NeoModifiers {
 };
 
 struct InputSequence {
-	uint8_t modifiers;
+	uint8_t modifier;
 	uint16_t key;
 };
 
@@ -34,6 +34,8 @@ class NeoReportParser : public KeyboardReportParser
 	
 	const static uint8_t NEO_MAP_SIZE = 100;
 	const static uint8_t neoMap[NEO_MAP_SIZE];
+	
+	InputSequence *activeSequence;
 	
 	const static InputSequence neoMapL2[NEO_MAP_SIZE - KEY_Z - 1] PROGMEM;
 	const static InputSequence neoMapL3[NEO_MAP_SIZE] PROGMEM;
@@ -54,7 +56,7 @@ class NeoReportParser : public KeyboardReportParser
 	
 	
 	public:
-	NeoReportParser() : KeyboardReportParser(), neoModifiers(), applyMap(true){ }
+	NeoReportParser() : KeyboardReportParser(), neoModifiers(), applyMap(true), activeSequence(nullptr){ }
 	
 };
 

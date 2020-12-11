@@ -162,7 +162,17 @@ void NeoReportParser::OnKeyUp(uint8_t mod, uint8_t key) {
 			return;
 		}
 		
-		Keyboard.release(KeyboardKeycode(neoMap[key]));
+		if(activeSequence){ //release active holds from substitution
+			InputSequence sq;
+			memcpy_P(&sq, activeSequence, sizeof(sq));
+		
+			Keyboard.release(KeyboardKeycode(sq.key));
+			Keyboard.release(KeyboardKeycode(sq.modifier));
+			activeSequence = nullptr;
+			
+		} else { //otherwise just release the actual key
+			Keyboard.release(KeyboardKeycode(neoMap[key]));
+		}
 	
 	} else { //act like a normal keyboard
 		Keyboard.release(KeyboardKeycode(key));
@@ -266,7 +276,7 @@ void NeoReportParser::substitutePress(InputSequence *sq, uint8_t offset){
 	memcpy_P(&modKey, (sq + offset), sizeof(modKey));
 
 	Keyboard.releaseAll();
-	if(modKey.modifiers == KEY_UNICODE){
+	if(modKey.modifier == KEY_UNICODE){
 		uint16_t uni = modKey.key;
 		uint8_t digits[5];
 		//load digits into array to send them in reverse order
@@ -283,15 +293,26 @@ void NeoReportParser::substitutePress(InputSequence *sq, uint8_t offset){
 			}
 			Keyboard.write(KeyboardKeycode(digit + KEYPAD_1 - 1));
 		}
-		//release in the end of function
+		Keyboard.releaseAll();
 		
+		/*
+		 * modifiers are stored internally still but reported as key-up event to host, 
+		 * therefore restore by re-pressing. Other layers not restored, as key-presses
+		 * of those are omitted anyway
+		 */
+		if(neoModifiers.bmLeftShift){
+			OnKeyDown(0, KEY_LEFT_SHIFT);
+		} else if(neoModifiers.bmRightShift){
+			OnKeyDown(0, KEY_RIGHT_SHIFT);
+		}
 		
 	} else{
-		Keyboard.press(KeyboardKeycode(modKey.modifiers));
+		Keyboard.press(KeyboardKeycode(modKey.modifier));
 		Keyboard.press(KeyboardKeycode(modKey.key));
-		//release in the end of function
+		
+		//will be released on release event, so holding of the key is possible
+		activeSequence = sq + offset;
 	}
-	Keyboard.releaseAll(); //TODO: refine in release function
 }
 
 int8_t NeoReportParser::getActiveLayer() {
