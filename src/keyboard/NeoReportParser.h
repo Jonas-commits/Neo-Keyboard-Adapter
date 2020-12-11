@@ -50,6 +50,7 @@ class NeoReportParser : public KeyboardReportParser
 	void OnControlKeysChanged(uint8_t before, uint8_t after) override;
 	
 	void substitutePress(InputSequence *sq, uint8_t offset);
+	int8_t getActiveLayer();
 	
 	
 	

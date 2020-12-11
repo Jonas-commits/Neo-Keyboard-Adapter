@@ -1,20 +1,45 @@
 #include "NeoReportParser.h"
 
- const uint8_t NeoReportParser::neoMap[] = {
-	 KEY_RESERVED, KEY_ERROR_ROLLOVER, KEY_POST_FAIL, KEY_ERROR_UNDEFINED, KEY_U, KEY_Y, KEY_QUOTE, KEY_A,
-	 KEY_L, KEY_E, KEY_O, KEY_S, KEY_G, KEY_N, KEY_R, KEY_T,
-	 KEY_M, KEY_B, KEY_F, KEY_Q, KEY_X, KEY_C, KEY_I, KEY_W,
-	 KEY_H, KEY_P, KEY_V, KEY_SEMICOLON, KEY_K, KEY_LEFT_BRACE, KEY_1, KEY_2,
-	 KEY_3, KEY_4, KEY_5, KEY_6, KEY_7, KEY_8, KEY_9, KEY_0,
-	 KEY_ENTER, KEY_ESC, KEY_BACKSPACE, KEY_TAB, KEY_SPACE, KEY_SLASH, KEY_RIGHT_BRACE, KEY_MINUS,
-	 KEY_EQUAL, KEY_BACKSLASH, KEY_NON_US_NUM, KEY_D, KEY_Z, KEY_TILDE, KEY_COMMA, KEY_PERIOD,
-	 KEY_J, KEY_CAPS_LOCK, KEY_F1, KEY_F2, KEY_F3, KEY_F4, KEY_F5, KEY_F6,
-	 KEY_F7, KEY_F8, KEY_F9, KEY_F10, KEY_F11, KEY_F12, KEY_PRINTSCREEN, KEY_SCROLL_LOCK,
-	 KEY_PAUSE, KEY_INSERT, KEY_HOME, KEY_PAGE_UP, KEY_DELETE, KEY_END, KEY_PAGE_DOWN, KEY_RIGHT,
-	 KEY_LEFT, KEY_DOWN, KEY_UP, KEY_TAB, KEYPAD_DIVIDE, KEYPAD_MULTIPLY, KEYPAD_SUBTRACT, KEYPAD_ADD,
-	 KEYPAD_ENTER, KEYPAD_1, KEYPAD_2, KEYPAD_3, KEYPAD_4, KEYPAD_5, KEYPAD_6, KEYPAD_7,
-	 KEYPAD_8, KEYPAD_9, KEYPAD_0, KEYPAD_DOT
- };
+const uint8_t NeoReportParser::neoMap[] = {
+  //KEY_RESERVED		KEY_ERROR_ROLLOVER	KEY_POST_FAIL		KEY_ERROR_UNDEFINED	KEY_A				KEY_B				KEY_C				KEY_D
+	KEY_RESERVED,		KEY_ERROR_ROLLOVER,	KEY_POST_FAIL,		KEY_ERROR_UNDEFINED,KEY_U,				KEY_Y,				KEY_QUOTE,			KEY_A,
+	
+  //KEY_E				KEY_F				KEY_G				KEY_H				KEY_I				KEY_J				KEY_K				KEY_L
+	KEY_L,				KEY_E,				KEY_O,				KEY_S,				KEY_G,				KEY_N,				KEY_R,				KEY_T,
+	
+  //KEY_M				KEY_N				KEY_O				KEY_P				KEY_Q				KEY_R				KEY_S				KEY_T
+	KEY_M,				KEY_B,				KEY_F,				KEY_Q,				KEY_X,				KEY_C,				KEY_I,				KEY_W,
+	
+  //KEY_U				KEY_V				KEY_W				KEY_X				KEY_Y				KEY_Z				KEY_1				KEY_2
+	KEY_H,				KEY_P,				KEY_V,				KEY_SEMICOLON,		KEY_K,				KEY_LEFT_BRACE,		KEY_1,				KEY_2,
+	
+  //KEY_3				KEY_4				KEY_5				KEY_6				KEY_7				KEY_8				KEY_9				KEY_0
+	KEY_3,				KEY_4,				KEY_5,				KEY_6,				KEY_7,				KEY_8,				KEY_9,				KEY_0,
+	
+  //KEY_ENTER			KEY_ESC				KEY_BACKSPACE		KEY_TAB				KEY_SPACE			KEY_MINUS			KEY_EQUAL			KEY_LEFT_BRACE
+	KEY_ENTER,			KEY_ESC,			KEY_BACKSPACE,		KEY_TAB,			KEY_SPACE,			KEY_SLASH,			KEY_RIGHT_BRACE,	KEY_MINUS,
+	
+  //KEY_RIGHT_BRACE		KEY_BACKSLASH		KEY_NON_US_NUM		KEY_SEMICOLON		KEY_QUOTE			KEY_TILDE			KEY_COMMA			KEY_PERIOD
+	KEY_EQUAL,			KEY_BACKSLASH,		KEY_NON_US_NUM,		KEY_D,				KEY_Z,				KEY_TILDE,			KEY_COMMA,			KEY_PERIOD,
+	
+  //KEY_SLASH			KEY_CAPS_LOCK		KEY_F1				KEY_F2				KEY_F3				KEY_F4				KEY_F5				KEY_F6
+	KEY_J,				KEY_CAPS_LOCK,		KEY_F1,				KEY_F2,				KEY_F3,				KEY_F4,				KEY_F5,				KEY_F6,
+	
+  //KEY_F7				KEY_F8				KEY_F9				KEY_F10				KEY_F11				KEY_F12				KEY_PRINT			KEY_SCROLL_LOCK
+	KEY_F7,				KEY_F8,				KEY_F9,				KEY_F10,			KEY_F11,			KEY_F12,			KEY_PRINTSCREEN,	KEY_SCROLL_LOCK,
+	
+  //KEY_PAUSE			KEY_INSERT			KEY_HOME			KEY_PAGE_UP			KEY_DELETE			KEY_END				KEY_PAGE_DOWN		KEY_RIGHT_ARROW
+	KEY_PAUSE,			KEY_INSERT,			KEY_HOME,			KEY_PAGE_UP,		KEY_DELETE,			KEY_END,			KEY_PAGE_DOWN,		KEY_RIGHT_ARROW,
+	
+  //KEY_LEFT_ARROW		KEY_DOWN_ARROW		KEY_UP_ARROW		KEY_NUM_LOCK		KEYPAD_DIVIDE		KEYPAD_MULTIPLY		KEYPAD_SUBTRACT		KEYPAD_ADD
+	KEY_LEFT_ARROW,		KEY_DOWN_ARROW,		KEY_UP_ARROW,		KEY_TAB,			KEYPAD_DIVIDE,		KEYPAD_MULTIPLY,	KEYPAD_SUBTRACT,	KEYPAD_ADD,
+	
+  //KEYPAD_ENTER		KEYPAD_1			KEYPAD_2			KEYPAD_3			KEYPAD_4			KEYPAD_5			KEYPAD_6			KEYPAD_7
+	KEYPAD_ENTER,		KEYPAD_1,			KEYPAD_2,			KEYPAD_3,			KEYPAD_4,			KEYPAD_5,			KEYPAD_6,			KEYPAD_7,
+	
+  //KEYPAD_8			KEYPAD_9			KEYPAD_0			KEYPAD_DOT
+	KEYPAD_8,			KEYPAD_9,			KEYPAD_0,			KEYPAD_DOT
+};
 
 const InputSequence NeoReportParser::neoMapL2[] = {
 	{KEY_LEFT_SHIFT, KEY_TILDE}, {KEY_LEFT_SHIFT, KEY_3}, {KEY_UNICODE, 0x2113}, {KEY_UNICODE, 0xBB},
@@ -45,61 +70,67 @@ const InputSequence NeoReportParser::neoMapL6[] PROGMEM = {0}; //TODO
 void NeoReportParser::OnKeyDown(uint8_t mod, uint8_t key) {
 	if (applyMap && key < NEO_MAP_SIZE + 1){ //act like neo keyboard
 
-		switch (key){ //handle neo-only-modifiers, others are handled in OnControlKeysChanged already
+		/*
+		 * handle neo modifiers and quit after determination, as we want to suppress the key press
+		 * other modifiers do not need to be considered here, as they are handled in the OnControlKeysChanged function
+		 */
+		switch (key){ 
 			case KEY_CAPS_LOCK:
 				neoModifiers.bmLeft3 = true;
-				break;
+				return;
 			
 			case KEY_BACKSLASH:
 			case KEY_NON_US_NUM:
 				neoModifiers.bmRight3 = true;
-				break;
+				return;
 				
 			case KEY_NON_US:
 				neoModifiers.bmLeft4 = true;
-				break;
+				return;
+		}
 			
-			default:
-				if (neoModifiers.bmLeftShift || neoModifiers.bmRightShift) {
-					if (neoModifiers.bmLeft3 || neoModifiers.bmRight3) { //layer 5
-						substitutePress(neoMapL5, key);
-						
-					} else { // layer 2
-						if ( 
-							key <= KEY_Z || (KEY_ENTER <= key && key <= KEY_SPACE) || 
+		
+		// map action according the current layer active, indicated by modifier states
+		switch (getActiveLayer()) {
+			case 1:
+				if (key != KEY_EQUAL) { //only key not fitting in layer1
+					Keyboard.press(KeyboardKeycode(neoMap[key]));
+				} else {
+					InputSequence sq = {KEY_LEFT_SHIFT, KEY_EQUAL};
+					substitutePress(&sq, 0);
+				}
+				break;
+					
+			case 2:
+				if ( key <= KEY_Z || (KEY_ENTER <= key && key <= KEY_SPACE) ||
 							(KEY_BACKSLASH <= key && key <= KEY_QUOTE) || (KEY_SLASH <= key && key <= KEYPAD_ENTER)
 							|| neoModifiers.bmLeftCtrl || neoModifiers.bmRightCtrl
-							|| neoModifiers.bmLeftGUI || neoModifiers.bmRightGUI || neoModifiers.bmLeftAlt
-						) {
-							Keyboard.press(KeyboardKeycode(neoMap[key]));
+							|| neoModifiers.bmLeftGUI || neoModifiers.bmRightGUI || neoModifiers.bmLeftAlt) {
 							
-						} else {
-							substitutePress(neoMapL2, key - KEY_Z - 1);
-						}
-					}
-				
-				} else if (neoModifiers.bmLeft3 || neoModifiers.bmRight3) {
-					
-					if (neoModifiers.bmLeft4 || neoModifiers.bmRightAlt) { // layer 6
-						substitutePress(neoMapL6, key);
-						
-					} else { // layer 3
-						substitutePress(neoMapL3, key);
-					}
-					
-				} else if (neoModifiers.bmLeft4 || neoModifiers.bmRightAlt) { // layer 4
-					substitutePress(neoMapL4, key);
-				
-				} else { // layer 1
-					if (key != KEY_EQUAL) { //only key not fitting in layer1
-						Keyboard.press(KeyboardKeycode(neoMap[key]));
-					} else {
-						InputSequence sq = {KEY_LEFT_SHIFT, KEY_EQUAL};
-						substitutePress(&sq, 0);
-					}
+					Keyboard.press(KeyboardKeycode(neoMap[key]));
+							
+				} else {
+					substitutePress(neoMapL2, key - KEY_Z - 1);
 				}
+				break;
+					
+			case 3:
+				substitutePress(neoMapL3, key);
+				break;
+					
+			case 4:
+				substitutePress(neoMapL4, key);
+				break;
+					
+			case 5:
+				substitutePress(neoMapL5, key);
+				break;
+					
+			case 6:
+				substitutePress(neoMapL6, key);
+				break;
 		}
-		
+
 	} else { //act like a normal keyboard
 		Keyboard.press(KeyboardKeycode(key));
 	}
@@ -254,3 +285,26 @@ void NeoReportParser::substitutePress(InputSequence *sq, uint8_t offset){
 	Keyboard.releaseAll(); //TODO: refine in release function
 }
 
+int8_t NeoReportParser::getActiveLayer() {
+	if (neoModifiers.bmLeftShift || neoModifiers.bmRightShift) {
+		if (neoModifiers.bmLeft3 || neoModifiers.bmRight3) {
+			return 5;
+					
+		} else {
+			return 2;
+		}
+				
+	} else if (neoModifiers.bmLeft3 || neoModifiers.bmRight3) {
+		if (neoModifiers.bmLeft4 || neoModifiers.bmRightAlt) {
+			return 6;
+		} else {
+			return 3;
+		}
+		
+	} else if (neoModifiers.bmLeft4 || neoModifiers.bmRightAlt) {
+		return 4;
+		
+	} else {
+		return 1;
+	}
+}
