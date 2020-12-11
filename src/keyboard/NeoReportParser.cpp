@@ -41,7 +41,7 @@ const uint8_t NeoReportParser::neoMap[] = {
 	KEYPAD_8,			KEYPAD_9,			KEYPAD_0,			KEYPAD_DOT
 };
 
-const InputSequence NeoReportParser::neoMapL2[] = {
+const InputSequence NeoReportParser::neoMapL2[] PROGMEM = {
 	{KEY_LEFT_SHIFT, KEY_TILDE}, {KEY_LEFT_SHIFT, KEY_3}, {KEY_UNICODE, 0x2113}, {KEY_UNICODE, 0xBB},
 	{KEY_UNICODE, 0xAB}, {KEY_LEFT_SHIFT, KEY_4}, {KEY_RIGHT_ALT, KEY_E}, {KEY_UNICODE, 0x201E},
 	{KEY_UNICODE, 0x201C}, {KEY_UNICODE, 0x201D}, {0, 0}, {0, 0}, 
@@ -80,7 +80,7 @@ void NeoReportParser::OnKeyDown(uint8_t mod, uint8_t key) {
 				if (key != KEY_EQUAL) { //only key not fitting in layer1
 					Keyboard.press(KeyboardKeycode(neoMap[key]));
 				} else {
-					InputSequence sq = {KEY_LEFT_SHIFT, KEY_EQUAL};
+					const static InputSequence sq PROGMEM = {KEY_LEFT_SHIFT, KEY_EQUAL};
 					substitutePress(&sq, 0);
 				}
 				break;
@@ -227,11 +227,12 @@ void NeoReportParser::OnControlKeysChanged(uint8_t before, uint8_t after) {
 }
 
 void NeoReportParser::substitutePress(InputSequence *sq, uint8_t offset){
-	InputSequence ModKey = sq[offset];
-	
+	InputSequence modKey;
+	memcpy_P(&modKey, (sq + offset), sizeof(modKey));
+
 	Keyboard.releaseAll();
-	if(ModKey.modifiers == KEY_UNICODE){
-		uint16_t uni = ModKey.key;
+	if(modKey.modifiers == KEY_UNICODE){
+		uint16_t uni = modKey.key;
 		uint8_t digits[5];
 		//load digits into array to send them in reverse order
 		for(int8_t i = 0; i < 5; i++){
@@ -251,8 +252,8 @@ void NeoReportParser::substitutePress(InputSequence *sq, uint8_t offset){
 		
 		
 	} else{
-		Keyboard.press(KeyboardKeycode(ModKey.modifiers));
-		Keyboard.press(KeyboardKeycode(ModKey.key));
+		Keyboard.press(KeyboardKeycode(modKey.modifiers));
+		Keyboard.press(KeyboardKeycode(modKey.key));
 		//release in the end of function
 	}
 	Keyboard.releaseAll(); //TODO: refine in release function
