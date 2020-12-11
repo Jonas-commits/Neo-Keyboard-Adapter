@@ -25,24 +25,21 @@ struct InputSequence {
 };
 
 enum C : uint8_t {
-	KEY_UNICODE = 0xFF
+	KEY_UNICODE = 0xFF,
+	NEO_MAP_SIZE = 100
 };
 
 class NeoReportParser : public KeyboardReportParser
 {
 	private:
-	
-	const static uint8_t NEO_MAP_SIZE = 100;
 	const static uint8_t neoMap[NEO_MAP_SIZE];
-	
-	InputSequence *activeSequence;
-	
 	const static InputSequence neoMapL2[NEO_MAP_SIZE - KEY_Z - 1] PROGMEM;
 	const static InputSequence neoMapL3[NEO_MAP_SIZE] PROGMEM;
 	const static InputSequence neoMapL4[NEO_MAP_SIZE] PROGMEM;
 	const static InputSequence neoMapL5[NEO_MAP_SIZE] PROGMEM;
 	const static InputSequence neoMapL6[NEO_MAP_SIZE] PROGMEM;
 	
+	InputSequence *activeSequence;
 	NeoModifiers neoModifiers;
 	boolean applyMap;
 	
