@@ -29,6 +29,16 @@ enum C : uint8_t {
 	NEO_MAP_SIZE = 100
 };
 
+enum Layer {
+	L1,
+	L2,
+	L3,
+	L4,
+	L4_SHIFT,
+	L5,
+	L6,
+};
+
 class NeoReportParser : public KeyboardReportParser
 {
 	private:
@@ -36,6 +46,7 @@ class NeoReportParser : public KeyboardReportParser
 	const static InputSequence neoMapL2[NEO_MAP_SIZE - KEY_Z - 1] PROGMEM;
 	const static InputSequence neoMapL3[NEO_MAP_SIZE] PROGMEM;
 	const static InputSequence neoMapL4[NEO_MAP_SIZE] PROGMEM;
+	const static InputSequence neoMapL4Shift[NEO_MAP_SIZE] PROGMEM;
 	const static uint16_t neoMapL5[NEO_MAP_SIZE] PROGMEM;
 	const static uint16_t neoMapL6[NEO_MAP_SIZE] PROGMEM;
 	
@@ -50,7 +61,7 @@ class NeoReportParser : public KeyboardReportParser
 	void substitutePress(InputSequence *sq, uint8_t offset);
 	void substitutePress(uint16_t *uni_map, uint8_t offset);
 	void pressUnicode(uint16_t code);
-	int8_t getActiveLayer();
+	Layer getActiveLayer();
 	boolean neoModifierChange(uint8_t key, boolean isKeyDownEvent);
 	
 	
