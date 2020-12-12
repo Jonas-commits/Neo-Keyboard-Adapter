@@ -53,6 +53,7 @@ class NeoReportParser : public KeyboardReportParser
 	InputSequence *activeSequence;
 	NeoModifiers neoModifiers;
 	boolean applyMap;
+	boolean leftGuiSinglePress;
 	
 	void OnKeyDown  (uint8_t mod, uint8_t key) override;
 	void OnKeyUp  (uint8_t mod, uint8_t key) override;

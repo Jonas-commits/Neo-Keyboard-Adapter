@@ -336,8 +336,27 @@ void NeoReportParser::OnKeyDown(uint8_t mod, uint8_t key) {
 	//uint32_t t;
 	//t = millis();
 	
+	//Use left windows key to change behavior of our driver
+	if (neoModifiers.bmLeftGUI) {
+		leftGuiSinglePress = false; //Host will never know we pressed something :)
+		
+		switch (key){
+			case KEY_F12:
+				applyMap = !applyMap;
+				return;
+				
+			case KEY_NUM_LOCK: // hack for toggeling num lock if it got lost for some reason
+				Keyboard.press(KeyboardKeycode(KEY_NUM_LOCK));
+				return;
+				
+			default:
+				Keyboard.press(KeyboardKeycode(KEY_LEFT_GUI));
+		}
+	}
+	
 	if (applyMap && key < NEO_MAP_SIZE + 1){ //act like neo keyboard
 
+		//in case of neo modifier pressed we can spare the rest of the code
 		if(neoModifierChange(key, true)){
 			return;
 		}
@@ -420,8 +439,6 @@ void NeoReportParser::OnKeyUp(uint8_t mod, uint8_t key) {
 }
 
 void NeoReportParser::OnControlKeysChanged(uint8_t before, uint8_t after) {
-
-
 	MODIFIERKEYS beforeMod;
 	*((uint8_t*)&beforeMod) = before;
 
@@ -462,10 +479,16 @@ void NeoReportParser::OnControlKeysChanged(uint8_t before, uint8_t after) {
 	if (beforeMod.bmLeftGUI != afterMod.bmLeftGUI) {
 		if (neoModifiers.bmLeftGUI) {
 			neoModifiers.bmLeftGUI = false;
+			
+			if (leftGuiSinglePress){ // no combo observed, press it eventually
+				leftGuiSinglePress = false;
+				Keyboard.press(KEY_LEFT_GUI);
+			}
 			Keyboard.release(KEY_LEFT_GUI);
 		} else {
 			neoModifiers.bmLeftGUI = true;
-			Keyboard.press(KEY_LEFT_GUI);
+			//OnKeyDown will set this, in case combo with win-key is hit
+			leftGuiSinglePress = true;
 		}
 	}
 
