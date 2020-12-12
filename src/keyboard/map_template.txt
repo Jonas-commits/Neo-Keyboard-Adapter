@@ -1,0 +1,74 @@
+  //KEY_RESERVED					KEY_ERROR_ROLLOVER	KEY_POST_FAIL								KEY_ERROR_UNDEFINED	
+	{0, 0},							{0, 0},							{0, 0},							{0, 0},
+		
+  //KEY_A							KEY_B							KEY_C							KEY_D
+	{0, 0},							{0, 0},							{0, 0},							{0, 0},
+		
+  //KEY_E							KEY_F							KEY_G							KEY_H
+	{0, 0},							{0, 0},							{0, 0},							{0, 0},
+		
+  //KEY_I							KEY_J							KEY_K							KEY_L
+	{0, 0},							{0, 0},							{0, 0},							{0, 0},
+		
+  //KEY_M							KEY_N							KEY_O							KEY_P
+	{0, 0},							{0, 0},							{0, 0},							{0, 0},
+		
+  //KEY_Q							KEY_R							KEY_S							KEY_T
+	{0, 0},							{0, 0},							{0, 0},							{0, 0},
+		
+  //KEY_U							KEY_V							KEY_W							KEY_X
+	{0, 0},							{0, 0},							{0, 0},							{0, 0},
+		
+  //KEY_Y							KEY_Z							KEY_1							KEY_2
+	{0, 0},							{0, 0},							{0, 0},							{0, 0},
+		
+  //KEY_3							KEY_4							KEY_5							KEY_6
+	{0, 0},							{0, 0},							{0, 0},							{0, 0},
+		
+  //KEY_7							KEY_8							KEY_9							KEY_0
+	{0, 0},							{0, 0},							{0, 0},							{0, 0},
+		
+  //KEY_ENTER						KEY_ESC							KEY_BACKSPACE					KEY_TAB
+	{0, 0},							{0, 0},							{0, 0},							{0, 0},
+		
+  //KEY_SPACE						KEY_MINUS						KEY_EQUAL						KEY_LEFT_BRACE
+	{0, 0},							{0, 0},							{0, 0},							{0, 0},
+		
+  //KEY_RIGHT_BRACE					KEY_BACKSLASH					KEY_NON_US_NUM					KEY_SEMICOLON
+	{0, 0},							{0, 0},							{0, 0},							{0, 0},
+		
+  //KEY_QUOTE						KEY_TILDE						KEY_COMMA						KEY_PERIOD
+	{0, 0},							{0, 0},							{0, 0},							{0, 0},
+
+  //KEY_SLASH						KEY_CAPS_LOCK					KEY_F1							KEY_F2
+	{0, 0},							{0, 0},							{KEY_RESERVED, KEY_F1},			{KEY_RESERVED, KEY_F2},
+		
+  //KEY_F3							KEY_F4							KEY_F5							KEY_F6
+	{KEY_RESERVED, KEY_F3},			{KEY_RESERVED, KEY_F4},			{KEY_RESERVED, KEY_F5},			{KEY_RESERVED, KEY_F6},
+		
+  //KEY_F7							KEY_F8							KEY_F9							KEY_F10
+	{KEY_RESERVED, KEY_F7},			{KEY_RESERVED, KEY_F8},			{KEY_RESERVED, KEY_F9},			{KEY_RESERVED, KEY_F10},
+		
+  //KEY_F11							KEY_F12							KEY_PRINT						KEY_SCROLL_LOCK
+	{KEY_RESERVED, KEY_F11},		{KEY_RESERVED, KEY_F12},		{KEY_RESERVED, KEY_PRINT},		{KEY_RESERVED, KEY_SCROLL_LOCK},
+		
+  //KEY_PAUSE						KEY_INSERT						KEY_HOME						KEY_PAGE_UP
+	{KEY_RESERVED, KEY_PAUSE},		{KEY_RESERVED, KEY_INSERT},		{KEY_RESERVED, KEY_HOME},		{KEY_RESERVED, KEY_PAGE_UP},
+		
+  //KEY_DELETE						KEY_END							KEY_PAGE_DOWN					KEY_RIGHT_ARROW
+	{KEY_RESERVED, KEY_DELETE},		{KEY_RESERVED, KEY_END},		{KEY_RESERVED, KEY_PAGE_DOWN},	{KEY_RESERVED, KEY_RIGHT_ARROW},
+		
+  //KEY_LEFT_ARROW					KEY_DOWN_ARROW					KEY_UP_ARROW					KEY_NUM_LOCK
+	{KEY_RESERVED, KEY_LEFT_ARROW},	{KEY_RESERVED, KEY_DOWN_ARROW},	{KEY_RESERVED, KEY_UP_ARROW},	{0,0},
+		
+  //KEYPAD_DIVIDE					KEYPAD_MULTIPLY					KEYPAD_SUBTRACT					KEYPAD_ADD
+	{0, 0},							{0, 0},							{0, 0},							{0, 0},
+		
+  //KEYPAD_ENTER					KEYPAD_1						KEYPAD_2						KEYPAD_3
+	{KEY_RESERVED, KEYPAD_ENTER},	{0, 0},							{0, 0},							{0, 0},
+		
+  //KEYPAD_4						KEYPAD_5						KEYPAD_6						KEYPAD_7
+	{0, 0},							{0, 0},							{0, 0},							{0, 0},
+		
+  //KEYPAD_8						KEYPAD_9						KEYPAD_0						KEYPAD_DOT
+	{0, 0},							{0, 0},							{0, 0},							{0, 0}
