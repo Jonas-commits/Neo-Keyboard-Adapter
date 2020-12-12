@@ -190,82 +190,82 @@ void NeoReportParser::OnControlKeysChanged(uint8_t before, uint8_t after) {
 
 	if (beforeMod.bmLeftCtrl != afterMod.bmLeftCtrl) {
 		if (neoModifiers.bmLeftCtrl) {
-			OnKeyUp(before, KEY_LEFT_CTRL);
 			neoModifiers.bmLeftCtrl = false;
+			Keyboard.release(KEY_LEFT_CTRL);
 		} else {
-			OnKeyDown(after, KEY_LEFT_CTRL);
 			neoModifiers.bmLeftCtrl = true;
+			Keyboard.press(KEY_LEFT_CTRL);
 		}
 	}
 	
 	if (beforeMod.bmLeftShift != afterMod.bmLeftShift) {
 		if (neoModifiers.bmLeftShift) {
-			OnKeyUp(before, KEY_LEFT_SHIFT);
 			neoModifiers.bmLeftShift = false;
+			Keyboard.release(KEY_LEFT_SHIFT);
 		} else {
-			OnKeyDown(after, KEY_LEFT_SHIFT);
 			neoModifiers.bmLeftShift = true;
+			Keyboard.press(KEY_LEFT_SHIFT);
 		}
 	}
 	
 	if (beforeMod.bmLeftAlt != afterMod.bmLeftAlt) {
 		if (neoModifiers.bmLeftAlt) {
-			OnKeyUp(before, KEY_LEFT_ALT);
 			neoModifiers.bmLeftAlt = false;
+			Keyboard.release(KEY_LEFT_ALT);
 		} else {
-			OnKeyDown(after, KEY_LEFT_ALT);
 			neoModifiers.bmLeftAlt = true;
+			Keyboard.press(KEY_LEFT_ALT);
 		}
 		
 	}
 	
 	if (beforeMod.bmLeftGUI != afterMod.bmLeftGUI) {
 		if (neoModifiers.bmLeftGUI) {
-			OnKeyUp(before, KEY_LEFT_GUI);
 			neoModifiers.bmLeftGUI = false;
+			Keyboard.release(KEY_LEFT_GUI);
 		} else {
-			OnKeyDown(after, KEY_LEFT_GUI);
 			neoModifiers.bmLeftGUI = true;
+			Keyboard.press(KEY_LEFT_GUI);
 		}
 	}
 
 	if (beforeMod.bmRightCtrl != afterMod.bmRightCtrl) {
 		if (neoModifiers.bmRightCtrl) {
-			OnKeyUp(before, KEY_RIGHT_CTRL);
 			neoModifiers.bmRightCtrl = false;
+			Keyboard.release(KEY_RIGHT_CTRL);
 		} else {
-			OnKeyDown(after, KEY_RIGHT_CTRL);
 			neoModifiers.bmRightCtrl = true;
+			Keyboard.press(KEY_RIGHT_CTRL);
 		}
 	}
 	
 	if (beforeMod.bmRightShift != afterMod.bmRightShift) {
 		if (neoModifiers.bmRightShift) {
-			OnKeyUp(before, KEY_RIGHT_SHIFT);
 			neoModifiers.bmRightShift = false;
+			Keyboard.release(KEY_RIGHT_SHIFT);
 		} else {
-			OnKeyDown(after, KEY_RIGHT_SHIFT);
 			neoModifiers.bmRightShift = true;
+			Keyboard.press(KEY_RIGHT_SHIFT);
 		}
 	}
 	
 	if (beforeMod.bmRightAlt != afterMod.bmRightAlt) {
 		if (neoModifiers.bmRightAlt) {
-			OnKeyUp(before, KEY_RIGHT_ALT);
 			neoModifiers.bmRightAlt = false;
+			Keyboard.release(KEY_RIGHT_ALT);
 		} else {
-			OnKeyDown(after, KEY_RIGHT_ALT);
 			neoModifiers.bmRightAlt = true;
+			Keyboard.press(KEY_RIGHT_ALT);
 		}
 	}
 	
 	if (beforeMod.bmRightGUI != afterMod.bmRightGUI) {
 		if (neoModifiers.bmRightGUI) {
-			OnKeyUp(before, KEY_RIGHT_GUI);
 			neoModifiers.bmRightGUI = false;
+			Keyboard.release(KEY_RIGHT_GUI);
 		} else {
-			OnKeyDown(after, KEY_RIGHT_GUI);
 			neoModifiers.bmRightGUI = true;
+			Keyboard.press(KEY_RIGHT_GUI);
 		}
 		
 	}
