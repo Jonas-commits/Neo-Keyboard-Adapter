@@ -173,9 +173,86 @@ const InputSequence NeoReportParser::neoMapL3[] PROGMEM = {
   //KEYPAD_8						KEYPAD_9						KEYPAD_0						KEYPAD_DOT
 	{KEY_UNICODE, 0x2191},			{KEY_UNICODE, 0x20D7},			{KEY_LEFT_SHIFT, KEY_5},		{KEY_RESERVED, KEYPAD_DOT}
 };
-const InputSequence NeoReportParser::neoMapL4[] PROGMEM = {0}; //TODO
-const InputSequence NeoReportParser::neoMapL5[] PROGMEM = {0}; //TODO
-const InputSequence NeoReportParser::neoMapL6[] PROGMEM = {0}; //TODO
+
+const InputSequence NeoReportParser::neoMapL4[] PROGMEM = {
+  //KEY_RESERVED					KEY_ERROR_ROLLOVER	KEY_POST_FAIL								KEY_ERROR_UNDEFINED	
+	{0, 0},							{0, 0},							{0, 0},							{0, 0},
+		
+  //KEY_A							KEY_B							KEY_C							KEY_D
+	{KEY_RESERVED, KEY_HOME},		{KEY_LEFT_CTRL, KEY_Y},			{KEY_RESERVED, KEY_INSERT},		{KEY_RESERVED, KEY_DOWN_ARROW},
+		
+  //KEY_E							KEY_F							KEY_G							KEY_H
+	{KEY_RESERVED, KEY_UP_ARROW},	{KEY_RESERVED, KEY_RIGHT_ARROW},{KEY_RESERVED, KEY_END},		{KEY_UNICODE, 0xBF},
+		
+  //KEY_I							KEY_J							KEY_K							KEY_L
+	{KEY_RESERVED, KEYPAD_8},		{KEY_RESERVED, KEYPAD_4},		{KEY_RESERVED, KEYPAD_5},		{KEY_RESERVED, KEYPAD_6},
+		
+  //KEY_M							KEY_N							KEY_O							KEY_P
+	{KEY_RESERVED, KEYPAD_1},		{KEY_LEFT_SHIFT, KEY_PERIOD},	{KEY_RESERVED, KEY_9},			{KEY_RESERVED, KEYPAD_ADD},
+		
+  //KEY_Q							KEY_R							KEY_S							KEY_T
+	{KEY_RESERVED, KEY_PAGE_UP},	{KEY_RESERVED, KEY_DELETE},		{KEY_RESERVED, KEY_LEFT_ARROW},	{KEY_RESERVED, KEY_PAGE_DOWN},
+		
+  //KEY_U							KEY_V							KEY_W							KEY_X
+	{KEY_RESERVED, KEYPAD_7},		{KEY_RESERVED, KEY_ENTER},		{KEY_RESERVED, KEY_BACKSPACE},	{KEY_RESERVED, KEY_TAB},
+		
+  //KEY_Y							KEY_Z							KEY_1							KEY_2
+	{KEY_UNICODE, 0xA1},			{KEY_RESERVED, KEY_ESC},		{KEY_UNICODE, 0xAA},			{KEY_UNICODE, 0xBA},
+		
+  //KEY_3							KEY_4							KEY_5							KEY_6
+	{KEY_UNICODE, 0x2116},			{0, 0},							{KEY_UNICODE, 0xB7},			{KEY_UNICODE, 0xA3},
+		
+  //KEY_7							KEY_8							KEY_9							KEY_0
+	{KEY_UNICODE, 0xA4},			{KEY_RESERVED, KEY_TAB},		{KEY_RESERVED, KEYPAD_DIVIDE},	{KEY_RESERVED, KEYPAD_MULTIPLY},
+		
+  //KEY_ENTER						KEY_ESC							KEY_BACKSPACE					KEY_TAB
+	{KEY_RESERVED, KEYPAD_ENTER},	{KEY_RESERVED, KEY_ESC},		{KEY_RESERVED, KEY_BACKSPACE},	{KEY_RESERVED, KEY_TAB},
+		
+  //KEY_SPACE						KEY_MINUS						KEY_EQUAL						KEY_LEFT_BRACE
+	{KEY_RESERVED, KEYPAD_0},		{KEY_RESERVED, KEYPAD_SUBTRACT},{KEY_UNICODE, 0xA8},			{KEY_UNICODE, 0x2212},
+		
+  //KEY_RIGHT_BRACE					KEY_BACKSLASH					KEY_NON_US_NUM					KEY_SEMICOLON
+	{KEY_UNICODE, 0x2DD},			{0, 0},							{0, 0},							{KEY_RESERVED, KEY_COMMA},
+		
+  //KEY_QUOTE						KEY_TILDE						KEY_COMMA						KEY_PERIOD
+	{KEY_RESERVED, KEY_PERIOD},		{KEY_UNICODE, 0x2D9},			{KEY_RESERVED, KEYPAD_2},		{KEY_RESERVED, KEYPAD_3},
+
+  //KEY_SLASH						KEY_CAPS_LOCK					KEY_F1							KEY_F2
+	{KEY_LEFT_SHIFT, KEY_COMMA},	{0, 0},							{KEY_RESERVED, KEY_F1},			{KEY_RESERVED, KEY_F2},
+		
+  //KEY_F3							KEY_F4							KEY_F5							KEY_F6
+	{KEY_RESERVED, KEY_F3},			{KEY_RESERVED, KEY_F4},			{KEY_RESERVED, KEY_F5},			{KEY_RESERVED, KEY_F6},
+		
+  //KEY_F7							KEY_F8							KEY_F9							KEY_F10
+	{KEY_RESERVED, KEY_F7},			{KEY_RESERVED, KEY_F8},			{KEY_RESERVED, KEY_F9},			{KEY_RESERVED, KEY_F10},
+		
+  //KEY_F11							KEY_F12							KEY_PRINT						KEY_SCROLL_LOCK
+	{KEY_RESERVED, KEY_F11},		{KEY_RESERVED, KEY_F12},		{KEY_RESERVED, KEY_PRINT},		{KEY_RESERVED, KEY_SCROLL_LOCK},
+		
+  //KEY_PAUSE						KEY_INSERT						KEY_HOME						KEY_PAGE_UP
+	{KEY_RESERVED, KEY_PAUSE},		{KEY_RESERVED, KEY_INSERT},		{KEY_RESERVED, KEY_HOME},		{KEY_RESERVED, KEY_PAGE_UP},
+		
+  //KEY_DELETE						KEY_END							KEY_PAGE_DOWN					KEY_RIGHT_ARROW
+	{KEY_RESERVED, KEY_DELETE},		{KEY_RESERVED, KEY_END},		{KEY_RESERVED, KEY_PAGE_DOWN},	{KEY_RESERVED, KEY_RIGHT_ARROW},
+		
+  //KEY_LEFT_ARROW					KEY_DOWN_ARROW					KEY_UP_ARROW					KEY_NUM_LOCK
+	{KEY_RESERVED, KEY_LEFT_ARROW},	{KEY_RESERVED, KEY_DOWN_ARROW},	{KEY_RESERVED, KEY_UP_ARROW},	{KEY_UNICODE, 0x2260},
+		
+  //KEYPAD_DIVIDE					KEYPAD_MULTIPLY					KEYPAD_SUBTRACT					KEYPAD_ADD
+	{KEY_UNICODE, 0x2044},			{KEY_UNICODE, 0xD7},			{KEY_UNICODE, 0x2216},			{0, 0},
+		
+  //KEYPAD_ENTER					KEYPAD_1						KEYPAD_2						KEYPAD_3
+	{KEY_RESERVED, KEYPAD_ENTER},	{KEY_LEFT_SHIFT, KEYPAD_1},		{KEY_LEFT_SHIFT, KEYPAD_2},		{KEY_LEFT_SHIFT, KEYPAD_3},
+		
+  //KEYPAD_4						KEYPAD_5						KEYPAD_6						KEYPAD_7
+	{KEY_LEFT_SHIFT, KEYPAD_4},		{KEY_RESERVED, KEY_APPLICATION},{KEY_LEFT_SHIFT, KEYPAD_6},		{KEY_LEFT_SHIFT, KEYPAD_7},
+		
+  //KEYPAD_8						KEYPAD_9						KEYPAD_0						KEYPAD_DOT
+	{KEY_LEFT_SHIFT, KEYPAD_8},		{KEY_LEFT_SHIFT, KEYPAD_9},		{KEY_LEFT_SHIFT, KEYPAD_0},		{KEY_LEFT_SHIFT, KEYPAD_DOT}
+};
+
+const uint16_t NeoReportParser::neoMapL5[] PROGMEM = {0}; //TODO
+const uint16_t NeoReportParser::neoMapL6[] PROGMEM = {0}; //TODO
 
 void NeoReportParser::OnKeyDown(uint8_t mod, uint8_t key) {
 	//uint32_t dt;
@@ -353,47 +430,55 @@ void NeoReportParser::OnControlKeysChanged(uint8_t before, uint8_t after) {
 	}
 }
 
+//pure unicode layers
+void NeoReportParser::substitutePress(uint16_t *uni_map, uint8_t offset) {
+	uint16_t key = pgm_read_word(uni_map + offset);
+	pressUnicode(key);
+}
+
 void NeoReportParser::substitutePress(InputSequence *sq, uint8_t offset){
 	InputSequence modKey;
 	memcpy_P(&modKey, (sq + offset), sizeof(modKey));
 
-	Keyboard.releaseAll();
 	if(modKey.modifier == KEY_UNICODE){
-		uint16_t uni = modKey.key;
-		uint8_t digits[5];
-		//load digits into array to send them in reverse order
-		for(int8_t i = 0; i < 5; i++){
-			digits[i] =  uni % 10;
-			uni /= 10;
-		}
-		
-		Keyboard.press(KeyboardKeycode(KEY_LEFT_ALT));
-		for(int8_t i = 4; i >= 0; i--){
-			uint8_t digit = digits[i];
-			if(digit == 0){ //0 is after 9 in keypad key order
-				digit = 10;
-			}
-			Keyboard.write(KeyboardKeycode(digit + KEYPAD_1 - 1));
-		}
+		pressUnicode(modKey.key);
+	} else {
 		Keyboard.releaseAll();
-		
-		/*
-		 * modifiers are stored internally still but reported as key-up event to host, 
-		 * therefore restore by re-pressing. Other layers not restored, as key-presses
-		 * of those are omitted anyway
-		 */
-		if(neoModifiers.bmLeftShift){
-			OnKeyDown(0, KEY_LEFT_SHIFT);
-		} else if(neoModifiers.bmRightShift){
-			OnKeyDown(0, KEY_RIGHT_SHIFT);
-		}
-		
-	} else{
 		Keyboard.press(KeyboardKeycode(modKey.modifier));
 		Keyboard.press(KeyboardKeycode(modKey.key));
 		
 		//will be released on release event, so holding of the key is possible
 		activeSequence = sq + offset;
+	}
+}
+
+void NeoReportParser::pressUnicode(uint16_t code) {
+	uint8_t digits[5];
+	//load digits into array to send them in reverse order
+	for(int8_t i = 0; i < 5; i++){
+		digits[i] =  code % 10;
+		code /= 10;
+	}
+	Keyboard.releaseAll();
+	Keyboard.press(KeyboardKeycode(KEY_LEFT_ALT));
+	for(int8_t i = 4; i >= 0; i--){
+		uint8_t digit = digits[i];
+		if(digit == 0){ //0 is after 9 in keypad key order
+			digit = 10;
+		}
+		Keyboard.write(KeyboardKeycode(digit + KEYPAD_1 - 1));
+	}
+	Keyboard.releaseAll();
+		
+	/*
+	* modifiers are stored internally still but reported as key-up event to host,
+	* therefore restore by re-pressing. Other layers not restored, as key-presses
+	* of those are omitted anyway
+	*/
+	if(neoModifiers.bmLeftShift){
+		Keyboard.press(KeyboardKeycode(KEY_LEFT_SHIFT));
+	} else if(neoModifiers.bmRightShift){
+		Keyboard.press(KeyboardKeycode(KEY_RIGHT_SHIFT));
 	}
 }
 

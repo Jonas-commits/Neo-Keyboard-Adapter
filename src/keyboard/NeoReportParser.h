@@ -36,8 +36,8 @@ class NeoReportParser : public KeyboardReportParser
 	const static InputSequence neoMapL2[NEO_MAP_SIZE - KEY_Z - 1] PROGMEM;
 	const static InputSequence neoMapL3[NEO_MAP_SIZE] PROGMEM;
 	const static InputSequence neoMapL4[NEO_MAP_SIZE] PROGMEM;
-	const static InputSequence neoMapL5[NEO_MAP_SIZE] PROGMEM;
-	const static InputSequence neoMapL6[NEO_MAP_SIZE] PROGMEM;
+	const static uint16_t neoMapL5[NEO_MAP_SIZE] PROGMEM;
+	const static uint16_t neoMapL6[NEO_MAP_SIZE] PROGMEM;
 	
 	InputSequence *activeSequence;
 	NeoModifiers neoModifiers;
@@ -48,6 +48,8 @@ class NeoReportParser : public KeyboardReportParser
 	void OnControlKeysChanged(uint8_t before, uint8_t after) override;
 	
 	void substitutePress(InputSequence *sq, uint8_t offset);
+	void substitutePress(uint16_t *uni_map, uint8_t offset);
+	void pressUnicode(uint16_t code);
 	int8_t getActiveLayer();
 	boolean neoModifierChange(uint8_t key, boolean isKeyDownEvent);
 	
