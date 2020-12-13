@@ -58,6 +58,7 @@ class NeoReportParser : public KeyboardReportParser
 	void OnKeyDown  (uint8_t mod, uint8_t key) override;
 	void OnKeyUp  (uint8_t mod, uint8_t key) override;
 	void OnControlKeysChanged(uint8_t before, uint8_t after) override;
+	uint8_t HandleLockingKeys(USBHID* hid, uint8_t key) override { }
 	
 	void substitutePress(InputSequence *sq, uint8_t offset);
 	void substitutePress(uint16_t *uni_map, uint8_t offset);
@@ -68,6 +69,8 @@ class NeoReportParser : public KeyboardReportParser
 	
 	public:
 	NeoReportParser() : KeyboardReportParser(), neoModifiers(), applyMap(true), activeSequence(nullptr){ }
+	void update();
+	void setLedState(uint8_t leds);
 	
 };
 

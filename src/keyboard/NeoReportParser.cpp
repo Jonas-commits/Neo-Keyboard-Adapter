@@ -503,9 +503,17 @@ void NeoReportParser::OnKeyUp(uint8_t mod, uint8_t key) {
 		if(activeSequence){ //release active holds from substitution
 			InputSequence sq;
 			memcpy_P(&sq, activeSequence, sizeof(sq));
-		
+			
 			Keyboard.release(KeyboardKeycode(sq.key));
-			Keyboard.release(KeyboardKeycode(sq.modifier));
+			
+			if (kbdLockingKeys.kbdLeds.bmCapsLock){
+				if(sq.modifier != KEY_LEFT_SHIFT){
+					Keyboard.release(KeyboardKeycode(KEY_LEFT_SHIFT));
+				}
+			} else {
+				Keyboard.release(KeyboardKeycode(sq.modifier));
+			}
+			
 			activeSequence = nullptr;
 			
 		} else { //otherwise just release the actual key
@@ -611,6 +619,11 @@ void NeoReportParser::OnControlKeysChanged(uint8_t before, uint8_t after) {
 		}
 		
 	}
+	
+	if (afterMod.bmLeftShift && afterMod.bmRightShift) { //CAPS hotkey
+		Keyboard.write(KEY_CAPS_LOCK);
+		kbdLockingKeys.kbdLeds.bmCapsLock = ~kbdLockingKeys.kbdLeds.bmCapsLock;
+	}
 }
 
 //pure unicode layers
@@ -626,8 +639,17 @@ void NeoReportParser::substitutePress(InputSequence *sq, uint8_t offset){
 	if(modKey.modifier == KEY_UNICODE){
 		pressUnicode(modKey.key);
 	} else {
+		
 		Keyboard.releaseAll();
-		Keyboard.press(KeyboardKeycode(modKey.modifier));
+		
+		if (kbdLockingKeys.kbdLeds.bmCapsLock){
+			if(modKey.modifier != KEY_LEFT_SHIFT){
+				Keyboard.press(KeyboardKeycode(KEY_LEFT_SHIFT));
+			} 
+		} else {
+			Keyboard.press(KeyboardKeycode(modKey.modifier));
+		}
+
 		Keyboard.press(KeyboardKeycode(modKey.key));
 		
 		//will be released on release event, so holding of the key is possible
@@ -710,4 +732,12 @@ boolean NeoReportParser::neoModifierChange(uint8_t key, boolean isKeyDownEvent){
 		default:
 			return false;
 	}
+}
+
+void NeoReportParser::setLedState(uint8_t leds){
+	kbdLockingKeys.bLeds = leds;
+}
+
+void NeoReportParser::update() {
+	setLedState(BootKeyboard.getLeds());
 }
