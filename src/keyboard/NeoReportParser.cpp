@@ -430,6 +430,11 @@ void NeoReportParser::OnKeyDown(uint8_t mod, uint8_t key) {
 	}
 	
 	if (applyMap && key < NEO_MAP_SIZE + 1){ //act like neo keyboard
+		
+		//Never let go of num lock :)
+		if(!kbdLockingKeys.kbdLeds.bmNumLock){
+			Keyboard.write(KeyboardKeycode(KEY_NUM_LOCK));
+		}
 
 		//in case of neo modifier pressed we can spare the rest of the code
 		if(neoModifierChange(key, true)){
@@ -736,10 +741,4 @@ void NeoReportParser::setLedState(uint8_t leds){
 
 void NeoReportParser::update() {
 	setLedState(BootKeyboard.getLeds());
-	
-	//Never let go of num lock :)
-	if(applyMap && !kbdLockingKeys.kbdLeds.bmNumLock){
-		Keyboard.write(KeyboardKeycode(KEY_NUM_LOCK));		
-		delay(10); //micro-delay to not play ping pong with the num-key
-	}
 }
