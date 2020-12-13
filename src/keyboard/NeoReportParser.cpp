@@ -424,10 +424,6 @@ void NeoReportParser::OnKeyDown(uint8_t mod, uint8_t key) {
 				applyMap = !applyMap;
 				return;
 				
-			case KEY_NUM_LOCK: // hack for toggeling num lock if it got lost for some reason
-				Keyboard.press(KeyboardKeycode(KEY_NUM_LOCK));
-				return;
-				
 			default:
 				Keyboard.press(KeyboardKeycode(KEY_LEFT_GUI));
 		}
@@ -740,4 +736,10 @@ void NeoReportParser::setLedState(uint8_t leds){
 
 void NeoReportParser::update() {
 	setLedState(BootKeyboard.getLeds());
+	
+	//Never let go of num lock :)
+	if(applyMap && !kbdLockingKeys.kbdLeds.bmNumLock){
+		Keyboard.write(KeyboardKeycode(KEY_NUM_LOCK));		
+		delay(10); //micro-delay to not play ping pong with the num-key
+	}
 }
