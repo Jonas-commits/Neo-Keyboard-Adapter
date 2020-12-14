@@ -39,6 +39,12 @@ enum Layer {
 	L6,
 };
 
+enum UnicodeMethod {
+	WIN_DEC,
+	WIN_HEX,
+	UNIX_HEX
+};
+
 class NeoReportParser : public KeyboardReportParser
 {
 	private:
@@ -50,10 +56,13 @@ class NeoReportParser : public KeyboardReportParser
 	const static uint16_t neoMapL5[NEO_MAP_SIZE] PROGMEM;
 	const static uint16_t neoMapL6[NEO_MAP_SIZE] PROGMEM;
 	
-	InputSequence *activeSequence;
 	NeoModifiers neoModifiers;
 	boolean applyMap;
+	UnicodeMethod unicodeMethod;
+	
+	InputSequence *activeSequence;
 	boolean leftGuiSinglePress;
+
 	
 	void OnKeyDown  (uint8_t mod, uint8_t key) override;
 	void OnKeyUp  (uint8_t mod, uint8_t key) override;
@@ -71,6 +80,7 @@ class NeoReportParser : public KeyboardReportParser
 	NeoReportParser() : KeyboardReportParser(), neoModifiers(), applyMap(true), activeSequence(nullptr){ }
 	void update();
 	void setLedState(uint8_t leds);
+	void install();
 	
 };
 

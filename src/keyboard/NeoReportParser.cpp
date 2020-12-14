@@ -424,6 +424,21 @@ void NeoReportParser::OnKeyDown(uint8_t mod, uint8_t key) {
 				applyMap = !applyMap;
 				return;
 				
+			case KEY_F9:
+				unicodeMethod = WIN_DEC;
+				return;
+				
+			case KEY_F10:
+				if (neoModifiers.bmLeftShift) {
+					install();
+				}
+				unicodeMethod = WIN_HEX;
+				return;
+				
+			case KEY_F11:
+				unicodeMethod = UNIX_HEX;
+				return;
+				
 			default:
 				Keyboard.press(KeyboardKeycode(KEY_LEFT_GUI));
 		}
@@ -659,23 +674,47 @@ void NeoReportParser::substitutePress(InputSequence *sq, uint8_t offset){
 }
 
 void NeoReportParser::pressUnicode(uint16_t code) {
+	uint8_t div = (unicodeMethod == WIN_DEC) ? 10 : 16;
 	uint8_t digits[5];
-	//load digits into array to send them in reverse order
+	
 	for(int8_t i = 0; i < 5; i++){
-		digits[i] =  code % 10;
-		code /= 10;
+		digits[i] =  code % div;
+		code /= div;
 	}
-	Keyboard.releaseAll();
-	Keyboard.press(KeyboardKeycode(KEY_LEFT_ALT));
-	for(int8_t i = 4; i >= 0; i--){
-		uint8_t digit = digits[i];
-		if(digit == 0){ //0 is after 9 in keypad key order
-			digit = 10;
-		}
-		Keyboard.write(KeyboardKeycode(digit + KEYPAD_1 - 1));
-	}
+
 	Keyboard.releaseAll();
 		
+	switch (unicodeMethod){
+		case WIN_DEC:
+			Keyboard.press(KeyboardKeycode(KEY_LEFT_ALT));
+			if (digits[4] != 0) {
+				Keyboard.write(KeyboardKeycode(digits[4] - 1 + KEYPAD_1));
+			}
+			break;
+
+		case WIN_HEX:
+			Keyboard.press(KeyboardKeycode(KEY_LEFT_ALT));
+			Keyboard.write(KeyboardKeycode(KEYPAD_ADD));
+			break;
+	
+		case UNIX_HEX:
+			Keyboard.press(KeyboardKeycode(KEY_LEFT_CTRL));
+			Keyboard.press(KeyboardKeycode(KEY_LEFT_SHIFT));
+			Keyboard.write(KeyboardKeycode(KEY_U));
+			break;
+	}
+	
+	for(int8_t i = 3; i >= 0; i--){
+		if(digits[i] == 0){
+			Keyboard.write(KeyboardKeycode(KEYPAD_0));
+		} else if (digits[i] < 10){
+			Keyboard.write(KeyboardKeycode(digits[i] - 1 + KEYPAD_1));
+		} else {
+			Keyboard.write(KeyboardKeycode(digits[i] - 10 + KEY_A));
+		}
+	}
+	
+	Keyboard.releaseAll();
 	/*
 	* modifiers are stored internally still but reported as key-up event to host,
 	* therefore restore by re-pressing. Other layers not restored, as key-presses
@@ -741,4 +780,29 @@ void NeoReportParser::setLedState(uint8_t leds){
 
 void NeoReportParser::update() {
 	setLedState(BootKeyboard.getLeds());
+}
+
+void NeoReportParser::install() {
+	Keyboard.releaseAll();
+	Keyboard.press(KeyboardKeycode(KEY_LEFT_GUI));
+	Keyboard.write(KeyboardKeycode(KEY_R));
+	Keyboard.release(KeyboardKeycode(KEY_LEFT_GUI));
+	delay(100);
+	Keyboard.println(F("cmd"));
+	delay(100);
+	for(int8_t i = 0; i<5; i++){
+		Keyboard.println(F("echo ))) PLEASE REBOOT AFTER INSTALLATION )))"));
+	}
+
+	//"reg add "HKCU\Control Panel\Input Method" /v EnableHexNumpad /t REG_SZ /d 1 /f"
+	Keyboard.print(F("reg add @HKCU"));
+	Keyboard.press(KeyboardKeycode(KEY_RIGHT_ALT));
+	Keyboard.write(KeyboardKeycode(KEY_MINUS));
+	Keyboard.release(KeyboardKeycode(KEY_RIGHT_ALT));
+	Keyboard.print(F("Control Panel"));
+	Keyboard.press(KeyboardKeycode(KEY_RIGHT_ALT));
+	Keyboard.write(KeyboardKeycode(KEY_MINUS));
+	Keyboard.release(KeyboardKeycode(KEY_RIGHT_ALT));
+	Keyboard.print(F("Input Method@ &v EnableHexNumpad &t REG?SY &d 1 &f"));
+	Keyboard.write(KeyboardKeycode(KEY_ENTER));
 }
