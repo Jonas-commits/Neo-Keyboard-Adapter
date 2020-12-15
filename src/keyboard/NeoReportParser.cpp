@@ -348,7 +348,7 @@ const uint16_t NeoReportParser::neoMapL5[] PROGMEM = {
 	0,					0,					0,					0,					0xA0,				0x2011,				0x1FFE,				0x3C2,
 	
   //KEY_RIGHT_BRACE		KEY_BACKSLASH		KEY_NON_US_NUM		KEY_SEMICOLON		KEY_QUOTE			KEY_TILDE			KEY_COMMA			KEY_PERIOD
-	0x1FBF,				0,					0,					0x3B4,				0x3C5,				0x2DE,				0x3F1,				0x3C5,
+	0x1FBF,				0,					0,					0x3B4,				0x3C5,				0x2DE,				0x3F1,				0x3D1,
 	
   //KEY_SLASH			KEY_CAPS_LOCK		KEY_F1				KEY_F2				KEY_F3				KEY_F4				KEY_F5				KEY_F6
 	0x3B8,				0,					0,					0,					0,					0,					0,					0,
