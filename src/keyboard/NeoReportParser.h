@@ -58,6 +58,7 @@ class NeoReportParser : public KeyboardReportParser
 	
 	NeoModifiers neoModifiers;
 	boolean applyMap;
+	boolean m4Lock;
 	UnicodeMethod unicodeMethod;
 	
 	InputSequence *activeSequence;
@@ -77,13 +78,14 @@ class NeoReportParser : public KeyboardReportParser
 	void pressUnicode(uint16_t code);
 	Layer getActiveLayer();
 	boolean neoModifierChange(uint8_t key, boolean isKeyDownEvent);
+	void toggleM4Lock();
 	
 	
 	public:
-	NeoReportParser() : KeyboardReportParser(), neoModifiers(), applyMap(true), activeSequence(nullptr){ }
-	void update();
+	NeoReportParser() : KeyboardReportParser(), neoModifiers(), applyMap(true), m4Lock(false), activeSequence(nullptr){ }
 	void setLedState(uint8_t leds);
 	void install();
+	void help();
 	
 };
 

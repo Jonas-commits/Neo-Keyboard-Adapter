@@ -420,10 +420,10 @@ void NeoReportParser::OnKeyDown(uint8_t mod, uint8_t key) {
 		leftGuiSinglePress = false; //Host will never know we pressed something :)
 		
 		switch (key){
-			case KEY_F12:
-				applyMap = !applyMap;
+			case KEY_F1:
+				help();
 				return;
-				
+			
 			case KEY_F9:
 				unicodeMethod = WIN_DEC;
 				return;
@@ -431,18 +431,25 @@ void NeoReportParser::OnKeyDown(uint8_t mod, uint8_t key) {
 			case KEY_F10:
 				if (neoModifiers.bmLeftShift) {
 					install();
+				} else {
+					unicodeMethod = WIN_HEX;
 				}
-				unicodeMethod = WIN_HEX;
 				return;
 				
 			case KEY_F11:
 				unicodeMethod = UNIX_HEX;
 				return;
 				
+			case KEY_F12:
+				applyMap = !applyMap;
+				return;
+				
 			default:
 				Keyboard.press(KeyboardKeycode(KEY_LEFT_GUI));
 		}
 	}
+	
+	setLedState(BootKeyboard.getLeds()); //update LEDs
 	
 	if (applyMap && key < NEO_MAP_SIZE + 1){ //act like neo keyboard
 		
@@ -621,6 +628,7 @@ void NeoReportParser::OnControlKeysChanged(uint8_t before, uint8_t after) {
 			Keyboard.release(KEY_RIGHT_ALT);
 		} else {
 			neoModifiers.bmRightAlt = true;
+			toggleM4Lock();
 			Keyboard.press(KEY_RIGHT_ALT);
 		}
 	}
@@ -637,6 +645,9 @@ void NeoReportParser::OnControlKeysChanged(uint8_t before, uint8_t after) {
 	}
 	
 	if (afterMod.bmLeftShift && afterMod.bmRightShift) { //CAPS hotkey
+		if (m4Lock){ //can't have caps and m4 locked
+			m4Lock = false;
+		}
 		Keyboard.write(KEY_CAPS_LOCK);
 		kbdLockingKeys.kbdLeds.bmCapsLock = ~kbdLockingKeys.kbdLeds.bmCapsLock;
 	}
@@ -728,7 +739,13 @@ void NeoReportParser::pressUnicode(uint16_t code) {
 }
 
 Layer NeoReportParser::getActiveLayer() {
-	if (neoModifiers.bmLeftShift || neoModifiers.bmRightShift) {
+	if (m4Lock){
+		if (neoModifiers.bmLeftShift || neoModifiers.bmRightShift) {
+			return L4_SHIFT;
+		} else {
+			return L4;
+		}
+	} else if (neoModifiers.bmLeftShift || neoModifiers.bmRightShift) {
 		if (neoModifiers.bmLeft3 || neoModifiers.bmRight3) {
 			return L5;
 		
@@ -767,6 +784,7 @@ boolean NeoReportParser::neoModifierChange(uint8_t key, boolean isKeyDownEvent){
 				
 		case KEY_NON_US:
 			neoModifiers.bmLeft4 = isKeyDownEvent;
+			toggleM4Lock();
 			return true;
 			
 		default:
@@ -778,8 +796,11 @@ void NeoReportParser::setLedState(uint8_t leds){
 	kbdLockingKeys.bLeds = leds;
 }
 
-void NeoReportParser::update() {
-	setLedState(BootKeyboard.getLeds());
+void NeoReportParser::toggleM4Lock() {
+	if(kbdLockingKeys.kbdLeds.bmCapsLock){
+		Keyboard.press(KEY_CAPS_LOCK); // cant have caps with m4 locked
+	}
+	m4Lock = !m4Lock;
 }
 
 void NeoReportParser::install() {
@@ -805,4 +826,15 @@ void NeoReportParser::install() {
 	Keyboard.release(KeyboardKeycode(KEY_RIGHT_ALT));
 	Keyboard.print(F("Input Method@ &v EnableHexNumpad &t REG?SY &d 1 &f"));
 	Keyboard.write(KeyboardKeycode(KEY_ENTER));
+}
+
+void NeoReportParser::help() {
+	Keyboard.releaseAll();
+	Keyboard.press(KeyboardKeycode(KEY_LEFT_GUI));
+	Keyboard.write(KeyboardKeycode(KEY_R));
+	Keyboard.release(KeyboardKeycode(KEY_LEFT_GUI));
+	delay(100);
+	
+	//https://github.com/Jonas-commits/Neo-Keyboard-Adapter
+	Keyboard.println(F("https>&&github.com&Jonas/commits&Neo/Kezboard/Adapter"));
 }

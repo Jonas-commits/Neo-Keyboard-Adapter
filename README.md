@@ -37,6 +37,7 @@ The Left Windows-Key is configured to interact with the driver. Following (under
 
 #### Toggle Unicode Input:
 
+* **WIN + F1**: Opens the browser with this repository.
 * **WIN + F9**: Unicode will be entered in decimal for Windows. (Default)
 * **WIN + F10**: Unicode will be entered in hexadecimal for Windows. (Requires setup)
 * **WIN + SHIFT + F10**: The registry entry for hexadecimal input in Windows is created. (Requires reboot)
@@ -47,7 +48,6 @@ General note for Unicode on Windows: The decimal method only works in some apps 
 ## Open issues (worked on):
 * Making the LEDs light on the Keyboard does not work (reading in the state and acting according to it works though)
 * only basic dead-key support and no compose
-* Mod4-Lock not supported yet.
 * Media-Keys not supported
 
 ## General issues:

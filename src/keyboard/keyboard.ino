@@ -31,5 +31,4 @@ void setup()
 void loop()
 {
   Usb.Task();
-  Prs.update();
 }
