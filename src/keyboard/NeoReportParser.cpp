@@ -458,54 +458,76 @@ void NeoReportParser::OnKeyDown(uint8_t mod, uint8_t key) {
 			Keyboard.write(KeyboardKeycode(KEY_NUM_LOCK));
 		}
 
-		//in case of neo modifier pressed we can spare the rest of the code
+		//in case of neo modifier pressed we have to handle it and can spare the rest of the code
 		if(neoModifierChange(key, true)){
 			return;
 		}
 		
-		// map action according the current layer active, indicated by modifier states
-		switch (getActiveLayer()) {
-			case L1:
-				if (key != KEY_EQUAL) { //only key not fitting in layer1
-					Keyboard.press(KeyboardKeycode(neoMap[key]));
-				} else {
-					const static InputSequence sq PROGMEM = {KEY_LEFT_SHIFT, KEY_EQUAL};
-					substitutePress(&sq, 0);
-				}
-				break;
+		Layer layer = getActiveLayer();
+		
+		if (composeState){
+			uint16_t result  = compose.transition(layer, key);
+			if(result == 0){
+				//not found, write X to indicate
+				Keyboard.write(KeyboardKeycode(KEY_X));
+				composeState = false;
+			
+			} else if (result > 1) { //result == 1: just remain, nothing to do
+				// we got a result
+				pressUnicode(result);
+				composeState = false;
+			}
+		
+		} else {
+			// map action according the current layer active, indicated by modifier states
+			switch (layer) {
+				case L1:
+					if (key != KEY_EQUAL) { //only key not fitting in layer1
+						Keyboard.press(KeyboardKeycode(neoMap[key]));
+					} else {
+						const static InputSequence sq PROGMEM = {KEY_LEFT_SHIFT, KEY_EQUAL};
+						substitutePress(&sq, 0);
+					}
+					break;
 					
-			case L2:
-				if ( key <= KEY_Z || (KEY_ENTER <= key && key <= KEY_SPACE) ||
-							(KEY_BACKSLASH <= key && key <= KEY_QUOTE) || (KEY_SLASH <= key && key <= KEYPAD_ENTER)
-							|| neoModifiers.bmLeftCtrl || neoModifiers.bmRightCtrl
-							|| neoModifiers.bmLeftGUI || neoModifiers.bmRightGUI || neoModifiers.bmLeftAlt) {
+				case L2:
+					if ( key <= KEY_Z || (KEY_ENTER <= key && key <= KEY_SPACE) ||
+								(KEY_BACKSLASH <= key && key <= KEY_QUOTE) || (KEY_SLASH <= key && key <= KEYPAD_ENTER)
+								|| neoModifiers.bmLeftCtrl || neoModifiers.bmRightCtrl
+								|| neoModifiers.bmLeftGUI || neoModifiers.bmRightGUI || neoModifiers.bmLeftAlt) {
 							
-					Keyboard.press(KeyboardKeycode(neoMap[key]));
+						Keyboard.press(KeyboardKeycode(neoMap[key]));
 							
-				} else {
-					substitutePress(neoMapL2, key - KEY_Z - 1);
-				}
-				break;
+					} else {
+						substitutePress(neoMapL2, key - KEY_Z - 1);
+					}
+					break;
 					
-			case L3:
-				substitutePress(neoMapL3, key);
-				break;
+				case L3:
+					if (key == KEY_TAB){
+						composeState = true;
+						compose.transition(layer, key);
+					} else {
+						substitutePress(neoMapL3, key);
+					}
+					break;
 					
-			case L4:
-				substitutePress(neoMapL4, key);
-				break;
+				case L4:
+					substitutePress(neoMapL4, key);
+					break;
 				
-			case L4_SHIFT:
-				substitutePress(neoMapL4Shift, key);
-				break;
+				case L4_SHIFT:
+					substitutePress(neoMapL4Shift, key);
+					break;
 					
-			case L5:
-				substitutePress(neoMapL5, key);
-				break;
+				case L5:
+					substitutePress(neoMapL5, key);
+					break;
 					
-			case L6:
-				substitutePress(neoMapL6, key);
-				break;
+				case L6:
+					substitutePress(neoMapL6, key);
+					break;
+			}
 		}
 
 	} else { //act like a normal keyboard

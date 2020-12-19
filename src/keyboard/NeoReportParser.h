@@ -1,49 +1,8 @@
 #ifndef NEO_REPORT_PARSER_H
 #define NEO_REPORT_PARSER_H
 
-#include <hidboot.h>     //arduino -> shield
-#include <SPI.h>
-#include <HID-Project.h> //arduino -> host
-
-struct NeoModifiers {
-	boolean bmLeftCtrl;
-	boolean bmLeftShift;
-	boolean bmLeftAlt;
-	boolean bmLeftGUI;
-	boolean bmRightCtrl;
-	boolean bmRightShift;
-	boolean bmRightAlt;
-	boolean bmRightGUI;
-	boolean bmLeft3;
-	boolean bmRight3;
-	boolean bmLeft4;
-};
-
-struct InputSequence {
-	uint8_t modifier;
-	uint16_t key;
-};
-
-enum C : uint8_t {
-	KEY_UNICODE = 0xFF,
-	NEO_MAP_SIZE = 100
-};
-
-enum Layer {
-	L1,
-	L2,
-	L3,
-	L4,
-	L4_SHIFT,
-	L5,
-	L6,
-};
-
-enum UnicodeMethod {
-	WIN_DEC,
-	WIN_HEX,
-	UNIX_HEX
-};
+#include "NeoIncludes.h"
+#include "Compose.h"
 
 class NeoReportParser : public KeyboardReportParser
 {
@@ -56,9 +15,11 @@ class NeoReportParser : public KeyboardReportParser
 	const static uint16_t neoMapL5[NEO_MAP_SIZE] PROGMEM;
 	const static uint16_t neoMapL6[NEO_MAP_SIZE] PROGMEM;
 	
+	Compose compose;
 	NeoModifiers neoModifiers;
 	boolean applyMap;
 	boolean m4Lock;
+	boolean composeState;
 	UnicodeMethod unicodeMethod;
 	
 	InputSequence *activeSequence;
@@ -82,7 +43,7 @@ class NeoReportParser : public KeyboardReportParser
 	
 	
 	public:
-	NeoReportParser() : KeyboardReportParser(), neoModifiers(), applyMap(true), m4Lock(false), activeSequence(nullptr){ }
+	NeoReportParser() : KeyboardReportParser(), neoModifiers(), applyMap(true), m4Lock(false), composeState(false), activeSequence(nullptr){ }
 	void setLedState(uint8_t leds);
 	void install();
 	void help();
