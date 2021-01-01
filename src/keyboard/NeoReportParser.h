@@ -29,10 +29,7 @@ class NeoReportParser : public KeyboardReportParser
 	void OnKeyDown  (uint8_t mod, uint8_t key) override;
 	void OnKeyUp  (uint8_t mod, uint8_t key) override;
 	void OnControlKeysChanged(uint8_t before, uint8_t after) override;
-	uint8_t HandleLockingKeys(USBHID* hid, uint8_t key) override {
-		uint8_t lockLeds = kbdLockingKeys.bLeds;
-		return (hid->SetReport(0, 0, 2, 0, 1, &lockLeds));
-	}
+	uint8_t HandleLockingKeys(USBHID* hid, uint8_t key) override;
 	
 	void substitutePress(InputSequence *sq, uint8_t offset);
 	void substitutePress(uint16_t *uni_map, uint8_t offset);

@@ -46,7 +46,6 @@ The Left Windows-Key is configured to interact with the driver. Following (under
 General note for Unicode on Windows: The decimal method only works in some apps (mainly MS Office) for all Unicode characters. For non-supported apps, only some of the Unicode Keys work. Hexadecimal setup does not require admin rights, but a reboot. It works with most apps, but apparently not with those where the decimal input is fully supported. So you have to toggle the Unicode method in respective to the app you are using. Linux is according to the specification I found, but untested. 
 
 ## Open issues (worked on):
-* Making the LEDs light on the Keyboard does not work (reading in the state and acting according to it works though)
 * only basic dead-key support and no compose
 * Media-Keys not supported
 

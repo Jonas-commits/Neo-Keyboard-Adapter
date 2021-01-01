@@ -449,8 +449,6 @@ void NeoReportParser::OnKeyDown(uint8_t mod, uint8_t key) {
 		}
 	}
 	
-	setLedState(BootKeyboard.getLeds()); //update LEDs
-	
 	if (applyMap && key < NEO_MAP_SIZE + 1){ //act like neo keyboard
 		
 		//Never let go of num lock :)
@@ -533,7 +531,7 @@ void NeoReportParser::OnKeyDown(uint8_t mod, uint8_t key) {
 	} else { //act like a normal keyboard
 		Keyboard.press(KeyboardKeycode(key));
 	}
-	
+		
 	//dt = millis() - t;
 	
 }
@@ -568,6 +566,8 @@ void NeoReportParser::OnKeyUp(uint8_t mod, uint8_t key) {
 	} else { //act like a normal keyboard
 		Keyboard.release(KeyboardKeycode(key));
 	}
+	
+	setLedState(BootKeyboard.getLeds()); //update LEDs
 }
 
 void NeoReportParser::OnControlKeysChanged(uint8_t before, uint8_t after) {
@@ -650,7 +650,9 @@ void NeoReportParser::OnControlKeysChanged(uint8_t before, uint8_t after) {
 			Keyboard.release(KEY_RIGHT_ALT);
 		} else {
 			neoModifiers.bmRightAlt = true;
-			toggleM4Lock();
+			if(neoModifiers.bmLeft4 && applyMap){
+				toggleM4Lock();
+			}
 			Keyboard.press(KEY_RIGHT_ALT);
 		}
 	}
@@ -666,13 +668,21 @@ void NeoReportParser::OnControlKeysChanged(uint8_t before, uint8_t after) {
 		
 	}
 	
-	if (afterMod.bmLeftShift && afterMod.bmRightShift) { //CAPS hotkey
+	if (afterMod.bmLeftShift && afterMod.bmRightShift && applyMap) { //CAPS hotkey
 		if (m4Lock){ //can't have caps and m4 locked
 			m4Lock = false;
 		}
 		Keyboard.write(KEY_CAPS_LOCK);
 		kbdLockingKeys.kbdLeds.bmCapsLock = ~kbdLockingKeys.kbdLeds.bmCapsLock;
 	}
+	
+	setLedState(BootKeyboard.getLeds()); //update LEDs
+	
+}
+
+uint8_t NeoReportParser::HandleLockingKeys(USBHID* hid, uint8_t key){
+	uint8_t lockLeds = kbdLockingKeys.bLeds;
+	return (hid->SetReport(0, 0, 2, 0, 1, &lockLeds));
 }
 
 //pure unicode layers
@@ -806,7 +816,9 @@ boolean NeoReportParser::neoModifierChange(uint8_t key, boolean isKeyDownEvent){
 				
 		case KEY_NON_US:
 			neoModifiers.bmLeft4 = isKeyDownEvent;
-			toggleM4Lock();
+			if(isKeyDownEvent && neoModifiers.bmRightAlt){
+				toggleM4Lock();
+			}
 			return true;
 			
 		default:
