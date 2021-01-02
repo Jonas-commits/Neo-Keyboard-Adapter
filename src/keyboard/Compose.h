@@ -34,8 +34,15 @@ class Compose
 
 	//the lookup data
 	const static Node root[];
+	
+	//composition steps
 	const static Node l3Tab[];
+	const static Node l3TabG[];
+	const static Node l3TabL3Q[];
+	
+	//Unicode characters
 	const static Node uniNote[];
+	const static Node uniDottedCircle[];
 
 	public:
 	Compose() : currentNode(const_cast<Node*>(root)){}
