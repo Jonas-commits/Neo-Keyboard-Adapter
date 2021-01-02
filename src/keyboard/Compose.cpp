@@ -65,3 +65,7 @@ uint16_t Compose::transition(uint8_t layer, uint8_t key) {
 	currentNode = const_cast<Node*>(root);
 	return 0;
 }
+
+void Compose::reset(){
+	currentNode = const_cast<Node*>(root);
+}

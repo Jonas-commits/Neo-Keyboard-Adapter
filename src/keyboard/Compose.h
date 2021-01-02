@@ -53,6 +53,8 @@ class Compose
 	Compose() : currentNode(const_cast<Node*>(root)){}
 		
 	uint16_t transition(uint8_t layer, uint8_t key);
+	void reset();
+	
 
 }; //Compose
 
