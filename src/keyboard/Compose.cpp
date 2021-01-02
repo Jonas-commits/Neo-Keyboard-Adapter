@@ -7,8 +7,15 @@ const Node Compose::root[] PROGMEM = { {{2, 0}, nullptr},
 	{{L3, KEY_TAB}, l3Tab}
 };
 	
-const Node Compose::l3Tab[] PROGMEM = { {{9, 0}, nullptr}, 
+const Node Compose::l3Tab[] PROGMEM = { {{16, 0}, nullptr}, 
+	{{L1, KEY_E}, l3TabE},
+	{{L2, KEY_E}, l3TabL2E},
+	{{L2, KEY_F}, l3TabL2F},
 	{{L1, KEY_G}, l3TabG},
+	{{L1, KEY_H}, l3TabH},
+	{{L2, KEY_H}, l3TabL2H},
+	{{L1, KEY_L}, l3TabL},
+	{{L2, KEY_L}, l3TabL2L},
 	{{L3, KEY_L}, l3TabMinus},
 	{{L3, KEY_Q}, l3TabL3Q},
 	{{L1, KEY_W}, l3TabL3W},
@@ -26,9 +33,17 @@ const Node Compose::l3TabMinus[] PROGMEM = { {{3, 0}, nullptr},
 	{{L1, KEY_U}, composeSymbols + 4},
 	{{L2, KEY_U}, composeSymbols + 5}
 };
+const Node Compose::l3TabH[] PROGMEM     = { {{L1, KEY_COMMA}, composeSymbols + 6} };
+const Node Compose::l3TabL2H[] PROGMEM   = { {{L1, KEY_COMMA}, composeSymbols + 7} };
+const Node Compose::l3TabL[] PROGMEM     = { {{L1, KEY_COMMA}, composeSymbols + 8} };
+const Node Compose::l3TabL2L[] PROGMEM   = { {{L1, KEY_COMMA}, composeSymbols + 9} };
+const Node Compose::l3TabL2F[] PROGMEM     = { {{L2, KEY_F}, composeSymbols + 10} };
+const Node Compose::l3TabE[] PROGMEM     = { {{L1, KEY_PERIOD}, composeSymbols + 11} };
+const Node Compose::l3TabL2E[] PROGMEM   = { {{L1, KEY_PERIOD}, composeSymbols + 12} };
 	
 const uint16_t Compose::composeSymbols[] PROGMEM = {
-	0x266B, 0x25CC, 0x0332, 0x02BC, 0x0127, 0x0126
+	0x266B, 0x25CC, 0x0332, 0x02BC, 0x0127, 0x0126, 0x0219, 0x0218,
+	0x021B, 0x021A, 0x018F, 0x0140, 0x013F
 };
 
 uint16_t Compose::transition(uint8_t layer, uint8_t key) {

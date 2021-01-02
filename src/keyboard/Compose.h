@@ -46,6 +46,13 @@ class Compose
 	const static Node l3TabL3W[] PROGMEM;
 	const static Node l3TabRBr[] PROGMEM;
 	const static Node l3TabMinus[] PROGMEM;
+	const static Node l3TabH[] PROGMEM;
+	const static Node l3TabL2H[] PROGMEM;
+	const static Node l3TabL[] PROGMEM;
+	const static Node l3TabL2L[] PROGMEM;
+	const static Node l3TabL2F[] PROGMEM;
+	const static Node l3TabE[] PROGMEM;
+	const static Node l3TabL2E[] PROGMEM;
 	
 	const static uint16_t composeSymbols[] PROGMEM;
 
