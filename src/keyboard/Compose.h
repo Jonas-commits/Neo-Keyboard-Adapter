@@ -4,16 +4,17 @@
 #include "NeoIncludes.h"
 
 /*
-* Node used as element in static defined lookup tree data structure.
-* The tree is static, therefore no methods for removing/adding elements,
-* everything has to be done in this class definition. 
-* 
-*  When first element in list: data taken from union,
-  data = list length when nodes != nullptr,
-  data = Unicode character when nodes == nullptr
-  
-  When not first element in list: layeredKey taken from union, 
-  nodes = first list element of list to continue search for next keystroke
+ * Node used as element in static defined lookup tree data structure.
+ * The tree is static, therefore no methods for removing/adding elements,
+ * everything has to be done in this class definition. 
+ * 
+ * When first element in list: Element only indicates length, instead
+ * of just 0-terminating this stuff, as it provides more information
+ * by using same memory, for a faster search algorithm if needed
+
+ * Pointer points to either next node or unicode symbol. This is detected by 
+ * address range comparison.
+
 */
 
 struct Node {
@@ -22,10 +23,15 @@ struct Node {
 			uint8_t layer;
 			uint8_t keycode;
 		} layeredKey;
-		uint16_t data;
+		uint16_t len;
 	} x;
-	Node* nodes;
+	union {
+		void* value;
+		Node* nodes;
+		uint16_t* unicode;
+	} ptr;
 };
+
 
 class Compose
 {
@@ -40,9 +46,7 @@ class Compose
 	const static Node l3TabG[];
 	const static Node l3TabL3Q[];
 	
-	//Unicode characters
-	const static Node uniNote[];
-	const static Node uniDottedCircle[];
+	const static uint16_t composeSymbols[];
 
 	public:
 	Compose() : currentNode(const_cast<Node*>(root)){}
