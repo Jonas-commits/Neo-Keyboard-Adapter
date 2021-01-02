@@ -39,14 +39,14 @@ class Compose
 	Node* currentNode;
 
 	//the lookup data
-	const static Node root[];
+	const static Node root[] PROGMEM;
 	
 	//composition steps
-	const static Node l3Tab[];
-	const static Node l3TabG[];
-	const static Node l3TabL3Q[];
+	const static Node l3Tab[] PROGMEM;
+	const static Node l3TabG[] PROGMEM;
+	const static Node l3TabL3Q[] PROGMEM;
 	
-	const static uint16_t composeSymbols[];
+	const static uint16_t composeSymbols[] PROGMEM;
 
 	public:
 	Compose() : currentNode(const_cast<Node*>(root)){}
