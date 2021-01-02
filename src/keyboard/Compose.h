@@ -38,13 +38,14 @@ class Compose
 	private:
 	Node* currentNode;
 
-	//the lookup data
 	const static Node root[] PROGMEM;
 	
-	//composition steps
 	const static Node l3Tab[] PROGMEM;
 	const static Node l3TabG[] PROGMEM;
 	const static Node l3TabL3Q[] PROGMEM;
+	const static Node l3TabL3W[] PROGMEM;
+	const static Node l3TabRBr[] PROGMEM;
+	const static Node l3TabMinus[] PROGMEM;
 	
 	const static uint16_t composeSymbols[] PROGMEM;
 
