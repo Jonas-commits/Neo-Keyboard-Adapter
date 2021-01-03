@@ -91,7 +91,7 @@ const InputSequence NeoReportParser::neoMapL2[] PROGMEM = {
 	{KEY_UNICODE, 0x2665},			{KEY_UNICODE, 0x2660},			{KEY_UNICODE, 0x2663},			{KEY_RIGHT_ALT, KEY_E},
 	
   //KEYPAD_6						KEYPAD_7						KEYPAD_8						KEYPAD_9
-	{KEY_UNICODE, 0x2023},			{KEY_UNICODE, 0x2714},			{KEY_UNICODE, 0x2718},			{KEY_RIGHT_ALT, 0x2020},
+	{KEY_UNICODE, 0x2023},			{KEY_UNICODE, 0x2714},			{KEY_UNICODE, 0x2718},			{KEY_UNICODE, 0x2020},
   
   //KEYPAD_0						KEYPAD_DOT
 	{KEY_UNICODE, 0x2423},			{KEY_RESERVED, KEY_PERIOD} 
@@ -464,16 +464,21 @@ void NeoReportParser::OnKeyDown(uint8_t mod, uint8_t key) {
 		Layer layer = getActiveLayer();
 		
 		if (composeState){
-			uint16_t result  = compose.transition(layer, key);
-			if(result == 0){
-				//not found, write X to indicate
-				Keyboard.write(KeyboardKeycode(KEY_X));
+			if (key == KEY_ESC){
+				compose.reset();
 				composeState = false;
+			} else {
+				uint16_t result  = compose.transition(layer, key);
+				if(result == 0){
+					//not found, write X to indicate
+					Keyboard.write(KeyboardKeycode(KEY_X));
+					composeState = false;
 			
-			} else if (result > 1) { //result == 1: just remain, nothing to do
-				// we got a result
-				pressUnicode(result);
-				composeState = false;
+				} else if (result > 1) { //result == 1: just remain, nothing to do
+					// we got a result
+					pressUnicode(result);
+					composeState = false;
+				}
 			}
 		
 		} else {
