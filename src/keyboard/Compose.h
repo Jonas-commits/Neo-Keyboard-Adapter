@@ -70,10 +70,21 @@ class Compose
 	const static Node l3TabL2J[] PROGMEM;
 	const static Node l3TabK[] PROGMEM;
 	const static Node l3TabL2K[] PROGMEM;
+	const static Node l3Tab1[] PROGMEM;
+	const static Node l3Tab2[] PROGMEM;
+	const static Node l3TabL3Y[] PROGMEM;
+	const static Node l3TabL3H[] PROGMEM;
+	const static Node l3TabL2Kp9[] PROGMEM;
+	const static Node l3TabL5Space[] PROGMEM;
+	const static Node l3Tab7[] PROGMEM;
 	
 	//Layer 3
 	const static Node l3TabK1[] PROGMEM;
 	const static Node l3TabL2K1[] PROGMEM;
+	const static Node l3Tab1L3H[] PROGMEM;
+	const static Node l3Tab1L3Y[] PROGMEM;
+	const static Node l3Tab1L4H[] PROGMEM;
+	const static Node l3Tab1L4Y[] PROGMEM;
 	
 	//characters
 	const static uint16_t composeSymbols[] PROGMEM;
