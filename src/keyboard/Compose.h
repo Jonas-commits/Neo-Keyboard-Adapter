@@ -11,6 +11,8 @@
  * When first element in list: Element only indicates length, instead
  * of just 0-terminating this stuff, as it provides more information
  * by using same memory, for a faster search algorithm if needed
+ * Endianess is little endian and only first union can be defined in C++ 11,
+ * Thats why size information is written down like this.
 
  * Pointer points to either next node or unicode symbol. This is detected by 
  * address range comparison.
@@ -37,11 +39,14 @@ class Compose
 {
 	private:
 	Node* currentNode;
-
+	
+	//Layer 0
 	const static Node root[] PROGMEM;
 	
+	//Layer1
 	const static Node l3Tab[] PROGMEM;
 	
+	//Layer2
 	const static Node l3TabG[] PROGMEM;
 	const static Node l3TabL3Q[] PROGMEM;
 	const static Node l3TabL3W[] PROGMEM;
@@ -66,9 +71,11 @@ class Compose
 	const static Node l3TabK[] PROGMEM;
 	const static Node l3TabL2K[] PROGMEM;
 	
+	//Layer 3
 	const static Node l3TabK1[] PROGMEM;
 	const static Node l3TabL2K1[] PROGMEM;
 	
+	//characters
 	const static uint16_t composeSymbols[] PROGMEM;
 
 	public:
