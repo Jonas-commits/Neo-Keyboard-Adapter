@@ -77,6 +77,9 @@ class Compose
 	const static Node l3TabL2Kp9[] PROGMEM;
 	const static Node l3TabL5Space[] PROGMEM;
 	const static Node l3Tab7[] PROGMEM;
+	const static Node l3Tab3[] PROGMEM;
+	const static Node l3Tab4[] PROGMEM;
+	const static Node l3Tab5[] PROGMEM;
 	
 	//Layer 3
 	const static Node l3TabK1[] PROGMEM;
