@@ -1,8 +1,9 @@
 #include "Compose.h"
 
 /********************************* Transition 0 *******************************/
-const Node Compose::root[3] PROGMEM              = { {{3, 0}, nullptr}, 
+const Node Compose::root[4] PROGMEM              = { {{4, 0}, nullptr}, 
 	{{L3, KEY_TAB}, l3Tab},
+	{{L6, KEY_RIGHT_BRACE}, l6RBr},
 	{{L2, KEY_TILDE}, l2Tilde}
 };
 
@@ -69,12 +70,38 @@ const Node Compose::l3Tab[59] PROGMEM            = { {{59, 0}, nullptr},
 	{{L6, KEYPAD_0}, l3TabL6Kp0}
 };
 
-const Node Compose::l2Tilde[6] PROGMEM           = { {{6, 0}, nullptr},
-	{{L1, KEY_H}, composeSymbols + 108},
-	{{L2, KEY_H}, composeSymbols + 107},
+const Node Compose::l6RBr[6] PROGMEM             = { {{6, 0}, nullptr},
+	{{L1, KEY_U}, composeSymbols + 108},
+	{{L2, KEY_U}, composeSymbols + 107},
 	{{L5, KEY_4}, composeSymbols + 109},
 	{{L1, KEY_SPACE}, composeSymbols + 105},
-	{{L2, KEY_TILDE}, composeSymbols + 106}
+	{{L6, KEY_RIGHT_BRACE}, composeSymbols + 106}
+};
+
+const Node Compose::l2Tilde[24] PROGMEM           = { {{24, 0}, nullptr},
+	{{L1, KEY_1}, composeSymbols + 116},
+	{{L1, KEY_2}, composeSymbols + 117},
+	{{L1, KEY_3}, composeSymbols + 118},
+	{{L1, KEY_4}, composeSymbols + 119},
+	{{L1, KEY_5}, composeSymbols + 120},
+	{{L1, KEY_6}, composeSymbols + 121},
+	{{L1, KEY_7}, composeSymbols + 122},
+	{{L1, KEY_8}, composeSymbols + 123},
+	{{L1, KEY_9}, composeSymbols + 124},
+	{{L1, KEY_0}, composeSymbols + 115},
+	{{L3, KEY_TAB}, l2TildeL3Tab},
+	{{L1, KEY_SPACE}, composeSymbols + 110},
+	{{L2, KEY_TILDE}, composeSymbols + 111},
+	{{L1, KEYPAD_1}, composeSymbols + 116},
+	{{L1, KEYPAD_2}, composeSymbols + 117},
+	{{L1, KEYPAD_3}, composeSymbols + 118},
+	{{L1, KEYPAD_4}, composeSymbols + 119},
+	{{L1, KEYPAD_5}, composeSymbols + 120},
+	{{L1, KEYPAD_6}, composeSymbols + 121},
+	{{L1, KEYPAD_7}, composeSymbols + 122},
+	{{L1, KEYPAD_8}, composeSymbols + 123},
+	{{L1, KEYPAD_9}, composeSymbols + 124},
+	{{L1, KEYPAD_0}, composeSymbols + 115}
 };
 
 /********************************* Transition 2 *******************************/
@@ -340,6 +367,11 @@ const Node Compose::l3TabL6Kp0[3] PROGMEM        = { {{3, 0}, nullptr},
 	{{L2, KEYPAD_8}, composeSymbols + 94},
 };
 
+const Node Compose::l2TildeL3Tab[3] PROGMEM      = { {{3, 0}, nullptr},
+	{{L1, KEY_SEMICOLON}, l2TildeL3TabSemicolon},
+	{{L2, KEY_SEMICOLON}, l2TildeL3TabL2Semicolon}
+};
+
 
 /********************************* Transition 3 *******************************/
 const Node Compose::l3TabGV[1] PROGMEM           = { {{L1, KEY_L}, composeSymbols + 100} };
@@ -382,6 +414,12 @@ const Node Compose::l3TabSemicolonD[1] PROGMEM   = { {{L1, KEY_I}, composeSymbol
 
 const Node Compose::l3TabPeriodSlash[1] PROGMEM  = { {{L1, KEY_PERIOD}, composeSymbols + 102} };
 
+const Node Compose::l2TildeL3TabSemicolon[1] PROGMEM = { {{L1, KEY_B}, composeSymbols + 114} };
+
+const Node Compose::l2TildeL3TabL2Semicolon[3] PROGMEM = {  {{3, 0}, nullptr},
+	{{L1, KEY_B}, composeSymbols + 113},
+	{{L2, KEY_B}, composeSymbols + 112},
+};
 
 /********************************* Characters *********************************/
 /*
@@ -401,8 +439,10 @@ const uint16_t Compose::composeSymbols[] PROGMEM = {
 	0x2158, 0x2159, 0x215A, 0x215B, 0x215C, 0x215D, 0x215E, 0x215F, //  80
 	0x00BC, 0x00BD, 0x00BE, 0x263A, 0x2639, 0x2122, 0x2105, 0x26A2, //  88
 	0x26A3, 0x26A4, 0x2665, 0x262E, 0x25A1, 0x2611, 0x2612, 0x26A0, //  96
-	0x237D, 0x20B0, 0x20A4, 0x2318, 0x2325, 0x2020, 0x2052, 0x2023,  // 104
-	0xFB05, 0x02D8, 0x0306, 0x1E2A, 0x162B, 0x263F
+	0x237D, 0x20B0, 0x20A4, 0x2318, 0x2325, 0x2020, 0x2052, 0x2023, // 104
+	0xFB05, 0x02D8, 0x0306, 0x1E2A, 0x162B, 0x263F, 0x02C7, 0x030C, // 112
+	0x01C4, 0x01C5, 0x01C6, 0x2080, 0x2081, 0x2082, 0x2083, 0x2084, // 120
+	0x2085, 0x2086, 0x2087, 0x2088, 0x2089 
 };
 
 
