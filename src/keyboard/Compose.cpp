@@ -1,8 +1,9 @@
 #include "Compose.h"
 
 /********************************* Transition 0 *******************************/
-const Node Compose::root[2] PROGMEM              = { {{2, 0}, nullptr}, 
-	{{L3, KEY_TAB}, l3Tab}
+const Node Compose::root[3] PROGMEM              = { {{3, 0}, nullptr}, 
+	{{L3, KEY_TAB}, l3Tab},
+	{{L2, KEY_TILDE}, l2Tilde}
 };
 
 
@@ -68,6 +69,13 @@ const Node Compose::l3Tab[59] PROGMEM            = { {{59, 0}, nullptr},
 	{{L6, KEYPAD_0}, l3TabL6Kp0}
 };
 
+const Node Compose::l2Tilde[6] PROGMEM           = { {{6, 0}, nullptr},
+	{{L1, KEY_H}, composeSymbols + 108},
+	{{L2, KEY_H}, composeSymbols + 107},
+	{{L5, KEY_4}, composeSymbols + 109},
+	{{L1, KEY_SPACE}, composeSymbols + 105},
+	{{L2, KEY_TILDE}, composeSymbols + 106}
+};
 
 /********************************* Transition 2 *******************************/
 const Node Compose::l3TabB[3] PROGMEM            = { {{3, 0}, nullptr},
@@ -394,7 +402,7 @@ const uint16_t Compose::composeSymbols[] PROGMEM = {
 	0x00BC, 0x00BD, 0x00BE, 0x263A, 0x2639, 0x2122, 0x2105, 0x26A2, //  88
 	0x26A3, 0x26A4, 0x2665, 0x262E, 0x25A1, 0x2611, 0x2612, 0x26A0, //  96
 	0x237D, 0x20B0, 0x20A4, 0x2318, 0x2325, 0x2020, 0x2052, 0x2023,  // 104
-	0xFB05
+	0xFB05, 0x02D8, 0x0306, 0x1E2A, 0x162B, 0x263F
 };
 
 

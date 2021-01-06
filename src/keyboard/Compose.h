@@ -45,6 +45,7 @@ class Compose
 	
 	//Transition 1
 	const static Node l3Tab[] PROGMEM;
+	const static Node l2Tilde[] PROGMEM;
 	
 	//Transition 2
 	const static Node l3TabB[] PROGMEM;
