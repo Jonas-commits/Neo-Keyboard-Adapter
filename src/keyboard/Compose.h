@@ -81,6 +81,7 @@ class Compose
 	const static Node l3TabL55[] PROGMEM;
 	const static Node l3Tab7[] PROGMEM;
 	const static Node l3TabL5Space[] PROGMEM;
+	const static Node l3TabL3LBr[] PROGMEM;
 	const static Node l3TabSemicolon [] PROGMEM;
 	const static Node l3TabL2Semicolon[] PROGMEM;
 	const static Node l3TabL3Semicolon[] PROGMEM;

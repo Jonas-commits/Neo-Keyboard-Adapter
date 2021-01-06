@@ -481,6 +481,10 @@ void NeoReportParser::OnKeyDown(uint8_t mod, uint8_t key) {
 				}
 			}
 		
+		}  else if(isComposeKey(layer, key)){
+			composeState = true;
+			compose.transition(layer, key);
+		
 		} else {
 			// map action according the current layer active, indicated by modifier states
 			switch (layer) {
@@ -494,7 +498,7 @@ void NeoReportParser::OnKeyDown(uint8_t mod, uint8_t key) {
 					break;
 					
 				case L2:
-					if ( key <= KEY_Z || (KEY_ENTER <= key && key <= KEY_SPACE) ||
+					if (key <= KEY_Z || (KEY_ENTER <= key && key <= KEY_SPACE) ||
 								(KEY_BACKSLASH <= key && key <= KEY_QUOTE) || (KEY_SLASH <= key && key <= KEYPAD_ENTER)
 								|| neoModifiers.bmLeftCtrl || neoModifiers.bmRightCtrl
 								|| neoModifiers.bmLeftGUI || neoModifiers.bmRightGUI || neoModifiers.bmLeftAlt) {
@@ -507,12 +511,7 @@ void NeoReportParser::OnKeyDown(uint8_t mod, uint8_t key) {
 					break;
 					
 				case L3:
-					if (key == KEY_TAB){
-						composeState = true;
-						compose.transition(layer, key);
-					} else {
 						substitutePress(neoMapL3, key);
-					}
 					break;
 					
 				case L4:
@@ -805,6 +804,18 @@ Layer NeoReportParser::getActiveLayer() {
 		
 	} else {
 		return L1;
+	}
+}
+
+boolean NeoReportParser::isComposeKey(uint8_t layer, uint8_t key){
+	if (
+		layer == L3 && key == KEY_TAB ||
+		layer == L2 && key == KEY_TILDE
+	) {
+		return true;
+	
+	} else {
+		return false;
 	}
 }
 
