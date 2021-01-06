@@ -811,7 +811,8 @@ boolean NeoReportParser::isComposeKey(uint8_t layer, uint8_t key){
 	if (
 		layer == L3 && key == KEY_TAB ||
 		layer == L6 && key == KEY_RIGHT_BRACE ||
-		layer == L2 && key == KEY_TILDE
+		layer == L2 && key == KEY_TILDE ||
+		layer == L2 && key == KEY_EQUAL
 	) {
 		return true;
 	
