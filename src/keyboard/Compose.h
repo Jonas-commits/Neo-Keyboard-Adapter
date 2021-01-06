@@ -40,77 +40,85 @@ class Compose
 	private:
 	Node* currentNode;
 	
-	//Layer 0
+	//Transition 0
 	const static Node root[] PROGMEM;
 	
-	//Layer1
+	//Transition 1
 	const static Node l3Tab[] PROGMEM;
+	const static Node l2Equal[] PROGMEM;
+	const static Node l6RBr[] PROGMEM;
+	const static Node l2Tilde[] PROGMEM;
 	
-	//Layer2
-	const static Node l3TabG[] PROGMEM;
-	const static Node l3TabL3Q[] PROGMEM;
-	const static Node l3TabL3W[] PROGMEM;
-	const static Node l3TabRBr[] PROGMEM;
-	const static Node l3TabMinus[] PROGMEM;
-	const static Node l3TabH[] PROGMEM;
-	const static Node l3TabL2H[] PROGMEM;
-	const static Node l3TabL[] PROGMEM;
-	const static Node l3TabL2L[] PROGMEM;
-	const static Node l3TabL2F[] PROGMEM;
+	//Transition 2
+	const static Node l3TabB[] PROGMEM;
 	const static Node l3TabE[] PROGMEM;
 	const static Node l3TabL2E[] PROGMEM;
-	const static Node l3TabS[] PROGMEM;
-	const static Node l3TabL2S[] PROGMEM;
-	const static Node l3TabB[] PROGMEM;
-	const static Node l3TabO[] PROGMEM;
-	const static Node l3TabL2O[] PROGMEM;
-	const static Node l3TabSemicolon[] PROGMEM;
-	const static Node l3TabL2Semicolon[] PROGMEM;
-	const static Node l3TabL3Semicolon[] PROGMEM;
+	const static Node l3TabL3E[] PROGMEM;
+	const static Node l3TabL2F[] PROGMEM;
+	const static Node l3TabG[] PROGMEM;
+	const static Node l3TabH[] PROGMEM;
+	const static Node l3TabL2H[] PROGMEM;
+	const static Node l3TabL3H[] PROGMEM;
 	const static Node l3TabJ[] PROGMEM;
 	const static Node l3TabL2J[] PROGMEM;
 	const static Node l3TabK[] PROGMEM;
 	const static Node l3TabL2K[] PROGMEM;
+	const static Node l3TabL[] PROGMEM;
+	const static Node l3TabL2L[] PROGMEM;
+	const static Node l3TabO[] PROGMEM;
+	const static Node l3TabL2O[] PROGMEM;
+	const static Node l3TabL3Q[] PROGMEM;
+	const static Node l3TabR[] PROGMEM;
+	const static Node l3TabS[] PROGMEM;
+	const static Node l3TabL2S[] PROGMEM;
+	const static Node l3TabL3U[] PROGMEM;
+	const static Node l3TabV[] PROGMEM;
+	const static Node l3TabL3W[] PROGMEM;
+	const static Node l3TabL3Y[] PROGMEM;
 	const static Node l3Tab1[] PROGMEM;
 	const static Node l3Tab2[] PROGMEM;
-	const static Node l3TabL3Y[] PROGMEM;
-	const static Node l3TabL3H[] PROGMEM;
-	const static Node l3TabL2Kp9[] PROGMEM;
-	const static Node l3TabL5Space[] PROGMEM;
-	const static Node l3Tab7[] PROGMEM;
 	const static Node l3Tab3[] PROGMEM;
 	const static Node l3Tab4[] PROGMEM;
-	const static Node l3Tab5[] PROGMEM;
-	const static Node l3TabR[] PROGMEM;
 	const static Node l3TabL54[] PROGMEM;
+	const static Node l3Tab5[] PROGMEM;
 	const static Node l3TabL55[] PROGMEM;
-	const static Node l3TabL3U[] PROGMEM;
-	const static Node l3TabL3E[] PROGMEM;
-	const static Node l3TabL2Kp7[] PROGMEM;
-	const static Node l3TabL2Kp8[] PROGMEM;
-	const static Node l3TabL6Kp0[] PROGMEM;
+	const static Node l3Tab7[] PROGMEM;
+	const static Node l3TabL5Space[] PROGMEM;
+	const static Node l3TabL3LBr[] PROGMEM;
+	const static Node l3TabSemicolon [] PROGMEM;
+	const static Node l3TabL2Semicolon[] PROGMEM;
+	const static Node l3TabL3Semicolon[] PROGMEM;
 	const static Node l3TabL6Semicolon[] PROGMEM;
-	const static Node l3TabL2Kp0[] PROGMEM;
-	const static Node l3TabV[] PROGMEM;
+	const static Node l3TabRBr[] PROGMEM;
 	const static Node l3TabPeriod[] PROGMEM;
 	const static Node l3TabL2Period[] PROGMEM;
+	const static Node l3TabMinus[] PROGMEM;
+	const static Node l3TabL2Kp7[] PROGMEM;
+	const static Node l3TabL2Kp8[] PROGMEM;
+	const static Node l3TabL2Kp9[] PROGMEM;
+	const static Node l3TabL2Kp0[] PROGMEM;
+	const static Node l3TabL6Kp0[] PROGMEM;
+	const static Node l2TildeL3Tab[] PROGMEM;
 	
-	//Layer 3
+	//Transition 3
+	const static Node l3TabGV[] PROGMEM;
 	const static Node l3TabK1[] PROGMEM;
 	const static Node l3TabL2K1[] PROGMEM;
-	const static Node l3Tab1L3H[] PROGMEM;
-	const static Node l3Tab1L3Y[] PROGMEM;
-	const static Node l3Tab1L4H[] PROGMEM;
-	const static Node l3Tab1L4Y[] PROGMEM;
-	const static Node l3TabRSlash[] PROGMEM;
 	const static Node l3TabRJ[] PROGMEM;
+	const static Node l3TabRSlash[] PROGMEM;
 	const static Node l3TabVG[] PROGMEM;
+	const static Node l3Tab1L3H[] PROGMEM;
+	const static Node l3Tab1L4H[] PROGMEM;
+	const static Node l3Tab1L3Y[] PROGMEM;
+	const static Node l3Tab1L4Y[] PROGMEM;
 	const static Node l3TabSemicolonD[] PROGMEM;
-	const static Node l3TabGV[] PROGMEM;
 	const static Node l3TabPeriodSlash[] PROGMEM;
+	const static Node l2TildeL3TabSemicolon[] PROGMEM;
+	const static Node l2TildeL3TabL2Semicolon[] PROGMEM;
 	
 	//characters
 	const static uint16_t composeSymbols[] PROGMEM;
+
 
 	public:
 	Compose() : currentNode(const_cast<Node*>(root)){}
