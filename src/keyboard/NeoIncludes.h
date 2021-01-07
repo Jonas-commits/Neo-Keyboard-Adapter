@@ -26,6 +26,7 @@ struct InputSequence {
 
 enum C : uint8_t {
 	KEY_UNICODE = 0xFF,
+	KEY_CONSUMER = 0xFE,
 	NEO_MAP_SIZE = 100
 };
 
