@@ -552,6 +552,7 @@ void NeoReportParser::OnKeyUp(uint8_t mod, uint8_t key) {
 			memcpy_P(&sq, activeSequence, sizeof(sq));
 			
 			Keyboard.release(KeyboardKeycode(sq.key));
+			Consumer.release(sq.key);
 			
 			if (kbdLockingKeys.kbdLeds.bmCapsLock){
 				if(sq.modifier != KEY_LEFT_SHIFT){
@@ -703,7 +704,8 @@ void NeoReportParser::substitutePress(InputSequence *sq, uint8_t offset){
 		pressUnicode(modKey.key);
 		
 	} else if (modKey.modifier == KEY_CONSUMER) {
-		Consumer.write(modKey.key);
+		Consumer.press(modKey.key);
+		activeSequence = sq + offset;
 		
 	} else {
 		
