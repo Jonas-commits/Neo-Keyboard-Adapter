@@ -13,14 +13,11 @@ This project can also be modified for other Keyboard-transforming applications, 
 ### Arduino Pro Micro:
 * Download Arduino IDE https://www.arduino.cc/en/software
 * **Do not** attempt to flash a sketch by selecting the "Arduino Pro Micro" in the List. It will work, but soft-brick the device for further programming.
-* Download Additional Bootloader for 3.3V/8Mhz Variant at Sparkfun https://codeload.github.com/sparkfun/SF32u4_boards/zip/master
-* Copy Bootloader SF32u4_boards-master.zip/SF32u4_boards-master/sparkfun/avr/bootloaders/caterina/Caterina-promicro8.hex to *Arduino-Install-dir*/hardware/arduino/avr/bootloaders/caterina
-* Edit *Arduino-Install-dir*/hardware/arduino/avr/boards.txt by adding the contents from [hardware/boards.txt](hardware/boards.txt)
-* Sketches can now be uploaded by selecting the respective COM-Port and selecting the device "Arduino Pro Mirco 3.3V"
+* Use the Entry "Lily Pad USB" instead. Although this is not a Lily Pad, it shares the relevant specifications
 	
 ### Mirco USB Host Shield:
 * USB runs with 5V, but the board is 3.3V only and therefore has a design flaw and has to be fixed
-* Furthermore, the reset pin of the shield (**Not** the reset pin of the Arduino) has to be connected to 3.3V. Unfortunately, this pin is GND in Arduino, so we cannot just set the Pin to HIGH. I went straight after following setup: https://geekhack.org/index.php?topic=80421.0
+* Furthermore, the reset pin of the shield (**Not** the reset pin of the Arduino) has to be connected to 3.3V. Unfortunately, this pin is GND in Arduino, so we cannot just set the Pin to HIGH. I went straight after following setup: https://geekhack.org/index.php?topic=80421.0 which i documented also under [here](hardware/Setup.md)
 	
 ### Software 
 * The USB Host Shield Library has to be installed in the Arduino Library Manager
@@ -45,8 +42,19 @@ The Left Windows-Key is configured to interact with the driver. Following (under
 
 General note for Unicode on Windows: The decimal method only works in some apps (mainly MS Office) for all Unicode characters. For non-supported apps, only some of the Unicode Keys work. Hexadecimal setup does not require admin rights, but a reboot. It works with most apps, but apparently not with those where the decimal input is fully supported. So you have to toggle the Unicode method in respective to the app you are using. Linux is according to the specification I found, but untested. 
 
+
+#### Media Keys:
+Additionally to the Neo Layout, I mapped custom combinations for Media Keys to Layer 4. This is a workaround for the not yet working media keys on the keyboard on the one hand and also spice up standard keyboards.
+
+* **L4 + Page Up**: Volume Up
+* **L4 + Page Down**: Volume Down
+* **L4 + Insert**: Mute
+* **L4 + Delete**: Play/Pause
+* **L4 + Home**: Previous Track
+* **L4 + End**: Next Track
+
 ## Open issues:
-* Media-Keys not supported
+* Media-Keys readin not supported
 * Not all Dead Keys and Compose Symbols supported yet
 
 ## General issues:
