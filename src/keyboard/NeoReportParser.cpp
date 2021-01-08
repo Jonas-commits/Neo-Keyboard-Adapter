@@ -894,8 +894,7 @@ void NeoReportParser::install() {
 	Keyboard.press(KeyboardKeycode(KEY_RIGHT_ALT));
 	Keyboard.write(KeyboardKeycode(KEY_MINUS));
 	Keyboard.release(KeyboardKeycode(KEY_RIGHT_ALT));
-	Keyboard.print(F("Input Method@ &v EnableHexNumpad &t REG?SY &d 1 &f"));
-	Keyboard.write(KeyboardKeycode(KEY_ENTER));
+	Keyboard.println(F("Input Method@ &v EnableHexNumpad &t REG?SY &d 1 &f"));
 }
 
 void NeoReportParser::help() {
