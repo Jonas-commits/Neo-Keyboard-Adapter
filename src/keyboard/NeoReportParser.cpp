@@ -548,10 +548,7 @@ void NeoReportParser::OnKeyUp(uint8_t mod, uint8_t key) {
 		}
 		
 		if (activeConsumerSequence){
-			InputSequence sq;
-			memcpy_P(&sq, activeConsumerSequence, sizeof(sq));
-			Consumer.release(sq.key);
-			activeConsumerSequence =nullptr;
+			Consumer.releaseAll();
 		}
 		
 		if(activeSequence){ //release active holds from substitution
@@ -710,13 +707,9 @@ void NeoReportParser::substitutePress(InputSequence *sq, uint8_t offset){
 		pressUnicode(modKey.key);
 		
 	} else if (modKey.modifier == KEY_CONSUMER) {
-		if (activeConsumerSequence) {
-			InputSequence sq;
-			memcpy_P(&sq, activeConsumerSequence, sizeof(sq));
-			Consumer.release(sq.key);
-		}
+		Consumer.releaseAll();
 		Consumer.press(modKey.key);
-		activeConsumerSequence = sq + offset;
+		activeConsumerSequence = true;
 		
 	} else {
 		
