@@ -4,7 +4,7 @@
 #include "NeoIncludes.h"
 #include "Compose.h"
 
-class NeoReportParser : public KeyboardReportParser
+class NeoReportParser : public EnhancedKeyboardReportParser
 {
 	private:
 	const static uint8_t neoMap[NEO_MAP_SIZE];
@@ -42,7 +42,7 @@ class NeoReportParser : public KeyboardReportParser
 	
 	
 	public:
-	NeoReportParser() : KeyboardReportParser(), neoModifiers(), applyMap(true), m4Lock(false), composeState(false), activeSequence(nullptr){ }
+	NeoReportParser() : EnhancedKeyboardReportParser(), neoModifiers(), applyMap(true), m4Lock(false), composeState(false), activeSequence(nullptr){ }
 	void setLedState(uint8_t leds);
 	void install();
 	void help();

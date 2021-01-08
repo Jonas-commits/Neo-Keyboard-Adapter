@@ -4,6 +4,7 @@
 #include <hidboot.h>     //arduino -> shield
 #include <SPI.h>
 #include <HID-Project.h> //arduino -> host
+#include "EnhancedKeyboardReportParser.h"
 
 struct NeoModifiers {
 	boolean bmLeftCtrl;
