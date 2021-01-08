@@ -23,6 +23,7 @@ class NeoReportParser : public KeyboardReportParser
 	UnicodeMethod unicodeMethod;
 	
 	InputSequence *activeSequence;
+	InputSequence *activeConsumerSequence;
 	boolean leftGuiSinglePress;
 
 	
