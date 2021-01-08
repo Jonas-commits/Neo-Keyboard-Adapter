@@ -11,6 +11,7 @@ NeoReportParser Prs;
 void setup()
 {
 	BootKeyboard.begin();
+	Consumer.begin();
 
 	// Flash LED rapidly in case USB Shield could not be initialized
 	if (Usb.Init() == -1) {
