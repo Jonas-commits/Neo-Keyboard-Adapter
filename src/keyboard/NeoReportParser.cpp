@@ -557,10 +557,9 @@ void NeoReportParser::OnKeyUp(uint8_t mod, uint8_t key) {
 			
 			Keyboard.release(KeyboardKeycode(sq.key));
 			
-			if (kbdLockingKeys.kbdLeds.bmCapsLock && sq.key <= KEY_SLASH){
-				if(sq.modifier != KEY_LEFT_SHIFT){
-					Keyboard.release(KeyboardKeycode(KEY_LEFT_SHIFT));
-				}
+			if (kbdLockingKeys.kbdLeds.bmCapsLock &&
+				sq.modifier == KEY_RESERVED && sq.key <= KEY_SLASH) {
+				Keyboard.release(KeyboardKeycode(KEY_LEFT_SHIFT));
 			} else {
 				Keyboard.release(KeyboardKeycode(sq.modifier));
 			}
@@ -714,10 +713,9 @@ void NeoReportParser::substitutePress(InputSequence *sq, uint8_t offset){
 		
 		Keyboard.releaseAll();
 		
-		if (kbdLockingKeys.kbdLeds.bmCapsLock && modKey.key <= KEY_SLASH){
-			if(modKey.modifier != KEY_LEFT_SHIFT){
-				Keyboard.press(KeyboardKeycode(KEY_LEFT_SHIFT));
-			} 
+		if (kbdLockingKeys.kbdLeds.bmCapsLock && 
+				modKey.modifier == KEY_RESERVED && modKey.key <= KEY_SLASH) {
+			Keyboard.press(KeyboardKeycode(KEY_LEFT_SHIFT));
 		} else {
 			Keyboard.press(KeyboardKeycode(modKey.modifier));
 		}
@@ -790,14 +788,20 @@ Layer NeoReportParser::getActiveLayer() {
 		} else {
 			return L4;
 		}
+	
 	} else if (neoModifiers.bmLeftShift || neoModifiers.bmRightShift) {
 		if (neoModifiers.bmLeft3 || neoModifiers.bmRight3) {
 			return L5;
 		
 		} else if (neoModifiers.bmLeft4 || neoModifiers.bmRightAlt){
 			return L4_SHIFT;
+			
 		} else {
-			return L2;
+			if (kbdLockingKeys.kbdLeds.bmCapsLock){
+				return L1;
+			} else {
+				return L2;
+			}
 		}
 		
 	} else if (neoModifiers.bmLeft3 || neoModifiers.bmRight3) {
@@ -812,7 +816,11 @@ Layer NeoReportParser::getActiveLayer() {
 		return L4;
 		
 	} else {
-		return L1;
+		if (kbdLockingKeys.kbdLeds.bmCapsLock){
+			return L2;
+		} else {
+			return L1;
+		}
 	}
 }
 
