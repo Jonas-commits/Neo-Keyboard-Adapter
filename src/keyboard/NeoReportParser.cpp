@@ -688,6 +688,12 @@ void NeoReportParser::OnControlKeysChanged(uint8_t before, uint8_t after) {
 
 uint8_t NeoReportParser::HandleLockingKeys(USBHID* hid, uint8_t key){
 	uint8_t lockLeds = kbdLockingKeys.bLeds;
+	KBDLEDS* kLockLeds = (KBDLEDS*) &lockLeds;
+		
+	//turn off NUM-Lock in case of M4-Lock
+	if(m4Lock && applyMap) {
+		(kLockLeds->bmNumLock) = 0;
+	}
 	return (hid->SetReport(0, 0, 2, 0, 1, &lockLeds));
 }
 
@@ -782,23 +788,23 @@ void NeoReportParser::pressUnicode(uint16_t code) {
 }
 
 Layer NeoReportParser::getActiveLayer() {
-	if (m4Lock){
-		if (neoModifiers.bmLeftShift || neoModifiers.bmRightShift) {
-			return L4_SHIFT;
-		} else {
-			return L4;
-		}
 	
-	} else if (neoModifiers.bmLeftShift || neoModifiers.bmRightShift) {
+	if (neoModifiers.bmLeftShift || neoModifiers.bmRightShift) {
 		if (neoModifiers.bmLeft3 || neoModifiers.bmRight3) {
 			return L5;
 		
 		} else if (neoModifiers.bmLeft4 || neoModifiers.bmRightAlt){
-			return L4_SHIFT;
+			if (m4Lock) {
+				return L2;
+			} else {
+				return L4_SHIFT;
+			}
 			
 		} else {
-			if (kbdLockingKeys.kbdLeds.bmCapsLock){
+			if (kbdLockingKeys.kbdLeds.bmCapsLock) {
 				return L1;
+			} else if (m4Lock) {
+				return L4_SHIFT;
 			} else {
 				return L2;
 			}
@@ -813,11 +819,17 @@ Layer NeoReportParser::getActiveLayer() {
 		}
 		
 	} else if (neoModifiers.bmLeft4 || neoModifiers.bmRightAlt) {
-		return L4;
+		if (m4Lock) {
+			return L1;
+		} else {
+			return L4;
+		}
 		
 	} else {
-		if (kbdLockingKeys.kbdLeds.bmCapsLock){
+		if (kbdLockingKeys.kbdLeds.bmCapsLock) {
 			return L2;
+		} else if (m4Lock) {
+			return L4;
 		} else {
 			return L1;
 		}
