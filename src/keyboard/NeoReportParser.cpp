@@ -61,7 +61,7 @@ const InputSequence NeoReportParser::neoMapL2[] PROGMEM = {
 	{0, 0},							{0, 0},							{0, 0},							{KEY_UNICODE, 0x2C7},
 	
   //KEY_COMMA						KEY_PERIOD						KEY_SLASH						KEY_CAPS_LOCK
-	{KEY_UNICODE, 0x2013},			{KEY_UNICODE, 0x2022},			{0, 0},			{0, 0}, 
+	{KEY_UNICODE, 0x2013},			{KEY_UNICODE, 0x2022},			{0, 0},							{0, 0}, 
 	
   //KEY_F1							KEY_F2							KEY_F3							KEY_F4
 	{0, 0},							{0, 0},							{0, 0},							{0, 0},
@@ -557,7 +557,7 @@ void NeoReportParser::OnKeyUp(uint8_t mod, uint8_t key) {
 			
 			Keyboard.release(KeyboardKeycode(sq.key));
 			
-			if (kbdLockingKeys.kbdLeds.bmCapsLock){
+			if (kbdLockingKeys.kbdLeds.bmCapsLock && sq.key <= KEY_SLASH){
 				if(sq.modifier != KEY_LEFT_SHIFT){
 					Keyboard.release(KeyboardKeycode(KEY_LEFT_SHIFT));
 				}
@@ -681,7 +681,6 @@ void NeoReportParser::OnControlKeysChanged(uint8_t before, uint8_t after) {
 			m4Lock = false;
 		}
 		Keyboard.write(KEY_CAPS_LOCK);
-		kbdLockingKeys.kbdLeds.bmCapsLock = ~kbdLockingKeys.kbdLeds.bmCapsLock;
 	}
 	
 	setLedState(BootKeyboard.getLeds()); //update LEDs
@@ -715,7 +714,7 @@ void NeoReportParser::substitutePress(InputSequence *sq, uint8_t offset){
 		
 		Keyboard.releaseAll();
 		
-		if (kbdLockingKeys.kbdLeds.bmCapsLock){
+		if (kbdLockingKeys.kbdLeds.bmCapsLock && modKey.key <= KEY_SLASH){
 			if(modKey.modifier != KEY_LEFT_SHIFT){
 				Keyboard.press(KeyboardKeycode(KEY_LEFT_SHIFT));
 			} 
