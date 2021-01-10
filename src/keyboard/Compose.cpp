@@ -1,12 +1,18 @@
 #include "Compose.h"
 
 /********************************* Transition 0 *******************************/
-const Node Compose::root[6] PROGMEM              = { {{6, 0}, nullptr}, 
+const Node Compose::root[12] PROGMEM             = { {{12, 0}, nullptr}, 
 	{{L3, KEY_TAB}, l3Tab},
 	{{L2, KEY_EQUAL}, l2Equal},
+	{{L3, KEY_EQUAL}, l3Equal},
+	{{L4, KEY_EQUAL}, l4Equal},
+	{{L6, KEY_EQUAL}, l6Equal},
+	{{L2, KEY_RIGHT_BRACE}, l2RBr},
+	{{L3, KEY_RIGHT_BRACE}, l3RBr},
 	{{L6, KEY_RIGHT_BRACE}, l6RBr},
 	{{L2, KEY_TILDE}, l2Tilde},
-	{{L3, KEY_TILDE}, l3Tilde}
+	{{L3, KEY_TILDE}, l3Tilde},
+	{{L4, KEY_TILDE}, l4Tilde}
 };
 
 
@@ -89,6 +95,66 @@ const Node Compose::l2Equal[15] PROGMEM           = { {{15, 0}, nullptr},
 	{{L2, KEY_EQUAL}, composeSymbols + 126}
 };
 
+const Node Compose::l3Equal[3] PROGMEM           = { {{3, 0}, nullptr},
+	{{L1, KEY_SPACE}, composeSymbols + 178},
+	{{L3, KEY_EQUAL}, composeSymbols + 179}
+};
+
+const Node Compose::l4Equal[3] PROGMEM           = { {{3, 0}, nullptr},
+	{{L1, KEY_SPACE}, composeSymbols + 207},
+	{{L4, KEY_EQUAL}, composeSymbols + 208},
+};
+
+const Node Compose::l6Equal[22] PROGMEM          = { {{22, 0}, nullptr},
+	{{L1, KEY_B}, composeSymbols + 203},
+	{{L2, KEY_B}, composeSymbols + 202},
+	{{L1, KEY_E}, composeSymbols + 195},
+	{{L2, KEY_E}, composeSymbols + 194},
+	{{L1, KEY_J}, composeSymbols + 197},
+	{{L2, KEY_J}, composeSymbols + 196},
+	{{L1, KEY_K}, composeSymbols + 199},
+	{{L2, KEY_K}, composeSymbols + 198},
+	{{L1, KEY_L}, composeSymbols + 201},
+	{{L2, KEY_L}, composeSymbols + 200},
+	{{L1, KEY_N}, composeSymbols + 189},
+	{{L2, KEY_N}, composeSymbols + 188},
+	{{L1, KEY_U}, composeSymbols + 204},
+	{{L1, KEY_Y}, composeSymbols + 193},
+	{{L2, KEY_Y}, composeSymbols + 192},
+	{{L3, KEY_TAB}, l6EqualL3Tab},
+	{{L1, KEY_SPACE}, composeSymbols + 184},
+	{{L2, KEY_EQUAL}, l6EqualL2Equal},
+	{{L6, KEY_EQUAL}, composeSymbols + 185},
+	{{L1, KEY_SEMICOLON}, composeSymbols + 191},
+	{{L2, KEY_SEMICOLON}, composeSymbols + 190}
+};
+
+const Node Compose::l2RBr[5] PROGMEM             = { {{5, 0}, nullptr},
+	{{L1, KEY_E}, composeSymbols + 183},
+	{{L2, KEY_E}, composeSymbols + 182},
+	{{L1, KEY_SPACE}, composeSymbols + 180},
+	{{L2, KEY_RIGHT_BRACE}, composeSymbols + 181}
+};
+
+const Node Compose::l3RBr[17] PROGMEM            = { {{17, 0}, nullptr},
+	{{L3, KEY_A}, composeSymbols + 211},
+	{{L5, KEY_5}, composeSymbols + 218},
+	{{L4, KEY_6}, composeSymbols + 98},
+	{{L5, KEY_6}, composeSymbols + 219},
+	{{L1, KEY_E}, composeSymbols + 215},
+	{{L2, KEY_E}, composeSymbols + 214},
+	{{L1, KEY_G}, composeSymbols + 217},
+	{{L2, KEY_G}, composeSymbols + 216},
+	{{L3, KEY_S}, composeSymbols + 211},
+	{{L1, KEY_U}, composeSymbols + 4},
+	{{L2, KEY_U}, composeSymbols + 5},
+	{{L1, KEY_SPACE}, composeSymbols + 209},
+	{{L3, KEY_RIGHT_BRACE}, composeSymbols + 210},
+	{{L1, KEY_SEMICOLON}, composeSymbols + 213},
+	{{L2, KEY_SEMICOLON}, composeSymbols + 212},
+	{{L1, KEYPAD_DIVIDE}, composeSymbols + 211},
+};
+
 const Node Compose::l6RBr[6] PROGMEM             = { {{6, 0}, nullptr},
 	{{L1, KEY_U}, composeSymbols + 108},
 	{{L2, KEY_U}, composeSymbols + 107},
@@ -97,7 +163,7 @@ const Node Compose::l6RBr[6] PROGMEM             = { {{6, 0}, nullptr},
 	{{L6, KEY_RIGHT_BRACE}, composeSymbols + 106}
 };
 
-const Node Compose::l2Tilde[24] PROGMEM           = { {{24, 0}, nullptr},
+const Node Compose::l2Tilde[24] PROGMEM          = { {{24, 0}, nullptr},
 	{{L1, KEY_1}, composeSymbols + 116},
 	{{L1, KEY_2}, composeSymbols + 117},
 	{{L1, KEY_3}, composeSymbols + 118},
@@ -123,7 +189,7 @@ const Node Compose::l2Tilde[24] PROGMEM           = { {{24, 0}, nullptr},
 	{{L1, KEYPAD_0}, composeSymbols + 115}
 };
 
-const Node Compose::l3Tilde[11] PROGMEM           = { {{11, 0}, nullptr},
+const Node Compose::l3Tilde[11] PROGMEM          = { {{11, 0}, nullptr},
 	{{L5, KEY_4}, composeSymbols + 172},
 	{{L3, KEY_Q}, composeSymbols + 64},
 	{{L3, KEY_R}, composeSymbols + 173},
@@ -134,6 +200,14 @@ const Node Compose::l3Tilde[11] PROGMEM           = { {{11, 0}, nullptr},
 	{{L6, KEY_RIGHT_BRACE}, l3TildeL6RBr},
 	{{L3, KEY_SEMICOLON}, composeSymbols + 171},
 	{{L3, KEYPAD_3}, composeSymbols + 174}
+};
+
+const Node Compose::l4Tilde[6] PROGMEM           = { {{6, 0}, nullptr},
+	{{L1, KEY_E}, composeSymbols + 11},
+	{{L2, KEY_E}, composeSymbols + 12},
+	{{L1, KEY_SPACE}, composeSymbols + 175},
+	{{L4, KEY_TILDE}, composeSymbols + 176},
+	{{L1, KEY_SLASH}, composeSymbols + 177}
 };
 
 
@@ -400,6 +474,16 @@ const Node Compose::l3TabL6Kp0[3] PROGMEM        = { {{3, 0}, nullptr},
 	{{L2, KEYPAD_8}, composeSymbols + 94}
 };
 
+const Node Compose::l6EqualL3Tab[3] PROGMEM      = { {{3, 0}, nullptr},
+	{{L1, KEY_D}, l6EqualL3TabD},
+	{{L2, KEY_D}, l6EqualL3TabL2D}
+};
+
+const Node Compose::l6EqualL2Equal[3] PROGMEM    = { {{3, 0}, nullptr},
+	{{L1, KEY_G}, composeSymbols + 187},
+	{{L2, KEY_G}, composeSymbols + 186}
+};
+
 const Node Compose::l2TildeL3Tab[3] PROGMEM      = { {{3, 0}, nullptr},
 	{{L1, KEY_SEMICOLON}, l2TildeL3TabSemicolon},
 	{{L2, KEY_SEMICOLON}, l2TildeL3TabL2Semicolon}
@@ -486,6 +570,10 @@ const Node Compose::l3TabSemicolonD[1] PROGMEM   = { {{L1, KEY_I}, composeSymbol
 
 const Node Compose::l3TabPeriodSlash[1] PROGMEM  = { {{L1, KEY_PERIOD}, composeSymbols + 102} };
 
+const Node Compose::l6EqualL3TabD[1] PROGMEM     = { {{L1, KEY_F}, composeSymbols + 206} };
+
+const Node Compose::l6EqualL3TabL2D[1] PROGMEM   = { {{L2, KEY_F}, composeSymbols + 205} };
+
 const Node Compose::l2TildeL3TabSemicolon[1] PROGMEM = { {{L1, KEY_B}, composeSymbols + 114} };
 
 const Node Compose::l2TildeL3TabL2Semicolon[3] PROGMEM = {  {{3, 0}, nullptr},
@@ -520,7 +608,13 @@ const uint16_t Compose::composeSymbols[] PROGMEM = {
 	0x030F, 0x0228, 0x0229, 0x0200, 0x0201, 0x0204, 0x0205, 0x0208, // 152
 	0x0209, 0x020C, 0x020D, 0x0210, 0x0211, 0x0214, 0x0215, 0x0202, // 160
 	0x0203, 0x0206, 0x0207, 0x020A, 0x020B, 0x020E, 0x020F, 0x0212, // 168
-	0x0213, 0x0216, 0x0217, 0x2025, 0x2641, 0x2423, 0x21CB
+	0x0213, 0x0216, 0x0217, 0x2025, 0x2641, 0x2423, 0x21CB, 0x02D9, // 176
+	0x0307, 0x0237, 0x02DA, 0x030A, 0x02DC, 0x0303, 0x2C62, 0x026B, // 184
+	0x00AF, 0x0304, 0x01EC, 0x01ED, 0x1E06, 0x1E07, 0x1E0E, 0x1E0F, // 192
+	0x1E34, 0x1E35, 0x1E3A, 0x1E3B, 0x1E48, 0x1E49, 0x1E5E, 0x1E5F, // 200
+	0x1E6E, 0x1E6F, 0x1E94, 0x1E95, 0x1E96, 0x01E2, 0x01E3, 0x00A8, // 208
+	0x0308, 0x002F, 0x0338, 0x2718, 0x0110, 0x0111, 0x0141, 0x0142, // 216
+	0x00D8, 0x00F8, 0x26A6, 0x26A7, 
 };
 
 

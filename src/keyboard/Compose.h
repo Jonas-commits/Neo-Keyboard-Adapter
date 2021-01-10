@@ -46,9 +46,15 @@ class Compose
 	//Transition 1
 	const static Node l3Tab[] PROGMEM;
 	const static Node l2Equal[] PROGMEM;
+	const static Node l3Equal[] PROGMEM;
+	const static Node l4Equal[] PROGMEM;
+	const static Node l6Equal[] PROGMEM;
+	const static Node l2RBr[] PROGMEM;
+	const static Node l3RBr[] PROGMEM;
 	const static Node l6RBr[] PROGMEM;
 	const static Node l2Tilde[] PROGMEM;
 	const static Node l3Tilde[] PROGMEM;
+	const static Node l4Tilde[] PROGMEM;
 	
 	//Transition 2
 	const static Node l3TabB[] PROGMEM;
@@ -99,6 +105,8 @@ class Compose
 	const static Node l3TabL2Kp9[] PROGMEM;
 	const static Node l3TabL2Kp0[] PROGMEM;
 	const static Node l3TabL6Kp0[] PROGMEM;
+	const static Node l6EqualL3Tab[] PROGMEM;
+	const static Node l6EqualL2Equal[] PROGMEM;
 	const static Node l2TildeL3Tab[] PROGMEM;
 	const static Node l3TildeL2Equal[] PROGMEM;
 	const static Node l3TildeL4RBr[] PROGMEM;
@@ -117,6 +125,8 @@ class Compose
 	const static Node l3Tab1L4Y[] PROGMEM;
 	const static Node l3TabSemicolonD[] PROGMEM;
 	const static Node l3TabPeriodSlash[] PROGMEM;
+	const static Node l6EqualL3TabD[] PROGMEM;
+	const static Node l6EqualL3TabL2D[] PROGMEM;
 	const static Node l2TildeL3TabSemicolon[] PROGMEM;
 	const static Node l2TildeL3TabL2Semicolon[] PROGMEM;
 	

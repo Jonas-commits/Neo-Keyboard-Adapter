@@ -690,9 +690,11 @@ uint8_t NeoReportParser::HandleLockingKeys(USBHID* hid, uint8_t key){
 	uint8_t lockLeds = kbdLockingKeys.bLeds;
 	KBDLEDS* kLockLeds = (KBDLEDS*) &lockLeds;
 		
-	//turn off NUM-Lock in case of M4-Lock
-	if(m4Lock && applyMap) {
+	//turn off NUM-Lock in case of M4-Lock, light everything in case of compose
+	if(m4Lock && applyMap) { 
 		(kLockLeds->bmNumLock) = 0;
+	} else if (composeState && applyMap){
+		lockLeds = 0xFF;
 	}
 	return (hid->SetReport(0, 0, 2, 0, 1, &lockLeds));
 }
@@ -837,18 +839,19 @@ Layer NeoReportParser::getActiveLayer() {
 }
 
 boolean NeoReportParser::isComposeKey(uint8_t layer, uint8_t key){
-	if (
+	return (
 		layer == L3 && key == KEY_TAB ||
+		layer == L2 && key == KEY_RIGHT_BRACE ||
+		layer == L3 && key == KEY_RIGHT_BRACE ||
 		layer == L6 && key == KEY_RIGHT_BRACE ||
 		layer == L2 && key == KEY_TILDE ||
 		layer == L3 && key == KEY_TILDE ||
-		layer == L2 && key == KEY_EQUAL
-	) {
-		return true;
-	
-	} else {
-		return false;
-	}
+		layer == L4 && key == KEY_TILDE ||
+		layer == L2 && key == KEY_EQUAL ||
+		layer == L3 && key == KEY_EQUAL ||
+		layer == L4 && key == KEY_EQUAL ||
+		layer == L6 && key == KEY_EQUAL 
+	);
 }
 
 boolean NeoReportParser::neoModifierChange(uint8_t key, boolean isKeyDownEvent){
