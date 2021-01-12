@@ -145,9 +145,11 @@ const Node Compose::l6Equal[22] PROGMEM          = { {{22, 0}, nullptr},
 	{{L2, KEY_SEMICOLON}, composeSymbols + 190}
 };
 
-const Node Compose::l1RBr[3] PROGMEM             = { {{3, 0}, nullptr},
+const Node Compose::l1RBr[5] PROGMEM             = { {{5, 0}, nullptr},
+	{{L3, KEY_TAB}, l1RBrL3Tab},
 	{{L1, KEY_SPACE}, composeSymbols + 229},
-	{{L1, KEY_RIGHT_BRACE}, composeSymbols + 230}
+	{{L1, KEY_RIGHT_BRACE}, composeSymbols + 230},
+	{{L3, KEY_RIGHT_BRACE}, l1RBrL3RBr}
 };
 
 const Node Compose::l2RBr[5] PROGMEM             = { {{5, 0}, nullptr},
@@ -529,6 +531,16 @@ const Node Compose::l6EqualL2Equal[3] PROGMEM    = { {{3, 0}, nullptr},
 	{{L2, KEY_G}, composeSymbols + 186}
 };
 
+const Node Compose::l1RBrL3Tab[3] PROGMEM    = { {{3, 0}, nullptr},
+	{{L1, KEY_D}, l1RBrL3TabD},
+	{{L2, KEY_D}, l1RBrL3TabL2D}
+};
+
+const Node Compose::l1RBrL3RBr[3] PROGMEM    = { {{3, 0}, nullptr},
+	{{L1, KEY_G}, composeSymbols + 234},
+	{{L2, KEY_G}, composeSymbols + 233}
+};
+
 const Node Compose::l2TildeL3Tab[3] PROGMEM      = { {{3, 0}, nullptr},
 	{{L1, KEY_SEMICOLON}, l2TildeL3TabSemicolon},
 	{{L2, KEY_SEMICOLON}, l2TildeL3TabL2Semicolon}
@@ -619,6 +631,10 @@ const Node Compose::l6EqualL3TabD[1] PROGMEM     = { {{L1, KEY_F}, composeSymbol
 
 const Node Compose::l6EqualL3TabL2D[1] PROGMEM   = { {{L2, KEY_F}, composeSymbols + 205} };
 
+const Node Compose::l1RBrL3TabD[1]  PROGMEM      = { {{L1, KEY_F}, composeSymbols + 236} };
+
+const Node Compose::l1RBrL3TabL2D[1]  PROGMEM    = { {{L2, KEY_F}, composeSymbols + 235} };
+
 const Node Compose::l2TildeL3TabSemicolon[1] PROGMEM = { {{L1, KEY_B}, composeSymbols + 114} };
 
 const Node Compose::l2TildeL3TabL2Semicolon[3] PROGMEM = {  {{3, 0}, nullptr},
@@ -661,7 +677,7 @@ const uint16_t Compose::composeSymbols[] PROGMEM = {
 	0x0308, 0x002F, 0x0338, 0x2718, 0x0110, 0x0111, 0x0141, 0x0142, // 216
 	0x00D8, 0x00F8, 0x26A6, 0x26A7, 0x0313, 0x1FBF, 0x0314, 0x1FFE, // 224
 	0x0323, 0x002E, 0x02DE, 0x02C6, 0x0302, 0x00B4, 0x0301, 0x0060, // 232
-	0x0300
+	0x0300, 0x01FE, 0x01FF, 0x01FC, 0x01FD
 };
 
 
