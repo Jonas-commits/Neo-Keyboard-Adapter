@@ -566,6 +566,13 @@ void NeoReportParser::OnKeyUp(uint8_t mod, uint8_t key) {
 				Keyboard.release(KeyboardKeycode(sq.modifier));
 			}
 			
+			//restore modifiers 
+			if(neoModifiers.bmLeftShift){
+				Keyboard.press(KeyboardKeycode(KEY_LEFT_SHIFT));
+			} else if(neoModifiers.bmRightShift){
+				Keyboard.press(KeyboardKeycode(KEY_RIGHT_SHIFT));
+			}
+			
 			activeSequence = nullptr;
 			
 		} else { //otherwise just release the actual key
