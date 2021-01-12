@@ -36,7 +36,6 @@ class NeoReportParser : public EnhancedKeyboardReportParser
 	void substitutePress(uint16_t *uni_map, uint8_t offset);
 	void pressUnicode(uint16_t code);
 	Layer getActiveLayer();
-	boolean isComposeKey(uint8_t layer, uint8_t key);
 	boolean neoModifierChange(uint8_t key, boolean isKeyDownEvent);
 	void toggleM4Lock();
 	

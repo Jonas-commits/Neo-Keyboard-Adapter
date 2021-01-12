@@ -45,16 +45,24 @@ class Compose
 	
 	//Transition 1
 	const static Node l3Tab[] PROGMEM;
+	const static Node l1Equal[] PROGMEM;
 	const static Node l2Equal[] PROGMEM;
 	const static Node l3Equal[] PROGMEM;
 	const static Node l4Equal[] PROGMEM;
+	const static Node l5Equal[] PROGMEM;
 	const static Node l6Equal[] PROGMEM;
+	const static Node l1RBr[] PROGMEM;
 	const static Node l2RBr[] PROGMEM;
 	const static Node l3RBr[] PROGMEM;
+	const static Node l4RBr[] PROGMEM;
+	const static Node l5RBr[] PROGMEM;
 	const static Node l6RBr[] PROGMEM;
+	const static Node l1Tilde[] PROGMEM;
 	const static Node l2Tilde[] PROGMEM;
 	const static Node l3Tilde[] PROGMEM;
 	const static Node l4Tilde[] PROGMEM;
+	const static Node l5Tilde[] PROGMEM;
+	const static Node l6Tilde[] PROGMEM;
 	
 	//Transition 2
 	const static Node l3TabB[] PROGMEM;

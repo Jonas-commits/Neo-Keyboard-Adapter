@@ -471,7 +471,8 @@ void NeoReportParser::OnKeyDown(uint8_t mod, uint8_t key) {
 				uint16_t result  = compose.transition(layer, key);
 				if(result == 0){
 					//not found, write X to indicate
-					Keyboard.write(KeyboardKeycode(KEY_X));
+					const static InputSequence sq PROGMEM = {L1, KEY_X};
+					substitutePress(&sq, 0);
 					composeState = false;
 			
 				} else if (result > 1) { //result == 1: just remain, nothing to do
@@ -481,7 +482,8 @@ void NeoReportParser::OnKeyDown(uint8_t mod, uint8_t key) {
 				}
 			}
 		
-		}  else if(isComposeKey(layer, key)){
+		}  else if(layer == L3 && key == KEY_TAB || key == KEY_RIGHT_BRACE || 
+				key == KEY_TILDE || key == KEY_EQUAL){  //is compose key
 			composeState = true;
 			compose.transition(layer, key);
 		
@@ -491,7 +493,7 @@ void NeoReportParser::OnKeyDown(uint8_t mod, uint8_t key) {
 				case L1:
 					if (key != KEY_EQUAL) { //only key not fitting in layer1
 						Keyboard.press(KeyboardKeycode(neoMap[key]));
-					} else {
+					} else { //dead code as long as Base Compose Module is used
 						const static InputSequence sq PROGMEM = {KEY_LEFT_SHIFT, KEY_EQUAL};
 						substitutePress(&sq, 0);
 					}
@@ -836,22 +838,6 @@ Layer NeoReportParser::getActiveLayer() {
 			return L1;
 		}
 	}
-}
-
-boolean NeoReportParser::isComposeKey(uint8_t layer, uint8_t key){
-	return (
-		layer == L3 && key == KEY_TAB ||
-		layer == L2 && key == KEY_RIGHT_BRACE ||
-		layer == L3 && key == KEY_RIGHT_BRACE ||
-		layer == L6 && key == KEY_RIGHT_BRACE ||
-		layer == L2 && key == KEY_TILDE ||
-		layer == L3 && key == KEY_TILDE ||
-		layer == L4 && key == KEY_TILDE ||
-		layer == L2 && key == KEY_EQUAL ||
-		layer == L3 && key == KEY_EQUAL ||
-		layer == L4 && key == KEY_EQUAL ||
-		layer == L6 && key == KEY_EQUAL 
-	);
 }
 
 boolean NeoReportParser::neoModifierChange(uint8_t key, boolean isKeyDownEvent){
