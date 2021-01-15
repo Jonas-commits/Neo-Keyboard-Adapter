@@ -7,6 +7,7 @@ NAME_UNI = 'composeSymbols'
 V_UNI = 'const uint16_t Compose::'
 V_IDENT = 'const Node Compose::'
 VH_IDENT = 'const static Node'
+GEN_MAGIC = '<GENERATOR>'
 
 ROOT = defaultdict(dict, ((LEAF, []),))
 values = []
@@ -200,7 +201,7 @@ def dump_c(d, fc, fh):
 
     if dictlen > 1:
         fc.write(V_IDENT + p + '[] PROGMEM = {\n')
-        fh.write(VH_IDENT + ' ' + p + '[] PROGMEM;' + '\n')
+        fh.write('\t' + VH_IDENT + ' ' + p + '[] PROGMEM;' + '\n')
 
     if dictlen > 2:
         fc.write('\t{{' + str((dictlen) % 256) + ', ' + str((dictlen) // 256) + '}, nullptr},\n')
@@ -271,6 +272,16 @@ def parse(filename):
                 print('WARNING: Strings not supported. Skipped \"' + str(e) + '\"')
 
 
+def inject_template(f_template, f_gen, f_out):
+    for x in f_template:
+        if GEN_MAGIC in x:
+            f_out.writelines(f_gen)
+        else:
+            f_out.write(x)
+
+
+
+
 def main():
     #use modules from neo compose/src
     print('===base.module===')
@@ -281,10 +292,21 @@ def main():
 
     print('\n\n===math.module===')
     parse('math.module')
-    with open('../keyboard/compose.gen.c', 'w') as fc:
-        with open('../keyboard/compose.gen.h', 'w') as fh:
-            dump_c(ROOT, fc, fh)
-            dump_values(fc)
+    with open('compose.gen.cpp', 'w') as f_gen_c:
+        with open('compose.gen.h', 'w') as f_gen_h:
+            dump_c(ROOT, f_gen_c, f_gen_h)
+            dump_values(f_gen_c)
+
+    with open('compose.gen.cpp', 'r') as f_gen_c:
+        with open('Compose.template.cpp', 'r') as f_tmp_c:
+            with open('../keyboard/Compose.gen.cpp', 'w') as f_out_c:
+                inject_template(f_tmp_c, f_gen_c, f_out_c)
+
+    with open('compose.gen.h', 'r') as f_gen_h:
+        with open('Compose.template.h', 'r') as f_tmp_h:
+            with open('../keyboard/Compose.gen.h', 'w') as f_out_h:
+                inject_template(f_tmp_h, f_gen_h, f_out_h)
+
 
 
 if __name__ == '__main__':

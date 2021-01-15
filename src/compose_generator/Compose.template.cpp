@@ -1,8 +1,7 @@
-#include "Compose.h"
+#include "Compose.gen.h"
 
-
-//generated Compose Tree
-#include "compose.gen.c"
+//generated compose tree
+<GENERATOR>
 
 uint16_t Compose::transition(uint8_t layer, uint8_t key) {
 	Node* cur = currentNode;

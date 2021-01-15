@@ -40,11 +40,9 @@ class Compose
 	private:
 	Node* currentNode;
 
-//generated symbols for compose tree
-#include "compose.gen.h"
+<GENERATOR>
 
 	const static uint16_t composeSymbols[] PROGMEM;
-
 
 	public:
 	Compose() : currentNode(const_cast<Node*>(root)){}
@@ -52,6 +50,7 @@ class Compose
 	uint16_t transition(uint8_t layer, uint8_t key);
 	void reset();
 	
+
 
 }; //Compose
 
