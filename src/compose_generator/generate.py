@@ -141,7 +141,7 @@ NEO_MAP = {
     'U017F': '{L3, KEY_LEFT_BRACE}',
     'U21CC': '{L3, KEYPAD_3}',
     'enfilledcircbullet': '{L2, KEY_PERIOD}',
-    'asciicircum': '{L1, KEY_TILDE}',
+    'asciicircum': '{L3, KEY_T}',
     'asciitilde': '{L3, KEY_V}',
     'Greek_lambda': '{L5, KEY_E}',
     'Greek_alpha': '{L5, KEY_D}',
