@@ -121,6 +121,7 @@ NEO_MAP = {
     'slash': '{L3, KEY_S}',
     'backslash': '{L3, KEY_A}',
     'less': '{L3, KEY_U}',
+    'greater': '{L3, KEY_I}',
     'bracketleft': '{L3, KEY_E}',
     'bracketright': '{L3, KEY_R}',
     'parenleft': '{L3, KEY_J}',
@@ -139,8 +140,43 @@ NEO_MAP = {
     'U017F': '{L3, KEY_LEFT_BRACE}',
     'U21CC': '{L3, KEYPAD_3}',
     'enfilledcircbullet': '{L2, KEY_PERIOD}',
+    'asciicircum': '{L1, KEY_TILDE}',
+    'asciitilde': '{L3, KEY_V}',
+    'Greek_lambda': '{L5, KEY_E}',
+    'Greek_alpha': '{L5, KEY_D}',
+    'Greek_omega': '{L5, KEY_T}',
+    'Greek_OMEGA': '{L6, KEY_T}',
+    'Greek_gamma': '{L5, KEY_I}',
+    'Greek_GAMMA': '{L5, KEY_I}',
+    'Greek_iota': '{L5, KEY_S}',
+    'Greek_upsilon': '{L5, KEY_QUOTE}',
+    'Greek_epsilon': '{L5, KEY_F}',
+    'Greek_phi': '{L5, KEY_P}',
+    'Greek_tau': '{L5, KEY_L}',
+    'Greek_omicron': '{L5, KEY_G}',
+    'Greek_pi': '{L5, KEY_V}',
+    'Greek_PI': '{L6, KEY_V}',
+    'Greek_beta': '{L5, KEY_N}',
+    'logicalor': '{L6, KEY_2}',
+    'logicaland': '{L6, KEY_3}',
+    'equal': '{L3, KEY_O}',
+    'apostrophe': '{L3, KEY_PERIOD}',
+    'multiply': '{L1, KEYPAD_MULTIPLY}',
+    'plus': '{L3, KEY_N}',
+    'KP_Add': '{L1, KEYPAD_ADD}',
+    'KP_Subtract': '{L1, KEYPAD_SUBTRACT}',
+    'radical': '{L6, KEY_W}',
+    'integral': '{L6, KEY_S}',
+    'degree': '{L2, KEY_1}',
+    'braceleft': '{L3, KEY_D}',
+    'braceright': '{L3, KEY_F}',
 }
 
+class Uint16_Exception(Exception):
+    pass
+
+class Char_Exception(Exception):
+    pass
 
 def attach(branch, trunk):
     if len(branch) == 0:
@@ -220,15 +256,31 @@ def parse(filename):
                 if len(sequence) > 0:
                     uc = suffix.split('\"')[1]
                     if len(uc) == 1:
+                        if (ord(uc) > 0xffff):
+                            raise Uint16_Exception(uc)
                         sequence.append(hex(ord(uc)))
                         attach(sequence, ROOT)
+                    else:
+                        raise Char_Exception(uc)
 
             except KeyError:
                 print('WARNING: no mapping found for \'' + str(s) + '\' - skipped containing sequence')
+            except Uint16_Exception as e:
+                print('WARNING: Unicode \'' + str(e) + '\' out of supported 2-Byte-Range - skipped containing sequence')
+            except Char_Exception as e:
+                print('WARNING: Strings not supported. Skipped \"' + str(e) + '\"')
 
 
 def main():
+    #use modules from neo compose/src
+    print('===base.module===')
     parse('base.module')
+
+    print('\n\n===lang.module===')
+    parse('lang.module')
+
+    print('\n\n===math.module===')
+    parse('math.module')
     with open('../keyboard/compose.gen.c', 'w') as fc:
         with open('../keyboard/compose.gen.h', 'w') as fh:
             dump_c(ROOT, fc, fh)
