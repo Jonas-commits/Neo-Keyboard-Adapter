@@ -173,11 +173,14 @@ NEO_MAP = {
     'braceright': '{L3, KEY_F}',
 }
 
+
 class Uint16_Exception(Exception):
     pass
 
+
 class Char_Exception(Exception):
     pass
+
 
 def attach(branch, trunk):
     if len(branch) == 0:
@@ -284,18 +287,16 @@ def inject_template(f_template, f_gen, f_out):
             f_out.write(x)
 
 
-
-
 def main():
-    #use modules from neo compose/src
+    # use modules from neo compose/src
     print('===base.module===')
     parse('base.module')
 
-    #print('\n\n===lang.module===')
-    #parse('lang.module')
+    # print('\n\n===lang.module===')
+    # parse('lang.module')
 
-    #print('\n\n===math.module===')
-    #parse('math.module')
+    # print('\n\n===math.module===')
+    # parse('math.module')
     with open('compose.gen.cpp', 'w') as f_gen_c:
         with open('compose.gen.h', 'w') as f_gen_h:
             dump_c(ROOT, f_gen_c, f_gen_h)
@@ -310,7 +311,6 @@ def main():
         with open('Compose.template.h', 'r') as f_tmp_h:
             with open('../keyboard/Compose.gen.h', 'w') as f_out_h:
                 inject_template(f_tmp_h, f_gen_h, f_out_h)
-
 
 
 if __name__ == '__main__':
