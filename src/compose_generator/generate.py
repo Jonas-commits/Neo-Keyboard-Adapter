@@ -291,11 +291,11 @@ def main():
     print('===base.module===')
     parse('base.module')
 
-    print('\n\n===lang.module===')
-    parse('lang.module')
+    #print('\n\n===lang.module===')
+    #parse('lang.module')
 
-    print('\n\n===math.module===')
-    parse('math.module')
+    #print('\n\n===math.module===')
+    #parse('math.module')
     with open('compose.gen.cpp', 'w') as f_gen_c:
         with open('compose.gen.h', 'w') as f_gen_h:
             dump_c(ROOT, f_gen_c, f_gen_h)
