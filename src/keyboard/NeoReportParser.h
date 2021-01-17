@@ -2,7 +2,7 @@
 #define NEO_REPORT_PARSER_H
 
 #include "NeoIncludes.h"
-#include "Compose.h"
+#include "Compose.gen.h"
 
 class NeoReportParser : public EnhancedKeyboardReportParser
 {

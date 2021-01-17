@@ -53,9 +53,11 @@ Additionally to the Neo Layout, I mapped custom combinations for Media Keys to L
 * **L4 + Home**: Previous Track
 * **L4 + End**: Next Track
 
-## Open issues:
-* Media-Keys readin not supported
-* Not all Dead Keys and Compose Symbols supported yet
+## Deviations:
+As we have full control over the LEDs without changing the actual Locking state reported to the host, I decided to have the NUM-Lock LED switched off in the case of M4-Lock. Furthermore, all LEDs are lit, when the keyboard is in compose-State.
 
-## General issues:
-* No universal working in all applications Unicode input method which does not require additional software available for windows.
+## Limitations:
+* No universal Unicode input method which works in all applications and does not require additional software available for Windows.
+* As we are using HID-Boot Protocol, only the “normal” keys on your keyboard are supported. Media Keys Readin or whatever else you have on your keyboard is not supported. However, I mapped the most important Media Keys to L4 Layer, and you can map like many other as you want if you edit the source code ☺.
+* Because of storage limitations, not all possible compose combinations can be added. So far, I only compiled the Base Module. I am planning to change that to the most often used keys. I never needed entering an “ǣ” for example. You can compile the compose combinations you actually use out of the \*.module files with the included [Python-Script](src/compose_generator/generate.py)
+
