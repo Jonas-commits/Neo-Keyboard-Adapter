@@ -11,9 +11,9 @@ class NeoReportParser : public EnhancedKeyboardReportParser
 	const static InputSequence neoMapL2[NEO_MAP_SIZE - KEY_Z - 1] PROGMEM;
 	const static InputSequence neoMapL3[NEO_MAP_SIZE] PROGMEM;
 	const static InputSequence neoMapL4[NEO_MAP_SIZE] PROGMEM;
-	const static InputSequence neoMapL4Shift[NEO_MAP_SIZE] PROGMEM;
 	const static uint16_t neoMapL5[NEO_MAP_SIZE] PROGMEM;
 	const static uint16_t neoMapL6[NEO_MAP_SIZE] PROGMEM;
+	const static uint8_t L4Shift_Map[(NEO_MAP_SIZE - 1) / 8 + 1];
 	
 	Compose compose;
 	NeoModifiers neoModifiers;
@@ -22,7 +22,7 @@ class NeoReportParser : public EnhancedKeyboardReportParser
 	boolean composeState;
 	UnicodeMethod unicodeMethod;
 	
-	InputSequence *activeSequence;
+	InputSequence activeSequence;
 	boolean activeConsumerSequence;
 	boolean leftGuiSinglePress;
 
@@ -33,6 +33,7 @@ class NeoReportParser : public EnhancedKeyboardReportParser
 	uint8_t HandleLockingKeys(USBHID* hid, uint8_t key) override;
 	
 	void substitutePress(InputSequence *sq, uint8_t offset);
+	void substitutePress(InputSequence sq);
 	void substitutePress(uint16_t *uni_map, uint8_t offset);
 	void pressUnicode(uint16_t code);
 	Layer getActiveLayer();
@@ -41,7 +42,7 @@ class NeoReportParser : public EnhancedKeyboardReportParser
 	
 	
 	public:
-	NeoReportParser() : EnhancedKeyboardReportParser(), neoModifiers(), applyMap(true), m4Lock(false), composeState(false), activeSequence(nullptr){ }
+	NeoReportParser() : EnhancedKeyboardReportParser(), neoModifiers(), applyMap(true), m4Lock(false), composeState(false), activeSequence(){ }
 	void setLedState(uint8_t leds);
 	void install();
 	void help();

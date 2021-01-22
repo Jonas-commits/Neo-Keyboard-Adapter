@@ -20,9 +20,13 @@ struct NeoModifiers {
 	boolean bmLeft4;
 };
 
-struct InputSequence {
+class InputSequence {
+	public:
 	uint8_t modifier;
 	uint16_t key;
+	boolean isNull(){
+		return (modifier == 0 && key == 0);
+	}
 };
 
 enum C : uint8_t {

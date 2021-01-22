@@ -251,83 +251,6 @@ const InputSequence NeoReportParser::neoMapL4[] PROGMEM = {
 	{KEY_LEFT_SHIFT, KEYPAD_8},		{KEY_LEFT_SHIFT, KEYPAD_9},		{KEY_LEFT_SHIFT, KEYPAD_0},		{KEY_LEFT_SHIFT, KEYPAD_DOT}
 };
 
-const InputSequence NeoReportParser::neoMapL4Shift[] PROGMEM = {
-	//KEY_RESERVED					KEY_ERROR_ROLLOVER	KEY_POST_FAIL								KEY_ERROR_UNDEFINED
-	{0, 0},							{0, 0},							{0, 0},							{0, 0},
-	
-	//KEY_A							KEY_B							KEY_C							KEY_D
-	{KEY_LEFT_SHIFT, KEY_HOME},		{KEY_LEFT_CTRL, KEY_Y},			{KEY_RESERVED, KEY_INSERT},		{KEY_LEFT_SHIFT, KEY_DOWN_ARROW},
-	
-	//KEY_E							KEY_F							KEY_G							KEY_H
-	{KEY_LEFT_SHIFT, KEY_UP_ARROW},	{KEY_LEFT_SHIFT, KEY_RIGHT_ARROW},{KEY_LEFT_SHIFT, KEY_END},	{KEY_UNICODE, 0xBF},
-	
-	//KEY_I							KEY_J							KEY_K							KEY_L
-	{KEY_RESERVED, KEYPAD_8},		{KEY_RESERVED, KEYPAD_4},		{KEY_RESERVED, KEYPAD_5},		{KEY_RESERVED, KEYPAD_6},
-	
-	//KEY_M							KEY_N							KEY_O							KEY_P
-	{KEY_RESERVED, KEYPAD_1},		{KEY_LEFT_SHIFT, KEY_PERIOD},	{KEY_RESERVED, KEY_9},			{KEY_RESERVED, KEYPAD_ADD},
-	
-	//KEY_Q							KEY_R							KEY_S							KEY_T
-	{KEY_LEFT_SHIFT, KEY_PAGE_UP},	{KEY_LEFT_SHIFT, KEY_DELETE},	{KEY_LEFT_SHIFT, KEY_LEFT_ARROW},{KEY_LEFT_SHIFT, KEY_PAGE_DOWN},
-	
-	//KEY_U							KEY_V							KEY_W							KEY_X
-	{KEY_RESERVED, KEYPAD_7},		{KEY_LEFT_SHIFT, KEY_ENTER},	{KEY_LEFT_SHIFT, KEY_BACKSPACE},{KEY_LEFT_SHIFT, KEY_TAB},
-	
-	//KEY_Y							KEY_Z							KEY_1							KEY_2
-	{KEY_UNICODE, 0xA1},			{KEY_LEFT_SHIFT, KEY_ESC},		{KEY_UNICODE, 0xAA},			{KEY_UNICODE, 0xBA},
-	
-	//KEY_3							KEY_4							KEY_5							KEY_6
-	{KEY_UNICODE, 0x2116},			{0, 0},							{KEY_UNICODE, 0xB7},			{KEY_UNICODE, 0xA3},
-	
-	//KEY_7							KEY_8							KEY_9							KEY_0
-	{KEY_UNICODE, 0xA4},			{KEY_LEFT_SHIFT, KEY_TAB},		{KEY_RESERVED, KEYPAD_DIVIDE},	{KEY_RESERVED, KEYPAD_MULTIPLY},
-	
-	//KEY_ENTER						KEY_ESC							KEY_BACKSPACE					KEY_TAB
-	{KEY_LEFT_SHIFT, KEYPAD_ENTER},	{KEY_LEFT_SHIFT, KEY_ESC},		{KEY_LEFT_SHIFT, KEY_BACKSPACE},{KEY_LEFT_SHIFT, KEY_TAB},
-	
-	//KEY_SPACE						KEY_MINUS						KEY_EQUAL						KEY_LEFT_BRACE
-	{KEY_RESERVED, KEYPAD_0},		{KEY_RESERVED, KEYPAD_SUBTRACT},{KEY_UNICODE, 0xA8},			{KEY_UNICODE, 0x2212},
-	
-	//KEY_RIGHT_BRACE				KEY_BACKSLASH					KEY_NON_US_NUM					KEY_SEMICOLON
-	{KEY_UNICODE, 0x2DD},			{0, 0},							{0, 0},							{KEY_RESERVED, KEY_COMMA},
-	
-	//KEY_QUOTE						KEY_TILDE						KEY_COMMA						KEY_PERIOD
-	{KEY_RESERVED, KEY_PERIOD},		{KEY_UNICODE, 0x2D9},			{KEY_RESERVED, KEYPAD_2},		{KEY_RESERVED, KEYPAD_3},
-
-	//KEY_SLASH						KEY_CAPS_LOCK					KEY_F1							KEY_F2
-	{KEY_LEFT_SHIFT, KEY_COMMA},	{0, 0},							{KEY_LEFT_SHIFT, KEY_F1},		{KEY_LEFT_SHIFT, KEY_F2},
-	
-	//KEY_F3						KEY_F4							KEY_F5							KEY_F6
-	{KEY_LEFT_SHIFT, KEY_F3},		{KEY_LEFT_SHIFT, KEY_F4},		{KEY_LEFT_SHIFT, KEY_F5},		{KEY_LEFT_SHIFT, KEY_F6},
-	
-	//KEY_F7						KEY_F8							KEY_F9							KEY_F10
-	{KEY_LEFT_SHIFT, KEY_F7},		{KEY_LEFT_SHIFT, KEY_F8},		{KEY_LEFT_SHIFT, KEY_F9},		{KEY_LEFT_SHIFT, KEY_F10},
-	
-	//KEY_F11						KEY_F12							KEY_PRINT						KEY_SCROLL_LOCK
-	{KEY_LEFT_SHIFT, KEY_F11},		{KEY_LEFT_SHIFT, KEY_F12},		{KEY_LEFT_SHIFT, KEY_PRINT},	{KEY_LEFT_SHIFT, KEY_SCROLL_LOCK},
-	
-	//KEY_PAUSE						KEY_INSERT						KEY_HOME						KEY_PAGE_UP
-	{KEY_RESERVED, KEY_PAUSE},		{KEY_CONSUMER, MEDIA_VOL_MUTE},	{KEY_CONSUMER, MEDIA_PREV},		{KEY_CONSUMER, MEDIA_VOL_UP},
-	
-	//KEY_DELETE					KEY_END							KEY_PAGE_DOWN					KEY_RIGHT_ARROW
-	{KEY_CONSUMER, MEDIA_PLAY_PAUSE},{KEY_CONSUMER, MEDIA_NEXT},	{KEY_CONSUMER, MEDIA_VOL_DOWN},	{KEY_RESERVED, KEY_RIGHT_ARROW},
-	
-	//KEY_LEFT_ARROW				KEY_DOWN_ARROW					KEY_UP_ARROW					KEY_NUM_LOCK
-	{KEY_LEFT_SHIFT, KEY_LEFT_ARROW},{KEY_LEFT_SHIFT, KEY_DOWN_ARROW},{KEY_LEFT_SHIFT, KEY_UP_ARROW},{KEY_UNICODE, 0x2260},
-	
-	//KEYPAD_DIVIDE					KEYPAD_MULTIPLY					KEYPAD_SUBTRACT					KEYPAD_ADD
-	{KEY_UNICODE, 0x2044},			{KEY_UNICODE, 0xD7},			{KEY_UNICODE, 0x2216},			{KEY_UNICODE, 0x2213},
-	
-	//KEYPAD_ENTER					KEYPAD_1						KEYPAD_2						KEYPAD_3
-	{KEY_RESERVED, KEYPAD_ENTER},	{KEY_LEFT_SHIFT, KEYPAD_1},		{KEY_LEFT_SHIFT, KEYPAD_2},		{KEY_LEFT_SHIFT, KEYPAD_3},
-	
-	//KEYPAD_4						KEYPAD_5						KEYPAD_6						KEYPAD_7
-	{KEY_LEFT_SHIFT, KEYPAD_4},		{KEY_RESERVED, KEY_APPLICATION},{KEY_LEFT_SHIFT, KEYPAD_6},		{KEY_LEFT_SHIFT, KEYPAD_7},
-	
-	//KEYPAD_8						KEYPAD_9						KEYPAD_0						KEYPAD_DOT
-	{KEY_LEFT_SHIFT, KEYPAD_8},		{KEY_LEFT_SHIFT, KEYPAD_9},		{KEY_LEFT_SHIFT, KEYPAD_0},		{KEY_LEFT_SHIFT, KEYPAD_DOT}
-};
-
 const uint16_t NeoReportParser::neoMapL5[] PROGMEM = {
   //KEY_RESERVED		KEY_ERROR_ROLLOVER	KEY_POST_FAIL		KEY_ERROR_UNDEFINED	KEY_A				KEY_B				KEY_C				KEY_D
 	0,					0,					0,					0,					0,					0x3B6,				0x3B7,				0x3B1,
@@ -408,6 +331,22 @@ const uint16_t NeoReportParser::neoMapL6[] PROGMEM = {
 	
   //KEYPAD_8			KEYPAD_9			KEYPAD_0			KEYPAD_DOT
 	0x22C2,				0x2309,				0x25A1,				0x2033
+};
+
+const uint8_t NeoReportParser::L4Shift_Map[] = {
+	0<<7 | 0<<6 | 0<<5 | 0<<4 | 1<<3 | 0<<2 | 0<<1 | 1, //KEY_RESERVED - KEY_D
+	1<<7 | 1<<6 | 1<<5 | 0<<4 | 0<<3 | 0<<2 | 0<<1 | 0, //KEY_E - KEY_L
+	0<<7 | 1<<6 | 0<<5 | 0<<4 | 1<<3 | 1<<2 | 1<<1 | 1, //KEY_M - KEY_T
+	0<<7 | 1<<6 | 1<<5 | 1<<4 | 0<<3 | 1<<2 | 0<<1 | 0, //KEY_U - KEY_2
+	0<<7 | 0<<6 | 0<<5 | 0<<4 | 0<<3 | 1<<2 | 0<<1 | 0, //KEY_3 - KEY_0
+	1<<7 | 1<<6 | 1<<5 | 1<<4 | 0<<3 | 0<<2 | 0<<1 | 0, //KEY_ENTER - KEY_LEFT_BRACE
+	0<<7 | 0<<6 | 0<<5 | 0<<4 | 0<<3 | 0<<2 | 0<<1 | 0, //KEY_RIGHT_BRACE - KEY_PERIOD
+	1<<7 | 0<<6 | 1<<5 | 1<<4 | 1<<3 | 1<<2 | 1<<1 | 1, //KEY_SLASH - KEY_F6
+	1<<7 | 1<<6 | 1<<5 | 1<<4 | 1<<3 | 1<<2 | 1<<1 | 1, //KEY_F7 - KEY_SCROLL_LOCK
+	0<<7 | 0<<6 | 0<<5 | 0<<4 | 0<<3 | 0<<2 | 0<<1 | 0, //KEY_PAUSE - KEY_RIGHT_ARROW
+	1<<7 | 1<<6 | 1<<5 | 0<<4 | 0<<3 | 0<<2 | 0<<1 | 0, //KEY_LEFT_ARROW - KEYPAD_ADD
+	0<<7 | 1<<6 | 1<<5 | 1<<4 | 1<<3 | 0<<2 | 1<<1 | 1, //KEYPAD_ENTER - KEYPAD_7
+	1<<7 | 1<<6 | 1<<5 | 1<<4                           //KEYPAD_8 - KEYPAD_DOT
 };
 
 void NeoReportParser::OnKeyDown(uint8_t mod, uint8_t key) {
@@ -494,8 +433,8 @@ void NeoReportParser::OnKeyDown(uint8_t mod, uint8_t key) {
 					if (key != KEY_EQUAL) { //only key not fitting in layer1
 						Keyboard.press(KeyboardKeycode(neoMap[key]));
 					} else { //dead code as long as Base Compose Module is used
-						const static InputSequence sq PROGMEM = {KEY_LEFT_SHIFT, KEY_EQUAL};
-						substitutePress(&sq, 0);
+						InputSequence sq = {KEY_LEFT_SHIFT, KEY_EQUAL};
+						substitutePress(sq);
 					}
 					break;
 					
@@ -521,7 +460,14 @@ void NeoReportParser::OnKeyDown(uint8_t mod, uint8_t key) {
 					break;
 				
 				case L4_SHIFT:
-					substitutePress(neoMapL4Shift, key);
+					InputSequence sq;
+					memcpy_P(&sq, (neoMapL4 + key), sizeof(sq));
+					uint8_t shift_bit = L4Shift_Map[key / 8] & (uint8_t) (1 << ( 7 - ( key % 8 ))) ;
+					
+					if (shift_bit > 0) {
+						sq.modifier = KEY_LEFT_SHIFT;
+					}
+					substitutePress(sq);
 					break;
 					
 				case L5:
@@ -553,17 +499,14 @@ void NeoReportParser::OnKeyUp(uint8_t mod, uint8_t key) {
 			Consumer.releaseAll();
 		}
 		
-		if(activeSequence){ //release active holds from substitution
-			InputSequence sq;
-			memcpy_P(&sq, activeSequence, sizeof(sq));
-			
-			Keyboard.release(KeyboardKeycode(sq.key));
+		if(!activeSequence.isNull()){ //release active holds from substitution
+			Keyboard.release(KeyboardKeycode(activeSequence.key));
 			
 			if (kbdLockingKeys.kbdLeds.bmCapsLock &&
-				sq.modifier == KEY_RESERVED && sq.key <= KEY_SLASH) {
+				activeSequence.modifier == KEY_RESERVED && activeSequence.key <= KEY_SLASH) {
 				Keyboard.release(KeyboardKeycode(KEY_LEFT_SHIFT));
 			} else {
-				Keyboard.release(KeyboardKeycode(sq.modifier));
+				Keyboard.release(KeyboardKeycode(activeSequence.modifier));
 			}
 			
 			//restore modifiers 
@@ -573,7 +516,7 @@ void NeoReportParser::OnKeyUp(uint8_t mod, uint8_t key) {
 				Keyboard.press(KeyboardKeycode(KEY_RIGHT_SHIFT));
 			}
 			
-			activeSequence = nullptr;
+			activeSequence = {0,0};
 			
 		} else { //otherwise just release the actual key
 			Keyboard.release(KeyboardKeycode(neoMap[key]));
@@ -714,34 +657,38 @@ void NeoReportParser::substitutePress(uint16_t *uni_map, uint8_t offset) {
 	pressUnicode(key);
 }
 
-void NeoReportParser::substitutePress(InputSequence *sq, uint8_t offset){
-	InputSequence modKey;
-	memcpy_P(&modKey, (sq + offset), sizeof(modKey));
-
-	if(modKey.modifier == KEY_UNICODE){
-		pressUnicode(modKey.key);
+void NeoReportParser::substitutePress(InputSequence sq){
+	if(sq.modifier == KEY_UNICODE){
+		pressUnicode(sq.key);
 		
-	} else if (modKey.modifier == KEY_CONSUMER) {
+		} else if (sq.modifier == KEY_CONSUMER) {
 		Consumer.releaseAll();
-		Consumer.press(modKey.key);
+		Consumer.press(sq.key);
 		activeConsumerSequence = true;
 		
-	} else {
+		} else {
 		
 		Keyboard.releaseAll();
 		
-		if (kbdLockingKeys.kbdLeds.bmCapsLock && 
-				modKey.modifier == KEY_RESERVED && modKey.key <= KEY_SLASH) {
+		if (kbdLockingKeys.kbdLeds.bmCapsLock &&
+		sq.modifier == KEY_RESERVED && sq.key <= KEY_SLASH) {
 			Keyboard.press(KeyboardKeycode(KEY_LEFT_SHIFT));
-		} else {
-			Keyboard.press(KeyboardKeycode(modKey.modifier));
+			} else {
+			Keyboard.press(KeyboardKeycode(sq.modifier));
 		}
 
-		Keyboard.press(KeyboardKeycode(modKey.key));
+		Keyboard.press(KeyboardKeycode(sq.key));
 		
 		//will be released on release event, so holding of the key is possible
-		activeSequence = sq + offset;
+		activeSequence = sq;
 	}
+}
+
+void NeoReportParser::substitutePress(InputSequence *sq, uint8_t offset){
+	InputSequence modKey;
+	memcpy_P(&modKey, (sq + offset), sizeof(modKey));
+	substitutePress(modKey);
+	
 }
 
 void NeoReportParser::pressUnicode(uint16_t code) {
