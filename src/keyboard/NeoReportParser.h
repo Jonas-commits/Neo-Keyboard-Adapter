@@ -33,7 +33,7 @@ class NeoReportParser : public EnhancedKeyboardReportParser
 	uint8_t HandleLockingKeys(USBHID* hid, uint8_t key) override;
 	
 	void substitutePress(InputSequence *sq, uint8_t offset);
-	void substitutePress(InputSequence sq);
+	void substitutePress(const InputSequence &sq);
 	void substitutePress(uint16_t *uni_map, uint8_t offset);
 	void pressUnicode(uint16_t code);
 	Layer getActiveLayer();

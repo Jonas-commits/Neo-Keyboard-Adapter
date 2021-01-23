@@ -429,11 +429,12 @@ void NeoReportParser::OnKeyDown(uint8_t mod, uint8_t key) {
 		} else {
 			// map action according the current layer active, indicated by modifier states
 			switch (layer) {
+				InputSequence sq;
 				case L1:
 					if (key != KEY_EQUAL) { //only key not fitting in layer1
 						Keyboard.press(KeyboardKeycode(neoMap[key]));
 					} else { //dead code as long as Base Compose Module is used
-						InputSequence sq = {KEY_LEFT_SHIFT, KEY_EQUAL};
+						sq = {KEY_LEFT_SHIFT, KEY_EQUAL};
 						substitutePress(sq);
 					}
 					break;
@@ -460,14 +461,15 @@ void NeoReportParser::OnKeyDown(uint8_t mod, uint8_t key) {
 					break;
 				
 				case L4_SHIFT:
-					InputSequence sq;
-					memcpy_P(&sq, (neoMapL4 + key), sizeof(sq));
-					uint8_t shift_bit = L4Shift_Map[key / 8] & (uint8_t) (1 << ( 7 - ( key % 8 ))) ;
-					
-					if (shift_bit > 0) {
-						sq.modifier = KEY_LEFT_SHIFT;
+					{
+						memcpy_P(&sq, (neoMapL4 + key), sizeof(sq));
+						
+						uint8_t shift_bit = L4Shift_Map[key / 8u] & (uint8_t) (1u << ( 7u - ( key % 8u ))) ;
+						if (shift_bit > 0) {
+							sq.modifier = KEY_LEFT_SHIFT;
+						}
+						substitutePress(sq);
 					}
-					substitutePress(sq);
 					break;
 					
 				case L5:
@@ -657,7 +659,7 @@ void NeoReportParser::substitutePress(uint16_t *uni_map, uint8_t offset) {
 	pressUnicode(key);
 }
 
-void NeoReportParser::substitutePress(InputSequence sq){
+void NeoReportParser::substitutePress(const InputSequence &sq){
 	if(sq.modifier == KEY_UNICODE){
 		pressUnicode(sq.key);
 		
