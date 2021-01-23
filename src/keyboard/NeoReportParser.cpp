@@ -600,13 +600,17 @@ void NeoReportParser::OnControlKeysChanged(uint8_t before, uint8_t after) {
 	if (beforeMod.bmRightAlt != afterMod.bmRightAlt) {
 		if (neoModifiers.bmRightAlt) {
 			neoModifiers.bmRightAlt = false;
-			Keyboard.release(KEY_RIGHT_ALT);
+			if(!applyMap){
+				Keyboard.release(KEY_RIGHT_ALT);
+			}
 		} else {
 			neoModifiers.bmRightAlt = true;
 			if(neoModifiers.bmLeft4 && applyMap){
 				toggleM4Lock();
 			}
-			Keyboard.press(KEY_RIGHT_ALT);
+			if(!applyMap){
+				Keyboard.press(KEY_RIGHT_ALT);
+			}
 		}
 	}
 	
