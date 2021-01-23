@@ -2,7 +2,7 @@ import codecs
 from collections import defaultdict
 
 LEAF = '<>'
-PREFIX_ID = 'OBJ_'
+PREFIX_ID = 'NODE_'
 V_UNI = 'const uint16_t Compose::'
 V_IDENT = 'const Node Compose::'
 VH_IDENT = 'const static Node'
@@ -38,6 +38,9 @@ NEO_MAP = {
     'x': 'L1, KEY_Q',
     'y': 'L1, KEY_QUOTE',
     'z': 'L1, KEY_B',
+    'adiaeresis' : 'L1, KEY_C',
+    'odiaeresis' : 'L1, KEY_X',
+    'udiaeresis' : 'L1, KEY_Z',
     'A': 'L2, KEY_D',
     'B': 'L2, KEY_N',
     'C': 'L2, KEY_R',
@@ -64,6 +67,9 @@ NEO_MAP = {
     'X': 'L2, KEY_Q',
     'Y': 'L2, KEY_QUOTE',
     'Z': 'L2, KEY_B',
+    'Adiaeresis': 'L2, KEY_C',
+    'Odiaeresis': 'L2, KEY_X',
+    'Udiaeresis': 'L2, KEY_Z',
     '1': 'L1, KEY_1',
     '2': 'L1, KEY_2',
     '3': 'L1, KEY_3',
@@ -87,8 +93,10 @@ NEO_MAP = {
     'KP_0': 'L1, KEYPAD_0',
     'KP_Divide': 'L1, KEYPAD_DIVIDE',
     'Multi_key': 'L3, KEY_TAB',
+    'Multi_Key': 'L3, KEY_TAB',
     'dead_grave': 'L1, KEY_EQUAL',
     'dead_cedilla': 'L2, KEY_EQUAL',
+    'dead_ogonek': 'L2, KEY_EQUAL',
     'dead_abovering': 'L3, KEY_EQUAL',
     'dead_diaeresis': 'L4, KEY_EQUAL',
     'dead_dasia': 'L5, KEY_EQUAL',
@@ -98,11 +106,13 @@ NEO_MAP = {
     'dead_stroke': 'L3, KEY_RIGHT_BRACE',
     'dead_doubleacute': 'L4, KEY_RIGHT_BRACE',
     'dead_psili': 'L5, KEY_RIGHT_BRACE',
+    'dead_hook': 'L5, KEY_RIGHT_BRACE',
     'dead_breve': 'L6, KEY_RIGHT_BRACE',
     'dead_circumflex': 'L1, KEY_TILDE',
     'dead_caron': 'L2, KEY_TILDE',
     'U21BB': 'L3, KEY_TILDE',
     'dead_abovedot': 'L4, KEY_TILDE',
+    'dead_horn': 'L5, KEY_TILDE',
     'U02DE': 'L5, KEY_TILDE',
     'dead_belowdot': 'L6, KEY_TILDE',
     'nobreakspace': 'L5, KEY_SPACE',
@@ -116,7 +126,7 @@ NEO_MAP = {
     'question': 'L3, KEY_H',
     'exclamdown': 'L4, KEY_Y',
     'questiondown': 'L4, KEY_H',
-    'minus': 'L1, KEY_MINUS',
+    'minus': 'L3, KEY_L',
     'colon': 'L3, KEY_SEMICOLON',
     'slash': 'L3, KEY_S',
     'backslash': 'L3, KEY_A',
@@ -233,6 +243,7 @@ def parse(filename):
             sequence = []
             x = str(x)
             x = x.replace(' ', '')  # remove whitespace
+            x = x.replace('\t', '')
             x = str(x.split('#')[0])  # remove comments
             symbols = x.split('>')
             suffix = symbols.pop()  # get all the unicode and other garbage
@@ -277,11 +288,17 @@ def main():
     print('===base.module===')
     parse('base.module')
 
-    # print('\n\n===lang.module===')
-    # parse('lang.module')
+    print('===dead_keys.module===')
+    parse('dead_keys.module')
 
-    # print('\n\n===math.module===')
-    # parse('math.module')
+    print('===misc.module===')
+    parse('misc.module')
+
+    print('\n\n===lang.module===')
+    parse('lang.module')
+
+    print('\n\n===math.module===')
+    parse('math.module')
     with open('compose.gen.cpp', 'w') as f_gen_c:
         with open('compose.gen.h', 'w') as f_gen_h:
             dump_c(ROOT, f_gen_c, f_gen_h)

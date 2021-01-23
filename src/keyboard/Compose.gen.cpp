@@ -7,36 +7,262 @@
 
 //generated compose tree
 const Node Compose::root[] PROGMEM = {
-	{{0, 0, L1, KEY_TILDE}, {(uint16_t) OBJ_3084155333744}},
-	{{0, 0, L2, KEY_TILDE}, {(uint16_t) OBJ_3084155333664}},
-	{{0, 0, L6, KEY_RIGHT_BRACE}, {(uint16_t) OBJ_3084155333584}},
-	{{0, 0, L1, KEY_RIGHT_BRACE}, {(uint16_t) OBJ_3084155333984}},
-	{{0, 0, L1, KEY_EQUAL}, {(uint16_t) OBJ_3084155334304}},
-	{{0, 0, L2, KEY_EQUAL}, {(uint16_t) OBJ_3084155334544}},
-	{{0, 0, L3, KEY_TILDE}, {(uint16_t) OBJ_3084155396320}},
-	{{0, 0, L4, KEY_TILDE}, {(uint16_t) OBJ_3084155396240}},
-	{{0, 0, L3, KEY_EQUAL}, {(uint16_t) OBJ_3084155396560}},
-	{{0, 0, L2, KEY_RIGHT_BRACE}, {(uint16_t) OBJ_3084155396720}},
-	{{0, 0, L6, KEY_EQUAL}, {(uint16_t) OBJ_3084155396880}},
-	{{0, 0, L4, KEY_EQUAL}, {(uint16_t) OBJ_3084155397280}},
-	{{0, 0, L3, KEY_RIGHT_BRACE}, {(uint16_t) OBJ_3084155397440}},
-	{{0, 0, L4, KEY_RIGHT_BRACE}, {(uint16_t) OBJ_3084155397760}},
-	{{0, 0, L5, KEY_RIGHT_BRACE}, {(uint16_t) OBJ_3084155397680}},
-	{{0, 0, L5, KEY_EQUAL}, {(uint16_t) OBJ_3084155397600}},
-	{{0, 0, L5, KEY_TILDE}, {(uint16_t) OBJ_3084155398160}},
-	{{0, 0, L6, KEY_TILDE}, {(uint16_t) OBJ_3084155398400}},
-	{{1, 0, L3, KEY_TAB}, {(uint16_t) OBJ_3084155398720}},
+	{{0, 0, L1, KEY_TILDE}, {(uint16_t) NODE_1703870304400}},
+	{{0, 0, L2, KEY_TILDE}, {(uint16_t) NODE_1703870304320}},
+	{{0, 0, L6, KEY_RIGHT_BRACE}, {(uint16_t) NODE_1703870072688}},
+	{{0, 0, L1, KEY_RIGHT_BRACE}, {(uint16_t) NODE_1703870304640}},
+	{{0, 0, L1, KEY_EQUAL}, {(uint16_t) NODE_1703870304960}},
+	{{0, 0, L2, KEY_EQUAL}, {(uint16_t) NODE_1703870305200}},
+	{{0, 0, L3, KEY_TILDE}, {(uint16_t) NODE_1703870305440}},
+	{{0, 0, L4, KEY_TILDE}, {(uint16_t) NODE_1703870305360}},
+	{{0, 0, L3, KEY_EQUAL}, {(uint16_t) NODE_1703870305680}},
+	{{0, 0, L2, KEY_RIGHT_BRACE}, {(uint16_t) NODE_1703870305840}},
+	{{0, 0, L6, KEY_EQUAL}, {(uint16_t) NODE_1703870306000}},
+	{{0, 0, L4, KEY_EQUAL}, {(uint16_t) NODE_1703870306400}},
+	{{0, 0, L3, KEY_RIGHT_BRACE}, {(uint16_t) NODE_1703870306560}},
+	{{0, 0, L4, KEY_RIGHT_BRACE}, {(uint16_t) NODE_1703870306880}},
+	{{0, 0, L5, KEY_RIGHT_BRACE}, {(uint16_t) NODE_1703870306800}},
+	{{0, 0, L5, KEY_EQUAL}, {(uint16_t) NODE_1703870306720}},
+	{{0, 0, L5, KEY_TILDE}, {(uint16_t) NODE_1703870307280}},
+	{{0, 0, L6, KEY_TILDE}, {(uint16_t) NODE_1703870307520}},
+	{{1, 0, L3, KEY_TAB}, {(uint16_t) NODE_1703870307840}},
 };
 
-const Node Compose::OBJ_3084155333744[] PROGMEM = {
+const Node Compose::NODE_1703870304400[] PROGMEM = {
 	{{0, 1, L5, KEY_SPACE}, {0x2c6}},
-	{{1, 1, L1, KEY_TILDE}, {0x302}},
+	{{0, 1, L1, KEY_TILDE}, {0x302}},
+	{{0, 1, L1, KEY_SPACE}, {0x5e}},
+	{{0, 1, L2, KEY_D}, {0xc2}},
+	{{0, 1, L2, KEY_F}, {0xca}},
+	{{0, 1, L2, KEY_S}, {0xce}},
+	{{0, 1, L2, KEY_G}, {0xd4}},
+	{{0, 1, L2, KEY_A}, {0xdb}},
+	{{0, 1, L1, KEY_D}, {0xe2}},
+	{{0, 1, L1, KEY_F}, {0xea}},
+	{{0, 1, L1, KEY_S}, {0xee}},
+	{{0, 1, L1, KEY_G}, {0xf4}},
+	{{0, 1, L1, KEY_A}, {0xfb}},
+	{{0, 1, L2, KEY_R}, {0x108}},
+	{{0, 1, L1, KEY_R}, {0x109}},
+	{{0, 1, L2, KEY_I}, {0x11c}},
+	{{0, 1, L1, KEY_I}, {0x11d}},
+	{{0, 1, L2, KEY_U}, {0x124}},
+	{{0, 1, L1, KEY_U}, {0x125}},
+	{{0, 1, L2, KEY_SLASH}, {0x134}},
+	{{0, 1, L1, KEY_SLASH}, {0x135}},
+	{{0, 1, L2, KEY_H}, {0x15c}},
+	{{0, 1, L1, KEY_H}, {0x15d}},
+	{{0, 1, L2, KEY_T}, {0x174}},
+	{{0, 1, L1, KEY_T}, {0x175}},
+	{{0, 1, L2, KEY_QUOTE}, {0x176}},
+	{{0, 1, L1, KEY_QUOTE}, {0x177}},
+	{{0, 1, L2, KEY_B}, {0x1e90}},
+	{{0, 1, L1, KEY_B}, {0x1e91}},
+	{{0, 0, L6, KEY_TILDE}, {(uint16_t) NODE_1703878094416}},
+	{{0, 1, L1, KEY_0}, {0x2070}},
+	{{0, 1, L1, KEYPAD_0}, {0x2070}},
+	{{0, 0, L3, KEY_TAB}, {(uint16_t) NODE_1703878150240}},
+	{{0, 1, L1, KEY_2}, {0xb2}},
+	{{0, 1, L1, KEYPAD_2}, {0xb2}},
+	{{0, 1, L1, KEY_3}, {0xb3}},
+	{{0, 1, L1, KEYPAD_3}, {0xb3}},
+	{{0, 1, L1, KEY_1}, {0xb9}},
+	{{0, 1, L1, KEYPAD_1}, {0xb9}},
+	{{0, 1, L1, KEY_4}, {0x2074}},
+	{{0, 1, L1, KEYPAD_4}, {0x2074}},
+	{{0, 1, L1, KEY_5}, {0x2075}},
+	{{0, 1, L1, KEYPAD_5}, {0x2075}},
+	{{0, 1, L1, KEY_6}, {0x2076}},
+	{{0, 1, L1, KEYPAD_6}, {0x2076}},
+	{{0, 1, L1, KEY_7}, {0x2077}},
+	{{0, 1, L1, KEYPAD_7}, {0x2077}},
+	{{0, 1, L1, KEY_8}, {0x2078}},
+	{{0, 1, L1, KEYPAD_8}, {0x2078}},
+	{{0, 1, L1, KEY_9}, {0x2079}},
+	{{0, 1, L1, KEYPAD_9}, {0x2079}},
+	{{0, 1, L3, KEY_N}, {0x207a}},
+	{{0, 1, L1, KEYPAD_ADD}, {0x207a}},
+	{{0, 1, L3, KEY_L}, {0x207b}},
+	{{0, 1, L3, KEY_O}, {0x207c}},
+	{{0, 1, L3, KEY_J}, {0x207d}},
+	{{0, 1, L3, KEY_K}, {0x207e}},
+	{{0, 0, L3, KEY_TILDE}, {(uint16_t) NODE_1703878270864}},
+	{{0, 1, L1, KEYPAD_MULTIPLY}, {0x33d}},
+	{{0, 0, L5, KEY_TILDE}, {(uint16_t) NODE_1703878290704}},
+	{{0, 0, L3, KEY_RIGHT_BRACE}, {(uint16_t) NODE_1703878307984}},
+	{{0, 1, L3, KEY_H}, {0x2c0}},
+	{{0, 0, L3, KEY_EQUAL}, {(uint16_t) NODE_1703878310464}},
+	{{0, 1, L5, KEY_QUOTE}, {0x1db7}},
+	{{0, 1, L5, KEY_F}, {0x1d4b}},
+	{{0, 1, L5, KEY_D}, {0x1d45}},
+	{{0, 1, L3, KEY_I}, {0x20d7}},
+	{{0, 1, L3, KEY_U}, {0x20d6}},
+	{{0, 1, L1, KEYPAD_SUBTRACT}, {0x207b}},
+	{{1, 1, L3, KEY_Q}, {0x22ef}},
 };
 
-const Node Compose::OBJ_3084155333664[] PROGMEM = {
+const Node Compose::NODE_1703878094416[] PROGMEM = {
+	{{0, 1, L2, KEY_D}, {0x1eac}},
+	{{0, 1, L1, KEY_D}, {0x1ead}},
+	{{0, 1, L2, KEY_F}, {0x1ec6}},
+	{{0, 1, L1, KEY_F}, {0x1ec7}},
+	{{0, 1, L2, KEY_G}, {0x1ed8}},
+	{{1, 1, L1, KEY_G}, {0x1ed9}},
+};
+
+const Node Compose::NODE_1703878150240[] PROGMEM = {
+	{{0, 0, L3, KEY_W}, {(uint16_t) NODE_1703878150560}},
+	{{0, 0, L3, KEY_C}, {(uint16_t) NODE_1703878270784}},
+	{{0, 0, L1, KEY_W}, {(uint16_t) NODE_1703878287424}},
+	{{0, 0, L1, KEY_J}, {(uint16_t) NODE_1703878290544}},
+	{{0, 0, L1, KEY_SLASH}, {(uint16_t) NODE_1703878290864}},
+	{{0, 0, L2, KEY_J}, {(uint16_t) NODE_1703878291344}},
+	{{0, 0, L1, KEY_I}, {(uint16_t) NODE_1703878308144}},
+	{{0, 0, L1, KEY_SEMICOLON}, {(uint16_t) NODE_1703878308384}},
+	{{0, 0, L1, KEY_H}, {(uint16_t) NODE_1703878308544}},
+	{{0, 0, L1, KEY_B}, {(uint16_t) NODE_1703878308624}},
+	{{0, 0, L1, KEY_E}, {(uint16_t) NODE_1703878309904}},
+	{{0, 0, L2, KEY_E}, {(uint16_t) NODE_1703878310064}},
+	{{0, 0, L3, KEY_L}, {(uint16_t) NODE_1703878310624}},
+	{{0, 0, L2, KEY_S}, {(uint16_t) NODE_1703878311344}},
+	{{0, 0, L1, KEY_F}, {(uint16_t) NODE_1703878311664}},
+	{{1, 0, L1, KEY_3}, {(uint16_t) NODE_1703878311824}},
+};
+
+const Node Compose::NODE_1703878150560[] PROGMEM = {
+	{{0, 1, L1, KEY_S}, {0x2071}},
+	{{1, 1, L1, KEY_J}, {0x207f}},
+};
+
+const Node Compose::NODE_1703878270784[] PROGMEM = {
+	{{1, 1, L3, KEY_T}, {0xa71b}},
+};
+
+const Node Compose::NODE_1703878287424[] PROGMEM = {
+	{{0, 1, L3, KEY_C}, {0xa71c}},
+	{{1, 1, L3, KEY_K}, {0x1db9}},
+};
+
+const Node Compose::NODE_1703878290544[] PROGMEM = {
+	{{0, 1, L1, KEY_E}, {0x1daf}},
+	{{1, 1, L1, KEY_I}, {0x1d51}},
+};
+
+const Node Compose::NODE_1703878290864[] PROGMEM = {
+	{{1, 1, L1, KEY_J}, {0x1dae}},
+};
+
+const Node Compose::NODE_1703878291344[] PROGMEM = {
+	{{1, 1, L2, KEY_J}, {0x1db0}},
+};
+
+const Node Compose::NODE_1703878308144[] PROGMEM = {
+	{{1, 1, L1, KEY_I}, {0x1da2}},
+};
+
+const Node Compose::NODE_1703878308384[] PROGMEM = {
+	{{1, 1, L1, KEY_U}, {0x1d9e}},
+};
+
+const Node Compose::NODE_1703878308544[] PROGMEM = {
+	{{1, 1, L1, KEY_U}, {0x1db4}},
+};
+
+const Node Compose::NODE_1703878308624[] PROGMEM = {
+	{{0, 1, L1, KEY_U}, {0x1dbe}},
+	{{1, 1, L1, KEY_B}, {0x1dbe}},
+};
+
+const Node Compose::NODE_1703878309904[] PROGMEM = {
+	{{1, 1, L1, KEY_E}, {0x1da9}},
+};
+
+const Node Compose::NODE_1703878310064[] PROGMEM = {
+	{{1, 1, L2, KEY_E}, {0x1dab}},
+};
+
+const Node Compose::NODE_1703878310624[] PROGMEM = {
+	{{0, 1, L1, KEY_S}, {0x1da4}},
+	{{0, 1, L1, KEY_A}, {0x1db6}},
+	{{0, 1, L1, KEY_G}, {0x1db1}},
+	{{1, 1, L2, KEY_S}, {0x1da7}},
+};
+
+const Node Compose::NODE_1703878311344[] PROGMEM = {
+	{{1, 1, L2, KEY_S}, {0x1da6}},
+};
+
+const Node Compose::NODE_1703878311664[] PROGMEM = {
+	{{1, 1, L1, KEY_F}, {0x1d4a}},
+};
+
+const Node Compose::NODE_1703878311824[] PROGMEM = {
+	{{1, 1, L1, KEY_3}, {0x1d9f}},
+};
+
+const Node Compose::NODE_1703878270864[] PROGMEM = {
+	{{0, 1, L2, KEY_E}, {0x31a}},
+	{{0, 1, L2, KEY_K}, {0x2b6}},
+	{{0, 1, L3, KEY_H}, {0x2c1}},
+	{{0, 1, L1, KEY_K}, {0x2b4}},
+	{{0, 0, L3, KEY_TAB}, {(uint16_t) NODE_1703878309664}},
+	{{0, 1, L1, KEY_U}, {0x1da3}},
+	{{0, 1, L1, KEY_M}, {0x1d5a}},
+	{{0, 1, L1, KEY_W}, {0x1dba}},
+	{{0, 1, L1, KEY_R}, {0x1d53}},
+	{{0, 1, L1, KEY_D}, {0x1d44}},
+	{{1, 1, L5, KEY_D}, {0x1d9b}},
+};
+
+const Node Compose::NODE_1703878309664[] PROGMEM = {
+	{{1, 0, L1, KEY_U}, {(uint16_t) NODE_1703878310144}},
+};
+
+const Node Compose::NODE_1703878310144[] PROGMEM = {
+	{{1, 1, L1, KEY_J}, {0x1dad}},
+};
+
+const Node Compose::NODE_1703878290704[] PROGMEM = {
+	{{0, 1, L1, KEY_M}, {0x1dac}},
+	{{0, 1, L1, KEY_J}, {0x1d51}},
+	{{0, 1, L1, KEY_H}, {0x1db3}},
+	{{0, 1, L1, KEY_B}, {0x1dbc}},
+	{{0, 1, L1, KEY_SLASH}, {0x1da8}},
+	{{0, 1, L1, KEY_Q}, {0x2e0}},
+	{{0, 1, L1, KEY_U}, {0x2b1}},
+	{{1, 0, L3, KEY_TILDE}, {(uint16_t) NODE_1703878309824}},
+};
+
+const Node Compose::NODE_1703878309824[] PROGMEM = {
+	{{1, 1, L1, KEY_K}, {0x2b5}},
+};
+
+const Node Compose::NODE_1703878307984[] PROGMEM = {
+	{{0, 1, L1, KEY_SLASH}, {0x1da1}},
+	{{0, 1, L2, KEY_SLASH}, {0x1da1}},
+	{{0, 1, L1, KEY_S}, {0x1da4}},
+	{{0, 1, L1, KEY_A}, {0x1db6}},
+	{{0, 1, L2, KEY_S}, {0x1da7}},
+	{{1, 0, L3, KEY_TAB}, {(uint16_t) NODE_1703878328944}},
+};
+
+const Node Compose::NODE_1703878328944[] PROGMEM = {
+	{{1, 0, L2, KEY_S}, {(uint16_t) NODE_1703878329264}},
+};
+
+const Node Compose::NODE_1703878329264[] PROGMEM = {
+	{{1, 1, L2, KEY_S}, {0x1da7}},
+};
+
+const Node Compose::NODE_1703878310464[] PROGMEM = {
+	{{0, 1, L1, KEY_R}, {0x1d9d}},
+	{{1, 1, L1, KEY_B}, {0x1dbd}},
+};
+
+const Node Compose::NODE_1703870304320[] PROGMEM = {
 	{{0, 1, L5, KEY_SPACE}, {0x2c7}},
 	{{0, 1, L2, KEY_TILDE}, {0x30c}},
-	{{0, 0, L3, KEY_TAB}, {(uint16_t) OBJ_3084155431888}},
+	{{0, 0, L3, KEY_TAB}, {(uint16_t) NODE_1703870345104}},
 	{{0, 1, L1, KEY_0}, {0x2080}},
 	{{0, 1, L1, KEYPAD_0}, {0x2080}},
 	{{0, 1, L1, KEY_1}, {0x2081}},
@@ -56,62 +282,294 @@ const Node Compose::OBJ_3084155333664[] PROGMEM = {
 	{{0, 1, L1, KEY_8}, {0x2088}},
 	{{0, 1, L1, KEYPAD_8}, {0x2088}},
 	{{0, 1, L1, KEY_9}, {0x2089}},
-	{{1, 1, L1, KEYPAD_9}, {0x2089}},
+	{{0, 1, L1, KEYPAD_9}, {0x2089}},
+	{{0, 1, L1, KEY_SPACE}, {0x2c7}},
+	{{0, 1, L2, KEY_R}, {0x10c}},
+	{{0, 1, L1, KEY_R}, {0x10d}},
+	{{0, 1, L2, KEY_SEMICOLON}, {0x10e}},
+	{{0, 1, L1, KEY_SEMICOLON}, {0x10f}},
+	{{0, 1, L2, KEY_F}, {0x11a}},
+	{{0, 1, L1, KEY_F}, {0x11b}},
+	{{0, 1, L2, KEY_E}, {0x13d}},
+	{{0, 1, L1, KEY_E}, {0x13e}},
+	{{0, 1, L2, KEY_J}, {0x147}},
+	{{0, 1, L1, KEY_J}, {0x148}},
+	{{0, 1, L2, KEY_K}, {0x158}},
+	{{0, 1, L1, KEY_K}, {0x159}},
+	{{0, 1, L2, KEY_H}, {0x160}},
+	{{0, 1, L1, KEY_H}, {0x161}},
+	{{0, 1, L2, KEY_L}, {0x164}},
+	{{0, 1, L1, KEY_L}, {0x165}},
+	{{0, 1, L2, KEY_B}, {0x17d}},
+	{{0, 1, L1, KEY_B}, {0x17e}},
+	{{0, 1, L2, KEY_D}, {0x1cd}},
+	{{0, 1, L1, KEY_D}, {0x1ce}},
+	{{0, 1, L2, KEY_S}, {0x1cf}},
+	{{0, 1, L1, KEY_S}, {0x1d0}},
+	{{0, 1, L2, KEY_G}, {0x1d1}},
+	{{0, 1, L1, KEY_G}, {0x1d2}},
+	{{0, 1, L2, KEY_A}, {0x1d3}},
+	{{0, 1, L1, KEY_A}, {0x1d4}},
+	{{0, 1, L2, KEY_Z}, {0x1d9}},
+	{{0, 0, L4, KEY_EQUAL}, {(uint16_t) NODE_1703878025920}},
+	{{0, 1, L1, KEY_Z}, {0x1da}},
+	{{0, 1, L2, KEY_I}, {0x1e6}},
+	{{0, 1, L1, KEY_I}, {0x1e7}},
+	{{0, 1, L2, KEY_Y}, {0x1e8}},
+	{{0, 1, L1, KEY_Y}, {0x1e9}},
+	{{0, 1, L1, KEY_SLASH}, {0x1f0}},
+	{{0, 1, L2, KEY_U}, {0x21e}},
+	{{0, 1, L1, KEY_U}, {0x21f}},
+	{{1, 1, L3, KEY_O}, {0x225a}},
 };
 
-const Node Compose::OBJ_3084155431888[] PROGMEM = {
-	{{0, 0, L2, KEY_SEMICOLON}, {(uint16_t) OBJ_3084155432128}},
-	{{1, 0, L1, KEY_SEMICOLON}, {(uint16_t) OBJ_3084155432288}},
+const Node Compose::NODE_1703870345104[] PROGMEM = {
+	{{0, 0, L2, KEY_SEMICOLON}, {(uint16_t) NODE_1703870370016}},
+	{{0, 0, L1, KEY_SEMICOLON}, {(uint16_t) NODE_1703870370176}},
+	{{0, 0, L2, KEY_B}, {(uint16_t) NODE_1703878247344}},
+	{{1, 0, L1, KEY_B}, {(uint16_t) NODE_1703878247424}},
 };
 
-const Node Compose::OBJ_3084155432128[] PROGMEM = {
+const Node Compose::NODE_1703870370016[] PROGMEM = {
 	{{0, 1, L2, KEY_B}, {0x1c4}},
 	{{1, 1, L1, KEY_B}, {0x1c5}},
 };
 
-const Node Compose::OBJ_3084155432288[] PROGMEM = {
+const Node Compose::NODE_1703870370176[] PROGMEM = {
 	{{1, 1, L1, KEY_B}, {0x1c6}},
 };
 
-const Node Compose::OBJ_3084155333584[] PROGMEM = {
+const Node Compose::NODE_1703878247344[] PROGMEM = {
+	{{1, 1, L2, KEY_U}, {0x1ee}},
+};
+
+const Node Compose::NODE_1703878247424[] PROGMEM = {
+	{{1, 1, L1, KEY_U}, {0x1ef}},
+};
+
+const Node Compose::NODE_1703878025920[] PROGMEM = {
+	{{0, 1, L2, KEY_A}, {0x1d9}},
+	{{1, 1, L1, KEY_A}, {0x1da}},
+};
+
+const Node Compose::NODE_1703870072688[] PROGMEM = {
 	{{0, 1, L5, KEY_SPACE}, {0x2d8}},
 	{{0, 1, L6, KEY_RIGHT_BRACE}, {0x306}},
 	{{0, 1, L2, KEY_U}, {0x1e2a}},
 	{{0, 1, L1, KEY_U}, {0x1e2b}},
-	{{1, 1, L5, KEY_5}, {0x263f}},
+	{{0, 1, L5, KEY_5}, {0x263f}},
+	{{0, 1, L1, KEY_SPACE}, {0x2d8}},
+	{{0, 1, L2, KEY_D}, {0x102}},
+	{{0, 1, L1, KEY_D}, {0x103}},
+	{{0, 1, L2, KEY_F}, {0x114}},
+	{{0, 1, L1, KEY_F}, {0x115}},
+	{{0, 1, L2, KEY_I}, {0x11e}},
+	{{0, 1, L1, KEY_I}, {0x11f}},
+	{{0, 1, L2, KEY_S}, {0x12c}},
+	{{0, 1, L1, KEY_S}, {0x12d}},
+	{{0, 1, L2, KEY_G}, {0x14e}},
+	{{0, 1, L1, KEY_G}, {0x14f}},
+	{{0, 1, L2, KEY_A}, {0x16c}},
+	{{0, 1, L1, KEY_A}, {0x16d}},
+	{{0, 0, L2, KEY_EQUAL}, {(uint16_t) NODE_1703878048000}},
+	{{1, 0, L6, KEY_TILDE}, {(uint16_t) NODE_1703878108160}},
 };
 
-const Node Compose::OBJ_3084155333984[] PROGMEM = {
+const Node Compose::NODE_1703878048000[] PROGMEM = {
+	{{0, 1, L2, KEY_F}, {0x1e1c}},
+	{{1, 1, L1, KEY_F}, {0x1e1d}},
+};
+
+const Node Compose::NODE_1703878108160[] PROGMEM = {
+	{{0, 1, L2, KEY_D}, {0x1eb6}},
+	{{1, 1, L1, KEY_D}, {0x1eb7}},
+};
+
+const Node Compose::NODE_1703870304640[] PROGMEM = {
 	{{0, 1, L5, KEY_SPACE}, {0xb4}},
 	{{0, 1, L1, KEY_RIGHT_BRACE}, {0x301}},
-	{{0, 0, L3, KEY_RIGHT_BRACE}, {(uint16_t) OBJ_3084155159632}},
-	{{1, 0, L3, KEY_TAB}, {(uint16_t) OBJ_3084155429888}},
+	{{0, 0, L3, KEY_RIGHT_BRACE}, {(uint16_t) NODE_1703870077104}},
+	{{0, 0, L3, KEY_TAB}, {(uint16_t) NODE_1703870343104}},
+	{{0, 1, L1, KEY_SPACE}, {0xb4}},
+	{{0, 1, L2, KEY_D}, {0xc1}},
+	{{0, 1, L2, KEY_F}, {0xc9}},
+	{{0, 1, L2, KEY_S}, {0xcd}},
+	{{0, 1, L2, KEY_G}, {0xd3}},
+	{{0, 1, L2, KEY_A}, {0xda}},
+	{{0, 1, L2, KEY_QUOTE}, {0xdd}},
+	{{0, 1, L1, KEY_D}, {0xe1}},
+	{{0, 1, L1, KEY_F}, {0xe9}},
+	{{0, 1, L1, KEY_S}, {0xed}},
+	{{0, 1, L1, KEY_G}, {0xf3}},
+	{{0, 1, L1, KEY_A}, {0xfa}},
+	{{0, 1, L1, KEY_QUOTE}, {0xfd}},
+	{{0, 1, L2, KEY_R}, {0x106}},
+	{{0, 1, L1, KEY_R}, {0x107}},
+	{{0, 1, L2, KEY_E}, {0x139}},
+	{{0, 1, L1, KEY_E}, {0x13a}},
+	{{0, 1, L2, KEY_J}, {0x143}},
+	{{0, 1, L1, KEY_J}, {0x144}},
+	{{0, 1, L2, KEY_K}, {0x154}},
+	{{0, 1, L1, KEY_K}, {0x155}},
+	{{0, 1, L2, KEY_H}, {0x15a}},
+	{{0, 1, L1, KEY_H}, {0x15b}},
+	{{0, 1, L2, KEY_B}, {0x179}},
+	{{0, 1, L1, KEY_B}, {0x17a}},
+	{{0, 1, L2, KEY_Z}, {0x1d7}},
+	{{0, 0, L4, KEY_EQUAL}, {(uint16_t) NODE_1703878025680}},
+	{{0, 1, L1, KEY_Z}, {0x1d8}},
+	{{0, 1, L2, KEY_I}, {0x1f4}},
+	{{0, 1, L1, KEY_I}, {0x1f5}},
+	{{0, 0, L3, KEY_EQUAL}, {(uint16_t) NODE_1703878028160}},
+	{{0, 0, L2, KEY_EQUAL}, {(uint16_t) NODE_1703878046720}},
+	{{0, 0, L6, KEY_EQUAL}, {(uint16_t) NODE_1703878047760}},
+	{{0, 1, L2, KEY_Y}, {0x1e30}},
+	{{0, 1, L1, KEY_Y}, {0x1e31}},
+	{{0, 1, L2, KEY_M}, {0x1e3e}},
+	{{0, 1, L1, KEY_M}, {0x1e3f}},
+	{{0, 0, L2, KEY_RIGHT_BRACE}, {(uint16_t) NODE_1703878063184}},
+	{{0, 1, L2, KEY_V}, {0x1e54}},
+	{{0, 1, L1, KEY_V}, {0x1e55}},
+	{{0, 1, L2, KEY_T}, {0x1e82}},
+	{{0, 1, L1, KEY_T}, {0x1e83}},
+	{{0, 0, L1, KEY_TILDE}, {(uint16_t) NODE_1703878093616}},
+	{{0, 0, L6, KEY_RIGHT_BRACE}, {(uint16_t) NODE_1703878094656}},
+	{{1, 0, L5, KEY_TILDE}, {(uint16_t) NODE_1703878111040}},
 };
 
-const Node Compose::OBJ_3084155159632[] PROGMEM = {
+const Node Compose::NODE_1703870077104[] PROGMEM = {
 	{{0, 1, L2, KEY_G}, {0x1fe}},
 	{{1, 1, L1, KEY_G}, {0x1ff}},
 };
 
-const Node Compose::OBJ_3084155429888[] PROGMEM = {
-	{{0, 0, L2, KEY_D}, {(uint16_t) OBJ_3084155430048}},
-	{{1, 0, L1, KEY_D}, {(uint16_t) OBJ_3084155430128}},
+const Node Compose::NODE_1703870343104[] PROGMEM = {
+	{{0, 0, L2, KEY_D}, {(uint16_t) NODE_1703870343264}},
+	{{1, 0, L1, KEY_D}, {(uint16_t) NODE_1703870343344}},
 };
 
-const Node Compose::OBJ_3084155430048[] PROGMEM = {
+const Node Compose::NODE_1703870343264[] PROGMEM = {
 	{{1, 1, L2, KEY_F}, {0x1fc}},
 };
 
-const Node Compose::OBJ_3084155430128[] PROGMEM = {
+const Node Compose::NODE_1703870343344[] PROGMEM = {
 	{{1, 1, L1, KEY_F}, {0x1fd}},
 };
 
-const Node Compose::OBJ_3084155334304[] PROGMEM = {
-	{{0, 1, L5, KEY_SPACE}, {0x60}},
-	{{1, 1, L1, KEY_EQUAL}, {0x300}},
+const Node Compose::NODE_1703878025680[] PROGMEM = {
+	{{0, 1, L2, KEY_A}, {0x1d7}},
+	{{0, 1, L1, KEY_A}, {0x1d8}},
+	{{0, 1, L2, KEY_S}, {0x1e2e}},
+	{{1, 1, L1, KEY_S}, {0x1e2f}},
 };
 
-const Node Compose::OBJ_3084155334544[] PROGMEM = {
+const Node Compose::NODE_1703878028160[] PROGMEM = {
+	{{0, 1, L2, KEY_D}, {0x1fa}},
+	{{1, 1, L1, KEY_D}, {0x1fb}},
+};
+
+const Node Compose::NODE_1703878046720[] PROGMEM = {
+	{{0, 1, L2, KEY_R}, {0x1e08}},
+	{{1, 1, L1, KEY_R}, {0x1e09}},
+};
+
+const Node Compose::NODE_1703878047760[] PROGMEM = {
+	{{0, 1, L2, KEY_F}, {0x1e16}},
+	{{0, 1, L1, KEY_F}, {0x1e17}},
+	{{0, 1, L2, KEY_G}, {0x1e52}},
+	{{1, 1, L1, KEY_G}, {0x1e53}},
+};
+
+const Node Compose::NODE_1703878063184[] PROGMEM = {
+	{{0, 1, L2, KEY_G}, {0x1e4c}},
+	{{0, 1, L1, KEY_G}, {0x1e4d}},
+	{{0, 1, L2, KEY_A}, {0x1e78}},
+	{{1, 1, L1, KEY_A}, {0x1e79}},
+};
+
+const Node Compose::NODE_1703878093616[] PROGMEM = {
+	{{0, 1, L2, KEY_D}, {0x1ea4}},
+	{{0, 1, L1, KEY_D}, {0x1ea5}},
+	{{0, 1, L2, KEY_F}, {0x1ebe}},
+	{{0, 1, L1, KEY_F}, {0x1ebf}},
+	{{0, 1, L2, KEY_G}, {0x1ed0}},
+	{{1, 1, L1, KEY_G}, {0x1ed1}},
+};
+
+const Node Compose::NODE_1703878094656[] PROGMEM = {
+	{{0, 1, L2, KEY_D}, {0x1eae}},
+	{{1, 1, L1, KEY_D}, {0x1eaf}},
+};
+
+const Node Compose::NODE_1703878111040[] PROGMEM = {
+	{{0, 1, L2, KEY_G}, {0x1eda}},
+	{{0, 1, L1, KEY_G}, {0x1edb}},
+	{{0, 1, L2, KEY_A}, {0x1ee8}},
+	{{1, 1, L1, KEY_A}, {0x1ee9}},
+};
+
+const Node Compose::NODE_1703870304960[] PROGMEM = {
+	{{0, 1, L5, KEY_SPACE}, {0x60}},
+	{{0, 1, L1, KEY_EQUAL}, {0x300}},
+	{{0, 1, L1, KEY_SPACE}, {0x60}},
+	{{0, 1, L2, KEY_D}, {0xc0}},
+	{{0, 1, L2, KEY_F}, {0xc8}},
+	{{0, 1, L2, KEY_S}, {0xcc}},
+	{{0, 1, L2, KEY_G}, {0xd2}},
+	{{0, 1, L2, KEY_A}, {0xd9}},
+	{{0, 1, L1, KEY_D}, {0xe0}},
+	{{0, 1, L1, KEY_F}, {0xe8}},
+	{{0, 1, L1, KEY_S}, {0xec}},
+	{{0, 1, L1, KEY_G}, {0xf2}},
+	{{0, 1, L1, KEY_A}, {0xf9}},
+	{{0, 1, L2, KEY_Z}, {0x1db}},
+	{{0, 0, L4, KEY_EQUAL}, {(uint16_t) NODE_1703878026480}},
+	{{0, 1, L1, KEY_Z}, {0x1dc}},
+	{{0, 1, L2, KEY_J}, {0x1f8}},
+	{{0, 1, L1, KEY_J}, {0x1f9}},
+	{{0, 0, L6, KEY_EQUAL}, {(uint16_t) NODE_1703878047440}},
+	{{0, 1, L2, KEY_T}, {0x1e80}},
+	{{0, 1, L1, KEY_T}, {0x1e81}},
+	{{0, 0, L1, KEY_TILDE}, {(uint16_t) NODE_1703878093536}},
+	{{0, 0, L6, KEY_RIGHT_BRACE}, {(uint16_t) NODE_1703878107440}},
+	{{0, 0, L5, KEY_TILDE}, {(uint16_t) NODE_1703878127840}},
+	{{0, 1, L2, KEY_QUOTE}, {0x1ef2}},
+	{{1, 1, L1, KEY_QUOTE}, {0x1ef3}},
+};
+
+const Node Compose::NODE_1703878026480[] PROGMEM = {
+	{{0, 1, L2, KEY_A}, {0x1db}},
+	{{1, 1, L1, KEY_A}, {0x1dc}},
+};
+
+const Node Compose::NODE_1703878047440[] PROGMEM = {
+	{{0, 1, L2, KEY_F}, {0x1e14}},
+	{{0, 1, L1, KEY_F}, {0x1e15}},
+	{{0, 1, L2, KEY_G}, {0x1e50}},
+	{{1, 1, L1, KEY_G}, {0x1e51}},
+};
+
+const Node Compose::NODE_1703878093536[] PROGMEM = {
+	{{0, 1, L2, KEY_D}, {0x1ea6}},
+	{{0, 1, L1, KEY_D}, {0x1ea7}},
+	{{0, 1, L2, KEY_F}, {0x1ec0}},
+	{{0, 1, L1, KEY_F}, {0x1ec1}},
+	{{0, 1, L2, KEY_G}, {0x1ed2}},
+	{{1, 1, L1, KEY_G}, {0x1ed3}},
+};
+
+const Node Compose::NODE_1703878107440[] PROGMEM = {
+	{{0, 1, L2, KEY_D}, {0x1eb0}},
+	{{1, 1, L1, KEY_D}, {0x1eb1}},
+};
+
+const Node Compose::NODE_1703878127840[] PROGMEM = {
+	{{0, 1, L2, KEY_G}, {0x1edc}},
+	{{0, 1, L1, KEY_G}, {0x1edd}},
+	{{0, 1, L2, KEY_A}, {0x1eea}},
+	{{1, 1, L1, KEY_A}, {0x1eeb}},
+};
+
+const Node Compose::NODE_1703870305200[] PROGMEM = {
 	{{0, 1, L5, KEY_SPACE}, {0xb8}},
 	{{0, 1, L2, KEY_EQUAL}, {0x327}},
 	{{0, 1, L2, KEY_D}, {0x104}},
@@ -123,23 +581,70 @@ const Node Compose::OBJ_3084155334544[] PROGMEM = {
 	{{0, 1, L2, KEY_A}, {0x172}},
 	{{0, 1, L1, KEY_A}, {0x173}},
 	{{0, 1, L2, KEY_G}, {0x1ea}},
-	{{1, 1, L1, KEY_G}, {0x1eb}},
+	{{0, 1, L1, KEY_G}, {0x1eb}},
+	{{0, 1, L1, KEY_SPACE}, {0xb8}},
+	{{0, 1, L2, KEY_R}, {0xc7}},
+	{{0, 1, L1, KEY_R}, {0xe7}},
+	{{0, 1, L2, KEY_I}, {0x122}},
+	{{0, 1, L1, KEY_I}, {0x123}},
+	{{0, 1, L2, KEY_Y}, {0x136}},
+	{{0, 1, L1, KEY_Y}, {0x137}},
+	{{0, 1, L2, KEY_E}, {0x13b}},
+	{{0, 1, L1, KEY_E}, {0x13c}},
+	{{0, 1, L2, KEY_J}, {0x145}},
+	{{0, 1, L1, KEY_J}, {0x146}},
+	{{0, 1, L2, KEY_K}, {0x156}},
+	{{0, 1, L1, KEY_K}, {0x157}},
+	{{0, 1, L2, KEY_H}, {0x15e}},
+	{{0, 1, L1, KEY_H}, {0x15f}},
+	{{0, 1, L2, KEY_L}, {0x162}},
+	{{0, 1, L1, KEY_L}, {0x163}},
+	{{0, 1, L2, KEY_SEMICOLON}, {0x1e10}},
+	{{0, 1, L1, KEY_SEMICOLON}, {0x1e11}},
+	{{0, 1, L2, KEY_U}, {0x1e28}},
+	{{1, 1, L1, KEY_U}, {0x1e29}},
 };
 
-const Node Compose::OBJ_3084155396320[] PROGMEM = {
-	{{0, 0, L2, KEY_EQUAL}, {(uint16_t) OBJ_3084155396400}},
-	{{0, 0, L4, KEY_RIGHT_BRACE}, {(uint16_t) OBJ_3084155398000}},
+const Node Compose::NODE_1703870305440[] PROGMEM = {
+	{{0, 0, L2, KEY_EQUAL}, {(uint16_t) NODE_1703870305520}},
+	{{0, 0, L4, KEY_RIGHT_BRACE}, {(uint16_t) NODE_1703870307120}},
 	{{0, 1, L5, KEY_SPACE}, {0x21bb}},
-	{{0, 0, L6, KEY_RIGHT_BRACE}, {(uint16_t) OBJ_3084155399360}},
+	{{0, 0, L6, KEY_RIGHT_BRACE}, {(uint16_t) NODE_1703870320864}},
 	{{0, 1, L1, KEY_SPACE}, {0x21bb}},
 	{{0, 1, L3, KEY_SEMICOLON}, {0x2025}},
 	{{0, 1, L3, KEY_Q}, {0x22ee}},
 	{{0, 1, L5, KEY_5}, {0x2641}},
 	{{0, 1, L3, KEY_R}, {0x2423}},
-	{{1, 1, L3, KEYPAD_3}, {0x21cb}},
+	{{0, 1, L3, KEYPAD_3}, {0x21cb}},
+	{{0, 1, L1, KEY_D}, {0x250}},
+	{{0, 1, L2, KEY_R}, {0x186}},
+	{{0, 1, L1, KEY_R}, {0x254}},
+	{{0, 1, L1, KEY_F}, {0x258}},
+	{{0, 1, L1, KEY_U}, {0x265}},
+	{{0, 1, L1, KEY_M}, {0x26f}},
+	{{0, 1, L2, KEY_K}, {0x281}},
+	{{0, 1, L1, KEY_K}, {0x279}},
+	{{0, 0, L3, KEY_TAB}, {(uint16_t) NODE_1703877935488}},
+	{{0, 1, L2, KEY_H}, {0x1a7}},
+	{{0, 1, L2, KEY_W}, {0x245}},
+	{{0, 1, L1, KEY_W}, {0x28c}},
+	{{0, 1, L1, KEY_T}, {0x28d}},
+	{{0, 1, L1, KEY_QUOTE}, {0x28e}},
+	{{0, 1, L5, KEY_E}, {0x28e}},
+	{{0, 1, L1, KEY_3}, {0x190}},
+	{{0, 1, L5, KEY_D}, {0x252}},
+	{{0, 1, L6, KEY_T}, {0x1b1}},
+	{{0, 1, L5, KEY_L}, {0x27e}},
+	{{0, 1, L3, KEY_K}, {0x203f}},
+	{{0, 1, L3, KEY_J}, {0x361}},
+	{{0, 0, L3, KEY_EQUAL}, {(uint16_t) NODE_1703878287904}},
+	{{0, 0, L4, KEY_EQUAL}, {(uint16_t) NODE_1703878288144}},
+	{{0, 0, L2, KEY_RIGHT_BRACE}, {(uint16_t) NODE_1703878288384}},
+	{{0, 1, L6, KEY_V}, {0x2210}},
+	{{1, 1, L3, KEY_V}, {0x2240}},
 };
 
-const Node Compose::OBJ_3084155396400[] PROGMEM = {
+const Node Compose::NODE_1703870305520[] PROGMEM = {
 	{{0, 1, L5, KEY_SPACE}, {0x2db}},
 	{{0, 1, L2, KEY_EQUAL}, {0x328}},
 	{{0, 1, L1, KEY_SPACE}, {0x2db}},
@@ -147,7 +652,7 @@ const Node Compose::OBJ_3084155396400[] PROGMEM = {
 	{{1, 1, L1, KEY_F}, {0x229}},
 };
 
-const Node Compose::OBJ_3084155398000[] PROGMEM = {
+const Node Compose::NODE_1703870307120[] PROGMEM = {
 	{{0, 1, L5, KEY_SPACE}, {0x2f5}},
 	{{0, 1, L4, KEY_RIGHT_BRACE}, {0x30f}},
 	{{0, 1, L2, KEY_D}, {0x200}},
@@ -164,7 +669,7 @@ const Node Compose::OBJ_3084155398000[] PROGMEM = {
 	{{1, 1, L1, KEY_A}, {0x215}},
 };
 
-const Node Compose::OBJ_3084155399360[] PROGMEM = {
+const Node Compose::NODE_1703870320864[] PROGMEM = {
 	{{0, 1, L6, KEY_RIGHT_BRACE}, {0x311}},
 	{{0, 1, L2, KEY_D}, {0x202}},
 	{{0, 1, L1, KEY_D}, {0x203}},
@@ -180,30 +685,262 @@ const Node Compose::OBJ_3084155399360[] PROGMEM = {
 	{{1, 1, L1, KEY_A}, {0x217}},
 };
 
-const Node Compose::OBJ_3084155396240[] PROGMEM = {
+const Node Compose::NODE_1703877935488[] PROGMEM = {
+	{{0, 0, L1, KEY_K}, {(uint16_t) NODE_1703877935808}},
+	{{0, 0, L1, KEY_D}, {(uint16_t) NODE_1703877936528}},
+	{{0, 0, L5, KEY_D}, {(uint16_t) NODE_1703877936448}},
+	{{0, 0, L1, KEY_U}, {(uint16_t) NODE_1703877936848}},
+	{{0, 0, L2, KEY_B}, {(uint16_t) NODE_1703878247264}},
+	{{0, 0, L1, KEY_B}, {(uint16_t) NODE_1703878247584}},
+	{{0, 0, L1, KEY_S}, {(uint16_t) NODE_1703878267264}},
+	{{0, 0, L3, KEY_PERIOD}, {(uint16_t) NODE_1703878270144}},
+	{{0, 0, L1, KEY_H}, {(uint16_t) NODE_1703878329184}},
+	{{1, 0, L1, KEY_T}, {(uint16_t) NODE_1703878541936}},
+};
+
+const Node Compose::NODE_1703877935808[] PROGMEM = {
+	{{0, 1, L1, KEY_K}, {0x27a}},
+	{{1, 1, L3, KEY_W}, {0x27f}},
+};
+
+const Node Compose::NODE_1703877936528[] PROGMEM = {
+	{{1, 1, L1, KEY_D}, {0x252}},
+};
+
+const Node Compose::NODE_1703877936448[] PROGMEM = {
+	{{1, 1, L5, KEY_D}, {0x252}},
+};
+
+const Node Compose::NODE_1703877936848[] PROGMEM = {
+	{{1, 1, L1, KEY_J}, {0x270}},
+};
+
+const Node Compose::NODE_1703878247264[] PROGMEM = {
+	{{1, 1, L2, KEY_B}, {0x1b8}},
+};
+
+const Node Compose::NODE_1703878247584[] PROGMEM = {
+	{{1, 1, L1, KEY_B}, {0x1b9}},
+};
+
+const Node Compose::NODE_1703878267264[] PROGMEM = {
+	{{1, 1, L3, KEY_H}, {0x295}},
+};
+
+const Node Compose::NODE_1703878270144[] PROGMEM = {
+	{{1, 1, L3, KEY_PERIOD}, {0x2cc}},
+};
+
+const Node Compose::NODE_1703878329184[] PROGMEM = {
+	{{1, 1, L1, KEY_U}, {0x285}},
+};
+
+const Node Compose::NODE_1703878541936[] PROGMEM = {
+	{{0, 1, L3, KEY_PERIOD}, {0x2035}},
+	{{0, 1, L1, KEY_3}, {0x2037}},
+	{{1, 1, L1, KEYPAD_3}, {0x2037}},
+};
+
+const Node Compose::NODE_1703878287904[] PROGMEM = {
+	{{0, 1, L3, KEY_EQUAL}, {0x325}},
+	{{0, 1, L2, KEY_D}, {0x1e00}},
+	{{1, 1, L1, KEY_D}, {0x1e01}},
+};
+
+const Node Compose::NODE_1703878288144[] PROGMEM = {
+	{{0, 1, L4, KEY_EQUAL}, {0x324}},
+	{{0, 1, L2, KEY_A}, {0x1e72}},
+	{{1, 1, L1, KEY_A}, {0x1e73}},
+};
+
+const Node Compose::NODE_1703878288384[] PROGMEM = {
+	{{0, 1, L2, KEY_RIGHT_BRACE}, {0x330}},
+	{{0, 1, L2, KEY_F}, {0x1e1a}},
+	{{0, 1, L1, KEY_F}, {0x1e1b}},
+	{{0, 1, L2, KEY_S}, {0x1e2c}},
+	{{0, 1, L1, KEY_S}, {0x1e2d}},
+	{{0, 1, L2, KEY_A}, {0x1e74}},
+	{{1, 1, L1, KEY_A}, {0x1e75}},
+};
+
+const Node Compose::NODE_1703870305360[] PROGMEM = {
 	{{0, 1, L5, KEY_SPACE}, {0x2d9}},
 	{{0, 1, L4, KEY_TILDE}, {0x307}},
 	{{0, 1, L2, KEY_E}, {0x13f}},
 	{{0, 1, L1, KEY_E}, {0x140}},
-	{{1, 1, L1, KEY_SLASH}, {0x237}},
+	{{0, 1, L1, KEY_SLASH}, {0x237}},
+	{{0, 1, L1, KEY_SPACE}, {0x2d9}},
+	{{0, 1, L2, KEY_R}, {0x10a}},
+	{{0, 1, L1, KEY_R}, {0x10b}},
+	{{0, 1, L2, KEY_F}, {0x116}},
+	{{0, 1, L1, KEY_F}, {0x117}},
+	{{0, 1, L2, KEY_I}, {0x120}},
+	{{0, 1, L1, KEY_I}, {0x121}},
+	{{0, 1, L2, KEY_S}, {0x130}},
+	{{0, 1, L1, KEY_S}, {0x131}},
+	{{0, 1, L2, KEY_B}, {0x17b}},
+	{{0, 1, L1, KEY_B}, {0x17c}},
+	{{0, 1, L2, KEY_D}, {0x226}},
+	{{0, 1, L1, KEY_D}, {0x227}},
+	{{0, 1, L2, KEY_G}, {0x22e}},
+	{{0, 1, L1, KEY_G}, {0x22f}},
+	{{0, 1, L2, KEY_N}, {0x1e02}},
+	{{0, 1, L1, KEY_N}, {0x1e03}},
+	{{0, 1, L2, KEY_SEMICOLON}, {0x1e0a}},
+	{{0, 1, L1, KEY_SEMICOLON}, {0x1e0b}},
+	{{0, 1, L2, KEY_O}, {0x1e1e}},
+	{{0, 1, L1, KEY_O}, {0x1e1f}},
+	{{0, 1, L2, KEY_U}, {0x1e22}},
+	{{0, 1, L1, KEY_U}, {0x1e23}},
+	{{0, 1, L2, KEY_M}, {0x1e40}},
+	{{0, 1, L1, KEY_M}, {0x1e41}},
+	{{0, 1, L2, KEY_J}, {0x1e44}},
+	{{0, 1, L1, KEY_J}, {0x1e45}},
+	{{0, 1, L2, KEY_V}, {0x1e56}},
+	{{0, 1, L1, KEY_V}, {0x1e57}},
+	{{0, 1, L2, KEY_K}, {0x1e58}},
+	{{0, 1, L1, KEY_K}, {0x1e59}},
+	{{0, 1, L2, KEY_H}, {0x1e60}},
+	{{0, 1, L1, KEY_H}, {0x1e61}},
+	{{0, 0, L1, KEY_RIGHT_BRACE}, {(uint16_t) NODE_1703878065184}},
+	{{0, 0, L2, KEY_TILDE}, {(uint16_t) NODE_1703878065424}},
+	{{0, 1, L2, KEY_L}, {0x1e6a}},
+	{{0, 1, L1, KEY_L}, {0x1e6b}},
+	{{0, 1, L2, KEY_T}, {0x1e86}},
+	{{0, 1, L1, KEY_T}, {0x1e87}},
+	{{0, 1, L2, KEY_Q}, {0x1e8a}},
+	{{0, 1, L1, KEY_Q}, {0x1e8b}},
+	{{0, 1, L2, KEY_QUOTE}, {0x1e8e}},
+	{{0, 1, L1, KEY_QUOTE}, {0x1e8f}},
+	{{0, 1, L3, KEY_LEFT_BRACE}, {0x1e9b}},
+	{{0, 1, L1, KEY_0}, {0x298}},
+	{{0, 1, L1, KEYPAD_0}, {0x298}},
+	{{0, 0, L3, KEY_TAB}, {(uint16_t) NODE_1703878393920}},
+	{{0, 1, L3, KEY_O}, {0x2250}},
+	{{0, 1, L6, KEY_3}, {0x2a51}},
+	{{0, 1, L6, KEY_2}, {0x2a52}},
+	{{0, 1, L3, KEY_V}, {0x2a6a}},
+	{{0, 1, L3, KEY_L}, {0x2238}},
+	{{0, 1, L3, KEY_N}, {0x2214}},
+	{{0, 1, L1, KEYPAD_MULTIPLY}, {0x2a30}},
+	{{1, 1, L6, KEY_SEMICOLON}, {0x29ca}},
 };
 
-const Node Compose::OBJ_3084155396560[] PROGMEM = {
+const Node Compose::NODE_1703878065184[] PROGMEM = {
+	{{0, 1, L2, KEY_H}, {0x1e64}},
+	{{1, 1, L1, KEY_H}, {0x1e65}},
+};
+
+const Node Compose::NODE_1703878065424[] PROGMEM = {
+	{{0, 1, L2, KEY_H}, {0x1e66}},
+	{{1, 1, L1, KEY_H}, {0x1e67}},
+};
+
+const Node Compose::NODE_1703878393920[] PROGMEM = {
+	{{1, 0, L3, KEY_O}, {(uint16_t) NODE_1703878394080}},
+};
+
+const Node Compose::NODE_1703878394080[] PROGMEM = {
+	{{1, 1, L3, KEY_O}, {0x2a67}},
+};
+
+const Node Compose::NODE_1703870305680[] PROGMEM = {
 	{{0, 1, L5, KEY_SPACE}, {0x2da}},
-	{{1, 1, L3, KEY_EQUAL}, {0x30a}},
+	{{0, 1, L3, KEY_EQUAL}, {0x30a}},
+	{{0, 1, L1, KEY_SPACE}, {0xb0}},
+	{{0, 1, L2, KEY_D}, {0xc5}},
+	{{0, 1, L1, KEY_D}, {0xe5}},
+	{{0, 1, L2, KEY_A}, {0x16e}},
+	{{0, 1, L1, KEY_A}, {0x16f}},
+	{{0, 1, L1, KEY_T}, {0x1e98}},
+	{{0, 1, L1, KEY_QUOTE}, {0x1e99}},
+	{{0, 1, L1, KEY_R}, {0x255}},
+	{{0, 1, L1, KEY_B}, {0x291}},
+	{{0, 1, L1, KEY_SEMICOLON}, {0x221}},
+	{{0, 1, L1, KEY_E}, {0x234}},
+	{{0, 1, L1, KEY_J}, {0x235}},
+	{{0, 1, L1, KEY_L}, {0x236}},
+	{{0, 1, L6, KEY_S}, {0x222e}},
+	{{0, 0, L1, KEY_2}, {(uint16_t) NODE_1703878370464}},
+	{{0, 0, L1, KEYPAD_2}, {(uint16_t) NODE_1703878370544}},
+	{{0, 0, L1, KEY_3}, {(uint16_t) NODE_1703878371024}},
+	{{0, 0, L1, KEYPAD_3}, {(uint16_t) NODE_1703878371184}},
+	{{0, 1, L3, KEY_O}, {0x2257}},
+	{{1, 1, L3, KEY_N}, {0x2a22}},
 };
 
-const Node Compose::OBJ_3084155396720[] PROGMEM = {
+const Node Compose::NODE_1703878370464[] PROGMEM = {
+	{{1, 1, L6, KEY_S}, {0x222f}},
+};
+
+const Node Compose::NODE_1703878370544[] PROGMEM = {
+	{{1, 1, L6, KEY_S}, {0x222f}},
+};
+
+const Node Compose::NODE_1703878371024[] PROGMEM = {
+	{{1, 1, L6, KEY_S}, {0x2230}},
+};
+
+const Node Compose::NODE_1703878371184[] PROGMEM = {
+	{{1, 1, L6, KEY_S}, {0x2230}},
+};
+
+const Node Compose::NODE_1703870305840[] PROGMEM = {
 	{{0, 1, L5, KEY_SPACE}, {0x2dc}},
 	{{0, 1, L2, KEY_RIGHT_BRACE}, {0x303}},
 	{{0, 1, L2, KEY_E}, {0x2c62}},
-	{{1, 1, L1, KEY_E}, {0x26b}},
+	{{0, 1, L1, KEY_E}, {0x26b}},
+	{{0, 1, L1, KEY_SPACE}, {0x7e}},
+	{{0, 1, L2, KEY_D}, {0xc3}},
+	{{0, 1, L2, KEY_J}, {0xd1}},
+	{{0, 1, L2, KEY_G}, {0xd5}},
+	{{0, 1, L1, KEY_D}, {0xe3}},
+	{{0, 1, L1, KEY_J}, {0xf1}},
+	{{0, 1, L1, KEY_G}, {0xf5}},
+	{{0, 1, L2, KEY_S}, {0x128}},
+	{{0, 1, L1, KEY_S}, {0x129}},
+	{{0, 1, L2, KEY_A}, {0x168}},
+	{{0, 1, L1, KEY_A}, {0x169}},
+	{{0, 1, L2, KEY_W}, {0x1e7c}},
+	{{0, 1, L1, KEY_W}, {0x1e7d}},
+	{{0, 0, L1, KEY_TILDE}, {(uint16_t) NODE_1703878094176}},
+	{{0, 0, L6, KEY_RIGHT_BRACE}, {(uint16_t) NODE_1703878107920}},
+	{{0, 1, L2, KEY_F}, {0x1ebc}},
+	{{0, 1, L1, KEY_F}, {0x1ebd}},
+	{{0, 0, L5, KEY_TILDE}, {(uint16_t) NODE_1703878128320}},
+	{{0, 1, L2, KEY_QUOTE}, {0x1ef8}},
+	{{0, 1, L1, KEY_QUOTE}, {0x1ef9}},
+	{{0, 1, L3, KEY_O}, {0x2245}},
+	{{0, 1, L3, KEY_V}, {0x2248}},
+	{{0, 1, L3, KEY_L}, {0x2243}},
+	{{1, 1, L3, KEY_N}, {0x2a24}},
 };
 
-const Node Compose::OBJ_3084155396880[] PROGMEM = {
+const Node Compose::NODE_1703878094176[] PROGMEM = {
+	{{0, 1, L2, KEY_D}, {0x1eaa}},
+	{{0, 1, L1, KEY_D}, {0x1eab}},
+	{{0, 1, L2, KEY_F}, {0x1ec4}},
+	{{0, 1, L1, KEY_F}, {0x1ec5}},
+	{{0, 1, L2, KEY_G}, {0x1ed6}},
+	{{1, 1, L1, KEY_G}, {0x1ed7}},
+};
+
+const Node Compose::NODE_1703878107920[] PROGMEM = {
+	{{0, 1, L2, KEY_D}, {0x1eb4}},
+	{{1, 1, L1, KEY_D}, {0x1eb5}},
+};
+
+const Node Compose::NODE_1703878128320[] PROGMEM = {
+	{{0, 1, L2, KEY_G}, {0x1ee0}},
+	{{0, 1, L1, KEY_G}, {0x1ee1}},
+	{{0, 1, L2, KEY_A}, {0x1eee}},
+	{{1, 1, L1, KEY_A}, {0x1eef}},
+};
+
+const Node Compose::NODE_1703870306000[] PROGMEM = {
 	{{0, 1, L5, KEY_SPACE}, {0xaf}},
 	{{0, 1, L6, KEY_EQUAL}, {0x304}},
-	{{0, 0, L2, KEY_EQUAL}, {(uint16_t) OBJ_3084155410768}},
+	{{0, 0, L2, KEY_EQUAL}, {(uint16_t) NODE_1703870323984}},
 	{{0, 1, L2, KEY_N}, {0x1e06}},
 	{{0, 1, L1, KEY_N}, {0x1e07}},
 	{{0, 1, L2, KEY_SEMICOLON}, {0x1e0e}},
@@ -221,33 +958,127 @@ const Node Compose::OBJ_3084155396880[] PROGMEM = {
 	{{0, 1, L2, KEY_B}, {0x1e94}},
 	{{0, 1, L1, KEY_B}, {0x1e95}},
 	{{0, 1, L1, KEY_U}, {0x1e96}},
-	{{1, 0, L3, KEY_TAB}, {(uint16_t) OBJ_3084155429568}},
+	{{0, 0, L3, KEY_TAB}, {(uint16_t) NODE_1703870342784}},
+	{{0, 1, L1, KEY_SPACE}, {0xaf}},
+	{{0, 1, L2, KEY_D}, {0x100}},
+	{{0, 1, L1, KEY_D}, {0x101}},
+	{{0, 1, L2, KEY_F}, {0x112}},
+	{{0, 1, L1, KEY_F}, {0x113}},
+	{{0, 1, L2, KEY_S}, {0x12a}},
+	{{0, 1, L1, KEY_S}, {0x12b}},
+	{{0, 1, L2, KEY_G}, {0x14c}},
+	{{0, 1, L1, KEY_G}, {0x14d}},
+	{{0, 1, L2, KEY_A}, {0x16a}},
+	{{0, 1, L1, KEY_A}, {0x16b}},
+	{{0, 1, L2, KEY_Z}, {0x1d5}},
+	{{0, 0, L4, KEY_EQUAL}, {(uint16_t) NODE_1703878008640}},
+	{{0, 1, L1, KEY_Z}, {0x1d6}},
+	{{0, 1, L2, KEY_C}, {0x1de}},
+	{{0, 1, L1, KEY_C}, {0x1df}},
+	{{0, 0, L4, KEY_TILDE}, {(uint16_t) NODE_1703878027040}},
+	{{0, 0, L2, KEY_RIGHT_BRACE}, {(uint16_t) NODE_1703878029120}},
+	{{0, 1, L2, KEY_QUOTE}, {0x232}},
+	{{0, 1, L1, KEY_QUOTE}, {0x233}},
+	{{0, 1, L2, KEY_I}, {0x1e20}},
+	{{0, 1, L1, KEY_I}, {0x1e21}},
+	{{0, 0, L6, KEY_TILDE}, {(uint16_t) NODE_1703878062224}},
+	{{0, 1, L3, KEY_V}, {0x2243}},
+	{{0, 1, L3, KEY_U}, {0x2264}},
+	{{0, 1, L3, KEY_I}, {0x2265}},
+	{{0, 1, L6, KEY_3}, {0x22bc}},
+	{{0, 1, L6, KEY_2}, {0x22bd}},
+	{{0, 1, L6, KEY_S}, {0x2a1b}},
+	{{1, 0, L1, KEY_V}, {(uint16_t) NODE_1703878520160}},
 };
 
-const Node Compose::OBJ_3084155410768[] PROGMEM = {
+const Node Compose::NODE_1703870323984[] PROGMEM = {
 	{{0, 1, L2, KEY_G}, {0x1ec}},
 	{{1, 1, L1, KEY_G}, {0x1ed}},
 };
 
-const Node Compose::OBJ_3084155429568[] PROGMEM = {
-	{{0, 0, L2, KEY_D}, {(uint16_t) OBJ_3084155429808}},
-	{{1, 0, L1, KEY_D}, {(uint16_t) OBJ_3084155429648}},
+const Node Compose::NODE_1703870342784[] PROGMEM = {
+	{{0, 0, L2, KEY_D}, {(uint16_t) NODE_1703870343024}},
+	{{1, 0, L1, KEY_D}, {(uint16_t) NODE_1703870342864}},
 };
 
-const Node Compose::OBJ_3084155429808[] PROGMEM = {
+const Node Compose::NODE_1703870343024[] PROGMEM = {
 	{{1, 1, L2, KEY_F}, {0x1e2}},
 };
 
-const Node Compose::OBJ_3084155429648[] PROGMEM = {
+const Node Compose::NODE_1703870342864[] PROGMEM = {
 	{{1, 1, L1, KEY_F}, {0x1e3}},
 };
 
-const Node Compose::OBJ_3084155397280[] PROGMEM = {
-	{{0, 1, L5, KEY_SPACE}, {0xa8}},
-	{{1, 1, L4, KEY_EQUAL}, {0x308}},
+const Node Compose::NODE_1703878008640[] PROGMEM = {
+	{{0, 1, L2, KEY_A}, {0x1d5}},
+	{{0, 1, L1, KEY_A}, {0x1d6}},
+	{{0, 1, L2, KEY_D}, {0x1de}},
+	{{0, 1, L1, KEY_D}, {0x1df}},
+	{{0, 1, L2, KEY_G}, {0x22a}},
+	{{1, 1, L1, KEY_G}, {0x22b}},
 };
 
-const Node Compose::OBJ_3084155397440[] PROGMEM = {
+const Node Compose::NODE_1703878027040[] PROGMEM = {
+	{{0, 1, L2, KEY_D}, {0x1e0}},
+	{{0, 1, L1, KEY_D}, {0x1e1}},
+	{{0, 1, L2, KEY_G}, {0x230}},
+	{{1, 1, L1, KEY_G}, {0x231}},
+};
+
+const Node Compose::NODE_1703878029120[] PROGMEM = {
+	{{0, 1, L2, KEY_G}, {0x22c}},
+	{{1, 1, L1, KEY_G}, {0x22d}},
+};
+
+const Node Compose::NODE_1703878062224[] PROGMEM = {
+	{{0, 1, L2, KEY_E}, {0x1e38}},
+	{{0, 1, L1, KEY_E}, {0x1e39}},
+	{{0, 1, L2, KEY_K}, {0x1e5c}},
+	{{1, 1, L1, KEY_K}, {0x1e5d}},
+};
+
+const Node Compose::NODE_1703878520160[] PROGMEM = {
+	{{1, 1, L1, KEY_U}, {0x210f}},
+};
+
+const Node Compose::NODE_1703870306400[] PROGMEM = {
+	{{0, 1, L5, KEY_SPACE}, {0xa8}},
+	{{0, 1, L4, KEY_EQUAL}, {0x308}},
+	{{0, 1, L1, KEY_SPACE}, {0xa8}},
+	{{0, 1, L2, KEY_D}, {0xc4}},
+	{{0, 1, L2, KEY_F}, {0xcb}},
+	{{0, 1, L2, KEY_S}, {0xcf}},
+	{{0, 1, L2, KEY_G}, {0xd6}},
+	{{0, 1, L2, KEY_A}, {0xdc}},
+	{{0, 1, L1, KEY_D}, {0xe4}},
+	{{0, 1, L1, KEY_F}, {0xeb}},
+	{{0, 1, L1, KEY_S}, {0xef}},
+	{{0, 1, L1, KEY_G}, {0xf6}},
+	{{0, 1, L1, KEY_A}, {0xfc}},
+	{{0, 1, L1, KEY_QUOTE}, {0xff}},
+	{{0, 1, L2, KEY_QUOTE}, {0x178}},
+	{{0, 1, L2, KEY_U}, {0x1e26}},
+	{{0, 1, L1, KEY_U}, {0x1e27}},
+	{{0, 0, L2, KEY_RIGHT_BRACE}, {(uint16_t) NODE_1703878063504}},
+	{{0, 0, L6, KEY_EQUAL}, {(uint16_t) NODE_1703878066064}},
+	{{0, 1, L2, KEY_T}, {0x1e84}},
+	{{0, 1, L1, KEY_T}, {0x1e85}},
+	{{0, 1, L2, KEY_Q}, {0x1e8c}},
+	{{0, 1, L1, KEY_Q}, {0x1e8d}},
+	{{1, 1, L1, KEY_L}, {0x1e97}},
+};
+
+const Node Compose::NODE_1703878063504[] PROGMEM = {
+	{{0, 1, L2, KEY_G}, {0x1e4e}},
+	{{1, 1, L1, KEY_G}, {0x1e4f}},
+};
+
+const Node Compose::NODE_1703878066064[] PROGMEM = {
+	{{0, 1, L2, KEY_A}, {0x1e7a}},
+	{{1, 1, L1, KEY_A}, {0x1e7b}},
+};
+
+const Node Compose::NODE_1703870306560[] PROGMEM = {
 	{{0, 1, L5, KEY_SPACE}, {0x2f}},
 	{{0, 1, L3, KEY_RIGHT_BRACE}, {0x337}},
 	{{0, 1, L1, KEY_SPACE}, {0x2010}},
@@ -264,277 +1095,898 @@ const Node Compose::OBJ_3084155397440[] PROGMEM = {
 	{{0, 1, L3, KEY_S}, {0x2718}},
 	{{0, 1, L1, KEYPAD_DIVIDE}, {0x2718}},
 	{{0, 1, L3, KEY_A}, {0x2718}},
-	{{1, 1, L4, KEY_6}, {0x20a4}},
+	{{0, 1, L4, KEY_6}, {0x20a4}},
+	{{0, 1, L2, KEY_L}, {0x166}},
+	{{0, 1, L1, KEY_L}, {0x167}},
+	{{0, 1, L1, KEY_N}, {0x180}},
+	{{0, 1, L2, KEY_S}, {0x197}},
+	{{0, 1, L2, KEY_B}, {0x1b5}},
+	{{0, 1, L1, KEY_B}, {0x1b6}},
+	{{0, 1, L2, KEY_I}, {0x1e4}},
+	{{0, 1, L1, KEY_I}, {0x1e5}},
+	{{0, 0, L1, KEY_RIGHT_BRACE}, {(uint16_t) NODE_1703878028560}},
+	{{0, 1, L1, KEY_S}, {0x268}},
+	{{0, 1, L2, KEY_D}, {0x23a}},
+	{{0, 1, L1, KEY_D}, {0x2c65}},
+	{{0, 1, L2, KEY_N}, {0x243}},
+	{{0, 1, L2, KEY_R}, {0x23b}},
+	{{0, 1, L1, KEY_R}, {0x23c}},
+	{{0, 1, L2, KEY_F}, {0x246}},
+	{{0, 1, L1, KEY_F}, {0x247}},
+	{{0, 0, L3, KEY_TAB}, {(uint16_t) NODE_1703878226304}},
+	{{0, 1, L2, KEY_SLASH}, {0x25f}},
+	{{0, 1, L1, KEY_SLASH}, {0x25f}},
+	{{0, 0, L4, KEY_TILDE}, {(uint16_t) NODE_1703878227184}},
+	{{0, 1, L2, KEY_V}, {0x2c63}},
+	{{0, 0, L1, KEY_V}, {(uint16_t) NODE_1703878228144}},
+	{{0, 1, L2, KEY_K}, {0x24c}},
+	{{0, 1, L1, KEY_K}, {0x24d}},
+	{{0, 1, L1, KEY_A}, {0x289}},
+	{{0, 1, L2, KEY_A}, {0x244}},
+	{{0, 1, L2, KEY_QUOTE}, {0x24e}},
+	{{0, 1, L1, KEY_QUOTE}, {0x24f}},
+	{{0, 1, L5, KEY_E}, {0x19b}},
+	{{0, 1, L5, KEY_S}, {0x1d7c}},
+	{{0, 1, L5, KEY_QUOTE}, {0x1d7f}},
+	{{0, 0, L3, KEY_TILDE}, {(uint16_t) NODE_1703878266944}},
+	{{0, 1, L3, KEY_LEFT_BRACE}, {0x1e9c}},
+	{{0, 1, L1, KEY_0}, {0x2205}},
+	{{0, 1, L6, KEY_S}, {0x2a0f}},
+	{{0, 1, L3, KEY_O}, {0x2260}},
+	{{0, 1, L3, KEY_C}, {0x2224}},
+	{{0, 1, L3, KEY_V}, {0x2241}},
+	{{0, 1, L3, KEY_U}, {0x226e}},
+	{{1, 1, L3, KEY_I}, {0x226f}},
 };
 
-const Node Compose::OBJ_3084155397760[] PROGMEM = {
+const Node Compose::NODE_1703878028560[] PROGMEM = {
+	{{0, 1, L2, KEY_G}, {0x1fe}},
+	{{1, 1, L1, KEY_G}, {0x1ff}},
+};
+
+const Node Compose::NODE_1703878226304[] PROGMEM = {
+	{{0, 0, L2, KEY_S}, {(uint16_t) NODE_1703878226704}},
+	{{0, 0, L2, KEY_A}, {(uint16_t) NODE_1703878246784}},
+	{{0, 0, L1, KEY_S}, {(uint16_t) NODE_1703878267184}},
+	{{0, 0, L3, KEY_U}, {(uint16_t) NODE_1703878459936}},
+	{{0, 0, L3, KEY_C}, {(uint16_t) NODE_1703878460176}},
+	{{1, 0, L3, KEY_O}, {(uint16_t) NODE_1703878460336}},
+};
+
+const Node Compose::NODE_1703878226704[] PROGMEM = {
+	{{1, 1, L2, KEY_S}, {0x1d7b}},
+};
+
+const Node Compose::NODE_1703878246784[] PROGMEM = {
+	{{1, 1, L2, KEY_A}, {0x1d7e}},
+};
+
+const Node Compose::NODE_1703878267184[] PROGMEM = {
+	{{1, 1, L3, KEY_H}, {0x2a1}},
+};
+
+const Node Compose::NODE_1703878459936[] PROGMEM = {
+	{{1, 1, L3, KEY_C}, {0x22ea}},
+};
+
+const Node Compose::NODE_1703878460176[] PROGMEM = {
+	{{0, 1, L3, KEY_I}, {0x22eb}},
+	{{0, 1, L3, KEY_L}, {0x22ac}},
+	{{1, 1, L3, KEY_O}, {0x22ad}},
+};
+
+const Node Compose::NODE_1703878460336[] PROGMEM = {
+	{{0, 0, L3, KEY_U}, {(uint16_t) NODE_1703878460576}},
+	{{1, 0, L3, KEY_C}, {(uint16_t) NODE_1703878460496}},
+};
+
+const Node Compose::NODE_1703878460576[] PROGMEM = {
+	{{1, 1, L3, KEY_C}, {0x22ec}},
+};
+
+const Node Compose::NODE_1703878460496[] PROGMEM = {
+	{{1, 1, L3, KEY_I}, {0x22ed}},
+};
+
+const Node Compose::NODE_1703878227184[] PROGMEM = {
+	{{1, 1, L1, KEY_SLASH}, {0x25f}},
+};
+
+const Node Compose::NODE_1703878228144[] PROGMEM = {
+	{{1, 1, L1, KEY_U}, {0x210f}},
+};
+
+const Node Compose::NODE_1703878266944[] PROGMEM = {
+	{{0, 1, L3, KEY_H}, {0x2a2}},
+	{{1, 0, L3, KEY_TAB}, {(uint16_t) NODE_1703878267504}},
+};
+
+const Node Compose::NODE_1703878267504[] PROGMEM = {
+	{{1, 0, L1, KEY_S}, {(uint16_t) NODE_1703878267744}},
+};
+
+const Node Compose::NODE_1703878267744[] PROGMEM = {
+	{{1, 1, L3, KEY_H}, {0x2a2}},
+};
+
+const Node Compose::NODE_1703870306880[] PROGMEM = {
 	{{0, 1, L5, KEY_SPACE}, {0x2dd}},
 	{{0, 1, L4, KEY_RIGHT_BRACE}, {0x30b}},
-	{{1, 1, L1, KEY_SPACE}, {0x2dd}},
+	{{0, 1, L1, KEY_SPACE}, {0x2dd}},
+	{{0, 1, L2, KEY_G}, {0x150}},
+	{{0, 1, L1, KEY_G}, {0x151}},
+	{{0, 1, L2, KEY_A}, {0x170}},
+	{{1, 1, L1, KEY_A}, {0x171}},
 };
 
-const Node Compose::OBJ_3084155397680[] PROGMEM = {
+const Node Compose::NODE_1703870306800[] PROGMEM = {
 	{{0, 1, L5, KEY_SPACE}, {0x1fbf}},
 	{{0, 1, L5, KEY_RIGHT_BRACE}, {0x313}},
-	{{1, 1, L1, KEY_SPACE}, {0x1fbf}},
+	{{0, 1, L1, KEY_SPACE}, {0x1fbf}},
+	{{0, 1, L2, KEY_D}, {0x1ea2}},
+	{{0, 1, L1, KEY_D}, {0x1ea3}},
+	{{0, 0, L1, KEY_TILDE}, {(uint16_t) NODE_1703878093936}},
+	{{0, 0, L6, KEY_RIGHT_BRACE}, {(uint16_t) NODE_1703878107680}},
+	{{0, 1, L2, KEY_F}, {0x1eba}},
+	{{0, 1, L1, KEY_F}, {0x1ebb}},
+	{{0, 1, L2, KEY_S}, {0x1ec8}},
+	{{0, 1, L1, KEY_S}, {0x1ec9}},
+	{{0, 1, L2, KEY_G}, {0x1ece}},
+	{{0, 1, L1, KEY_G}, {0x1ecf}},
+	{{0, 0, L5, KEY_TILDE}, {(uint16_t) NODE_1703878128080}},
+	{{0, 1, L2, KEY_A}, {0x1ee6}},
+	{{0, 1, L1, KEY_A}, {0x1ee7}},
+	{{0, 1, L2, KEY_QUOTE}, {0x1ef6}},
+	{{0, 1, L1, KEY_QUOTE}, {0x1ef7}},
+	{{1, 0, L3, KEY_TILDE}, {(uint16_t) NODE_1703878329424}},
 };
 
-const Node Compose::OBJ_3084155397600[] PROGMEM = {
+const Node Compose::NODE_1703878093936[] PROGMEM = {
+	{{0, 1, L2, KEY_D}, {0x1ea8}},
+	{{0, 1, L1, KEY_D}, {0x1ea9}},
+	{{0, 1, L2, KEY_F}, {0x1ec2}},
+	{{0, 1, L1, KEY_F}, {0x1ec3}},
+	{{0, 1, L2, KEY_G}, {0x1ed4}},
+	{{1, 1, L1, KEY_G}, {0x1ed5}},
+};
+
+const Node Compose::NODE_1703878107680[] PROGMEM = {
+	{{0, 1, L2, KEY_D}, {0x1eb2}},
+	{{1, 1, L1, KEY_D}, {0x1eb3}},
+};
+
+const Node Compose::NODE_1703878128080[] PROGMEM = {
+	{{0, 1, L2, KEY_G}, {0x1ede}},
+	{{0, 1, L1, KEY_G}, {0x1edf}},
+	{{0, 1, L2, KEY_A}, {0x1eec}},
+	{{1, 1, L1, KEY_A}, {0x1eed}},
+};
+
+const Node Compose::NODE_1703878329424[] PROGMEM = {
+	{{1, 1, L1, KEY_U}, {0x2ae}},
+};
+
+const Node Compose::NODE_1703870306720[] PROGMEM = {
 	{{0, 1, L5, KEY_SPACE}, {0x1ffe}},
 	{{0, 1, L5, KEY_EQUAL}, {0x314}},
-	{{1, 1, L1, KEY_SPACE}, {0x1ffe}},
+	{{0, 1, L1, KEY_SPACE}, {0x1ffe}},
+	{{1, 0, L5, KEY_RIGHT_BRACE}, {(uint16_t) NODE_1703878329584}},
 };
 
-const Node Compose::OBJ_3084155398160[] PROGMEM = {
+const Node Compose::NODE_1703878329584[] PROGMEM = {
+	{{1, 0, L3, KEY_TILDE}, {(uint16_t) NODE_1703878329904}},
+};
+
+const Node Compose::NODE_1703878329904[] PROGMEM = {
+	{{1, 1, L1, KEY_U}, {0x2af}},
+};
+
+const Node Compose::NODE_1703870307280[] PROGMEM = {
 	{{0, 1, L5, KEY_SPACE}, {0x2de}},
 	{{0, 1, L5, KEY_TILDE}, {0x2de}},
 	{{0, 1, L1, KEY_SPACE}, {0x2de}},
 	{{0, 1, L3, KEY_S}, {0x2714}},
 	{{0, 1, L1, KEYPAD_DIVIDE}, {0x2714}},
-	{{1, 1, L3, KEY_A}, {0x2714}},
+	{{0, 1, L3, KEY_A}, {0x2714}},
+	{{0, 1, L2, KEY_G}, {0x1a0}},
+	{{0, 1, L1, KEY_G}, {0x1a1}},
+	{{0, 1, L2, KEY_A}, {0x1af}},
+	{{0, 1, L1, KEY_A}, {0x1b0}},
+	{{0, 1, L2, KEY_N}, {0x181}},
+	{{0, 1, L1, KEY_N}, {0x253}},
+	{{0, 1, L2, KEY_R}, {0x187}},
+	{{0, 1, L1, KEY_R}, {0x188}},
+	{{0, 1, L2, KEY_SEMICOLON}, {0x18a}},
+	{{0, 1, L1, KEY_SEMICOLON}, {0x257}},
+	{{0, 1, L2, KEY_O}, {0x191}},
+	{{0, 1, L1, KEY_O}, {0x192}},
+	{{0, 0, L3, KEY_TAB}, {(uint16_t) NODE_1703878182768}},
+	{{0, 1, L2, KEY_I}, {0x193}},
+	{{0, 1, L1, KEY_I}, {0x260}},
+	{{0, 1, L1, KEY_U}, {0x266}},
+	{{0, 1, L2, KEY_S}, {0x196}},
+	{{0, 1, L1, KEY_S}, {0x269}},
+	{{0, 1, L1, KEY_SLASH}, {0x29d}},
+	{{0, 1, L2, KEY_Y}, {0x198}},
+	{{0, 1, L1, KEY_Y}, {0x199}},
+	{{0, 1, L1, KEY_E}, {0x26c}},
+	{{0, 1, L2, KEY_M}, {0x2c6e}},
+	{{0, 1, L1, KEY_M}, {0x271}},
+	{{0, 1, L2, KEY_J}, {0x14a}},
+	{{0, 1, L1, KEY_J}, {0x14b}},
+	{{0, 1, L2, KEY_V}, {0x1a4}},
+	{{0, 1, L1, KEY_V}, {0x1a5}},
+	{{0, 1, L2, KEY_K}, {0x2c64}},
+	{{0, 1, L1, KEY_K}, {0x27d}},
+	{{0, 1, L1, KEY_H}, {0x282}},
+	{{0, 1, L2, KEY_L}, {0x1ac}},
+	{{0, 1, L1, KEY_L}, {0x1ad}},
+	{{0, 1, L1, KEY_W}, {0x2c71}},
+	{{0, 1, L2, KEY_T}, {0x2c72}},
+	{{0, 1, L1, KEY_T}, {0x2c73}},
+	{{0, 1, L2, KEY_Q}, {0x194}},
+	{{0, 1, L1, KEY_Q}, {0x263}},
+	{{0, 1, L2, KEY_QUOTE}, {0x1b3}},
+	{{0, 1, L1, KEY_QUOTE}, {0x1b4}},
+	{{0, 1, L1, KEY_B}, {0x290}},
+	{{0, 1, L1, KEY_3}, {0x25d}},
+	{{0, 0, L3, KEY_TILDE}, {(uint16_t) NODE_1703878211200}},
+	{{1, 0, L3, KEY_RIGHT_BRACE}, {(uint16_t) NODE_1703878227264}},
 };
 
-const Node Compose::OBJ_3084155398400[] PROGMEM = {
+const Node Compose::NODE_1703878182768[] PROGMEM = {
+	{{0, 0, L2, KEY_I}, {(uint16_t) NODE_1703878183088}},
+	{{0, 0, L1, KEY_F}, {(uint16_t) NODE_1703878210320}},
+	{{0, 0, L3, KEY_L}, {(uint16_t) NODE_1703878462736}},
+	{{0, 0, L3, KEY_U}, {(uint16_t) NODE_1703878462816}},
+	{{0, 0, L3, KEY_A}, {(uint16_t) NODE_1703878462896}},
+	{{1, 0, L3, KEY_S}, {(uint16_t) NODE_1703878463136}},
+};
+
+const Node Compose::NODE_1703878183088[] PROGMEM = {
+	{{1, 1, L2, KEY_I}, {0x29b}},
+};
+
+const Node Compose::NODE_1703878210320[] PROGMEM = {
+	{{1, 1, L1, KEY_F}, {0x25a}},
+};
+
+const Node Compose::NODE_1703878462736[] PROGMEM = {
+	{{1, 1, L3, KEY_I}, {0x21aa}},
+};
+
+const Node Compose::NODE_1703878462816[] PROGMEM = {
+	{{1, 1, L3, KEY_L}, {0x21a9}},
+};
+
+const Node Compose::NODE_1703878462896[] PROGMEM = {
+	{{0, 1, L3, KEY_T}, {0x2923}},
+	{{1, 1, L1, KEY_W}, {0x2925}},
+};
+
+const Node Compose::NODE_1703878463136[] PROGMEM = {
+	{{0, 1, L3, KEY_T}, {0x2924}},
+	{{1, 1, L1, KEY_W}, {0x2926}},
+};
+
+const Node Compose::NODE_1703878211200[] PROGMEM = {
+	{{1, 1, L1, KEY_K}, {0x27b}},
+};
+
+const Node Compose::NODE_1703878227264[] PROGMEM = {
+	{{1, 1, L2, KEY_SLASH}, {0x284}},
+};
+
+const Node Compose::NODE_1703870307520[] PROGMEM = {
 	{{0, 1, L5, KEY_SPACE}, {0x2e}},
 	{{0, 1, L6, KEY_TILDE}, {0x323}},
-	{{1, 1, L1, KEY_SPACE}, {0x2e}},
+	{{0, 1, L1, KEY_SPACE}, {0x2e}},
+	{{0, 1, L2, KEY_N}, {0x1e04}},
+	{{0, 1, L1, KEY_N}, {0x1e05}},
+	{{0, 1, L2, KEY_SEMICOLON}, {0x1e0c}},
+	{{0, 1, L1, KEY_SEMICOLON}, {0x1e0d}},
+	{{0, 1, L2, KEY_U}, {0x1e24}},
+	{{0, 1, L1, KEY_U}, {0x1e25}},
+	{{0, 1, L2, KEY_Y}, {0x1e32}},
+	{{0, 1, L1, KEY_Y}, {0x1e33}},
+	{{0, 1, L2, KEY_E}, {0x1e36}},
+	{{0, 1, L1, KEY_E}, {0x1e37}},
+	{{0, 1, L2, KEY_M}, {0x1e42}},
+	{{0, 1, L1, KEY_M}, {0x1e43}},
+	{{0, 1, L2, KEY_J}, {0x1e46}},
+	{{0, 1, L1, KEY_J}, {0x1e47}},
+	{{0, 1, L2, KEY_K}, {0x1e5a}},
+	{{0, 1, L1, KEY_K}, {0x1e5b}},
+	{{0, 1, L2, KEY_H}, {0x1e62}},
+	{{0, 1, L1, KEY_H}, {0x1e63}},
+	{{0, 1, L2, KEY_L}, {0x1e6c}},
+	{{0, 1, L1, KEY_L}, {0x1e6d}},
+	{{0, 1, L2, KEY_W}, {0x1e7e}},
+	{{0, 1, L1, KEY_W}, {0x1e7f}},
+	{{0, 1, L2, KEY_T}, {0x1e88}},
+	{{0, 1, L1, KEY_T}, {0x1e89}},
+	{{0, 1, L2, KEY_B}, {0x1e92}},
+	{{0, 1, L1, KEY_B}, {0x1e93}},
+	{{0, 1, L2, KEY_D}, {0x1ea0}},
+	{{0, 1, L1, KEY_D}, {0x1ea1}},
+	{{0, 1, L2, KEY_F}, {0x1eb8}},
+	{{0, 1, L1, KEY_F}, {0x1eb9}},
+	{{0, 1, L2, KEY_S}, {0x1eca}},
+	{{0, 1, L1, KEY_S}, {0x1ecb}},
+	{{0, 1, L2, KEY_G}, {0x1ecc}},
+	{{0, 1, L1, KEY_G}, {0x1ecd}},
+	{{0, 0, L5, KEY_TILDE}, {(uint16_t) NODE_1703878128560}},
+	{{0, 1, L2, KEY_A}, {0x1ee4}},
+	{{0, 1, L1, KEY_A}, {0x1ee5}},
+	{{0, 1, L2, KEY_QUOTE}, {0x1ef4}},
+	{{0, 1, L1, KEY_QUOTE}, {0x1ef5}},
+	{{0, 1, L3, KEY_O}, {0x2a66}},
+	{{1, 1, L6, KEY_3}, {0x27d1}},
 };
 
-const Node Compose::OBJ_3084155398720[] PROGMEM = {
-	{{0, 0, L1, KEY_G}, {(uint16_t) OBJ_3084155398800}},
-	{{0, 0, L3, KEY_Q}, {(uint16_t) OBJ_3084155398560}},
-	{{0, 0, L3, KEY_W}, {(uint16_t) OBJ_3084155408928}},
-	{{0, 0, L3, KEY_0}, {(uint16_t) OBJ_3084155408608}},
-	{{0, 0, L1, KEY_MINUS}, {(uint16_t) OBJ_3084155160512}},
-	{{0, 0, L2, KEY_H}, {(uint16_t) OBJ_3084155285232}},
-	{{0, 0, L1, KEY_H}, {(uint16_t) OBJ_3084155285072}},
-	{{0, 0, L2, KEY_L}, {(uint16_t) OBJ_3084155284992}},
-	{{0, 0, L1, KEY_L}, {(uint16_t) OBJ_3084155284592}},
-	{{0, 0, L2, KEY_F}, {(uint16_t) OBJ_3084155411728}},
-	{{0, 0, L2, KEY_E}, {(uint16_t) OBJ_3084155411888}},
-	{{0, 0, L1, KEY_E}, {(uint16_t) OBJ_3084155411968}},
-	{{0, 0, L1, KEY_S}, {(uint16_t) OBJ_3084155429248}},
-	{{0, 0, L2, KEY_S}, {(uint16_t) OBJ_3084155429168}},
-	{{0, 0, L1, KEY_B}, {(uint16_t) OBJ_3084155430288}},
-	{{0, 0, L1, KEY_O}, {(uint16_t) OBJ_3084155430608}},
-	{{0, 0, L2, KEY_O}, {(uint16_t) OBJ_3084155430928}},
-	{{0, 0, L3, KEY_LEFT_BRACE}, {(uint16_t) OBJ_3084155431168}},
-	{{0, 0, L2, KEY_SEMICOLON}, {(uint16_t) OBJ_3084155431568}},
-	{{0, 0, L1, KEY_SEMICOLON}, {(uint16_t) OBJ_3084155431808}},
-	{{0, 0, L2, KEY_J}, {(uint16_t) OBJ_3084155432688}},
-	{{0, 0, L1, KEY_J}, {(uint16_t) OBJ_3084155453504}},
-	{{0, 0, L1, KEY_2}, {(uint16_t) OBJ_3084155455344}},
-	{{0, 0, L3, KEY_Y}, {(uint16_t) OBJ_3084155455424}},
-	{{0, 0, L1, KEYPAD_2}, {(uint16_t) OBJ_3084155455504}},
-	{{0, 0, L3, KEY_H}, {(uint16_t) OBJ_3084155455904}},
-	{{0, 0, L1, KEY_1}, {(uint16_t) OBJ_3084155456384}},
-	{{0, 0, L1, KEYPAD_1}, {(uint16_t) OBJ_3084155456704}},
-	{{0, 0, L2, KEYPAD_9}, {(uint16_t) OBJ_3084155466032}},
-	{{0, 0, L5, KEY_SPACE}, {(uint16_t) OBJ_3084155466512}},
-	{{0, 0, L1, KEY_7}, {(uint16_t) OBJ_3084155466752}},
-	{{0, 0, L1, KEYPAD_7}, {(uint16_t) OBJ_3084155466672}},
-	{{0, 0, L2, KEY_K}, {(uint16_t) OBJ_3084155467152}},
-	{{0, 0, L1, KEY_K}, {(uint16_t) OBJ_3084155469152}},
-	{{0, 0, L1, KEY_3}, {(uint16_t) OBJ_3084155484016}},
-	{{0, 0, L1, KEY_4}, {(uint16_t) OBJ_3084155484096}},
-	{{0, 0, L1, KEY_5}, {(uint16_t) OBJ_3084155484416}},
-	{{0, 0, L1, KEYPAD_3}, {(uint16_t) OBJ_3084155485376}},
-	{{0, 0, L1, KEYPAD_4}, {(uint16_t) OBJ_3084155485456}},
-	{{0, 0, L1, KEYPAD_5}, {(uint16_t) OBJ_3084155485776}},
-	{{0, 0, L3, KEY_SEMICOLON}, {(uint16_t) OBJ_3084155511648}},
-	{{0, 0, L1, KEY_R}, {(uint16_t) OBJ_3084155511888}},
-	{{0, 0, L5, KEY_5}, {(uint16_t) OBJ_3084155511968}},
-	{{0, 0, L5, KEY_4}, {(uint16_t) OBJ_3084155512208}},
+const Node Compose::NODE_1703878128560[] PROGMEM = {
+	{{0, 1, L2, KEY_G}, {0x1ee2}},
+	{{0, 1, L1, KEY_G}, {0x1ee3}},
+	{{0, 1, L2, KEY_A}, {0x1ef0}},
+	{{1, 1, L1, KEY_A}, {0x1ef1}},
+};
+
+const Node Compose::NODE_1703870307840[] PROGMEM = {
+	{{0, 0, L1, KEY_G}, {(uint16_t) NODE_1703870307920}},
+	{{0, 0, L3, KEY_Q}, {(uint16_t) NODE_1703870307680}},
+	{{0, 0, L3, KEY_W}, {(uint16_t) NODE_1703870322144}},
+	{{0, 0, L3, KEY_0}, {(uint16_t) NODE_1703870321824}},
+	{{0, 0, L3, KEY_L}, {(uint16_t) NODE_1703870076224}},
+	{{0, 0, L2, KEY_H}, {(uint16_t) NODE_1703870219104}},
+	{{0, 0, L1, KEY_H}, {(uint16_t) NODE_1703870218944}},
+	{{0, 0, L2, KEY_L}, {(uint16_t) NODE_1703870218864}},
+	{{0, 0, L1, KEY_L}, {(uint16_t) NODE_1703870218544}},
+	{{0, 0, L2, KEY_F}, {(uint16_t) NODE_1703870341424}},
+	{{0, 0, L2, KEY_E}, {(uint16_t) NODE_1703870341584}},
+	{{0, 0, L1, KEY_E}, {(uint16_t) NODE_1703870341664}},
+	{{0, 0, L1, KEY_S}, {(uint16_t) NODE_1703870342464}},
+	{{0, 0, L2, KEY_S}, {(uint16_t) NODE_1703870342384}},
+	{{0, 0, L1, KEY_B}, {(uint16_t) NODE_1703870343504}},
+	{{0, 0, L1, KEY_O}, {(uint16_t) NODE_1703870343824}},
+	{{0, 0, L2, KEY_O}, {(uint16_t) NODE_1703870344144}},
+	{{0, 0, L3, KEY_LEFT_BRACE}, {(uint16_t) NODE_1703870344384}},
+	{{0, 0, L2, KEY_SEMICOLON}, {(uint16_t) NODE_1703870344784}},
+	{{0, 0, L1, KEY_SEMICOLON}, {(uint16_t) NODE_1703870345024}},
+	{{0, 0, L2, KEY_J}, {(uint16_t) NODE_1703870370576}},
+	{{0, 0, L1, KEY_J}, {(uint16_t) NODE_1703870370816}},
+	{{0, 0, L1, KEY_2}, {(uint16_t) NODE_1703870372656}},
+	{{0, 0, L3, KEY_Y}, {(uint16_t) NODE_1703870372736}},
+	{{0, 0, L1, KEYPAD_2}, {(uint16_t) NODE_1703870372816}},
+	{{0, 0, L3, KEY_H}, {(uint16_t) NODE_1703870373216}},
+	{{0, 0, L1, KEY_1}, {(uint16_t) NODE_1703870373696}},
+	{{0, 0, L1, KEYPAD_1}, {(uint16_t) NODE_1703870382304}},
+	{{0, 0, L2, KEYPAD_9}, {(uint16_t) NODE_1703870383344}},
+	{{0, 0, L5, KEY_SPACE}, {(uint16_t) NODE_1703870383824}},
+	{{0, 0, L1, KEY_7}, {(uint16_t) NODE_1703870384064}},
+	{{0, 0, L1, KEYPAD_7}, {(uint16_t) NODE_1703870383984}},
+	{{0, 0, L2, KEY_K}, {(uint16_t) NODE_1703870384464}},
+	{{0, 0, L1, KEY_K}, {(uint16_t) NODE_1703870390656}},
+	{{0, 0, L1, KEY_3}, {(uint16_t) NODE_1703870393136}},
+	{{0, 0, L1, KEY_4}, {(uint16_t) NODE_1703870393216}},
+	{{0, 0, L1, KEY_5}, {(uint16_t) NODE_1703870393536}},
+	{{0, 0, L1, KEYPAD_3}, {(uint16_t) NODE_1703877898464}},
+	{{0, 0, L1, KEYPAD_4}, {(uint16_t) NODE_1703877898544}},
+	{{0, 0, L1, KEYPAD_5}, {(uint16_t) NODE_1703877898864}},
+	{{0, 0, L3, KEY_SEMICOLON}, {(uint16_t) NODE_1703877900064}},
+	{{0, 0, L1, KEY_R}, {(uint16_t) NODE_1703877900304}},
+	{{0, 0, L5, KEY_5}, {(uint16_t) NODE_1703877900384}},
+	{{0, 0, L5, KEY_4}, {(uint16_t) NODE_1703877900624}},
 	{{0, 1, L1, KEY_TAB}, {0x266b}},
 	{{0, 1, L3, KEY_TAB}, {0x266b}},
-	{{0, 0, L3, KEY_U}, {(uint16_t) OBJ_3084155513568}},
-	{{0, 0, L2, KEY_R}, {(uint16_t) OBJ_3084155513808}},
-	{{0, 0, L3, KEY_E}, {(uint16_t) OBJ_3084155513888}},
-	{{0, 0, L6, KEYPAD_0}, {(uint16_t) OBJ_3084155514128}},
-	{{0, 0, L2, KEYPAD_7}, {(uint16_t) OBJ_3084155514288}},
-	{{0, 0, L2, KEYPAD_8}, {(uint16_t) OBJ_3084155514608}},
-	{{0, 0, L6, KEY_SEMICOLON}, {(uint16_t) OBJ_3084155514688}},
-	{{0, 0, L2, KEYPAD_0}, {(uint16_t) OBJ_3084155527472}},
-	{{0, 0, L1, KEY_V}, {(uint16_t) OBJ_3084155527552}},
-	{{0, 0, L1, KEY_PERIOD}, {(uint16_t) OBJ_3084155528592}},
-	{{1, 0, L2, KEY_PERIOD}, {(uint16_t) OBJ_3084155528832}},
+	{{0, 0, L3, KEY_U}, {(uint16_t) NODE_1703877901984}},
+	{{0, 0, L2, KEY_R}, {(uint16_t) NODE_1703877902224}},
+	{{0, 0, L3, KEY_E}, {(uint16_t) NODE_1703877914688}},
+	{{0, 0, L6, KEYPAD_0}, {(uint16_t) NODE_1703877914928}},
+	{{0, 0, L2, KEYPAD_7}, {(uint16_t) NODE_1703877915088}},
+	{{0, 0, L2, KEYPAD_8}, {(uint16_t) NODE_1703877915408}},
+	{{0, 0, L6, KEY_SEMICOLON}, {(uint16_t) NODE_1703877915488}},
+	{{0, 0, L2, KEYPAD_0}, {(uint16_t) NODE_1703877915888}},
+	{{0, 0, L1, KEY_V}, {(uint16_t) NODE_1703877915968}},
+	{{0, 0, L1, KEY_PERIOD}, {(uint16_t) NODE_1703877917008}},
+	{{0, 0, L2, KEY_PERIOD}, {(uint16_t) NODE_1703877917248}},
+	{{0, 0, L3, KEY_N}, {(uint16_t) NODE_1703878130640}},
+	{{0, 0, L2, KEY_V}, {(uint16_t) NODE_1703878130960}},
+	{{0, 0, L2, KEY_G}, {(uint16_t) NODE_1703878148240}},
+	{{0, 0, L1, KEY_D}, {(uint16_t) NODE_1703878148320}},
+	{{0, 0, L2, KEY_D}, {(uint16_t) NODE_1703878148800}},
+	{{0, 0, L1, KEY_0}, {(uint16_t) NODE_1703878149600}},
+	{{0, 0, L3, KEY_T}, {(uint16_t) NODE_1703878150000}},
+	{{0, 0, L1, KEY_M}, {(uint16_t) NODE_1703878151840}},
+	{{0, 0, L5, KEY_I}, {(uint16_t) NODE_1703878209840}},
+	{{0, 0, L2, KEY_W}, {(uint16_t) NODE_1703878210560}},
+	{{0, 0, L1, KEY_W}, {(uint16_t) NODE_1703878210400}},
+	{{0, 0, L1, KEY_SLASH}, {(uint16_t) NODE_1703878211360}},
+	{{0, 0, L2, KEY_SLASH}, {(uint16_t) NODE_1703878211520}},
+	{{0, 0, L5, KEY_TILDE}, {(uint16_t) NODE_1703878212080}},
+	{{0, 0, L3, KEY_S}, {(uint16_t) NODE_1703878212480}},
+	{{0, 0, L1, KEYPAD_DIVIDE}, {(uint16_t) NODE_1703878212400}},
+	{{0, 0, L3, KEY_O}, {(uint16_t) NODE_1703878227744}},
+	{{0, 0, L2, KEY_B}, {(uint16_t) NODE_1703878247024}},
+	{{0, 0, L2, KEY_N}, {(uint16_t) NODE_1703878248064}},
+	{{0, 0, L2, KEY_I}, {(uint16_t) NODE_1703878248224}},
+	{{0, 0, L2, KEY_U}, {(uint16_t) NODE_1703878248304}},
+	{{0, 0, L2, KEY_QUOTE}, {(uint16_t) NODE_1703878248784}},
+	{{0, 0, L5, KEY_D}, {(uint16_t) NODE_1703878248864}},
+	{{0, 0, L5, KEY_F}, {(uint16_t) NODE_1703878249344}},
+	{{0, 0, L5, KEY_P}, {(uint16_t) NODE_1703878249504}},
+	{{0, 0, L5, KEY_QUOTE}, {(uint16_t) NODE_1703878249664}},
+	{{0, 0, L1, KEY_I}, {(uint16_t) NODE_1703878267664}},
+	{{0, 0, L3, KEY_J}, {(uint16_t) NODE_1703878268144}},
+	{{0, 0, L1, KEY_Q}, {(uint16_t) NODE_1703878268544}},
+	{{0, 0, L1, KEYPAD_0}, {(uint16_t) NODE_1703878269184}},
+	{{0, 0, L3, KEY_PERIOD}, {(uint16_t) NODE_1703878269904}},
+	{{0, 0, L6, KEY_EQUAL}, {(uint16_t) NODE_1703878289744}},
+	{{0, 0, L1, KEY_EQUAL}, {(uint16_t) NODE_1703878289984}},
+	{{0, 0, L1, KEY_RIGHT_BRACE}, {(uint16_t) NODE_1703878290064}},
+	{{0, 0, L5, KEY_G}, {(uint16_t) NODE_1703878332144}},
+	{{0, 0, L2, KEY_Q}, {(uint16_t) NODE_1703878348944}},
+	{{0, 0, L1, KEY_U}, {(uint16_t) NODE_1703878351104}},
+	{{0, 0, L2, KEY_T}, {(uint16_t) NODE_1703878351184}},
+	{{0, 0, L1, KEY_T}, {(uint16_t) NODE_1703878351504}},
+	{{0, 0, L1, KEY_QUOTE}, {(uint16_t) NODE_1703878351824}},
+	{{0, 0, L6, KEY_W}, {(uint16_t) NODE_1703878351904}},
+	{{0, 0, L6, KEY_S}, {(uint16_t) NODE_1703878352784}},
+	{{0, 0, L3, KEY_I}, {(uint16_t) NODE_1703878372064}},
+	{{0, 0, L3, KEY_V}, {(uint16_t) NODE_1703878372624}},
+	{{0, 0, L2, KEY_1}, {(uint16_t) NODE_1703878394880}},
+	{{0, 0, L1, KEYPAD_ADD}, {(uint16_t) NODE_1703878395760}},
+	{{0, 0, L1, KEYPAD_SUBTRACT}, {(uint16_t) NODE_1703878396000}},
+	{{0, 0, L6, KEY_2}, {(uint16_t) NODE_1703878397840}},
+	{{0, 0, L6, KEY_3}, {(uint16_t) NODE_1703878410304}},
+	{{0, 0, L6, KEY_V}, {(uint16_t) NODE_1703878410704}},
+	{{0, 0, L3, KEY_C}, {(uint16_t) NODE_1703878411424}},
+	{{0, 0, L3, KEY_A}, {(uint16_t) NODE_1703878411904}},
+	{{0, 0, L1, KEYPAD_MULTIPLY}, {(uint16_t) NODE_1703878435760}},
+	{{0, 0, L1, KEY_F}, {(uint16_t) NODE_1703878495744}},
+	{{0, 0, L3, KEY_K}, {(uint16_t) NODE_1703878518320}},
+	{{0, 0, L3, KEY_R}, {(uint16_t) NODE_1703878518720}},
+	{{0, 0, L3, KEY_D}, {(uint16_t) NODE_1703878518960}},
+	{{1, 0, L3, KEY_F}, {(uint16_t) NODE_1703878519280}},
 };
 
-const Node Compose::OBJ_3084155398800[] PROGMEM = {
+const Node Compose::NODE_1703870307920[] PROGMEM = {
 	{{0, 1, L1, KEY_SPACE}, {0x25cc}},
-	{{1, 0, L1, KEY_V}, {(uint16_t) OBJ_3084155528032}},
+	{{0, 0, L1, KEY_V}, {(uint16_t) NODE_1703877916448}},
+	{{0, 1, L1, KEY_F}, {0x153}},
+	{{0, 1, L6, KEY_S}, {0x222e}},
+	{{0, 0, L1, KEY_2}, {(uint16_t) NODE_1703878370704}},
+	{{0, 0, L1, KEYPAD_2}, {(uint16_t) NODE_1703878370864}},
+	{{0, 0, L1, KEY_3}, {(uint16_t) NODE_1703878371344}},
+	{{0, 0, L1, KEYPAD_3}, {(uint16_t) NODE_1703878371504}},
+	{{0, 1, L3, KEY_N}, {0x2295}},
+	{{0, 1, L1, KEYPAD_ADD}, {0x2295}},
+	{{0, 1, L3, KEY_L}, {0x2296}},
+	{{0, 1, L1, KEYPAD_SUBTRACT}, {0x2296}},
+	{{0, 1, L1, KEYPAD_MULTIPLY}, {0x2297}},
+	{{0, 1, L3, KEY_S}, {0x2298}},
+	{{0, 1, L1, KEYPAD_DIVIDE}, {0x2298}},
+	{{0, 1, L1, KEY_PERIOD}, {0x2299}},
+	{{0, 1, L2, KEY_1}, {0x229a}},
+	{{0, 1, L3, KEY_O}, {0x229c}},
+	{{0, 1, L3, KEY_U}, {0x29c0}},
+	{{1, 1, L3, KEY_I}, {0x29c1}},
 };
 
-const Node Compose::OBJ_3084155528032[] PROGMEM = {
+const Node Compose::NODE_1703877916448[] PROGMEM = {
 	{{1, 1, L1, KEY_L}, {0x2325}},
 };
 
-const Node Compose::OBJ_3084155398560[] PROGMEM = {
+const Node Compose::NODE_1703878370704[] PROGMEM = {
+	{{1, 1, L6, KEY_S}, {0x222f}},
+};
+
+const Node Compose::NODE_1703878370864[] PROGMEM = {
+	{{1, 1, L6, KEY_S}, {0x222f}},
+};
+
+const Node Compose::NODE_1703878371344[] PROGMEM = {
+	{{1, 1, L6, KEY_S}, {0x2230}},
+};
+
+const Node Compose::NODE_1703878371504[] PROGMEM = {
+	{{1, 1, L6, KEY_S}, {0x2230}},
+};
+
+const Node Compose::NODE_1703870307680[] PROGMEM = {
 	{{0, 1, L1, KEY_G}, {0x25cc}},
-	{{1, 1, L3, KEY_C}, {0x22ee}},
+	{{0, 0, L3, KEY_C}, {(uint16_t) NODE_1703870383744}},
+	{{0, 1, L6, KEY_3}, {0x2234}},
+	{{0, 1, L6, KEY_2}, {0x2235}},
+	{{0, 0, L1, KEY_W}, {(uint16_t) NODE_1703878471904}},
+	{{0, 0, L3, KEY_L}, {(uint16_t) NODE_1703878471984}},
+	{{0, 0, L3, KEY_U}, {(uint16_t) NODE_1703878472144}},
+	{{0, 1, L3, KEY_S}, {0x22f0}},
+	{{1, 1, L3, KEY_A}, {0x22f1}},
 };
 
-const Node Compose::OBJ_3084155408928[] PROGMEM = {
-	{{1, 1, L3, KEY_W}, {0x332}},
+const Node Compose::NODE_1703870383744[] PROGMEM = {
+	{{1, 1, L3, KEY_T}, {0x21e1}},
 };
 
-const Node Compose::OBJ_3084155408608[] PROGMEM = {
-	{{1, 1, L3, KEY_0}, {0x2bc}},
+const Node Compose::NODE_1703878471904[] PROGMEM = {
+	{{1, 1, L3, KEY_C}, {0x21e3}},
 };
 
-const Node Compose::OBJ_3084155160512[] PROGMEM = {
+const Node Compose::NODE_1703878471984[] PROGMEM = {
+	{{1, 1, L3, KEY_I}, {0x21e2}},
+};
+
+const Node Compose::NODE_1703878472144[] PROGMEM = {
+	{{1, 1, L3, KEY_L}, {0x21e0}},
+};
+
+const Node Compose::NODE_1703870322144[] PROGMEM = {
+	{{0, 1, L3, KEY_W}, {0x332}},
+	{{0, 1, L1, KEY_0}, {0x2080}},
+	{{0, 1, L1, KEYPAD_0}, {0x2080}},
+	{{0, 1, L1, KEY_1}, {0x2081}},
+	{{0, 1, L1, KEYPAD_1}, {0x2081}},
+	{{0, 1, L1, KEY_2}, {0x2082}},
+	{{0, 1, L1, KEYPAD_2}, {0x2082}},
+	{{0, 1, L1, KEY_3}, {0x2083}},
+	{{0, 1, L1, KEYPAD_3}, {0x2083}},
+	{{0, 1, L1, KEY_4}, {0x2084}},
+	{{0, 1, L1, KEYPAD_4}, {0x2084}},
+	{{0, 1, L1, KEY_5}, {0x2085}},
+	{{0, 1, L1, KEYPAD_5}, {0x2085}},
+	{{0, 1, L1, KEY_6}, {0x2086}},
+	{{0, 1, L1, KEYPAD_6}, {0x2086}},
+	{{0, 1, L1, KEY_7}, {0x2087}},
+	{{0, 1, L1, KEYPAD_7}, {0x2087}},
+	{{0, 1, L1, KEY_8}, {0x2088}},
+	{{0, 1, L1, KEYPAD_8}, {0x2088}},
+	{{0, 1, L1, KEY_9}, {0x2089}},
+	{{0, 1, L1, KEYPAD_9}, {0x2089}},
+	{{0, 1, L3, KEY_N}, {0x208a}},
+	{{0, 1, L1, KEYPAD_ADD}, {0x208a}},
+	{{0, 1, L3, KEY_O}, {0x208c}},
+	{{0, 1, L3, KEY_J}, {0x208d}},
+	{{0, 1, L3, KEY_K}, {0x208e}},
+	{{0, 1, L3, KEY_PERIOD}, {0x2cc}},
+	{{0, 1, L3, KEY_EQUAL}, {0x325}},
+	{{0, 1, L4, KEY_EQUAL}, {0x324}},
+	{{0, 1, L2, KEY_RIGHT_BRACE}, {0x330}},
+	{{0, 1, L6, KEY_RIGHT_BRACE}, {0x32f}},
+	{{0, 0, L1, KEY_TILDE}, {(uint16_t) NODE_1703878288704}},
+	{{0, 1, L2, KEY_TILDE}, {0x32c}},
+	{{0, 1, L1, KEY_M}, {0x33c}},
+	{{0, 1, L3, KEY_C}, {0x329}},
+	{{0, 1, L6, KEY_EQUAL}, {0x331}},
+	{{0, 1, L1, KEY_R}, {0x31c}},
+	{{0, 0, L3, KEY_TILDE}, {(uint16_t) NODE_1703878289504}},
+	{{0, 1, L6, KEYPAD_0}, {0x33b}},
+	{{0, 1, L3, KEY_E}, {0x230a}},
+	{{0, 1, L3, KEY_R}, {0x230b}},
+	{{0, 1, L6, KEY_S}, {0x2a1c}},
+	{{0, 1, L1, KEYPAD_MULTIPLY}, {0x2a31}},
+	{{0, 1, L3, KEY_L}, {0x208b}},
+	{{0, 1, L1, KEYPAD_SUBTRACT}, {0x208b}},
+	{{0, 1, L1, KEY_D}, {0x2090}},
+	{{0, 1, L1, KEY_F}, {0x2091}},
+	{{0, 1, L1, KEY_U}, {0x2095}},
+	{{0, 1, L1, KEY_S}, {0x1d62}},
+	{{0, 1, L1, KEY_SLASH}, {0x2c7c}},
+	{{0, 1, L1, KEY_Y}, {0x2096}},
+	{{0, 1, L1, KEY_E}, {0x2097}},
+	{{0, 1, L1, KEY_J}, {0x2099}},
+	{{0, 1, L1, KEY_G}, {0x2092}},
+	{{0, 1, L1, KEY_V}, {0x209a}},
+	{{0, 1, L1, KEY_K}, {0x1d63}},
+	{{0, 1, L1, KEY_H}, {0x209b}},
+	{{0, 1, L1, KEY_L}, {0x209c}},
+	{{0, 1, L1, KEY_A}, {0x1d64}},
+	{{0, 1, L1, KEY_W}, {0x1d65}},
+	{{0, 1, L1, KEY_Q}, {0x2093}},
+	{{0, 1, L5, KEY_N}, {0x1d66}},
+	{{0, 1, L5, KEY_I}, {0x1d67}},
+	{{1, 1, L5, KEY_P}, {0x1d69}},
+};
+
+const Node Compose::NODE_1703878288704[] PROGMEM = {
+	{{0, 1, L1, KEY_TILDE}, {0x32d}},
+	{{0, 1, L2, KEY_SEMICOLON}, {0x1e12}},
+	{{0, 1, L1, KEY_SEMICOLON}, {0x1e13}},
+	{{0, 1, L2, KEY_E}, {0x1e3c}},
+	{{0, 1, L1, KEY_E}, {0x1e3d}},
+	{{0, 1, L2, KEY_J}, {0x1e4a}},
+	{{0, 1, L1, KEY_J}, {0x1e4b}},
+	{{0, 1, L2, KEY_L}, {0x1e70}},
+	{{0, 1, L1, KEY_L}, {0x1e71}},
+	{{0, 1, L2, KEY_F}, {0x1e18}},
+	{{0, 1, L1, KEY_F}, {0x1e19}},
+	{{0, 1, L2, KEY_A}, {0x1e76}},
+	{{1, 1, L1, KEY_A}, {0x1e77}},
+};
+
+const Node Compose::NODE_1703878289504[] PROGMEM = {
+	{{0, 1, L1, KEY_R}, {0x339}},
+	{{0, 1, L3, KEY_R}, {0x33a}},
+	{{1, 1, L3, KEY_E}, {0x32a}},
+};
+
+const Node Compose::NODE_1703870321824[] PROGMEM = {
+	{{0, 1, L3, KEY_0}, {0x2bc}},
+	{{1, 1, L1, KEY_J}, {0x149}},
+};
+
+const Node Compose::NODE_1703870076224[] PROGMEM = {
 	{{0, 1, L2, KEY_U}, {0x126}},
 	{{0, 1, L1, KEY_U}, {0x127}},
-	{{1, 1, L4, KEY_6}, {0x20a4}},
+	{{0, 1, L4, KEY_6}, {0x20a4}},
+	{{0, 1, L3, KEY_N}, {0xb1}},
+	{{0, 1, L3, KEY_SEMICOLON}, {0xf7}},
+	{{0, 1, L2, KEY_N}, {0x243}},
+	{{0, 1, L2, KEY_S}, {0x197}},
+	{{0, 1, L2, KEY_SLASH}, {0x248}},
+	{{0, 1, L1, KEY_SLASH}, {0x249}},
+	{{0, 1, L2, KEY_E}, {0x23d}},
+	{{0, 1, L1, KEY_E}, {0x19a}},
+	{{0, 1, L1, KEY_G}, {0x275}},
+	{{0, 1, L2, KEY_G}, {0x19f}},
+	{{0, 1, L2, KEY_V}, {0x2c63}},
+	{{0, 0, L1, KEY_V}, {(uint16_t) NODE_1703878228384}},
+	{{0, 1, L2, KEY_K}, {0x24c}},
+	{{0, 1, L1, KEY_K}, {0x24d}},
+	{{0, 1, L1, KEY_A}, {0x289}},
+	{{0, 1, L2, KEY_A}, {0x244}},
+	{{0, 1, L2, KEY_QUOTE}, {0x24e}},
+	{{0, 1, L1, KEY_QUOTE}, {0x24f}},
+	{{0, 1, L1, KEY_2}, {0x1bb}},
+	{{0, 1, L5, KEY_S}, {0x1d7c}},
+	{{0, 1, L5, KEY_QUOTE}, {0x1d7f}},
+	{{0, 1, L3, KEY_C}, {0x22a3}},
+	{{0, 1, L6, KEY_SEMICOLON}, {0x2a3a}},
+	{{0, 1, L6, KEY_S}, {0x2a0d}},
+	{{0, 1, L3, KEY_I}, {0x2192}},
+	{{1, 1, L3, KEY_U}, {0x2919}},
 };
 
-const Node Compose::OBJ_3084155285232[] PROGMEM = {
-	{{1, 1, L1, KEY_COMMA}, {0x218}},
+const Node Compose::NODE_1703878228384[] PROGMEM = {
+	{{1, 1, L1, KEY_U}, {0x210f}},
 };
 
-const Node Compose::OBJ_3084155285072[] PROGMEM = {
+const Node Compose::NODE_1703870219104[] PROGMEM = {
+	{{0, 1, L1, KEY_COMMA}, {0x218}},
+	{{0, 1, L2, KEY_H}, {0x1e9e}},
+	{{1, 1, L2, KEY_U}, {0x1a9}},
+};
+
+const Node Compose::NODE_1703870218944[] PROGMEM = {
 	{{0, 1, L1, KEY_COMMA}, {0x219}},
-	{{1, 1, L1, KEY_L}, {0xfb06}},
+	{{0, 1, L1, KEY_L}, {0xfb06}},
+	{{0, 1, L1, KEY_H}, {0xdf}},
+	{{0, 1, L1, KEY_U}, {0x283}},
+	{{0, 0, L1, KEY_A}, {(uint16_t) NODE_1703878396160}},
+	{{1, 0, L1, KEY_R}, {(uint16_t) NODE_1703878495104}},
 };
 
-const Node Compose::OBJ_3084155284992[] PROGMEM = {
-	{{1, 1, L1, KEY_COMMA}, {0x21a}},
+const Node Compose::NODE_1703878396160[] PROGMEM = {
+	{{1, 1, L1, KEY_M}, {0x2211}},
 };
 
-const Node Compose::OBJ_3084155284592[] PROGMEM = {
+const Node Compose::NODE_1703878495104[] PROGMEM = {
+	{{0, 1, L1, KEY_I}, {0x210a}},
+	{{0, 1, L2, KEY_U}, {0x210b}},
+	{{0, 1, L2, KEY_S}, {0x2110}},
+	{{0, 1, L2, KEY_E}, {0x2112}},
+	{{0, 1, L1, KEY_E}, {0x2113}},
+	{{0, 1, L2, KEY_V}, {0x2118}},
+	{{0, 1, L2, KEY_K}, {0x211b}},
+	{{0, 1, L2, KEY_N}, {0x212c}},
+	{{0, 1, L1, KEY_F}, {0x212f}},
+	{{0, 1, L2, KEY_F}, {0x2130}},
+	{{0, 1, L2, KEY_O}, {0x2131}},
+	{{0, 1, L2, KEY_M}, {0x2133}},
+	{{1, 1, L1, KEY_G}, {0x2134}},
+};
+
+const Node Compose::NODE_1703870218864[] PROGMEM = {
+	{{0, 1, L1, KEY_COMMA}, {0x21a}},
+	{{0, 1, L1, KEY_E}, {0x1ae}},
+	{{1, 1, L2, KEY_E}, {0x1ae}},
+};
+
+const Node Compose::NODE_1703870218544[] PROGMEM = {
 	{{0, 1, L1, KEY_COMMA}, {0x21b}},
-	{{1, 1, L1, KEY_M}, {0x2122}},
+	{{0, 1, L1, KEY_M}, {0x2122}},
+	{{0, 1, L1, KEY_E}, {0x288}},
+	{{0, 1, L1, KEY_5}, {0x2e5}},
+	{{0, 1, L1, KEY_4}, {0x2e6}},
+	{{0, 1, L1, KEY_3}, {0x2e7}},
+	{{0, 1, L1, KEY_2}, {0x2e8}},
+	{{1, 1, L1, KEY_1}, {0x2e9}},
 };
 
-const Node Compose::OBJ_3084155411728[] PROGMEM = {
+const Node Compose::NODE_1703870341424[] PROGMEM = {
 	{{1, 1, L2, KEY_F}, {0x18f}},
 };
 
-const Node Compose::OBJ_3084155411888[] PROGMEM = {
+const Node Compose::NODE_1703870341584[] PROGMEM = {
 	{{0, 1, L1, KEY_PERIOD}, {0x13f}},
 	{{0, 1, L2, KEY_SLASH}, {0x1c7}},
-	{{1, 1, L1, KEY_SLASH}, {0x1c8}},
+	{{0, 1, L1, KEY_SLASH}, {0x1c8}},
+	{{1, 1, L2, KEY_E}, {0x29f}},
 };
 
-const Node Compose::OBJ_3084155411968[] PROGMEM = {
+const Node Compose::NODE_1703870341664[] PROGMEM = {
 	{{0, 1, L1, KEY_PERIOD}, {0x140}},
-	{{1, 1, L1, KEY_SLASH}, {0x1c9}},
+	{{0, 1, L1, KEY_SLASH}, {0x1c9}},
+	{{0, 1, L1, KEY_E}, {0x26d}},
+	{{1, 1, L1, KEY_B}, {0x26e}},
 };
 
-const Node Compose::OBJ_3084155429248[] PROGMEM = {
+const Node Compose::NODE_1703870342464[] PROGMEM = {
 	{{0, 1, L1, KEY_S}, {0x131}},
-	{{1, 1, L1, KEY_SLASH}, {0x133}},
+	{{0, 1, L1, KEY_SLASH}, {0x133}},
+	{{0, 1, L3, KEY_H}, {0x294}},
+	{{0, 0, L3, KEY_C}, {(uint16_t) NODE_1703878268944}},
+	{{0, 1, L3, KEY_Y}, {0x1c3}},
+	{{0, 1, L3, KEY_N}, {0x31f}},
+	{{0, 1, L3, KEY_L}, {0x320}},
+	{{0, 0, L1, KEY_J}, {(uint16_t) NODE_1703878395920}},
+	{{1, 1, L1, KEY_M}, {0x2111}},
 };
 
-const Node Compose::OBJ_3084155429168[] PROGMEM = {
+const Node Compose::NODE_1703878268944[] PROGMEM = {
+	{{0, 1, L1, KEY_SPACE}, {0x1c0}},
+	{{1, 1, L3, KEY_C}, {0x1c1}},
+};
+
+const Node Compose::NODE_1703878395920[] PROGMEM = {
+	{{1, 1, L1, KEY_L}, {0x222b}},
+};
+
+const Node Compose::NODE_1703870342384[] PROGMEM = {
 	{{0, 1, L2, KEY_S}, {0x130}},
-	{{1, 1, L2, KEY_SLASH}, {0x132}},
+	{{0, 1, L2, KEY_SLASH}, {0x132}},
+	{{0, 1, L1, KEY_SLASH}, {0x132}},
+	{{1, 1, L1, KEY_M}, {0x2111}},
 };
 
-const Node Compose::OBJ_3084155430288[] PROGMEM = {
+const Node Compose::NODE_1703870343504[] PROGMEM = {
 	{{0, 1, L1, KEY_U}, {0x292}},
 	{{1, 1, L1, KEY_B}, {0x292}},
 };
 
-const Node Compose::OBJ_3084155430608[] PROGMEM = {
+const Node Compose::NODE_1703870343824[] PROGMEM = {
 	{{0, 1, L1, KEY_O}, {0xfb00}},
 	{{0, 1, L1, KEY_S}, {0xfb01}},
 	{{1, 1, L1, KEY_E}, {0xfb02}},
 };
 
-const Node Compose::OBJ_3084155430928[] PROGMEM = {
+const Node Compose::NODE_1703870344144[] PROGMEM = {
 	{{0, 1, L1, KEY_S}, {0xfb03}},
 	{{1, 1, L1, KEY_E}, {0xfb04}},
 };
 
-const Node Compose::OBJ_3084155431168[] PROGMEM = {
+const Node Compose::NODE_1703870344384[] PROGMEM = {
 	{{1, 1, L1, KEY_L}, {0xfb05}},
 };
 
-const Node Compose::OBJ_3084155431568[] PROGMEM = {
+const Node Compose::NODE_1703870344784[] PROGMEM = {
 	{{0, 1, L2, KEY_B}, {0x1f1}},
-	{{1, 1, L1, KEY_B}, {0x1f2}},
+	{{0, 1, L1, KEY_B}, {0x1f2}},
+	{{0, 1, L1, KEY_E}, {0x189}},
+	{{1, 1, L2, KEY_E}, {0x189}},
 };
 
-const Node Compose::OBJ_3084155431808[] PROGMEM = {
+const Node Compose::NODE_1703870345024[] PROGMEM = {
 	{{0, 1, L1, KEY_B}, {0x1f3}},
-	{{1, 0, L1, KEY_D}, {(uint16_t) OBJ_3084155528192}},
+	{{0, 0, L1, KEY_D}, {(uint16_t) NODE_1703877916608}},
+	{{1, 1, L1, KEY_E}, {0x256}},
 };
 
-const Node Compose::OBJ_3084155528192[] PROGMEM = {
+const Node Compose::NODE_1703877916608[] PROGMEM = {
 	{{1, 1, L1, KEY_I}, {0x2020}},
 };
 
-const Node Compose::OBJ_3084155432688[] PROGMEM = {
+const Node Compose::NODE_1703870370576[] PROGMEM = {
 	{{0, 1, L2, KEY_SLASH}, {0x1ca}},
-	{{1, 1, L1, KEY_SLASH}, {0x1cb}},
+	{{0, 1, L1, KEY_SLASH}, {0x1cb}},
+	{{0, 1, L2, KEY_F}, {0x18e}},
+	{{0, 1, L2, KEY_J}, {0x274}},
+	{{1, 1, L3, KEY_C}, {0x220}},
 };
 
-const Node Compose::OBJ_3084155453504[] PROGMEM = {
-	{{1, 1, L1, KEY_SLASH}, {0x1cc}},
+const Node Compose::NODE_1703870370816[] PROGMEM = {
+	{{0, 1, L1, KEY_SLASH}, {0x1cc}},
+	{{0, 1, L1, KEY_F}, {0x1dd}},
+	{{0, 1, L1, KEY_E}, {0x273}},
+	{{1, 1, L3, KEY_C}, {0x19e}},
 };
 
-const Node Compose::OBJ_3084155455344[] PROGMEM = {
+const Node Compose::NODE_1703870372656[] PROGMEM = {
 	{{0, 1, L3, KEY_Y}, {0x203c}},
 	{{0, 1, L3, KEY_H}, {0x2047}},
 	{{0, 1, L1, KEY_3}, {0x2154}},
-	{{1, 1, L1, KEY_5}, {0x2156}},
+	{{0, 1, L1, KEY_5}, {0x2156}},
+	{{0, 1, L3, KEY_T}, {0xb2}},
+	{{0, 1, L6, KEY_S}, {0x222c}},
+	{{0, 1, L3, KEY_SEMICOLON}, {0x2237}},
+	{{0, 1, L3, KEY_I}, {0x226b}},
+	{{0, 1, L3, KEY_U}, {0x226a}},
+	{{1, 1, L3, KEY_O}, {0x2a75}},
 };
 
-const Node Compose::OBJ_3084155455424[] PROGMEM = {
+const Node Compose::NODE_1703870372736[] PROGMEM = {
 	{{0, 1, L1, KEY_2}, {0x203c}},
 	{{0, 1, L1, KEYPAD_2}, {0x203c}},
 	{{0, 1, L3, KEY_H}, {0x2049}},
-	{{1, 1, L6, KEY_SEMICOLON}, {0x26a0}},
+	{{0, 1, L6, KEY_SEMICOLON}, {0x26a0}},
+	{{1, 1, L3, KEY_Y}, {0xa1}},
 };
 
-const Node Compose::OBJ_3084155455504[] PROGMEM = {
+const Node Compose::NODE_1703870372816[] PROGMEM = {
 	{{0, 1, L3, KEY_Y}, {0x203c}},
 	{{0, 1, L3, KEY_H}, {0x2047}},
 	{{0, 1, L1, KEYPAD_3}, {0x2154}},
-	{{1, 1, L1, KEYPAD_5}, {0x2156}},
+	{{0, 1, L1, KEYPAD_5}, {0x2156}},
+	{{0, 1, L6, KEY_S}, {0x222c}},
+	{{0, 1, L3, KEY_SEMICOLON}, {0x2237}},
+	{{0, 1, L3, KEY_I}, {0x226b}},
+	{{0, 1, L3, KEY_U}, {0x226a}},
+	{{1, 1, L3, KEY_O}, {0x2a75}},
 };
 
-const Node Compose::OBJ_3084155455904[] PROGMEM = {
+const Node Compose::NODE_1703870373216[] PROGMEM = {
 	{{0, 1, L1, KEY_2}, {0x2047}},
 	{{0, 1, L1, KEYPAD_2}, {0x2047}},
-	{{1, 1, L3, KEY_Y}, {0x2048}},
+	{{0, 1, L3, KEY_Y}, {0x2048}},
+	{{0, 1, L3, KEY_H}, {0xbf}},
+	{{0, 1, L3, KEY_O}, {0x225f}},
+	{{0, 1, L3, KEY_U}, {0x2a7b}},
+	{{1, 1, L3, KEY_I}, {0x2a7c}},
 };
 
-const Node Compose::OBJ_3084155456384[] PROGMEM = {
-	{{0, 0, L3, KEY_H}, {(uint16_t) OBJ_3084155456544}},
-	{{0, 0, L3, KEY_Y}, {(uint16_t) OBJ_3084155456464}},
-	{{0, 0, L4, KEY_H}, {(uint16_t) OBJ_3084155457104}},
-	{{0, 0, L4, KEY_Y}, {(uint16_t) OBJ_3084155457264}},
+const Node Compose::NODE_1703870373696[] PROGMEM = {
+	{{0, 0, L3, KEY_H}, {(uint16_t) NODE_1703870382144}},
+	{{0, 0, L3, KEY_Y}, {(uint16_t) NODE_1703870373776}},
+	{{0, 0, L4, KEY_H}, {(uint16_t) NODE_1703870382704}},
+	{{0, 0, L4, KEY_Y}, {(uint16_t) NODE_1703870382864}},
 	{{0, 1, L1, KEY_3}, {0x2153}},
 	{{0, 1, L1, KEY_5}, {0x2155}},
 	{{0, 1, L1, KEY_6}, {0x2159}},
 	{{0, 1, L1, KEY_8}, {0x215b}},
 	{{0, 1, L3, KEY_S}, {0x215f}},
-	{{1, 1, L1, KEYPAD_DIVIDE}, {0x215f}},
+	{{0, 1, L1, KEYPAD_DIVIDE}, {0x215f}},
+	{{0, 1, L1, KEY_4}, {0xbc}},
+	{{0, 1, L1, KEY_2}, {0xbd}},
+	{{0, 1, L1, KEY_7}, {0x2150}},
+	{{0, 1, L1, KEY_9}, {0x2151}},
+	{{0, 0, L1, KEY_1}, {(uint16_t) NODE_1703878149360}},
+	{{1, 1, L3, KEY_T}, {0xb9}},
 };
 
-const Node Compose::OBJ_3084155456544[] PROGMEM = {
+const Node Compose::NODE_1703870382144[] PROGMEM = {
 	{{1, 1, L3, KEY_Y}, {0x203d}},
 };
 
-const Node Compose::OBJ_3084155456464[] PROGMEM = {
+const Node Compose::NODE_1703870373776[] PROGMEM = {
 	{{1, 1, L3, KEY_H}, {0x203d}},
 };
 
-const Node Compose::OBJ_3084155457104[] PROGMEM = {
+const Node Compose::NODE_1703870382704[] PROGMEM = {
 	{{1, 1, L4, KEY_Y}, {0x2e18}},
 };
 
-const Node Compose::OBJ_3084155457264[] PROGMEM = {
+const Node Compose::NODE_1703870382864[] PROGMEM = {
 	{{1, 1, L4, KEY_H}, {0x2e18}},
 };
 
-const Node Compose::OBJ_3084155456704[] PROGMEM = {
-	{{0, 0, L3, KEY_H}, {(uint16_t) OBJ_3084155456944}},
-	{{0, 0, L3, KEY_Y}, {(uint16_t) OBJ_3084155456864}},
-	{{0, 0, L4, KEY_H}, {(uint16_t) OBJ_3084155457424}},
-	{{0, 0, L4, KEY_Y}, {(uint16_t) OBJ_3084155465872}},
+const Node Compose::NODE_1703878149360[] PROGMEM = {
+	{{1, 1, L1, KEY_0}, {0x2152}},
+};
+
+const Node Compose::NODE_1703870382304[] PROGMEM = {
+	{{0, 0, L3, KEY_H}, {(uint16_t) NODE_1703870382544}},
+	{{0, 0, L3, KEY_Y}, {(uint16_t) NODE_1703870382464}},
+	{{0, 0, L4, KEY_H}, {(uint16_t) NODE_1703870383024}},
+	{{0, 0, L4, KEY_Y}, {(uint16_t) NODE_1703870383184}},
 	{{0, 1, L1, KEYPAD_3}, {0x2153}},
 	{{0, 1, L1, KEYPAD_5}, {0x2155}},
 	{{0, 1, L1, KEYPAD_6}, {0x2159}},
@@ -545,42 +1997,42 @@ const Node Compose::OBJ_3084155456704[] PROGMEM = {
 	{{1, 1, L1, KEYPAD_2}, {0xbd}},
 };
 
-const Node Compose::OBJ_3084155456944[] PROGMEM = {
+const Node Compose::NODE_1703870382544[] PROGMEM = {
 	{{1, 1, L3, KEY_Y}, {0x203d}},
 };
 
-const Node Compose::OBJ_3084155456864[] PROGMEM = {
+const Node Compose::NODE_1703870382464[] PROGMEM = {
 	{{1, 1, L3, KEY_H}, {0x203d}},
 };
 
-const Node Compose::OBJ_3084155457424[] PROGMEM = {
+const Node Compose::NODE_1703870383024[] PROGMEM = {
 	{{1, 1, L4, KEY_Y}, {0x2e18}},
 };
 
-const Node Compose::OBJ_3084155465872[] PROGMEM = {
+const Node Compose::NODE_1703870383184[] PROGMEM = {
 	{{1, 1, L4, KEY_H}, {0x2e18}},
 };
 
-const Node Compose::OBJ_3084155466032[] PROGMEM = {
+const Node Compose::NODE_1703870383344[] PROGMEM = {
 	{{1, 1, L2, KEYPAD_9}, {0x2021}},
 };
 
-const Node Compose::OBJ_3084155466512[] PROGMEM = {
+const Node Compose::NODE_1703870383824[] PROGMEM = {
 	{{1, 1, L5, KEY_SPACE}, {0x2d}},
 };
 
-const Node Compose::OBJ_3084155466752[] PROGMEM = {
+const Node Compose::NODE_1703870384064[] PROGMEM = {
 	{{0, 1, L1, KEY_7}, {0x204a}},
 	{{1, 1, L1, KEY_8}, {0x215e}},
 };
 
-const Node Compose::OBJ_3084155466672[] PROGMEM = {
+const Node Compose::NODE_1703870383984[] PROGMEM = {
 	{{0, 1, L1, KEYPAD_7}, {0x204a}},
 	{{1, 1, L1, KEYPAD_8}, {0x215e}},
 };
 
-const Node Compose::OBJ_3084155467152[] PROGMEM = {
-	{{0, 0, L1, KEY_1}, {(uint16_t) OBJ_3084155467072}},
+const Node Compose::NODE_1703870384464[] PROGMEM = {
+	{{0, 0, L1, KEY_1}, {(uint16_t) NODE_1703870384384}},
 	{{0, 1, L1, KEY_2}, {0x2161}},
 	{{0, 1, L1, KEY_3}, {0x2162}},
 	{{0, 1, L1, KEY_4}, {0x2163}},
@@ -589,7 +2041,7 @@ const Node Compose::OBJ_3084155467152[] PROGMEM = {
 	{{0, 1, L1, KEY_7}, {0x2166}},
 	{{0, 1, L1, KEY_8}, {0x2167}},
 	{{0, 1, L1, KEY_9}, {0x2168}},
-	{{0, 0, L1, KEYPAD_1}, {(uint16_t) OBJ_3084155468112}},
+	{{0, 0, L1, KEYPAD_1}, {(uint16_t) NODE_1703870385424}},
 	{{0, 1, L1, KEYPAD_2}, {0x2161}},
 	{{0, 1, L1, KEYPAD_3}, {0x2162}},
 	{{0, 1, L1, KEYPAD_4}, {0x2163}},
@@ -597,25 +2049,27 @@ const Node Compose::OBJ_3084155467152[] PROGMEM = {
 	{{0, 1, L1, KEYPAD_6}, {0x2165}},
 	{{0, 1, L1, KEYPAD_7}, {0x2166}},
 	{{0, 1, L1, KEYPAD_8}, {0x2167}},
-	{{1, 1, L1, KEYPAD_9}, {0x2168}},
+	{{0, 1, L1, KEYPAD_9}, {0x2168}},
+	{{0, 1, L2, KEY_K}, {0x280}},
+	{{1, 1, L1, KEY_F}, {0x211c}},
 };
 
-const Node Compose::OBJ_3084155467072[] PROGMEM = {
+const Node Compose::NODE_1703870384384[] PROGMEM = {
 	{{0, 1, L1, KEY_SPACE}, {0x2160}},
 	{{0, 1, L1, KEY_0}, {0x2169}},
 	{{0, 1, L1, KEY_1}, {0x216a}},
 	{{1, 1, L1, KEY_2}, {0x216b}},
 };
 
-const Node Compose::OBJ_3084155468112[] PROGMEM = {
+const Node Compose::NODE_1703870385424[] PROGMEM = {
 	{{0, 1, L1, KEY_SPACE}, {0x2160}},
 	{{0, 1, L1, KEYPAD_0}, {0x2169}},
 	{{0, 1, L1, KEYPAD_1}, {0x216a}},
 	{{1, 1, L1, KEYPAD_2}, {0x216b}},
 };
 
-const Node Compose::OBJ_3084155469152[] PROGMEM = {
-	{{0, 0, L1, KEY_1}, {(uint16_t) OBJ_3084155469312}},
+const Node Compose::NODE_1703870390656[] PROGMEM = {
+	{{0, 0, L1, KEY_1}, {(uint16_t) NODE_1703870390816}},
 	{{0, 1, L1, KEY_2}, {0x2171}},
 	{{0, 1, L1, KEY_3}, {0x2172}},
 	{{0, 1, L1, KEY_4}, {0x2173}},
@@ -624,7 +2078,7 @@ const Node Compose::OBJ_3084155469152[] PROGMEM = {
 	{{0, 1, L1, KEY_7}, {0x2176}},
 	{{0, 1, L1, KEY_8}, {0x2177}},
 	{{0, 1, L1, KEY_9}, {0x2178}},
-	{{0, 0, L1, KEYPAD_1}, {(uint16_t) OBJ_3084155482656}},
+	{{0, 0, L1, KEYPAD_1}, {(uint16_t) NODE_1703870391776}},
 	{{0, 1, L1, KEYPAD_2}, {0x2171}},
 	{{0, 1, L1, KEYPAD_3}, {0x2172}},
 	{{0, 1, L1, KEYPAD_4}, {0x2173}},
@@ -632,137 +2086,776 @@ const Node Compose::OBJ_3084155469152[] PROGMEM = {
 	{{0, 1, L1, KEYPAD_6}, {0x2175}},
 	{{0, 1, L1, KEYPAD_7}, {0x2176}},
 	{{0, 1, L1, KEYPAD_8}, {0x2177}},
-	{{1, 1, L1, KEYPAD_9}, {0x2178}},
+	{{0, 1, L1, KEYPAD_9}, {0x2178}},
+	{{0, 1, L3, KEY_W}, {0x27e}},
+	{{0, 1, L1, KEY_K}, {0x27c}},
+	{{1, 1, L1, KEY_F}, {0x211c}},
 };
 
-const Node Compose::OBJ_3084155469312[] PROGMEM = {
+const Node Compose::NODE_1703870390816[] PROGMEM = {
 	{{0, 1, L1, KEY_SPACE}, {0x2170}},
 	{{0, 1, L1, KEY_0}, {0x2179}},
 	{{0, 1, L1, KEY_1}, {0x217a}},
 	{{1, 1, L1, KEY_2}, {0x217b}},
 };
 
-const Node Compose::OBJ_3084155482656[] PROGMEM = {
+const Node Compose::NODE_1703870391776[] PROGMEM = {
 	{{0, 1, L1, KEY_SPACE}, {0x2170}},
 	{{0, 1, L1, KEYPAD_0}, {0x2179}},
 	{{0, 1, L1, KEYPAD_1}, {0x217a}},
 	{{1, 1, L1, KEYPAD_2}, {0x217b}},
 };
 
-const Node Compose::OBJ_3084155484016[] PROGMEM = {
+const Node Compose::NODE_1703870393136[] PROGMEM = {
 	{{0, 1, L1, KEY_5}, {0x2157}},
-	{{1, 1, L1, KEY_8}, {0x215c}},
+	{{0, 1, L1, KEY_8}, {0x215c}},
+	{{0, 1, L1, KEY_4}, {0xbe}},
+	{{0, 1, L3, KEY_T}, {0xb3}},
+	{{0, 1, L1, KEY_3}, {0x25c}},
+	{{0, 1, L6, KEY_W}, {0x221b}},
+	{{0, 1, L6, KEY_S}, {0x222d}},
+	{{0, 1, L3, KEY_I}, {0x22d9}},
+	{{0, 1, L3, KEY_U}, {0x22d8}},
+	{{1, 1, L3, KEY_O}, {0x2a76}},
 };
 
-const Node Compose::OBJ_3084155484096[] PROGMEM = {
-	{{1, 1, L1, KEY_5}, {0x2158}},
+const Node Compose::NODE_1703870393216[] PROGMEM = {
+	{{0, 1, L1, KEY_5}, {0x2158}},
+	{{0, 1, L6, KEY_W}, {0x221c}},
+	{{1, 1, L6, KEY_S}, {0x2a0c}},
 };
 
-const Node Compose::OBJ_3084155484416[] PROGMEM = {
+const Node Compose::NODE_1703870393536[] PROGMEM = {
 	{{0, 1, L1, KEY_6}, {0x215a}},
 	{{1, 1, L1, KEY_8}, {0x215d}},
 };
 
-const Node Compose::OBJ_3084155485376[] PROGMEM = {
+const Node Compose::NODE_1703877898464[] PROGMEM = {
 	{{0, 1, L1, KEYPAD_5}, {0x2157}},
 	{{0, 1, L1, KEYPAD_8}, {0x215c}},
-	{{1, 1, L1, KEYPAD_4}, {0xbe}},
+	{{0, 1, L1, KEYPAD_4}, {0xbe}},
+	{{0, 1, L1, KEYPAD_3}, {0x25c}},
+	{{0, 1, L6, KEY_W}, {0x221b}},
+	{{0, 1, L6, KEY_S}, {0x222d}},
+	{{0, 1, L3, KEY_I}, {0x22d9}},
+	{{0, 1, L3, KEY_U}, {0x22d8}},
+	{{1, 1, L3, KEY_O}, {0x2a76}},
 };
 
-const Node Compose::OBJ_3084155485456[] PROGMEM = {
-	{{1, 1, L1, KEYPAD_5}, {0x2158}},
+const Node Compose::NODE_1703877898544[] PROGMEM = {
+	{{0, 1, L1, KEYPAD_5}, {0x2158}},
+	{{0, 1, L6, KEY_W}, {0x221c}},
+	{{1, 1, L6, KEY_S}, {0x2a0c}},
 };
 
-const Node Compose::OBJ_3084155485776[] PROGMEM = {
+const Node Compose::NODE_1703877898864[] PROGMEM = {
 	{{0, 1, L1, KEYPAD_6}, {0x215a}},
 	{{1, 1, L1, KEYPAD_8}, {0x215d}},
 };
 
-const Node Compose::OBJ_3084155511648[] PROGMEM = {
+const Node Compose::NODE_1703877900064[] PROGMEM = {
 	{{0, 1, L3, KEY_K}, {0x263a}},
-	{{1, 1, L3, KEY_J}, {0x2639}},
+	{{0, 1, L3, KEY_J}, {0x2639}},
+	{{0, 1, L3, KEY_L}, {0xf7}},
+	{{0, 1, L3, KEY_SEMICOLON}, {0x2d0}},
+	{{1, 1, L3, KEY_O}, {0x2254}},
 };
 
-const Node Compose::OBJ_3084155511888[] PROGMEM = {
-	{{1, 0, L1, KEYPAD_DIVIDE}, {(uint16_t) OBJ_3084155512048}},
+const Node Compose::NODE_1703877900304[] PROGMEM = {
+	{{1, 0, L1, KEYPAD_DIVIDE}, {(uint16_t) NODE_1703877900464}},
 };
 
-const Node Compose::OBJ_3084155512048[] PROGMEM = {
+const Node Compose::NODE_1703877900464[] PROGMEM = {
 	{{1, 1, L1, KEY_G}, {0x2105}},
 };
 
-const Node Compose::OBJ_3084155511968[] PROGMEM = {
+const Node Compose::NODE_1703877900384[] PROGMEM = {
 	{{0, 1, L5, KEY_5}, {0x26a2}},
 	{{1, 1, L5, KEY_4}, {0x26a4}},
 };
 
-const Node Compose::OBJ_3084155512208[] PROGMEM = {
+const Node Compose::NODE_1703877900624[] PROGMEM = {
 	{{0, 1, L5, KEY_4}, {0x26a3}},
 	{{1, 1, L5, KEY_5}, {0x26a4}},
 };
 
-const Node Compose::OBJ_3084155513568[] PROGMEM = {
+const Node Compose::NODE_1703877901984[] PROGMEM = {
 	{{0, 1, L1, KEY_3}, {0x2665}},
-	{{1, 1, L1, KEYPAD_3}, {0x2665}},
+	{{0, 1, L1, KEYPAD_3}, {0x2665}},
+	{{0, 1, L1, KEY_PERIOD}, {0x2235}},
+	{{0, 1, L3, KEY_O}, {0x2264}},
+	{{0, 1, L3, KEY_C}, {0x22b2}},
+	{{0, 1, L3, KEY_U}, {0x226a}},
+	{{0, 1, L3, KEY_K}, {0x2aa6}},
+	{{0, 1, L3, KEY_H}, {0x2a7b}},
+	{{0, 1, L3, KEY_I}, {0x2260}},
+	{{0, 0, L3, KEY_RIGHT_BRACE}, {(uint16_t) NODE_1703878459616}},
+	{{1, 1, L3, KEY_L}, {0x2190}},
 };
 
-const Node Compose::OBJ_3084155513808[] PROGMEM = {
-	{{1, 0, L2, KEY_J}, {(uint16_t) OBJ_3084155513968}},
+const Node Compose::NODE_1703878459616[] PROGMEM = {
+	{{1, 1, L3, KEY_RIGHT_BRACE}, {0x226e}},
 };
 
-const Node Compose::OBJ_3084155513968[] PROGMEM = {
+const Node Compose::NODE_1703877902224[] PROGMEM = {
+	{{0, 0, L2, KEY_J}, {(uint16_t) NODE_1703877914768}},
+	{{1, 1, L3, KEY_C}, {0x2c6d}},
+};
+
+const Node Compose::NODE_1703877914768[] PROGMEM = {
 	{{1, 1, L2, KEY_SEMICOLON}, {0x262e}},
 };
 
-const Node Compose::OBJ_3084155513888[] PROGMEM = {
-	{{1, 1, L3, KEY_R}, {0x25a1}},
+const Node Compose::NODE_1703877914688[] PROGMEM = {
+	{{0, 1, L3, KEY_R}, {0x25a1}},
+	{{1, 1, L3, KEY_E}, {0x27e6}},
 };
 
-const Node Compose::OBJ_3084155514128[] PROGMEM = {
+const Node Compose::NODE_1703877914928[] PROGMEM = {
 	{{0, 1, L2, KEYPAD_7}, {0x2611}},
 	{{1, 1, L2, KEYPAD_8}, {0x2612}},
 };
 
-const Node Compose::OBJ_3084155514288[] PROGMEM = {
+const Node Compose::NODE_1703877915088[] PROGMEM = {
 	{{1, 1, L6, KEYPAD_0}, {0x2611}},
 };
 
-const Node Compose::OBJ_3084155514608[] PROGMEM = {
+const Node Compose::NODE_1703877915408[] PROGMEM = {
 	{{1, 1, L6, KEYPAD_0}, {0x2612}},
 };
 
-const Node Compose::OBJ_3084155514688[] PROGMEM = {
-	{{1, 1, L3, KEY_Y}, {0x26a0}},
+const Node Compose::NODE_1703877915488[] PROGMEM = {
+	{{0, 1, L3, KEY_Y}, {0x26a0}},
+	{{0, 1, L3, KEY_O}, {0x225c}},
+	{{0, 1, L3, KEY_N}, {0x2a39}},
+	{{0, 1, L3, KEY_L}, {0x2a3a}},
+	{{1, 1, L1, KEYPAD_MULTIPLY}, {0x2a3b}},
 };
 
-const Node Compose::OBJ_3084155527472[] PROGMEM = {
+const Node Compose::NODE_1703877915888[] PROGMEM = {
 	{{1, 1, L2, KEYPAD_0}, {0x237d}},
 };
 
-const Node Compose::OBJ_3084155527552[] PROGMEM = {
+const Node Compose::NODE_1703877915968[] PROGMEM = {
 	{{0, 1, L1, KEY_O}, {0x20b0}},
-	{{1, 0, L1, KEY_G}, {(uint16_t) OBJ_3084155527952}},
+	{{0, 0, L1, KEY_G}, {(uint16_t) NODE_1703877916368}},
+	{{0, 1, L3, KEY_Y}, {0xb6}},
+	{{0, 0, L1, KEY_K}, {(uint16_t) NODE_1703878396320}},
+	{{1, 0, L1, KEY_U}, {(uint16_t) NODE_1703878519600}},
 };
 
-const Node Compose::OBJ_3084155527952[] PROGMEM = {
+const Node Compose::NODE_1703877916368[] PROGMEM = {
 	{{1, 1, L1, KEY_S}, {0x2318}},
 };
 
-const Node Compose::OBJ_3084155528592[] PROGMEM = {
-	{{0, 0, L3, KEY_S}, {(uint16_t) OBJ_3084155528672}},
-	{{1, 0, L1, KEYPAD_DIVIDE}, {(uint16_t) OBJ_3084155528512}},
+const Node Compose::NODE_1703878396320[] PROGMEM = {
+	{{1, 0, L1, KEY_G}, {(uint16_t) NODE_1703878396560}},
 };
 
-const Node Compose::OBJ_3084155528672[] PROGMEM = {
+const Node Compose::NODE_1703878396560[] PROGMEM = {
+	{{0, 1, L1, KEY_SEMICOLON}, {0x220f}},
+	{{1, 1, L1, KEY_V}, {0x221d}},
+};
+
+const Node Compose::NODE_1703878519600[] PROGMEM = {
+	{{0, 1, L1, KEY_SPACE}, {0x210e}},
+	{{0, 1, L3, KEY_L}, {0x210f}},
+	{{1, 1, L1, KEYPAD_SUBTRACT}, {0x210f}},
+};
+
+const Node Compose::NODE_1703877917008[] PROGMEM = {
+	{{0, 0, L3, KEY_S}, {(uint16_t) NODE_1703877917088}},
+	{{0, 0, L1, KEYPAD_DIVIDE}, {(uint16_t) NODE_1703877916928}},
+	{{0, 1, L1, KEY_0}, {0x298}},
+	{{1, 1, L1, KEYPAD_0}, {0x298}},
+};
+
+const Node Compose::NODE_1703877917088[] PROGMEM = {
 	{{1, 1, L1, KEY_PERIOD}, {0x2052}},
 };
 
-const Node Compose::OBJ_3084155528512[] PROGMEM = {
+const Node Compose::NODE_1703877916928[] PROGMEM = {
 	{{1, 1, L1, KEY_PERIOD}, {0x2052}},
 };
 
-const Node Compose::OBJ_3084155528832[] PROGMEM = {
+const Node Compose::NODE_1703877917248[] PROGMEM = {
 	{{1, 1, L2, KEY_PERIOD}, {0x2023}},
+};
+
+const Node Compose::NODE_1703878130640[] PROGMEM = {
+	{{0, 1, L3, KEY_L}, {0xb1}},
+	{{1, 1, L6, KEY_SEMICOLON}, {0x2a39}},
+};
+
+const Node Compose::NODE_1703878130960[] PROGMEM = {
+	{{1, 1, L3, KEY_Y}, {0xb6}},
+};
+
+const Node Compose::NODE_1703878148240[] PROGMEM = {
+	{{0, 1, L2, KEY_F}, {0x152}},
+	{{0, 0, L2, KEY_G}, {(uint16_t) NODE_1703878248944}},
+	{{0, 1, L2, KEY_A}, {0x222}},
+	{{1, 1, L1, KEY_G}, {0x2c7a}},
+};
+
+const Node Compose::NODE_1703878248944[] PROGMEM = {
+	{{1, 1, L2, KEY_F}, {0x276}},
+};
+
+const Node Compose::NODE_1703878148320[] PROGMEM = {
+	{{0, 1, L1, KEY_F}, {0xe6}},
+	{{0, 1, L1, KEY_D}, {0x251}},
+	{{0, 1, L1, KEY_0}, {0x660}},
+	{{0, 1, L1, KEY_1}, {0x661}},
+	{{0, 1, L1, KEY_2}, {0x662}},
+	{{0, 1, L1, KEY_3}, {0x663}},
+	{{0, 1, L1, KEY_4}, {0x664}},
+	{{0, 1, L1, KEY_5}, {0x665}},
+	{{0, 1, L1, KEY_6}, {0x666}},
+	{{0, 1, L1, KEY_7}, {0x667}},
+	{{0, 1, L1, KEY_8}, {0x668}},
+	{{0, 1, L1, KEY_9}, {0x669}},
+	{{0, 1, L1, KEYPAD_0}, {0x660}},
+	{{0, 1, L1, KEYPAD_1}, {0x661}},
+	{{0, 1, L1, KEYPAD_2}, {0x662}},
+	{{0, 1, L1, KEYPAD_3}, {0x663}},
+	{{0, 1, L1, KEYPAD_4}, {0x664}},
+	{{0, 1, L1, KEYPAD_5}, {0x665}},
+	{{0, 1, L1, KEYPAD_6}, {0x666}},
+	{{0, 1, L1, KEYPAD_7}, {0x667}},
+	{{0, 1, L1, KEYPAD_8}, {0x668}},
+	{{0, 1, L1, KEYPAD_9}, {0x669}},
+	{{1, 1, L1, KEY_Q}, {0x221d}},
+};
+
+const Node Compose::NODE_1703878148800[] PROGMEM = {
+	{{1, 1, L2, KEY_F}, {0xc6}},
+};
+
+const Node Compose::NODE_1703878149600[] PROGMEM = {
+	{{0, 1, L1, KEY_3}, {0x2189}},
+	{{0, 1, L1, KEY_PERIOD}, {0x298}},
+	{{1, 0, L3, KEY_RIGHT_BRACE}, {(uint16_t) NODE_1703878412304}},
+};
+
+const Node Compose::NODE_1703878412304[] PROGMEM = {
+	{{1, 1, L3, KEY_RIGHT_BRACE}, {0x2205}},
+};
+
+const Node Compose::NODE_1703878150000[] PROGMEM = {
+	{{0, 1, L1, KEY_0}, {0x2070}},
+	{{0, 1, L1, KEYPAD_0}, {0x2070}},
+	{{0, 0, L3, KEY_W}, {(uint16_t) NODE_1703878150400}},
+	{{0, 1, L1, KEY_2}, {0xb2}},
+	{{0, 1, L1, KEYPAD_2}, {0xb2}},
+	{{0, 1, L1, KEY_3}, {0xb3}},
+	{{0, 1, L1, KEYPAD_3}, {0xb3}},
+	{{0, 1, L1, KEY_1}, {0xb9}},
+	{{0, 1, L1, KEYPAD_1}, {0xb9}},
+	{{0, 1, L1, KEY_4}, {0x2074}},
+	{{0, 1, L1, KEYPAD_4}, {0x2074}},
+	{{0, 1, L1, KEY_5}, {0x2075}},
+	{{0, 1, L1, KEYPAD_5}, {0x2075}},
+	{{0, 1, L1, KEY_6}, {0x2076}},
+	{{0, 1, L1, KEYPAD_6}, {0x2076}},
+	{{0, 1, L1, KEY_7}, {0x2077}},
+	{{0, 1, L1, KEYPAD_7}, {0x2077}},
+	{{0, 1, L1, KEY_8}, {0x2078}},
+	{{0, 1, L1, KEYPAD_8}, {0x2078}},
+	{{0, 1, L1, KEY_9}, {0x2079}},
+	{{0, 1, L1, KEYPAD_9}, {0x2079}},
+	{{0, 1, L3, KEY_N}, {0x207a}},
+	{{0, 1, L1, KEYPAD_ADD}, {0x207a}},
+	{{0, 1, L3, KEY_O}, {0x207c}},
+	{{0, 1, L3, KEY_J}, {0x207d}},
+	{{0, 1, L3, KEY_K}, {0x207e}},
+	{{0, 1, L1, KEYPAD_MULTIPLY}, {0x33d}},
+	{{0, 1, L3, KEY_E}, {0x2308}},
+	{{0, 1, L3, KEY_R}, {0x2309}},
+	{{0, 0, L3, KEY_C}, {(uint16_t) NODE_1703878461296}},
+	{{0, 0, L3, KEY_A}, {(uint16_t) NODE_1703878461776}},
+	{{0, 1, L3, KEY_I}, {0x20d7}},
+	{{0, 1, L3, KEY_U}, {0x20d6}},
+	{{0, 1, L3, KEY_L}, {0x207b}},
+	{{0, 1, L1, KEYPAD_SUBTRACT}, {0x207b}},
+	{{0, 1, L1, KEY_D}, {0x1d43}},
+	{{0, 1, L1, KEY_N}, {0x1d47}},
+	{{0, 1, L1, KEY_R}, {0x1d9c}},
+	{{0, 1, L1, KEY_SEMICOLON}, {0x1d48}},
+	{{0, 1, L1, KEY_F}, {0x1d49}},
+	{{0, 1, L1, KEY_O}, {0x1da0}},
+	{{0, 1, L1, KEY_I}, {0x1d4d}},
+	{{0, 1, L1, KEY_U}, {0x2b0}},
+	{{0, 1, L1, KEY_S}, {0x2071}},
+	{{0, 1, L1, KEY_SLASH}, {0x2b2}},
+	{{0, 1, L1, KEY_Y}, {0x1d4f}},
+	{{0, 1, L1, KEY_E}, {0x2e1}},
+	{{0, 1, L1, KEY_M}, {0x1d50}},
+	{{0, 1, L1, KEY_J}, {0x207f}},
+	{{0, 1, L1, KEY_G}, {0x1d52}},
+	{{0, 1, L1, KEY_V}, {0x1d56}},
+	{{0, 1, L1, KEY_K}, {0x2b3}},
+	{{0, 1, L1, KEY_H}, {0x2e2}},
+	{{0, 1, L1, KEY_L}, {0x1d57}},
+	{{0, 1, L1, KEY_A}, {0x1d58}},
+	{{0, 1, L1, KEY_W}, {0x1d5b}},
+	{{0, 1, L1, KEY_T}, {0x2b7}},
+	{{0, 1, L1, KEY_Q}, {0x2e3}},
+	{{0, 1, L1, KEY_QUOTE}, {0x2b8}},
+	{{0, 1, L1, KEY_B}, {0x1dbb}},
+	{{0, 1, L2, KEY_D}, {0x1d2c}},
+	{{0, 1, L2, KEY_N}, {0x1d2e}},
+	{{0, 1, L2, KEY_SEMICOLON}, {0x1d30}},
+	{{0, 1, L2, KEY_F}, {0x1d31}},
+	{{0, 1, L2, KEY_I}, {0x1d33}},
+	{{0, 1, L2, KEY_U}, {0x1d34}},
+	{{0, 1, L2, KEY_S}, {0x1d35}},
+	{{0, 1, L2, KEY_SLASH}, {0x1d36}},
+	{{0, 1, L2, KEY_Y}, {0x1d37}},
+	{{0, 1, L2, KEY_E}, {0x1d38}},
+	{{0, 1, L2, KEY_M}, {0x1d39}},
+	{{0, 1, L2, KEY_J}, {0x1d3a}},
+	{{0, 1, L2, KEY_G}, {0x1d3c}},
+	{{0, 1, L2, KEY_V}, {0x1d3e}},
+	{{0, 1, L2, KEY_K}, {0x1d3f}},
+	{{0, 1, L2, KEY_L}, {0x1d40}},
+	{{0, 1, L2, KEY_A}, {0x1d41}},
+	{{0, 1, L2, KEY_W}, {0x2c7d}},
+	{{0, 1, L2, KEY_T}, {0x1d42}},
+	{{0, 1, L5, KEY_D}, {0x1d45}},
+	{{0, 1, L5, KEY_N}, {0x1d5d}},
+	{{0, 1, L5, KEY_I}, {0x1d5e}},
+	{{0, 1, L5, KEY_F}, {0x1d4b}},
+	{{0, 1, L5, KEY_P}, {0x1d60}},
+	{{1, 1, L5, KEY_QUOTE}, {0x1db7}},
+};
+
+const Node Compose::NODE_1703878150400[] PROGMEM = {
+	{{0, 1, L1, KEY_S}, {0x2071}},
+	{{1, 1, L1, KEY_J}, {0x207f}},
+};
+
+const Node Compose::NODE_1703878461296[] PROGMEM = {
+	{{1, 1, L1, KEY_W}, {0x2195}},
+};
+
+const Node Compose::NODE_1703878461776[] PROGMEM = {
+	{{1, 1, L1, KEY_W}, {0x2921}},
+};
+
+const Node Compose::NODE_1703878151840[] PROGMEM = {
+	{{0, 1, L1, KEY_A}, {0xb5}},
+	{{1, 0, L1, KEY_S}, {(uint16_t) NODE_1703878520400}},
+};
+
+const Node Compose::NODE_1703878520400[] PROGMEM = {
+	{{1, 0, L1, KEY_R}, {(uint16_t) NODE_1703878520560}},
+};
+
+const Node Compose::NODE_1703878520560[] PROGMEM = {
+	{{1, 0, L1, KEY_K}, {(uint16_t) NODE_1703878520480}},
+};
+
+const Node Compose::NODE_1703878520480[] PROGMEM = {
+	{{1, 1, L1, KEY_G}, {0xb5}},
+};
+
+const Node Compose::NODE_1703878209840[] PROGMEM = {
+	{{1, 1, L5, KEY_I}, {0x263}},
+};
+
+const Node Compose::NODE_1703878210560[] PROGMEM = {
+	{{1, 1, L3, KEY_K}, {0x1b2}},
+};
+
+const Node Compose::NODE_1703878210400[] PROGMEM = {
+	{{0, 1, L3, KEY_K}, {0x28b}},
+	{{0, 1, L3, KEY_C}, {0x2193}},
+	{{1, 0, L3, KEY_S}, {(uint16_t) NODE_1703878461856}},
+};
+
+const Node Compose::NODE_1703878461856[] PROGMEM = {
+	{{1, 1, L3, KEY_T}, {0x2922}},
+};
+
+const Node Compose::NODE_1703878211360[] PROGMEM = {
+	{{0, 1, L2, KEY_J}, {0x19d}},
+	{{0, 1, L1, KEY_J}, {0x272}},
+	{{1, 1, L1, KEY_O}, {0x284}},
+};
+
+const Node Compose::NODE_1703878211520[] PROGMEM = {
+	{{1, 1, L2, KEY_J}, {0x19d}},
+};
+
+const Node Compose::NODE_1703878212080[] PROGMEM = {
+	{{1, 0, L1, KEY_U}, {(uint16_t) NODE_1703878212160}},
+};
+
+const Node Compose::NODE_1703878212160[] PROGMEM = {
+	{{0, 1, L1, KEY_SLASH}, {0x267}},
+	{{1, 1, L1, KEY_I}, {0x267}},
+};
+
+const Node Compose::NODE_1703878212480[] PROGMEM = {
+	{{0, 1, L2, KEY_D}, {0x23a}},
+	{{0, 1, L1, KEY_D}, {0x2c65}},
+	{{0, 1, L2, KEY_R}, {0x23b}},
+	{{0, 1, L1, KEY_R}, {0x23c}},
+	{{0, 1, L2, KEY_F}, {0x246}},
+	{{0, 1, L1, KEY_F}, {0x247}},
+	{{0, 1, L2, KEY_L}, {0x23e}},
+	{{0, 1, L1, KEY_L}, {0x2c66}},
+	{{0, 1, L5, KEY_E}, {0x19b}},
+	{{0, 1, L3, KEY_LEFT_BRACE}, {0x1e9c}},
+	{{0, 1, L1, KEY_0}, {0x2205}},
+	{{0, 1, L6, KEY_S}, {0x2a0f}},
+	{{0, 1, L3, KEY_O}, {0x2260}},
+	{{0, 1, L3, KEY_C}, {0x2224}},
+	{{0, 1, L3, KEY_V}, {0x2241}},
+	{{0, 1, L3, KEY_U}, {0x226e}},
+	{{0, 1, L3, KEY_I}, {0x226f}},
+	{{0, 1, L3, KEY_T}, {0x2197}},
+	{{1, 1, L1, KEY_W}, {0x2199}},
+};
+
+const Node Compose::NODE_1703878212400[] PROGMEM = {
+	{{0, 1, L2, KEY_D}, {0x23a}},
+	{{0, 1, L1, KEY_D}, {0x2c65}},
+	{{0, 1, L2, KEY_R}, {0x23b}},
+	{{0, 1, L1, KEY_R}, {0x23c}},
+	{{0, 1, L2, KEY_F}, {0x246}},
+	{{0, 1, L1, KEY_F}, {0x247}},
+	{{0, 1, L2, KEY_L}, {0x23e}},
+	{{0, 1, L1, KEY_L}, {0x2c66}},
+	{{1, 1, L5, KEY_E}, {0x19b}},
+};
+
+const Node Compose::NODE_1703878227744[] PROGMEM = {
+	{{0, 1, L2, KEY_E}, {0x2c60}},
+	{{0, 1, L1, KEY_E}, {0x2c61}},
+	{{0, 0, L3, KEY_C}, {(uint16_t) NODE_1703878268704}},
+	{{0, 1, L3, KEY_V}, {0x2245}},
+	{{0, 1, L3, KEY_O}, {0x2261}},
+	{{0, 1, L3, KEY_SEMICOLON}, {0x2255}},
+	{{0, 1, L3, KEY_I}, {0x2265}},
+	{{0, 1, L3, KEY_U}, {0x2264}},
+	{{0, 1, L2, KEY_1}, {0x2257}},
+	{{0, 1, L3, KEY_T}, {0x2259}},
+	{{0, 1, L6, KEY_SEMICOLON}, {0x225c}},
+	{{0, 1, L3, KEY_H}, {0x225f}},
+	{{0, 1, L6, KEY_S}, {0x2a0e}},
+	{{1, 0, L3, KEY_RIGHT_BRACE}, {(uint16_t) NODE_1703878437920}},
+};
+
+const Node Compose::NODE_1703878268704[] PROGMEM = {
+	{{0, 1, L3, KEY_U}, {0x22b4}},
+	{{1, 1, L3, KEY_I}, {0x22b5}},
+};
+
+const Node Compose::NODE_1703878437920[] PROGMEM = {
+	{{1, 1, L3, KEY_RIGHT_BRACE}, {0x2260}},
+};
+
+const Node Compose::NODE_1703878247024[] PROGMEM = {
+	{{0, 1, L2, KEY_U}, {0x1b7}},
+	{{1, 1, L2, KEY_B}, {0x1b7}},
+};
+
+const Node Compose::NODE_1703878248064[] PROGMEM = {
+	{{1, 1, L2, KEY_N}, {0x299}},
+};
+
+const Node Compose::NODE_1703878248224[] PROGMEM = {
+	{{0, 1, L2, KEY_I}, {0x262}},
+	{{1, 1, L2, KEY_A}, {0x222}},
+};
+
+const Node Compose::NODE_1703878248304[] PROGMEM = {
+	{{0, 1, L2, KEY_U}, {0x29c}},
+	{{0, 1, L2, KEY_W}, {0x1f6}},
+	{{1, 1, L1, KEY_W}, {0x1f6}},
+};
+
+const Node Compose::NODE_1703878248784[] PROGMEM = {
+	{{0, 1, L2, KEY_QUOTE}, {0x28f}},
+	{{0, 1, L2, KEY_I}, {0x21c}},
+	{{1, 1, L1, KEY_I}, {0x21c}},
+};
+
+const Node Compose::NODE_1703878248864[] PROGMEM = {
+	{{1, 1, L5, KEY_D}, {0x251}},
+};
+
+const Node Compose::NODE_1703878249344[] PROGMEM = {
+	{{1, 1, L5, KEY_F}, {0x25b}},
+};
+
+const Node Compose::NODE_1703878249504[] PROGMEM = {
+	{{1, 1, L5, KEY_P}, {0x278}},
+};
+
+const Node Compose::NODE_1703878249664[] PROGMEM = {
+	{{1, 1, L5, KEY_QUOTE}, {0x28a}},
+};
+
+const Node Compose::NODE_1703878267664[] PROGMEM = {
+	{{0, 1, L1, KEY_I}, {0x261}},
+	{{0, 1, L2, KEY_A}, {0x222}},
+	{{1, 1, L1, KEY_A}, {0x223}},
+};
+
+const Node Compose::NODE_1703878268144[] PROGMEM = {
+	{{0, 0, L1, KEY_3}, {(uint16_t) NODE_1703878268384}},
+	{{0, 0, L1, KEYPAD_3}, {(uint16_t) NODE_1703878268304}},
+	{{0, 1, L3, KEY_I}, {0x2aa7}},
+	{{1, 1, L3, KEY_J}, {0x2985}},
+};
+
+const Node Compose::NODE_1703878268384[] PROGMEM = {
+	{{1, 1, L1, KEY_SPACE}, {0x25e}},
+};
+
+const Node Compose::NODE_1703878268304[] PROGMEM = {
+	{{1, 1, L1, KEY_SPACE}, {0x25e}},
+};
+
+const Node Compose::NODE_1703878268544[] PROGMEM = {
+	{{0, 1, L3, KEY_W}, {0x264}},
+	{{1, 1, L3, KEY_H}, {0x242}},
+};
+
+const Node Compose::NODE_1703878269184[] PROGMEM = {
+	{{1, 1, L1, KEY_PERIOD}, {0x298}},
+};
+
+const Node Compose::NODE_1703878269904[] PROGMEM = {
+	{{1, 1, L3, KEY_PERIOD}, {0x2c8}},
+};
+
+const Node Compose::NODE_1703878289744[] PROGMEM = {
+	{{0, 1, L1, KEY_RIGHT_BRACE}, {0x1dc4}},
+	{{1, 1, L1, KEY_EQUAL}, {0x1dc6}},
+};
+
+const Node Compose::NODE_1703878289984[] PROGMEM = {
+	{{0, 1, L6, KEY_EQUAL}, {0x1dc5}},
+	{{1, 0, L1, KEY_RIGHT_BRACE}, {(uint16_t) NODE_1703878290384}},
+};
+
+const Node Compose::NODE_1703878290384[] PROGMEM = {
+	{{1, 1, L1, KEY_EQUAL}, {0x1dc8}},
+};
+
+const Node Compose::NODE_1703878290064[] PROGMEM = {
+	{{0, 1, L6, KEY_EQUAL}, {0x1dc7}},
+	{{1, 0, L1, KEY_EQUAL}, {(uint16_t) NODE_1703878290464}},
+};
+
+const Node Compose::NODE_1703878290464[] PROGMEM = {
+	{{1, 1, L1, KEY_RIGHT_BRACE}, {0x1dc9}},
+};
+
+const Node Compose::NODE_1703878332144[] PROGMEM = {
+	{{1, 1, L5, KEY_QUOTE}, {0x223}},
+};
+
+const Node Compose::NODE_1703878348944[] PROGMEM = {
+	{{1, 1, L3, KEY_H}, {0x241}},
+};
+
+const Node Compose::NODE_1703878351104[] PROGMEM = {
+	{{0, 1, L1, KEY_W}, {0x195}},
+	{{0, 1, L1, KEY_D}, {0x2135}},
+	{{0, 1, L1, KEY_N}, {0x2136}},
+	{{0, 1, L1, KEY_I}, {0x2137}},
+	{{1, 1, L1, KEY_SEMICOLON}, {0x2138}},
+};
+
+const Node Compose::NODE_1703878351184[] PROGMEM = {
+	{{0, 1, L2, KEY_QUOTE}, {0x1f7}},
+	{{1, 1, L1, KEY_QUOTE}, {0x1f7}},
+};
+
+const Node Compose::NODE_1703878351504[] PROGMEM = {
+	{{0, 1, L1, KEY_QUOTE}, {0x1bf}},
+	{{0, 0, L1, KEY_S}, {(uint16_t) NODE_1703878461936}},
+	{{0, 1, L1, KEY_V}, {0x2118}},
+	{{0, 1, L2, KEY_1}, {0xb0}},
+	{{0, 1, L3, KEY_PERIOD}, {0x2032}},
+	{{0, 1, L1, KEY_3}, {0x2034}},
+	{{0, 1, L1, KEYPAD_3}, {0x2034}},
+	{{0, 1, L1, KEY_4}, {0x2057}},
+	{{1, 1, L1, KEYPAD_4}, {0x2057}},
+};
+
+const Node Compose::NODE_1703878461936[] PROGMEM = {
+	{{1, 1, L1, KEY_SEMICOLON}, {0x21af}},
+};
+
+const Node Compose::NODE_1703878351824[] PROGMEM = {
+	{{1, 1, L1, KEY_I}, {0x21d}},
+};
+
+const Node Compose::NODE_1703878351904[] PROGMEM = {
+	{{0, 1, L1, KEY_3}, {0x221b}},
+	{{0, 1, L1, KEYPAD_3}, {0x221b}},
+	{{0, 1, L1, KEY_4}, {0x221c}},
+	{{1, 1, L1, KEYPAD_4}, {0x221c}},
+};
+
+const Node Compose::NODE_1703878352784[] PROGMEM = {
+	{{0, 1, L1, KEY_2}, {0x222c}},
+	{{0, 1, L6, KEY_S}, {0x222c}},
+	{{0, 1, L1, KEYPAD_2}, {0x222c}},
+	{{0, 1, L1, KEY_3}, {0x222d}},
+	{{0, 1, L1, KEYPAD_3}, {0x222d}},
+	{{0, 1, L1, KEY_4}, {0x2a0c}},
+	{{0, 1, L1, KEYPAD_4}, {0x2a0c}},
+	{{0, 1, L3, KEY_O}, {0x2a0e}},
+	{{1, 1, L1, KEYPAD_MULTIPLY}, {0x2a18}},
+};
+
+const Node Compose::NODE_1703878372064[] PROGMEM = {
+	{{0, 1, L1, KEY_PERIOD}, {0x2234}},
+	{{0, 1, L3, KEY_O}, {0x2265}},
+	{{0, 1, L3, KEY_I}, {0x226b}},
+	{{0, 1, L3, KEY_H}, {0x2a7c}},
+	{{0, 0, L3, KEY_RIGHT_BRACE}, {(uint16_t) NODE_1703878460016}},
+	{{1, 1, L3, KEY_L}, {0x291a}},
+};
+
+const Node Compose::NODE_1703878460016[] PROGMEM = {
+	{{1, 1, L3, KEY_RIGHT_BRACE}, {0x226f}},
+};
+
+const Node Compose::NODE_1703878372624[] PROGMEM = {
+	{{0, 1, L3, KEY_O}, {0x2245}},
+	{{0, 1, L3, KEY_V}, {0x2248}},
+	{{1, 0, L3, KEY_RIGHT_BRACE}, {(uint16_t) NODE_1703878438800}},
+};
+
+const Node Compose::NODE_1703878438800[] PROGMEM = {
+	{{1, 1, L3, KEY_RIGHT_BRACE}, {0x2241}},
+};
+
+const Node Compose::NODE_1703878394880[] PROGMEM = {
+	{{0, 1, L3, KEY_O}, {0x2257}},
+	{{0, 1, L2, KEY_R}, {0x2103}},
+	{{1, 1, L2, KEY_O}, {0x2109}},
+};
+
+const Node Compose::NODE_1703878395760[] PROGMEM = {
+	{{1, 1, L1, KEYPAD_SUBTRACT}, {0xb1}},
+};
+
+const Node Compose::NODE_1703878396000[] PROGMEM = {
+	{{0, 1, L1, KEYPAD_ADD}, {0x2213}},
+	{{1, 0, L1, KEY_V}, {(uint16_t) NODE_1703878519920}},
+};
+
+const Node Compose::NODE_1703878519920[] PROGMEM = {
+	{{1, 1, L1, KEY_U}, {0x210f}},
+};
+
+const Node Compose::NODE_1703878397840[] PROGMEM = {
+	{{0, 1, L3, KEY_W}, {0x22bb}},
+	{{1, 1, L6, KEY_2}, {0x22c1}},
+};
+
+const Node Compose::NODE_1703878410304[] PROGMEM = {
+	{{0, 1, L3, KEY_W}, {0x2a5f}},
+	{{1, 1, L6, KEY_3}, {0x22c0}},
+};
+
+const Node Compose::NODE_1703878410704[] PROGMEM = {
+	{{1, 1, L6, KEY_V}, {0x220f}},
+};
+
+const Node Compose::NODE_1703878411424[] PROGMEM = {
+	{{0, 1, L3, KEY_U}, {0x22b2}},
+	{{0, 1, L3, KEY_I}, {0x22b3}},
+	{{0, 1, L1, KEY_SPACE}, {0x2223}},
+	{{0, 1, L3, KEY_C}, {0x2016}},
+	{{0, 1, L3, KEY_L}, {0x22a2}},
+	{{0, 1, L3, KEY_O}, {0x22a8}},
+	{{0, 0, L1, KEYPAD_MULTIPLY}, {(uint16_t) NODE_1703878437360}},
+	{{0, 0, L3, KEY_RIGHT_BRACE}, {(uint16_t) NODE_1703878438400}},
+	{{0, 1, L3, KEY_T}, {0x2191}},
+	{{0, 0, L3, KEY_A}, {(uint16_t) NODE_1703878462176}},
+	{{0, 0, L3, KEY_S}, {(uint16_t) NODE_1703878462336}},
+	{{0, 1, L2, KEY_R}, {0x2102}},
+	{{0, 1, L2, KEY_U}, {0x210d}},
+	{{0, 1, L2, KEY_J}, {0x2115}},
+	{{0, 1, L2, KEY_V}, {0x2119}},
+	{{0, 1, L2, KEY_P}, {0x211a}},
+	{{0, 1, L2, KEY_K}, {0x211d}},
+	{{0, 1, L2, KEY_B}, {0x2124}},
+	{{0, 1, L5, KEY_I}, {0x213d}},
+	{{0, 1, L5, KEY_V}, {0x213c}},
+	{{0, 1, L6, KEY_V}, {0x213f}},
+	{{0, 1, L3, KEY_J}, {0x2985}},
+	{{0, 1, L3, KEY_K}, {0x2986}},
+	{{0, 1, L3, KEY_E}, {0x27e6}},
+	{{0, 1, L3, KEY_R}, {0x27e7}},
+	{{0, 1, L3, KEY_D}, {0x2983}},
+	{{1, 1, L3, KEY_F}, {0x2984}},
+};
+
+const Node Compose::NODE_1703878437360[] PROGMEM = {
+	{{0, 1, L3, KEY_C}, {0x22c8}},
+	{{1, 1, L1, KEY_SPACE}, {0x22c9}},
+};
+
+const Node Compose::NODE_1703878438400[] PROGMEM = {
+	{{1, 1, L3, KEY_RIGHT_BRACE}, {0x2224}},
+};
+
+const Node Compose::NODE_1703878462176[] PROGMEM = {
+	{{0, 1, L3, KEY_T}, {0x21d6}},
+	{{1, 1, L1, KEY_W}, {0x21d8}},
+};
+
+const Node Compose::NODE_1703878462336[] PROGMEM = {
+	{{0, 1, L3, KEY_T}, {0x21d7}},
+	{{1, 1, L1, KEY_W}, {0x21d9}},
+};
+
+const Node Compose::NODE_1703878411904[] PROGMEM = {
+	{{0, 1, L3, KEY_A}, {0x2216}},
+	{{0, 1, L3, KEY_T}, {0x2196}},
+	{{1, 1, L1, KEY_W}, {0x2198}},
+};
+
+const Node Compose::NODE_1703878435760[] PROGMEM = {
+	{{0, 1, L6, KEY_SEMICOLON}, {0x2a3b}},
+	{{0, 1, L6, KEY_S}, {0x2a18}},
+	{{0, 1, L1, KEYPAD_MULTIPLY}, {0x2a2f}},
+	{{1, 1, L3, KEY_C}, {0x22ca}},
+};
+
+const Node Compose::NODE_1703878495744[] PROGMEM = {
+	{{1, 0, L1, KEY_E}, {(uint16_t) NODE_1703878495904}},
+};
+
+const Node Compose::NODE_1703878495904[] PROGMEM = {
+	{{1, 1, L1, KEY_E}, {0x2113}},
+};
+
+const Node Compose::NODE_1703878518320[] PROGMEM = {
+	{{1, 1, L3, KEY_K}, {0x2986}},
+};
+
+const Node Compose::NODE_1703878518720[] PROGMEM = {
+	{{1, 1, L3, KEY_R}, {0x27e7}},
+};
+
+const Node Compose::NODE_1703878518960[] PROGMEM = {
+	{{1, 1, L3, KEY_D}, {0x2983}},
+};
+
+const Node Compose::NODE_1703878519280[] PROGMEM = {
+	{{1, 1, L3, KEY_F}, {0x2984}},
 };
 
 
