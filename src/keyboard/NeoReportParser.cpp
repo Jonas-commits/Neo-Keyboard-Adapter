@@ -406,11 +406,8 @@ void NeoReportParser::OnKeyDown(uint8_t mod, uint8_t key) {
 			} else {
 				uint16_t result  = compose.transition(layer, key);
 				if(result == 0){
-					//not found, write X to indicate
-					const InputSequence sq = {L1, KEY_X};
-					substitutePress(sq);
 					composeState = false;
-			
+					
 				} else if (result > 1) { //result == 1: just remain, nothing to do
 					// we got a result
 					pressUnicode(result);
