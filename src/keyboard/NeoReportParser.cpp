@@ -350,10 +350,7 @@ const uint8_t NeoReportParser::L4Shift_Map[] = {
 };
 
 void NeoReportParser::OnKeyDown(uint8_t mod, uint8_t key) {
-	//uint32_t dt;
-	//uint32_t t;
-	//t = millis();
-	
+
 	//Use left windows key to change behavior of our driver
 	if (neoModifiers.bmLeftGUI) {
 		leftGuiSinglePress = false; //Host will never know we pressed something :)
@@ -410,8 +407,8 @@ void NeoReportParser::OnKeyDown(uint8_t mod, uint8_t key) {
 				uint16_t result  = compose.transition(layer, key);
 				if(result == 0){
 					//not found, write X to indicate
-					const static InputSequence sq PROGMEM = {L1, KEY_X};
-					substitutePress(&sq, 0);
+					const InputSequence sq = {L1, KEY_X};
+					substitutePress(sq);
 					composeState = false;
 			
 				} else if (result > 1) { //result == 1: just remain, nothing to do
@@ -448,16 +445,16 @@ void NeoReportParser::OnKeyDown(uint8_t mod, uint8_t key) {
 						Keyboard.press(KeyboardKeycode(neoMap[key]));
 							
 					} else {
-						substitutePress(neoMapL2, key - KEY_Z - 1);
+						substitutePress(const_cast<InputSequence*>(neoMapL2), key - KEY_Z - 1);
 					}
 					break;
 					
 				case L3:
-						substitutePress(neoMapL3, key);
+						substitutePress(const_cast<InputSequence*>(neoMapL3), key);
 					break;
 					
 				case L4:
-					substitutePress(neoMapL4, key);
+					substitutePress(const_cast<InputSequence*>(neoMapL4), key);
 					break;
 				
 				case L4_SHIFT:
@@ -473,11 +470,11 @@ void NeoReportParser::OnKeyDown(uint8_t mod, uint8_t key) {
 					break;
 					
 				case L5:
-					substitutePress(neoMapL5, key);
+					substitutePress(const_cast<uint16_t*>(neoMapL5), key);
 					break;
 					
 				case L6:
-					substitutePress(neoMapL6, key);
+					substitutePress(const_cast<uint16_t*>(neoMapL6), key);
 					break;
 			}
 		}
@@ -486,8 +483,6 @@ void NeoReportParser::OnKeyDown(uint8_t mod, uint8_t key) {
 		Keyboard.press(KeyboardKeycode(key));
 	}
 		
-	//dt = millis() - t;
-	
 }
 
 void NeoReportParser::OnKeyUp(uint8_t mod, uint8_t key) {
@@ -665,7 +660,7 @@ void NeoReportParser::substitutePress(const InputSequence &sq){
 		
 		} else if (sq.modifier == KEY_CONSUMER) {
 		Consumer.releaseAll();
-		Consumer.press(sq.key);
+		Consumer.press(ConsumerKeycode(sq.key));
 		activeConsumerSequence = true;
 		
 		} else {
