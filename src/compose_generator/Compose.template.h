@@ -13,12 +13,12 @@
 */
 
 struct Node {
-    struct {
-        uint8_t isLastElement : 1;
-        uint8_t isLeaf : 1;
-        uint8_t layer : 6;
-        uint8_t keycode : 8;
-    } layeredKey;
+	struct {
+		uint8_t isLastElement : 1;
+		uint8_t isLeaf : 1;
+		uint8_t layer : 6;
+		uint8_t keycode : 8;
+	} layeredKey;
 	union {
 		uint16_t unicode;
 		Node* nodes;
