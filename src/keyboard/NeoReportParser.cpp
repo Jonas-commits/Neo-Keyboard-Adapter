@@ -493,7 +493,7 @@ void NeoReportParser::OnKeyUp(uint8_t mod, uint8_t key) {
 			Consumer.releaseAll();
 		}
 		
-		if(!activeSequence.isNull()){ //release active holds from substitution
+		if(!(activeSequence.key == 0 && activeSequence.modifier == 0)){ //release active holds from substitution
 			Keyboard.release(KeyboardKeycode(activeSequence.key));
 			
 			if (kbdLockingKeys.kbdLeds.bmCapsLock &&
