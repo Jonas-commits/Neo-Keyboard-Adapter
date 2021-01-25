@@ -119,6 +119,7 @@ NEO_MAP = {
     'space': 'L1, KEY_SPACE',
     'ellipsis': 'L3, KEY_Q',
     'underscore': 'L3, KEY_W',
+    'underbar': 'L3, KEY_W',
     'rightsinglequotemark': 'L3, KEY_0',
     'comma': 'L1, KEY_COMMA',
     'period': 'L1, KEY_PERIOD',
@@ -174,12 +175,32 @@ NEO_MAP = {
     'multiply': 'L3, KEY_G',
     'plus': 'L3, KEY_N',
     'KP_Add': 'L3, KEY_N',
-    'KP_Subtract': 'L3, KEY_MINUS',
+    'KP_Subtract': 'L1, KEY_MINUS',
     'radical': 'L6, KEY_W',
     'integral': 'L6, KEY_S',
     'degree': 'L2, KEY_1',
     'braceleft': 'L3, KEY_D',
     'braceright': 'L3, KEY_F',
+    'KP_Equal': 'L3, KEY_O',
+    'plusminus': 'L3, KEYPAD_ADD',
+    'elementof': 'L6, KEY_G',
+    'union': 'L6, KEY_Z',
+    'intersection': 'L6, KEY_X',
+    'Greek_SIGMA': 'L6, KEY_H',
+    'ampersand': 'L3, KEY_P',
+    'rightarrow': 'L3, KEYPAD_6',
+    'leftarrow': 'L3, KEYPAD_4',
+    'uparrow': 'L3, KEYPAD_8',
+    'downarrow': 'L3, KEYPAD_2',
+    'includein': 'L6, KEY_A',
+    'Greek_delta': 'L5, KEY_SEMICOLON',
+    'Greek_theta': 'L5, KEY_SLASH',
+    'Greek_rho': 'L5, KEY_K',
+    'Greek_chi': 'L5, KEY_R',
+    'Greek_eta': 'L5, KEY_C',
+    'approxeq': 'L5, KEY_NUM_LOCK',
+    'emdash': 'L1, KEY_MINUS',
+    'endash': 'L1, KEY_MINUS',
 }
 
 
@@ -290,6 +311,9 @@ def main():
 
     print('===dead_keys.module===')
     parse('dead_keys.module')
+
+    print('===dead_greek.module===')
+    parse('dead_greek.module')
 
     print('===misc.module===')
     parse('misc.module')

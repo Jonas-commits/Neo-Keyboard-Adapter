@@ -23,6 +23,7 @@ const LayeredKey Compose::aliases[][2] {
 	{{L1, KEYPAD_DIVIDE}, {L3, KEY_S}},
 	{{L1, KEYPAD_MULTIPLY}, {L3, KEY_G}},
 	{{L1, KEYPAD_ADD}, {L3, KEY_N}},
+	{{L3, KEY_NUM_LOCK}, {L3, KEY_O}},
 };
 
 LayeredKey Compose::getAlias(uint8_t layer, uint8_t key) {

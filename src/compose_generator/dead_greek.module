@@ -1,0 +1,85 @@
+<dead_psili> <Greek_alpha>        	: "ἀ"   U1F00 # GREEK SMALL LETTER ALPHA WITH PSILI
+<dead_dasia> <Greek_alpha>        	: "ἁ"   U1F01 # GREEK SMALL LETTER ALPHA WITH DASIA
+<dead_grave> <dead_psili> <Greek_alpha> 	: "ἂ"   U1F02 # GREEK SMALL LETTER ALPHA WITH PSILI AND VARIA
+<dead_grave> <dead_dasia> <Greek_alpha> 	: "ἃ"   U1F03 # GREEK SMALL LETTER ALPHA WITH DASIA AND VARIA
+<dead_acute> <dead_psili> <Greek_alpha> 	: "ἄ"   U1F04 # GREEK SMALL LETTER ALPHA WITH PSILI AND OXIA
+<dead_acute> <dead_dasia> <Greek_alpha> 	: "ἅ"   U1F05 # GREEK SMALL LETTER ALPHA WITH DASIA AND OXIA
+<dead_tilde> <dead_psili> <Greek_alpha> 	: "ἆ"   U1F06 # GREEK SMALL LETTER ALPHA WITH PSILI AND PERISPOMENI
+<dead_tilde> <dead_dasia> <Greek_alpha> 	: "ἇ"   U1F07 # GREEK SMALL LETTER ALPHA WITH DASIA AND PERISPOMENI
+<dead_psili> <Greek_epsilon>      	: "ἐ"   U1F10 # GREEK SMALL LETTER EPSILON WITH PSILI
+<dead_dasia> <Greek_epsilon>      	: "ἑ"   U1F11 # GREEK SMALL LETTER EPSILON WITH DASIA
+<dead_grave> <dead_psili> <Greek_epsilon> 	: "ἒ"   U1F12 # GREEK SMALL LETTER EPSILON WITH PSILI AND VARIA
+<dead_grave> <dead_dasia> <Greek_epsilon> 	: "ἓ"   U1F13 # GREEK SMALL LETTER EPSILON WITH DASIA AND VARIA
+<dead_acute> <dead_psili> <Greek_epsilon> 	: "ἔ"   U1F14 # GREEK SMALL LETTER EPSILON WITH PSILI AND OXIA
+<dead_acute> <dead_dasia> <Greek_epsilon> 	: "ἕ"   U1F15 # GREEK SMALL LETTER EPSILON WITH DASIA AND OXIA
+<dead_psili> <Greek_eta>          	: "ἠ"   U1F20 # GREEK SMALL LETTER ETA WITH PSILI
+<dead_dasia> <Greek_eta>          	: "ἡ"   U1F21 # GREEK SMALL LETTER ETA WITH DASIA
+<dead_grave> <dead_psili> <Greek_eta> 	: "ἢ"   U1F22 # GREEK SMALL LETTER ETA WITH PSILI AND VARIA
+<dead_grave> <dead_dasia> <Greek_eta> 	: "ἣ"   U1F23 # GREEK SMALL LETTER ETA WITH DASIA AND VARIA
+<dead_acute> <dead_psili> <Greek_eta> 	: "ἤ"   U1F24 # GREEK SMALL LETTER ETA WITH PSILI AND OXIA
+<dead_acute> <dead_dasia> <Greek_eta> 	: "ἥ"   U1F25 # GREEK SMALL LETTER ETA WITH DASIA AND OXIA
+<dead_tilde> <dead_psili> <Greek_eta> 	: "ἦ"   U1F26 # GREEK SMALL LETTER ETA WITH PSILI AND PERISPOMENI
+<dead_tilde> <dead_dasia> <Greek_eta> 	: "ἧ"   U1F27 # GREEK SMALL LETTER ETA WITH DASIA AND PERISPOMENI
+<dead_psili> <Greek_iota>         	: "ἰ"   U1F30 # GREEK SMALL LETTER IOTA WITH PSILI
+<dead_dasia> <Greek_iota>         	: "ἱ"   U1F31 # GREEK SMALL LETTER IOTA WITH DASIA
+<dead_grave> <dead_psili> <Greek_iota> 	: "ἲ"   U1F32 # GREEK SMALL LETTER IOTA WITH PSILI AND VARIA
+<dead_grave> <dead_dasia> <Greek_iota> 	: "ἳ"   U1F33 # GREEK SMALL LETTER IOTA WITH DASIA AND VARIA
+<dead_acute> <dead_psili> <Greek_iota> 	: "ἴ"   U1F34 # GREEK SMALL LETTER IOTA WITH PSILI AND OXIA
+<dead_acute> <dead_dasia> <Greek_iota> 	: "ἵ"   U1F35 # GREEK SMALL LETTER IOTA WITH DASIA AND OXIA
+<dead_tilde> <dead_psili> <Greek_iota> 	: "ἶ"   U1F36 # GREEK SMALL LETTER IOTA WITH PSILI AND PERISPOMENI
+<dead_tilde> <dead_dasia> <Greek_iota> 	: "ἷ"   U1F37 # GREEK SMALL LETTER IOTA WITH DASIA AND PERISPOMENI
+<dead_psili> <Greek_omicron>      	: "ὀ"   U1F40 # GREEK SMALL LETTER OMICRON WITH PSILI
+<dead_dasia> <Greek_omicron>      	: "ὁ"   U1F41 # GREEK SMALL LETTER OMICRON WITH DASIA
+<dead_grave> <dead_psili> <Greek_omicron> 	: "ὂ"   U1F42 # GREEK SMALL LETTER OMICRON WITH PSILI AND VARIA
+<dead_grave> <dead_dasia> <Greek_omicron> 	: "ὃ"   U1F43 # GREEK SMALL LETTER OMICRON WITH DASIA AND VARIA
+<dead_acute> <dead_psili> <Greek_omicron> 	: "ὄ"   U1F44 # GREEK SMALL LETTER OMICRON WITH PSILI AND OXIA
+<dead_acute> <dead_dasia> <Greek_omicron> 	: "ὅ"   U1F45 # GREEK SMALL LETTER OMICRON WITH DASIA AND OXIA
+<dead_psili> <Greek_upsilon>      	: "ὐ"   U1F50 # GREEK SMALL LETTER UPSILON WITH PSILI
+<dead_dasia> <Greek_upsilon>      	: "ὑ"   U1F51 # GREEK SMALL LETTER UPSILON WITH DASIA
+<dead_grave> <dead_psili> <Greek_upsilon> 	: "ὒ"   U1F52 # GREEK SMALL LETTER UPSILON WITH PSILI AND VARIA
+<dead_grave> <dead_dasia> <Greek_upsilon> 	: "ὓ"   U1F53 # GREEK SMALL LETTER UPSILON WITH DASIA AND VARIA
+<dead_acute> <dead_psili> <Greek_upsilon> 	: "ὔ"   U1F54 # GREEK SMALL LETTER UPSILON WITH PSILI AND OXIA
+<dead_acute> <dead_dasia> <Greek_upsilon> 	: "ὕ"   U1F55 # GREEK SMALL LETTER UPSILON WITH DASIA AND OXIA
+<dead_tilde> <dead_psili> <Greek_upsilon> 	: "ὖ"   U1F56 # GREEK SMALL LETTER UPSILON WITH PSILI AND PERISPOMENI
+<dead_tilde> <dead_dasia> <Greek_upsilon> 	: "ὗ"   U1F57 # GREEK SMALL LETTER UPSILON WITH DASIA AND PERISPOMENI
+<dead_psili> <Greek_omega>        	: "ὠ"   U1F60 # GREEK SMALL LETTER OMEGA WITH PSILI
+<dead_dasia> <Greek_omega>        	: "ὡ"   U1F61 # GREEK SMALL LETTER OMEGA WITH DASIA
+<dead_grave> <dead_psili> <Greek_omega> 	: "ὢ"   U1F62 # GREEK SMALL LETTER OMEGA WITH PSILI AND VARIA
+<dead_grave> <dead_dasia> <Greek_omega> 	: "ὣ"   U1F63 # GREEK SMALL LETTER OMEGA WITH DASIA AND VARIA
+<dead_acute> <dead_psili> <Greek_omega> 	: "ὤ"   U1F64 # GREEK SMALL LETTER OMEGA WITH PSILI AND OXIA
+<dead_acute> <dead_dasia> <Greek_omega> 	: "ὥ"   U1F65 # GREEK SMALL LETTER OMEGA WITH DASIA AND OXIA
+<dead_tilde> <dead_psili> <Greek_omega> 	: "ὦ"   U1F66 # GREEK SMALL LETTER OMEGA WITH PSILI AND PERISPOMENI
+<dead_tilde> <dead_dasia> <Greek_omega> 	: "ὧ"   U1F67 # GREEK SMALL LETTER OMEGA WITH DASIA AND PERISPOMENI
+<dead_psili> <Greek_OMEGA>        	: "Ὠ"   U1F68 # GREEK CAPITAL LETTER OMEGA WITH PSILI
+<dead_dasia> <Greek_OMEGA>        	: "Ὡ"   U1F69 # GREEK CAPITAL LETTER OMEGA WITH DASIA
+<dead_grave> <dead_psili> <Greek_OMEGA> 	: "Ὢ"   U1F6A # GREEK CAPITAL LETTER OMEGA WITH PSILI AND VARIA
+<dead_grave> <dead_dasia> <Greek_OMEGA> 	: "Ὣ"   U1F6B # GREEK CAPITAL LETTER OMEGA WITH DASIA AND VARIA
+<dead_acute> <dead_psili> <Greek_OMEGA> 	: "Ὤ"   U1F6C # GREEK CAPITAL LETTER OMEGA WITH PSILI AND OXIA
+<dead_acute> <dead_dasia> <Greek_OMEGA> 	: "Ὥ"   U1F6D # GREEK CAPITAL LETTER OMEGA WITH DASIA AND OXIA
+<dead_tilde> <dead_psili> <Greek_OMEGA> 	: "Ὦ"   U1F6E # GREEK CAPITAL LETTER OMEGA WITH PSILI AND PERISPOMENI
+<dead_tilde> <dead_dasia> <Greek_OMEGA> 	: "Ὧ"   U1F6F # GREEK CAPITAL LETTER OMEGA WITH DASIA AND PERISPOMENI
+<dead_grave> <Greek_alpha>       	: "ὰ"   U1F70 # GREEK SMALL LETTER ALPHA WITH VARIA
+<dead_grave> <Greek_epsilon>     	: "ὲ"   U1F72 # GREEK SMALL LETTER EPSILON WITH VARIA
+<dead_grave> <Greek_eta>         	: "ὴ"   U1F74 # GREEK SMALL LETTER ETA WITH VARIA
+<dead_grave> <Greek_iota>        	: "ὶ"   U1F76 # GREEK SMALL LETTER IOTA WITH VARIA
+<dead_grave> <Greek_omicron>     	: "ὸ"   U1F78 # GREEK SMALL LETTER OMICRON WITH VARIA
+<dead_grave> <Greek_upsilon>     	: "ὺ"   U1F7A # GREEK SMALL LETTER UPSILON WITH VARIA
+<dead_grave> <Greek_omega>       	: "ὼ"   U1F7C # GREEK SMALL LETTER OMEGA WITH VARIA
+<dead_breve> <Greek_alpha>       	: "ᾰ"   U1FB0 # GREEK SMALL LETTER ALPHA WITH VRACHY
+<dead_macron> <Greek_alpha>      	: "ᾱ"   U1FB1 # GREEK SMALL LETTER ALPHA WITH MACRON
+<dead_tilde> <Greek_alpha>       	: "ᾶ"   U1FB6 # GREEK SMALL LETTER ALPHA WITH PERISPOMENI
+<dead_tilde> <Greek_eta>         	: "ῆ"   U1FC6 # GREEK SMALL LETTER ETA WITH PERISPOMENI
+<dead_breve> <Greek_iota>        	: "ῐ"   U1FD0 # GREEK SMALL LETTER IOTA WITH VRACHY
+<dead_macron> <Greek_iota>       	: "ῑ"   U1FD1 # GREEK SMALL LETTER IOTA WITH MACRON
+<dead_grave> <dead_diaeresis> <Greek_iota> 	: "ῒ"   U1FD2 # GREEK SMALL LETTER IOTA WITH DIALYTIKA AND VARIA
+<dead_tilde> <Greek_iota>        	: "ῖ"   U1FD6 # GREEK SMALL LETTER IOTA WITH PERISPOMENI
+<dead_tilde> <dead_diaeresis> <Greek_iota> 	: "ῗ"   U1FD7 # GREEK SMALL LETTER IOTA WITH DIALYTIKA AND PERISPOMENI
+<dead_breve> <Greek_upsilon>     	: "ῠ"   U1FE0 # GREEK SMALL LETTER UPSILON WITH VRACHY
+<dead_macron> <Greek_upsilon>    	: "ῡ"   U1FE1 # GREEK SMALL LETTER UPSILON WITH MACRON
+<dead_grave> <dead_diaeresis> <Greek_upsilon> 	: "ῢ"   U1FE2 # GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND VARIA
+<dead_psili> <Greek_rho>          	: "ῤ"   U1FE4 # GREEK SMALL LETTER RHO WITH PSILI
+<dead_dasia> <Greek_rho>          	: "ῥ"   U1FE5 # GREEK SMALL LETTER RHO WITH DASIA
+<dead_tilde> <Greek_upsilon>     	: "ῦ"   U1FE6 # GREEK SMALL LETTER UPSILON WITH PERISPOMENI
+<dead_tilde> <dead_diaeresis> <Greek_upsilon> 	: "ῧ"   U1FE7 # GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND PERISPOMENI
+<dead_tilde> <Greek_omega>       	: "ῶ"   U1FF6 # GREEK SMALL LETTER OMEGA WITH PERISPOMENI
+<dead_grave> <Greek_OMEGA>       	: "Ὼ"   U1FFA # GREEK CAPITAL LETTER OMEGA WITH VARIA

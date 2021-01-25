@@ -1,9 +1,25 @@
 #most of the stuff from en_US.UTF-8.module
 
+<Multi_key> <o> <c>              	: "©"   copyright # COPYRIGHT SIGN
+<Multi_key> <o> <C>              	: "©"   copyright # COPYRIGHT SIGN
+<Multi_key> <O> <c>              	: "©"   copyright # COPYRIGHT SIGN
+<Multi_key> <O> <C>              	: "©"   copyright # COPYRIGHT SIGN
+<Multi_key> <C> <o> 			: "©"   copyright # COPYRIGHT SIGN
+<Multi_key> <C> <O> 			: "©"   copyright # COPYRIGHT SIGN
+
+<Multi_key> <o> <r>              	: "®"   registered # REGISTERED SIGN
+<Multi_key> <o> <R>              	: "®"   registered # REGISTERED SIGN
+<Multi_key> <O> <r>              	: "®"   registered # REGISTERED SIGN
+<Multi_key> <O> <R>              	: "®"   registered # REGISTERED SIGN
+<Multi_key> <R> <o> 			: "®"   registered # REGISTERED SIGN
+<Multi_key> <R> <O> 			: "®"   registered # REGISTERED SIGN
+
 <Multi_key> <plus> <minus>       	: "±"   plusminus # PLUS-MINUS SIGN
 <Multi_key> <minus> <plus> 		: "±"   plusminus # PLUS-MINUS SIGN
 <Multi_key> <p> <exclam>         	: "¶"   paragraph # PILCROW SIGN
 <Multi_key> <P> <exclam>         	: "¶"   paragraph # PILCROW SIGN
+
+<Multi_key> <less> <3>                  : "♥"   U2665 # BLACK HEART SUIT
 
 <Multi_key> <exclam> <exclam>    	: "¡"   exclamdown # INVERTED EXCLAMATION MARK
 <Multi_key> <question> <question> 	: "¿"   questiondown # INVERTED QUESTION MARK
