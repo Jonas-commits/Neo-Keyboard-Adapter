@@ -201,6 +201,9 @@ NEO_MAP = {
     'approxeq': 'L5, KEY_NUM_LOCK',
     'emdash': 'L1, KEY_MINUS',
     'endash': 'L1, KEY_MINUS',
+    'includedin' : 'L6, KEY_A',
+    'numbersign' : 'L3, KEY_Z',
+    'asterisk' : 'L3, KEY_G',
 }
 
 

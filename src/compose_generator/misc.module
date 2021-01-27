@@ -24,6 +24,138 @@
 <Multi_key> <exclam> <exclam>    	: "¡"   exclamdown # INVERTED EXCLAMATION MARK
 <Multi_key> <question> <question> 	: "¿"   questiondown # INVERTED QUESTION MARK
 
+# Currencies
+<Multi_key> <C> <E>              	: "₠"   U20a0 # EURO-CURRENCY SIGN
+<Multi_key> <C> <slash>          	: "₡"   U20a1 # COLON SIGN
+<Multi_key> <slash> <C>          	: "₡"   U20a1 # COLON SIGN
+<Multi_key> <C> <r>              	: "₢"   U20a2 # CRUZEIRO SIGN
+<Multi_key> <F> <r>              	: "₣"   U20a3 # FRENCH FRANC SIGN
+<Multi_key> <L> <equal>          	: "₤"   U20a4 # LIRA SIGN
+<Multi_key> <equal> <L>          	: "₤"   U20a4 # LIRA SIGN
+<Multi_key> <m> <slash>          	: "₥"   U20a5 # MILL SIGN
+<Multi_key> <slash> <m>          	: "₥"   U20a5 # MILL SIGN
+<Multi_key> <N> <equal>          	: "₦"   U20a6 # NAIRA SIGN
+<Multi_key> <equal> <N>          	: "₦"   U20a6 # NAIRA SIGN
+<Multi_key> <P> <t>              	: "₧"   U20a7 # PESETA SIGN
+<Multi_key> <R> <s>              	: "₨"   U20a8 # RUPEE SIGN
+<Multi_key> <W> <equal>          	: "₩"   U20a9 # WON SIGN
+<Multi_key> <equal> <W>          	: "₩"   U20a9 # WON SIGN
+# "₪" U20aa NEW SHEQEL SIGN
+<Multi_key> <d> <equal>          	: "₫"   U20ab # DONG SIGN
+<Multi_key> <equal> <d>          	: "₫"   U20ab # DONG SIGN
+<Multi_key> <C> <equal>          	: "€"   EuroSign # EURO SIGN
+<Multi_key> <equal> <C>          	: "€"   EuroSign # EURO SIGN
+<Multi_key> <c> <equal>          	: "€"   EuroSign # EURO SIGN
+<Multi_key> <equal> <c>          	: "€"   EuroSign # EURO SIGN
+<Multi_key> <E> <equal>          	: "€"   EuroSign # EURO SIGN
+<Multi_key> <equal> <E>          	: "€"   EuroSign # EURO SIGN
+<Multi_key> <e> <equal>          	: "€"   EuroSign # EURO SIGN
+<Multi_key> <equal> <e>          	: "€"   EuroSign # EURO SIGN
+<Multi_key> <Cyrillic_ES> <equal>	: "€"   EuroSign # EURO SIGN
+<Multi_key> <equal> <Cyrillic_ES>	: "€"   EuroSign # EURO SIGN
+<Multi_key> <Cyrillic_IE> <equal>	: "€"   EuroSign # EURO SIGN
+<Multi_key> <equal> <Cyrillic_IE>	: "€"   EuroSign # EURO SIGN
+<Multi_key> <P> <equal>          	: "₽"   U20bd # ROUBLE SIGN
+<Multi_key> <p> <equal>          	: "₽"   U20bd # ROUBLE SIGN
+<Multi_key> <equal> <P>          	: "₽"   U20bd # ROUBLE SIGN
+<Multi_key> <equal> <p>          	: "₽"   U20bd # ROUBLE SIGN
+<Multi_key> <Cyrillic_ZE> <equal>	: "₽"   U20bd # ROUBLE SIGN
+<Multi_key> <Cyrillic_ze> <equal>	: "₽"   U20bd # ROUBLE SIGN
+<Multi_key> <equal> <Cyrillic_ZE>	: "₽"   U20bd # ROUBLE SIGN
+<Multi_key> <equal> <Cyrillic_ze>	: "₽"   U20bd # ROUBLE SIGN
+# "₭" U20ad KIP SIGN
+# "₮" U20ae TUGRIK SIGN
+# "₯" U20af DRACHMA SIGN
+# "₰" U20b0 GERMAN PENNY SIGN
+# "₱" U20b1 PESO SIGN
+# "₲" U20b2 GUARANI SIGN
+# "₳" U20b3 AUSTRAL SIGN
+# "₴" U20b4 HRYVNIA SIGN
+# "₵" U20b5 CEDI SIGN
+<Multi_key> <R> <equal>          	: "₹" U20b9 # INDIAN RUPEE SIGN
+<Multi_key> <equal> <R>          	: "₹" U20b9 # INDIAN RUPEE SIGN
+<Multi_key> <r> <equal>          	: "₹" U20b9 # INDIAN RUPEE SIGN
+<Multi_key> <equal> <r>          	: "₹" U20b9 # INDIAN RUPEE SIGN
+
+<Multi_key> <C> <bar>            	: "¢"   cent # CENT SIGN
+<Multi_key> <bar> <C>			: "¢"   cent # CENT SIGN
+<Multi_key> <c> <bar>            	: "¢"   cent # CENT SIGN
+<Multi_key> <bar> <c>			: "¢"   cent # CENT SIGN
+<Multi_key> <c> <slash>          	: "¢"   cent # CENT SIGN
+<Multi_key> <slash> <c>          	: "¢"   cent # CENT SIGN
+<Multi_key> <L> <minus>          	: "£"   sterling # POUND SIGN
+<Multi_key> <minus> <L>          	: "£"   sterling # POUND SIGN
+<Multi_key> <l> <minus> 		: "£"   sterling # POUND SIGN
+<Multi_key> <minus> <l>          	: "£"   sterling # POUND SIGN
+<Multi_key> <Y> <equal>          	: "¥"   yen # YEN SIGN
+<Multi_key> <equal> <Y>          	: "¥"   yen # YEN SIGN
+<Multi_key> <y> <equal> 		: "¥"   yen # YEN SIGN
+<Multi_key> <equal> <y>          	: "¥"   yen # YEN SIGN
+<Multi_key> <Y> <minus> 		: "¥"   yen # YEN SIGN
+<Multi_key> <minus> <Y> 		: "¥"   yen # YEN SIGN
+<Multi_key> <y> <minus> 		: "¥"   yen # YEN SIGN
+<Multi_key> <minus> <y> 		: "¥"   yen # YEN SIGN
+
+# Long S
+<Multi_key> <f> <s>              	: "ſ"   U017f # LATIN SMALL LETTER LONG S
+<Multi_key> <f> <S>              	: "ſ"   U017f # LATIN SMALL LETTER LONG S
+<dead_abovedot> <Multi_key> <f> <s>	: "ẛ"   U1e9b # LATIN SMALL LETTER LONG S WITH DOT ABOVE
+<Multi_key> <dead_abovedot> <f> <s>	: "ẛ"   U1e9b # LATIN SMALL LETTER LONG S WITH DOT ABOVE
+
+# Dashes
+<Multi_key> <minus> <minus> <period> 	: "–"   U2013 # EN DASH
+<Multi_key> <minus> <minus> <minus> 	: "—"   U2014 # EM DASH
+
+# Musical alterations
+<Multi_key> <numbersign> <q>    	: "♩"   U2669 # QUARTER NOTE
+<Multi_key> <numbersign> <e>    	: "♪"   U266a # EIGHTH NOTE
+<Multi_key> <numbersign> <E>    	: "♫"   U266b # BEAMED EIGHTH NOTES
+<Multi_key> <numbersign> <S>    	: "♬"   U266c # BEAMED SIXTEENTH NOTES
+<Multi_key> <numbersign> <b>     	: "♭"   U266d # MUSIC FLAT SIGN
+<Multi_key> <numbersign> <f>     	: "♮"   U266e # MUSIC NATURAL SIGN
+<Multi_key> <numbersign> <numbersign> 	: "♯"   U266f # MUSIC SHARP SIGN
+
+# Other symbols
+<Multi_key> <s> <o>              	: "§"   section # SECTION SIGN
+<Multi_key> <o> <s>              	: "§"   section # SECTION SIGN
+<Multi_key> <S> <O> 			: "§"   section # SECTION SIGN
+<Multi_key> <O> <S> 			: "§"   section # SECTION SIGN
+<Multi_key> <s> <exclam> 		: "§"   section # SECTION SIGN
+<Multi_key> <S> <exclam> 		: "§"   section # SECTION SIGN
+<Multi_key> <Cyrillic_pe> <Cyrillic_a>	: "§"   section # SECTION SIGN
+
+<Multi_key> <o> <x>              	: "¤"   currency # CURRENCY SIGN
+<Multi_key> <x> <o>              	: "¤"   currency # CURRENCY SIGN
+<Multi_key> <o> <X> 			: "¤"   currency # CURRENCY SIGN
+<Multi_key> <X> <o> 			: "¤"   currency # CURRENCY SIGN
+<Multi_key> <O> <X> 			: "¤"   currency # CURRENCY SIGN
+<Multi_key> <X> <O> 			: "¤"   currency # CURRENCY SIGN
+<Multi_key> <O> <x> 			: "¤"   currency # CURRENCY SIGN
+<Multi_key> <x> <O> 			: "¤"   currency # CURRENCY SIGN
+
+<Multi_key> <P> <P>              	: "¶"   paragraph # PILCROW SIGN
+
+<Multi_key> <N> <o>			: "№" numerosign # NUMERO SIGN
+<Multi_key> <N> <O>			: "№" numerosign # NUMERO SIGN
+<Multi_key> <Cyrillic_EN> <Cyrillic_o>	: "№" numerosign # NUMERO SIGN
+<Multi_key> <Cyrillic_EN> <Cyrillic_O>	: "№" numerosign # NUMERO SIGN
+
+<Multi_key> <question> <exclam>         : "⸘"   U2E18 # INVERTED INTERROBANG
+<Multi_key> <exclam> <question>         : "‽"   U203D # INTERROBANG
+
+<Multi_key> <C> <C> <C> <P>             : "☭"   U262D # HAMMER AND SICKLE
+<Multi_key> <O> <A>                     : "Ⓐ"   U24B6 # CIRCLED LATIN CAPITAL LETTER A
+
+
+<Multi_key> <colon> <parenright>        : "☺"   U263A # WHITE SMILING FACE
+<Multi_key> <colon> <parenleft>         : "☹"   U2639 # WHITE FROWNING FACE
+<Multi_key> <backslash> <o> <slash>		: "🙌"		# PERSON RAISING BOTH HANDS IN CELEBRATION
+
+<Multi_key> <p> <o> <o>                 : "💩"  U1F4A9 # PILE OF POO
+
+<Multi_key> <F> <U>                     : "🖕"  U1F595 # REVERSED HAND WITH MIDDLE FINGER EXTENDED
+<Multi_key> <L> <L> <A> <P>             : "🖖"  U1F596 # RAISED HAND WITH PART BETWEEN MIDDLE AND RING FINGERS
+
 <Multi_key> <s> <s>              	: "ß"   ssharp # LATIN SMALL LETTER SHARP S
 <Multi_key> <S> <S>              	: "ẞ"   U1e9e # LATIN CAPITAL LETTER SHARP S
 <Multi_key> <o> <e>              	: "œ"   oe # LATIN SMALL LIGATURE OE
@@ -144,3 +276,20 @@
 <Multi_key> <underscore> <equal> 	: "₌"   U208C # SUBSCRIPT EQUALS SIGN
 <Multi_key> <underscore> <parenleft> 	: "₍"   U208D # SUBSCRIPT LEFT PARENTHESIS
 <Multi_key> <underscore> <parenright> 	: "₎"   U208E # SUBSCRIPT RIGHT PARENTHESIS
+
+
+<dead_circumflex> <Multi_key> <S> <M> 	: "℠"   U2120 # SERVICE MARK
+<Multi_key> <S> <M>		 	: "℠"   U2120 # SERVICE MARK
+<dead_circumflex> <Multi_key> <s> <M> 	: "℠"   U2120 # SERVICE MARK
+<Multi_key> <s> <M>		 	: "℠"   U2120 # SERVICE MARK
+<dead_circumflex> <Multi_key> <S> <m> 	: "℠"   U2120 # SERVICE MARK
+<Multi_key> <S> <m>		 	: "℠"   U2120 # SERVICE MARK
+<dead_circumflex> <Multi_key> <s> <m> 	: "℠"   U2120 # SERVICE MARK
+<Multi_key> <s> <m>		 	: "℠"   U2120 # SERVICE MARK
+<dead_circumflex> <Multi_key> <T> <M> 	: "™"   U2122 # TRADE MARK SIGN
+<Multi_key> <T> <M>		 	: "™"   U2122 # TRADE MARK SIGN
+<dead_circumflex> <Multi_key> <t> <M> 	: "™"   U2122 # TRADE MARK SIGN
+<Multi_key> <t> <M>		 	: "™"   U2122 # TRADE MARK SIGN
+<dead_circumflex> <Multi_key> <T> <m> 	: "™"   U2122 # TRADE MARK SIGN
+<Multi_key> <T> <m>		 	: "™"   U2122 # TRADE MARK SIGN
+<dead_circumflex> <Multi_key> <t> <m> 	: "™"   U2122 # TRADE MARK SIGN

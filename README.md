@@ -14,11 +14,11 @@ This project can also be modified for other Keyboard-transforming applications, 
 * Download Arduino IDE https://www.arduino.cc/en/software
 * **Do not** attempt to flash a sketch by selecting the "Arduino Pro Micro" in the List. It will work, but soft-brick the device for further programming.
 * Use the Entry "Lily Pad USB" instead. Although this is not a Lily Pad, it shares the relevant specifications
-	
+
 ### Mirco USB Host Shield:
 * USB runs with 5V, but the board is 3.3V only and therefore has a design flaw and has to be fixed
 * Furthermore, the reset pin of the shield (**Not** the reset pin of the Arduino) has to be connected to 3.3V. Unfortunately, this pin is GND in Arduino, so we cannot just set the Pin to HIGH. I went straight after following setup: https://geekhack.org/index.php?topic=80421.0 which i documented also under [here](hardware/Setup.md)
-	
+
 ### Software 
 * The USB Host Shield Library has to be installed in the Arduino Library Manager
 * The HID-Project Library has to be installed in the Arduino Library Manager, standard Keyboard Library is insufficient.
@@ -59,5 +59,7 @@ As we have full control over the LEDs without changing the actual Locking state 
 ## Limitations:
 * No universal Unicode input method which works in all applications and does not require additional software available for Windows.
 * As we are using HID-Boot Protocol, only the “normal” keys on your keyboard are supported. Media Keys Readin or whatever else you have on your keyboard is not supported. However, I mapped the most important Media Keys to L4 Layer, and you can map like many other as you want if you edit the source code ☺.
-* Because of storage limitations, not all possible compose combinations can be added. So far, I only compiled the Base Module. I am planning to change that to the most often used keys. I never needed entering an “ǣ” for example. You can compile the compose combinations you actually use out of the \*.module files with the included [Python-Script](src/compose_generator/generate.py)
+* Because of storage limitations, only compose sequences leading to a 2-Byte Unicode-Character could be considered. The goal is to have a almost complete version as in Neo-Layout. For further storage reasons, letters with diacrical marks can only be accessed by the most common and intuitive way, using the corresponing dead key. You can compile your own compose sequences by adding them in a \*.module file and compile it to C++-Code with the included [Python-Script](src/compose_generator/generate.py)
+
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FJonas-commits%2FNeo-Keyboard-Adapter&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 
