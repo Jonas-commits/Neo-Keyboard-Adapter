@@ -496,12 +496,17 @@ void NeoReportParser::OnKeyUp(uint8_t mod, uint8_t key) {
 		if(!(activeSequence.key == 0 && activeSequence.modifier == 0)){ //release active holds from substitution
 			Keyboard.release(KeyboardKeycode(activeSequence.key));
 			
-			if (kbdLockingKeys.kbdLeds.bmCapsLock &&
-				activeSequence.modifier == KEY_RESERVED && activeSequence.key <= KEY_SLASH) {
-				Keyboard.release(KeyboardKeycode(KEY_LEFT_SHIFT));
+			if (kbdLockingKeys.kbdLeds.bmCapsLock && activeSequence.key <= KEY_SLASH && activeSequence.key != KEY_TILDE) {
+				if(activeSequence.modifier == KEY_RESERVED) {
+					Keyboard.release(KeyboardKeycode(KEY_LEFT_SHIFT));
+				} else if (activeSequence.modifier != KEY_LEFT_SHIFT){
+					Keyboard.release(KeyboardKeycode(activeSequence.modifier));
+				}
 			} else {
 				Keyboard.release(KeyboardKeycode(activeSequence.modifier));
 			}
+			
+			Keyboard.release(KeyboardKeycode(activeSequence.key));
 			
 			//restore modifiers 
 			if(neoModifiers.bmLeftShift){
@@ -668,13 +673,16 @@ void NeoReportParser::substitutePress(const InputSequence &sq){
 		
 		Keyboard.releaseAll();
 		
-		if (kbdLockingKeys.kbdLeds.bmCapsLock &&
-		sq.modifier == KEY_RESERVED && sq.key <= KEY_SLASH) {
-			Keyboard.press(KeyboardKeycode(KEY_LEFT_SHIFT));
-			} else {
+		if (kbdLockingKeys.kbdLeds.bmCapsLock && sq.key <= KEY_SLASH && sq.key != KEY_TILDE) {
+			if(sq.modifier == KEY_RESERVED) {
+				Keyboard.press(KeyboardKeycode(KEY_LEFT_SHIFT));
+			} else if (sq.modifier != KEY_LEFT_SHIFT){
+				Keyboard.press(KeyboardKeycode(sq.modifier));
+			}
+		} else {
 			Keyboard.press(KeyboardKeycode(sq.modifier));
 		}
-
+		
 		Keyboard.press(KeyboardKeycode(sq.key));
 		
 		//will be released on release event, so holding of the key is possible

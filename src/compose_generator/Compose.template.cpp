@@ -52,7 +52,7 @@ uint16_t Compose::transition(uint8_t layer, uint8_t key) {
 				currentNode = const_cast<Node*>(root);
 				return val_cur.payload.unicode;
 				
-				} else { //found, waiting for next key
+			} else { //found, waiting for next key
 				currentNode = const_cast<Node*>(val_cur.payload.nodes);
 				return 1;
 			}
