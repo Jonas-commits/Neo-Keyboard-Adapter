@@ -744,53 +744,42 @@ void NeoReportParser::pressUnicode(uint16_t code) {
 }
 
 Layer NeoReportParser::getActiveLayer() {
+	boolean m2 = neoModifiers.bmLeftShift || neoModifiers.bmRightShift;
+	boolean m3 = neoModifiers.bmLeft3 || neoModifiers.bmRight3;
+	boolean m4 = neoModifiers.bmLeft4 || neoModifiers.bmRightAlt;
 	
-	if (neoModifiers.bmLeftShift || neoModifiers.bmRightShift) {
-		if (neoModifiers.bmLeft3 || neoModifiers.bmRight3) {
-			return L5;
-		
-		} else if (neoModifiers.bmLeft4 || neoModifiers.bmRightAlt){
-			if (m4Lock) {
-				return L2;
-			} else {
-				return L4_SHIFT;
-			}
-			
-		} else {
-			if (kbdLockingKeys.kbdLeds.bmCapsLock) {
-				return L1;
-			} else if (m4Lock) {
-				return L4_SHIFT;
-			} else {
-				return L2;
-			}
-		}
-		
-	} else if (neoModifiers.bmLeft3 || neoModifiers.bmRight3) {
-		if (neoModifiers.bmLeft4 || neoModifiers.bmRightAlt) {
-			return L6;
-		
-		} else {
-			return L3;
-		}
-		
-	} else if (neoModifiers.bmLeft4 || neoModifiers.bmRightAlt) {
-		if (m4Lock) {
-			return L1;
-		} else {
-			return L4;
-		}
-		
-	} else {
-		if (kbdLockingKeys.kbdLeds.bmCapsLock) {
-			return L2;
-		} else if (m4Lock) {
-			return L4;
-		} else {
-			return L1;
+	if(m4Lock) {
+		if(!m3){
+			m4 = !m4;
 		}
 	}
-}
+	
+	if (kbdLockingKeys.kbdLeds.bmCapsLock){
+		if(!m3 && !m4){
+			m2 = !m2;
+		}
+	}
+	
+	if (!m2 && !m3 && !m4){
+		return L1;
+	} else if (!m2 && !m3 && m4){
+		return L4;
+	} else if (!m2 && m3 && !m4){
+		return L3;
+	} else if (!m2 && m3 && m4){
+		return L6;
+	} else if (m2 && !m3 && !m4){
+		return L2;
+	} else if (m2 && !m3 && m4){
+		return L4_SHIFT;
+	} else if (m2 && m3 && !m4){
+		return L5;
+	} else {
+		return None;
+	}
+
+} 
+
 
 boolean NeoReportParser::neoModifierChange(uint8_t key, boolean isKeyDownEvent){
 	switch (key){ 

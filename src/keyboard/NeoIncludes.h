@@ -33,6 +33,7 @@ enum C : uint8_t {
 
 /* Layer values must not exceed 64 because of bit sharing in Compose*/
 enum Layer : uint8_t {
+	None = 0,
 	L1 = 1,
 	L2 = 2,
 	L3 = 3,
