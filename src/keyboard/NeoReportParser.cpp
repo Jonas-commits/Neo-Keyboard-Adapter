@@ -493,7 +493,8 @@ void NeoReportParser::OnKeyUp(uint8_t mod, uint8_t key) {
 			Consumer.releaseAll();
 		}
 		
-		if(!(activeSequence.key == 0 && activeSequence.modifier == 0)){ //release active holds from substitution
+		//release keys from active sequence if active sequence ended
+		if(!(activeSequence.key == 0 && activeSequence.modifier == 0) && key != KEY_LEFT_CTRL && key != KEY_RIGHT_CTRL) {
 			Keyboard.release(KeyboardKeycode(activeSequence.key));
 			
 			if (kbdLockingKeys.kbdLeds.bmCapsLock && activeSequence.key < KEY_SLASH && activeSequence.key != KEY_TILDE) {
@@ -672,6 +673,14 @@ void NeoReportParser::substitutePress(const InputSequence &sq){
 		} else {
 		
 		Keyboard.releaseAll();
+		
+		//restore control keys (used for word-wise marking in L4)
+		if (neoModifiers.bmLeftCtrl) {
+			Keyboard.press(KeyboardKeycode(KEY_LEFT_CTRL));
+		}
+		if (neoModifiers.bmRightCtrl){
+			Keyboard.press(KeyboardKeycode(KEY_RIGHT_CTRL));
+		}
 		
 		if (kbdLockingKeys.kbdLeds.bmCapsLock && sq.key < KEY_SLASH && sq.key != KEY_TILDE) {
 			if(sq.modifier == KEY_RESERVED) {
