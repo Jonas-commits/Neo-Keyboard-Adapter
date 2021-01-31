@@ -242,13 +242,13 @@ const InputSequence NeoReportParser::neoMapL4[] PROGMEM = {
 	{KEY_UNICODE, 0x2044},			{KEY_UNICODE, 0xD7},			{KEY_UNICODE, 0x2216},			{KEY_UNICODE, 0x2213},
 		
   //KEYPAD_ENTER					KEYPAD_1						KEYPAD_2						KEYPAD_3
-	{KEY_RESERVED, KEYPAD_ENTER},	{KEY_LEFT_SHIFT, KEYPAD_1},		{KEY_LEFT_SHIFT, KEYPAD_2},		{KEY_LEFT_SHIFT, KEYPAD_3},
+	{KEY_RESERVED, KEYPAD_ENTER},	{KEY_RESERVED, KEY_END},		{KEY_RESERVED, KEY_DOWN},		{KEY_RESERVED, KEY_PAGE_DOWN},
 		
   //KEYPAD_4						KEYPAD_5						KEYPAD_6						KEYPAD_7
-	{KEY_LEFT_SHIFT, KEYPAD_4},		{KEY_RESERVED, KEY_APPLICATION},{KEY_LEFT_SHIFT, KEYPAD_6},		{KEY_LEFT_SHIFT, KEYPAD_7},
+	{KEY_RESERVED, KEY_LEFT_ARROW},	{KEY_RESERVED, KEY_APPLICATION},{KEY_RESERVED, KEY_RIGHT_ARROW},{KEY_RESERVED, KEY_HOME},
 		
   //KEYPAD_8						KEYPAD_9						KEYPAD_0						KEYPAD_DOT
-	{KEY_LEFT_SHIFT, KEYPAD_8},		{KEY_LEFT_SHIFT, KEYPAD_9},		{KEY_LEFT_SHIFT, KEYPAD_0},		{KEY_LEFT_SHIFT, KEYPAD_DOT}
+	{KEY_RESERVED, KEY_UP_ARROW},	{KEY_RESERVED, KEY_PAGE_UP},	{KEY_RESERVED, KEY_INSERT},		{KEY_RESERVED, KEY_DELETE}
 };
 
 const uint16_t NeoReportParser::neoMapL5[] PROGMEM = {
@@ -346,7 +346,7 @@ const uint8_t NeoReportParser::L4Shift_Map[] = {
 	0<<7 | 0<<6 | 0<<5 | 0<<4 | 0<<3 | 0<<2 | 0<<1 | 0, //KEY_PAUSE - KEY_RIGHT_ARROW
 	1<<7 | 1<<6 | 1<<5 | 0<<4 | 0<<3 | 0<<2 | 0<<1 | 0, //KEY_LEFT_ARROW - KEYPAD_ADD
 	0<<7 | 1<<6 | 1<<5 | 1<<4 | 1<<3 | 0<<2 | 1<<1 | 1, //KEYPAD_ENTER - KEYPAD_7
-	1<<7 | 1<<6 | 1<<5 | 1<<4                           //KEYPAD_8 - KEYPAD_DOT
+	1<<7 | 1<<6 | 1<<5 | 0<<4                           //KEYPAD_8 - KEYPAD_DOT
 };
 
 void NeoReportParser::OnKeyDown(uint8_t mod, uint8_t key) {
@@ -496,7 +496,7 @@ void NeoReportParser::OnKeyUp(uint8_t mod, uint8_t key) {
 		if(!(activeSequence.key == 0 && activeSequence.modifier == 0)){ //release active holds from substitution
 			Keyboard.release(KeyboardKeycode(activeSequence.key));
 			
-			if (kbdLockingKeys.kbdLeds.bmCapsLock && activeSequence.key <= KEY_SLASH && activeSequence.key != KEY_TILDE) {
+			if (kbdLockingKeys.kbdLeds.bmCapsLock && activeSequence.key < KEY_SLASH && activeSequence.key != KEY_TILDE) {
 				if(activeSequence.modifier == KEY_RESERVED) {
 					Keyboard.release(KeyboardKeycode(KEY_LEFT_SHIFT));
 				} else if (activeSequence.modifier != KEY_LEFT_SHIFT){
@@ -673,7 +673,7 @@ void NeoReportParser::substitutePress(const InputSequence &sq){
 		
 		Keyboard.releaseAll();
 		
-		if (kbdLockingKeys.kbdLeds.bmCapsLock && sq.key <= KEY_SLASH && sq.key != KEY_TILDE) {
+		if (kbdLockingKeys.kbdLeds.bmCapsLock && sq.key < KEY_SLASH && sq.key != KEY_TILDE) {
 			if(sq.modifier == KEY_RESERVED) {
 				Keyboard.press(KeyboardKeycode(KEY_LEFT_SHIFT));
 			} else if (sq.modifier != KEY_LEFT_SHIFT){
