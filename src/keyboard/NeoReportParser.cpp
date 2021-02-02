@@ -483,7 +483,13 @@ void NeoReportParser::OnKeyDown(uint8_t mod, uint8_t key) {
 }
 
 void NeoReportParser::OnKeyUp(uint8_t mod, uint8_t key) {
-	if (applyMap && key < NEO_MAP_SIZE + 1) { //act like neo keyboard
+	if (key == KEY_ESC) { //panic button in case something hangs up :)
+		Keyboard.releaseAll();
+		Consumer.releaseAll();
+		activeConsumerSequence = false;
+		activeSequence = {0, 0};
+	
+	} else if (applyMap && key < NEO_MAP_SIZE + 1) { //act like neo keyboard
 		
 		if(neoModifierChange(key, false)){
 			return;
@@ -494,7 +500,7 @@ void NeoReportParser::OnKeyUp(uint8_t mod, uint8_t key) {
 		}
 		
 		//release keys from active sequence if active sequence ended
-		if(!(activeSequence.key == 0 && activeSequence.modifier == 0) && key != KEY_LEFT_CTRL && key != KEY_RIGHT_CTRL) {
+		if(!(activeSequence.key == 0 && activeSequence.modifier == 0)) {
 			Keyboard.release(KeyboardKeycode(activeSequence.key));
 			
 			if (kbdLockingKeys.kbdLeds.bmCapsLock && activeSequence.key < KEY_SLASH && activeSequence.key != KEY_TILDE) {
@@ -665,12 +671,12 @@ void NeoReportParser::substitutePress(const InputSequence &sq){
 	if(sq.modifier == KEY_UNICODE){
 		pressUnicode(sq.key);
 		
-		} else if (sq.modifier == KEY_CONSUMER) {
+	} else if (sq.modifier == KEY_CONSUMER) {
 		Consumer.releaseAll();
 		Consumer.press(ConsumerKeycode(sq.key));
 		activeConsumerSequence = true;
 		
-		} else {
+	} else {
 		
 		Keyboard.releaseAll();
 		
