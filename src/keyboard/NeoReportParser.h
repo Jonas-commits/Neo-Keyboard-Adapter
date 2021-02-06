@@ -15,6 +15,9 @@ class NeoReportParser : public EnhancedKeyboardReportParser
 	const static uint16_t neoMapL6[NEO_MAP_SIZE] PROGMEM;
 	const static uint8_t L4Shift_Map[(NEO_MAP_SIZE - 1) / 8 + 1];
 	
+	const static uint16_t SQ_DELAY = 10;   // delay before a key is entered after the modifiers
+	const static uint16_t GUI_DELAY = 250; // delay to wait for a popup
+	
 	Compose compose;
 	NeoModifiers neoModifiers;
 	boolean applyMap;

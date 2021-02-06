@@ -697,6 +697,7 @@ void NeoReportParser::substitutePress(const InputSequence &sq){
 		} else {
 			Keyboard.press(KeyboardKeycode(sq.modifier));
 		}
+		delay(SQ_DELAY); //sometimes we are just too fast, e.g. RDP
 		
 		Keyboard.press(KeyboardKeycode(sq.key));
 		
@@ -726,6 +727,7 @@ void NeoReportParser::pressUnicode(uint16_t code) {
 	switch (unicodeMethod){
 		case WIN_DEC:
 			Keyboard.press(KeyboardKeycode(KEY_LEFT_ALT));
+			delay(SQ_DELAY); //sometimes we are just too fast, e.g. RDP
 			if (digits[4] != 0) {
 				Keyboard.write(KeyboardKeycode(digits[4] - 1 + KEYPAD_1));
 			}
@@ -733,12 +735,14 @@ void NeoReportParser::pressUnicode(uint16_t code) {
 
 		case WIN_HEX:
 			Keyboard.press(KeyboardKeycode(KEY_LEFT_ALT));
+			delay(SQ_DELAY);
 			Keyboard.write(KeyboardKeycode(KEYPAD_ADD));
 			break;
 	
 		case UNIX_HEX:
 			Keyboard.press(KeyboardKeycode(KEY_LEFT_CTRL));
 			Keyboard.press(KeyboardKeycode(KEY_LEFT_SHIFT));
+			delay(SQ_DELAY);
 			Keyboard.write(KeyboardKeycode(KEY_U));
 			break;
 	}
@@ -843,9 +847,9 @@ void NeoReportParser::install() {
 	Keyboard.press(KeyboardKeycode(KEY_LEFT_GUI));
 	Keyboard.write(KeyboardKeycode(KEY_R));
 	Keyboard.release(KeyboardKeycode(KEY_LEFT_GUI));
-	delay(100);
+	delay(GUI_DELAY);
 	Keyboard.println(F("cmd"));
-	delay(100);
+	delay(GUI_DELAY);
 	for(int8_t i = 0; i<5; i++){
 		Keyboard.println(F("echo ))) PLEASE REBOOT AFTER INSTALLATION )))"));
 	}
@@ -867,7 +871,7 @@ void NeoReportParser::help() {
 	Keyboard.press(KeyboardKeycode(KEY_LEFT_GUI));
 	Keyboard.write(KeyboardKeycode(KEY_R));
 	Keyboard.release(KeyboardKeycode(KEY_LEFT_GUI));
-	delay(100);
+	delay(GUI_DELAY);
 	
 	//https://github.com/Jonas-commits/Neo-Keyboard-Adapter
 	Keyboard.println(F("https>&&github.com&Jonas/commits&Neo/Kezboard/Adapter"));
