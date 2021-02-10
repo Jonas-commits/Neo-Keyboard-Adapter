@@ -42,6 +42,8 @@ The Left Windows-Key is configured to interact with the driver. Following (under
 
 General note for Unicode on Windows: The decimal method only works in some apps (mainly MS Office) for all Unicode characters. For non-supported apps, only some of the Unicode Keys work. Hexadecimal setup does not require admin rights, but a reboot. It works with most apps, but apparently not with those where the decimal input is fully supported. So you have to toggle the Unicode method in respective to the app you are using. Linux is according to the specification I found, but untested. 
 
+To make life easier, I included a small [ahk-tool](/winUnicodeHelper) which makes the Default method in windows work universally.
+
 
 #### Media Keys:
 Additionally to the Neo Layout, I mapped custom combinations for Media Keys to Layer 4. This is a workaround for the not yet working media keys on the keyboard on the one hand and also spice up standard keyboards.
