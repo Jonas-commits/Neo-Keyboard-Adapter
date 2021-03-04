@@ -687,6 +687,15 @@ void NeoReportParser::substitutePress(const InputSequence &sq){
 		if (neoModifiers.bmRightCtrl){
 			Keyboard.press(KeyboardKeycode(KEY_RIGHT_CTRL));
 		}
+		if (neoModifiers.bmLeftAlt) {
+			Keyboard.press(KeyboardKeycode(KEY_LEFT_ALT));
+		}
+		if (neoModifiers.bmLeftGUI){
+			Keyboard.press(KeyboardKeycode(KEY_LEFT_GUI));
+		}
+		if (neoModifiers.bmRightGUI){
+			Keyboard.press(KeyboardKeycode(KEY_RIGHT_GUI));
+		}
 		
 		if (kbdLockingKeys.kbdLeds.bmCapsLock && sq.key < KEY_SLASH && sq.key != KEY_TILDE) {
 			if(sq.modifier == KEY_RESERVED) {
