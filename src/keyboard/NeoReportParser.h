@@ -3,18 +3,13 @@
 
 #include "NeoIncludes.h"
 #include "Compose.gen.h"
+#include "Neo2Map.h"
 
 class NeoReportParser : public EnhancedKeyboardReportParser
 {
 	private:
-	const static uint8_t neoMap[NEO_MAP_SIZE];
-	const static InputSequence neoMapL2[NEO_MAP_SIZE - KEY_Z - 1] PROGMEM;
-	const static InputSequence neoMapL3[NEO_MAP_SIZE] PROGMEM;
-	const static InputSequence neoMapL4[NEO_MAP_SIZE] PROGMEM;
-	const static uint16_t neoMapL5[NEO_MAP_SIZE] PROGMEM;
-	const static uint16_t neoMapL6[NEO_MAP_SIZE] PROGMEM;
-	const static uint8_t L4Shift_Map[(NEO_MAP_SIZE - 1) / 8 + 1];
-	
+	const Neo2Map neo2Map = Neo2Map();
+	const KeyboardMap* keyboardMap = &neo2Map;
 	const static uint16_t SQ_DELAY = 10;   // delay before a key is entered after the modifiers
 	const static uint16_t GUI_DELAY = 250; // delay to wait for a popup
 	
@@ -45,7 +40,7 @@ class NeoReportParser : public EnhancedKeyboardReportParser
 	
 	
 	public:
-	NeoReportParser() : EnhancedKeyboardReportParser(), neoModifiers(), applyMap(true), m4Lock(false), composeState(false), activeSequence(){ }
+	NeoReportParser() : EnhancedKeyboardReportParser(), neoModifiers(), applyMap(true), m4Lock(false), composeState(false), activeSequence(){}
 	void setLedState(uint8_t leds);
 	void install();
 	void help();
