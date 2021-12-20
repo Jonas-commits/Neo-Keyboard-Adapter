@@ -19,12 +19,17 @@ This project can also be modified for other Keyboard-transforming applications, 
 * USB runs with 5V, but the board is 3.3V only and therefore has a design flaw and has to be fixed
 * Furthermore, the reset pin of the shield (**Not** the reset pin of the Arduino) has to be connected to 3.3V. Unfortunately, this pin is GND in Arduino, so we cannot just set the Pin to HIGH. I went straight after following setup: https://geekhack.org/index.php?topic=80421.0 which i documented also under [here](hardware/Setup.md)
 
+### Custom PCB
+To remove the need to solder the pro micro and host shield directly together or glue them with wires together, there is a pcb design, which works fine (v1 is tested, but you need to solder a wire. Since v1.1 adds a missing trace but hasn't been tested it's your choice which one to order. In every case, please verify the PCB yourself).
+You still have to cut the trace as on the Host Shield. **Dont** forget it.
+
+
 ### Software 
 * The USB Host Shield Library has to be installed in the Arduino Library Manager
 * The HID-Project Library has to be installed in the Arduino Library Manager, standard Keyboard Library is insufficient.
 * After uploading the [example](https://github.com/felis/USB_Host_Shield_2.0/blob/master/examples/HID/USBHIDBootKbd/USBHIDBootKbd.ino) to the board I can see the board working in the serial port monitor. 
 
-## Controlling the driver
+## Controlling the driver:
 The Left Windows-Key is configured to interact with the driver. Following (under windows anyhow unused combinations) are therefore used to interact with the driver and are not passed to the Host-PC. To reach this behavior, the left Windows-Key behaves differently in that way. Therefore it does not appear in a pressed-State to the Host before another non-used combination is pressed or the Key is released without pressing a key. In practical use, you will not notice this difference. Please note, that only the left Windows-Key is configured for this use, not the right one. The settings are not stored to EEPROM and therefore reset after each power-reset from the Arduino. This behavior is intended.
 
 ### Combinations:
@@ -65,3 +70,17 @@ As we have full control over the LEDs without changing the actual Locking state 
 
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FJonas-commits%2FNeo-Keyboard-Adapter&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 
+## Known Working Keyboards
+Due to diffrent software revisions, hardware revisions and the inability to check all listed keyboards, a listed keyboard could end up not working for you!
+
+|Model|Model No| Comment|
+|---|---|---|
+|Lenovo External Keyboard|KU-1255|"ThinkPad TKL style"|
+|Cherry MX-Board 3.0|MX 3850 USB||
+
+## Not working Keyboards
+If possible to you, please verify this list!
+
+|Model|Model No| Comment|
+|---|---|---|
+|CHERRY G80-3000N RGB TKL||No response at all|
